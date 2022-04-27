@@ -57,9 +57,6 @@ startLevel = 2
 [mediaTypes."application/atom+xml"]
 suffixes = ["xml"]
 [[menu.main]]
-name = "About"
-weight = 5
-[[menu.main]]
 identifier = "lang-switcher"
 name = "Friends"
 weight = 4
