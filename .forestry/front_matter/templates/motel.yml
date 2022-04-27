@@ -1,0 +1,46 @@
+---
+label: motel
+hide_body: false
+fields:
+- name: te-ma
+  type: text
+  config:
+    required: false
+  label: 标题
+  description: 吨测试
+- name: time
+  type: datetime
+  label: 日期
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+- name: biaoqian
+  type: tag_list
+  default: []
+  label: 标签
+- name: naiyou
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: 内容
+- name: picture
+  type: file
+  config:
+    maxSize: 64
+  label: 图片
+- name: nai-you
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: 内容
