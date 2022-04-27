@@ -61,21 +61,22 @@ identifier = "lang-switcher"
 weight = 6
 [[menu.main]]
 identifier = "theme-switcher"
+name = "Friends"
 weight = 5
 [[menu.main]]
-name = "关于"
+name = "About"
 pageref = "/about/"
 post = "user-circle"
 pre = "internal"
 weight = 4
 [[menu.main]]
-name = "标签"
+name = "Tags"
 pageref = "/tags/"
 post = "tags"
 pre = "internal"
 weight = 3
 [[menu.main]]
-name = "分类"
+name = "Categories"
 pageref = "/categories/"
 post = "th"
 pre = "internal"
