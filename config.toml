@@ -57,24 +57,11 @@ startLevel = 2
 [mediaTypes."application/atom+xml"]
 suffixes = ["xml"]
 [[menu.main]]
-identifier = "lang-switcher"
-weight = 6
-[[menu.main]]
-identifier = "theme-switcher"
-name = "Friends"
-weight = 5
-[[menu.main]]
-name = "About"
-pageref = "/about/"
-post = "user-circle"
+name = "Posts"
+pageref = "/posts/"
+post = "archive"
 pre = "internal"
-weight = 4
-[[menu.main]]
-name = "Tags"
-pageref = "/tags/"
-post = "tags"
-pre = "internal"
-weight = 3
+weight = 1
 [[menu.main]]
 name = "Categories"
 pageref = "/categories/"
@@ -82,11 +69,15 @@ post = "th"
 pre = "internal"
 weight = 2
 [[menu.main]]
-name = "Posts"
-pageref = "/posts/"
-post = "archive"
+name = "Tags"
+pageref = "/tags/"
+post = "tags"
 pre = "internal"
-weight = 1
+weight = 3
+[[menu.main]]
+identifier = "lang-switcher"
+name = "Friends"
+weight = 4
 [minify.tdewolff.html]
 keepWhitespace = false
 [outputFormats.Algolia]
