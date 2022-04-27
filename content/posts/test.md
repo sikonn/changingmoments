@@ -1,6 +1,5 @@
 +++
 biaoqian = ["天天的快乐日记", "坠落天边的快乐碎片"]
-draft = true
 nai-you = ""
 naiyou = ""
 picture = ""
