@@ -57,6 +57,10 @@ startLevel = 2
 [mediaTypes."application/atom+xml"]
 suffixes = ["xml"]
 [[menu.main]]
+identifier = "lang-switcher"
+name = "Friends"
+weight = 4
+[[menu.main]]
 name = "Posts"
 pageref = "/posts/"
 post = "archive"
@@ -74,10 +78,6 @@ pageref = "/tags/"
 post = "tags"
 pre = "internal"
 weight = 3
-[[menu.main]]
-identifier = "lang-switcher"
-name = "Friends"
-weight = 4
 [minify.tdewolff.html]
 keepWhitespace = false
 [outputFormats.Algolia]
