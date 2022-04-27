@@ -1,7 +1,10 @@
 ---
-title: 'My First Post'
-date: 2019-07-18T17:18:05+01:00
+title: My First Post
+date: 2022-04-27T11:42:44.723Z
 draft: false
+slug: post
+lastmod: 2022-04-27T11:43:23.939Z
+tags: []
 ---
 
 # Hugo on Vercel
