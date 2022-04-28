@@ -214,18 +214,6 @@ uglyURLs = false
         pre = "internal"
         post = "tags"
     [[menu.main]]
-        pageref = "/about/"
-        name = "about"
-        weight = 5
-        pre = "internal"
-        post = "user-circle"
-    [[menu.main]]
-        pageref = "/friends/"
-        name = "friends"
-        weight = 5
-        pre = "internal"
-        post = "user-circle"
-    [[menu.main]]
         weight = 6
         identifier = "theme-switcher"
     [[menu.main]]
