@@ -197,25 +197,25 @@ uglyURLs = false
     #     post = "home"
     [[menu.main]]
         pageref = "/posts/"
-        name = "文章"
+        name = "posts"
         weight = 2
         pre = "internal"
         post = "archive"
     [[menu.main]]
         pageref = "/categories/"
-        name = "分类"
+        name = "categories"
         weight = 3
         pre = "internal"
         post = "th"
     [[menu.main]]
         pageref = "/tags/"
-        name = "标签"
+        name = "tags"
         weight = 4
         pre = "internal"
         post = "tags"
     [[menu.main]]
         pageref = "/about/"
-        name = "关于"
+        name = "about"
         weight = 5
         pre = "internal"
         post = "user-circle"
