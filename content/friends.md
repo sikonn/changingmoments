@@ -5,8 +5,7 @@ draft: true
 menu: main
 weight: 60
 comment: false
-lastmod: 2022-04-28T11:31:38.633Z
+lastmod: 2022-04-28T11:35:59.874Z
 description: 我的赛博好友们！
 ---
-[Missing不想睡](https://hugo-missingid.vercel.app/)
-
+<center>### [Missing不想睡](https://hugo-missingid.vercel.app/)</center>
