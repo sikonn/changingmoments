@@ -699,9 +699,9 @@ uglyURLs = false
     duration = 0.5
 
     # 浅色模式的主色
-    primaryColorLight = "179, 40%, 60%"
+    primaryColorLight = "179, 60%, 50%"
     # 深色模式的主色
-    primaryColorDark = "179, 40%, 60%"
+    primaryColorDark = "179, 60%, 50%"
     # 注意：只支持 HSL 颜色值
 
     # 文章的内容宽度
