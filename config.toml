@@ -2,7 +2,7 @@
 # 站点配置
 
 baseURL = "https://example.com/"
-title = "Hugo 主题 MemE"
+title = "Changing-moments"
 languageCode = "zh-CN"
 hasCJKLanguage = true
 # 版权信息（支持 Markdown）
@@ -96,11 +96,11 @@ uglyURLs = false
 # 作者信息
 [author]
     # 名字
-    name = "reuixiy"
+    name = "天天好耶"
     # 邮箱
-    email = "reuixiy@gmail.com"
+    email = "mhzhang0831@gmail.com"
     # 座右铭或简介
-    motto = "Viva La Vida"
+    motto = "決して最後まであきらめない"
     # 头像
     avatar = "/icons/apple-touch-icon.png"
     # 网站（默认值：baseURL）
