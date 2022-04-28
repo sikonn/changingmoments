@@ -2,7 +2,7 @@
 # 站点配置
 
 baseURL = "https://example.com/"
-title = "欢迎来玩"
+title = "欢迎来到我的世界"
 languageCode = "zh-CN"
 hasCJKLanguage = true
 # 版权信息（支持 Markdown）
@@ -197,19 +197,19 @@ uglyURLs = false
     #     post = "home"
     [[menu.main]]
         pageref = "/posts/"
-        name = "时间轴"
+        name = "时间轴在这"
         weight = 2
         pre = "internal"
         post = "archive"
     [[menu.main]]
         pageref = "/categories/"
-        name = "分类项"
+        name = "我的分类"
         weight = 3
         pre = "internal"
         post = "th"
     [[menu.main]]
         pageref = "/tags/"
-        name = "标签页"
+        name = "不要给人贴标签"
         weight = 4
         pre = "internal"
         post = "tags"
@@ -746,7 +746,7 @@ uglyURLs = false
     publishedDateIcon = "calendar-alt"
 
     # 是否显示修改时间
-    displayModifiedDate = true
+    displayModifiedDate = false
     # 修改时间的图标
     modifiedDateIcon = "calendar-check"
 

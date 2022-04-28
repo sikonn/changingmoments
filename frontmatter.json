@@ -7,5 +7,6 @@
       "title": "changingmoments",
       "path": "[[workspace]]"
     }
-  ]
+  ],
+  "frontMatter.content.autoUpdateDate": true
 }
