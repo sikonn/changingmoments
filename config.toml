@@ -1219,10 +1219,10 @@ uglyURLs = false
     # 是否显示站点的创建年份
     displaySiteCreatedYear = true
 
-    # 年份与作者之间的图标，留空（""）则无
+    # 年份与作者之间的图标，留空（"heart"）则无
     iconBetweenYearAndAuthor = ""
     # 图标颜色
-    iconColor = "#f06292"
+    iconColor = "#00C5CD"
     # 是否开启图标的跳动效果
     iconAnimation = true
 
@@ -1230,11 +1230,11 @@ uglyURLs = false
     displayPoweredBy = true
 
     # 是否显示站点的版权信息
-    displaySiteCopyright = true
+    displaySiteCopyright = false
 
     # 自定义页脚（支持 Markdown）customFooter =  ""
 
-    displayBusuanziSiteUVAndPV = true
+    displayBusuanziSiteUVAndPV = false
     busuanziSiteUVText = "本站访客数"
     busuanziSiteUVIcon = "user"
     busuanziSitePVText = "本站访问量"
