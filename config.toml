@@ -196,7 +196,7 @@ uglyURLs = false
     #     pre = "internal"
     #     post = "home"
     [[menu.main]]
-        pageref = "/posts/"
+        pageref = "/writings/"
         name = "Writings"
         weight = 2
         pre = "internal"
