@@ -1,6 +1,5 @@
 +++
 biaoqian = []
-draft = true
 nai-you = ""
 naiyou = ""
 picture = "/uploads/178.png"
