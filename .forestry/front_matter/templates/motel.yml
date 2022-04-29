@@ -44,5 +44,3 @@ fields:
     schema:
       format: markdown
   label: 内容
-pages:
-- content/posts/test.md
