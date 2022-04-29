@@ -1232,7 +1232,7 @@ uglyURLs = false
     # 是否显示站点的版权信息
     displaySiteCopyright = false
 
-    # 自定义页脚（支持 Markdown）customFooter =  ""
+    # 自定义页脚（支持 Markdown）customFooter =  "就在此刻，改变时刻。"
 
     displayBusuanziSiteUVAndPV = false
     busuanziSiteUVText = "本站访客数"
