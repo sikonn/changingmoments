@@ -1219,8 +1219,8 @@ uglyURLs = false
     # 是否显示站点的创建年份
     displaySiteCreatedYear = true
 
-    # 年份与作者之间的图标，留空（"heart"）则无
-    iconBetweenYearAndAuthor = ""
+    # 年份与作者之间的图标，留空（""）则无
+    iconBetweenYearAndAuthor = "heart"
     # 图标颜色
     iconColor = "#00C5CD"
     # 是否开启图标的跳动效果
