@@ -88,7 +88,7 @@
     {{ end }}
     {{ now.Format "2006" }} {{ .Site.Title }}
     <br/>
-    共 {{ len (where .Site.RegularPages "Section" "post") }} 篇文章
+    共 {{ len (where .Site.RegularPages "Section" "posts") }} 篇文章
     {{$scratch := newScratch}}
     {{ range (where .Site.Pages "Kind" "page" )}}
         {{$scratch.Add "total" .WordCount}}
