@@ -1,7 +1,7 @@
 ##########################################
 # 站点配置
 
-baseURL = "https://example.com/"
+baseURL = "hhttps://changingmoments.vercel.app/"
 title = "欢迎来到我的世界"
 languageCode = "zh-CN"
 hasCJKLanguage = true
