@@ -854,7 +854,7 @@ uglyURLs = false
     enableImageHost = true
 
     # 图片外链地址
-    imageHostURL = "https://example.com/"
+    imageHostURL = "https://changingmoments.vercel.app/"
 
     # 是否将 HTML 的头部元数据中的图片链接也替换为外链
     headAlso = true
@@ -875,7 +875,7 @@ uglyURLs = false
     enableVideoHost = false
 
     # 视频外链地址
-    videoHostURL = "https://example.com/"
+    videoHostURL = "https://changingmoments.vercel.app/"
 
 
     ######################################
