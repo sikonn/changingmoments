@@ -2,7 +2,7 @@
 title: HUGO & MemE | 踩坑实录
 date: 2022-05-02T01:35:26.079Z
 draft: true
-lastmod: 2022-05-02T02:41:59.411Z
+lastmod: 2022-05-02T02:44:35.915Z
 description: ""
 tags:
   - HUGO
@@ -42,7 +42,7 @@ tags:
 
 如果想简化一点，可以跟着[Missing不想睡](https://hugo-missingid.vercel.app/)的这一篇[forestry.io 进行博客写作](https://hugo-missingid.vercel.app/p/forestry/)进行。
 
-用forestry.io需要注意的是一定要把GitHub转成公开！
+用forestry.io需要注意的是一定要把GitHub转成公开！我没有主用forestry的原因是总是显示不出标题，而且打字的时候会乱码，可能是因为我用了多平台吧（不懂）现在主要用他传图片，手机也能传ipad也能传好方便。
 
 ##### front matter
 
