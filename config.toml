@@ -1171,14 +1171,14 @@ uglyURLs = false
     # 极简页脚
 
     # 是否开启
-    enableMinimalFooter = false
-    enableVerticalBarStructure = false
+    enableMinimalFooter = true
+    enableVerticalBarStructure = true
     # 说明：如果开启此项，显示在右边的部类或分区
     #      将会包含全部的第一级部类或分区，并且
     #      以竖线（|）分隔开来。
 
     # 是否开启关于页面的极简页脚
-    enableAboutPageMinimalFooter = false
+    enableAboutPageMinimalFooter = true
 
 
     ######################################
@@ -1204,20 +1204,20 @@ uglyURLs = false
     # 页脚
 
     # 是否开启
-    enableFooter = false
+    enableFooter = true
 
     # 是否显示
-    displayFooter = false
+    displayFooter = true
 
     # 是否在首页显示
-    displayFooterInHome = false
+    displayFooterInHome = true
 
-    displayCopyleftSymbol = false
+    displayCopyleftSymbol = true
     # 是否显示版权符号（©）
-    displayCopyrightSymbol = false
+    displayCopyrightSymbol = true
 
     # 是否显示站点的创建年份
-    displaySiteCreatedYear = false
+    displaySiteCreatedYear = true
 
     # 年份与作者之间的图标，留空（""）则无
     iconBetweenYearAndAuthor = "heart"
@@ -1227,14 +1227,14 @@ uglyURLs = false
     iconAnimation = true
 
     # 是否显示 Hugo 和 MemE 的链接
-    displayPoweredBy = false
+    displayPoweredBy = true
 
     # 是否显示站点的版权信息
-    displaySiteCopyright = false
+    displaySiteCopyright = true
 
     # 自定义页脚（支持 Markdown）customFooter =  "就在此刻，改变时刻。"
 
-    displayBusuanziSiteUVAndPV = false
+    displayBusuanziSiteUVAndPV = true
     busuanziSiteUVText = "本站访客数"
     busuanziSiteUVIcon = "user"
     busuanziSitePVText = "本站访问量"
