@@ -94,6 +94,6 @@
         {{ range (where .Site.Pages "Kind" "page" )}}
             {{$scratch.Add "total" .WordCount}}
         {{ end }}
-        共写了{{ div ($scratch.Get "total") 1000.0 | lang.FormatNumber 2 }}k字.
+        共嘟嘟了{{ div ($scratch.Get "total") 1000.0 | lang.FormatNumber 2 }}k字.
     </section>
 </center>
