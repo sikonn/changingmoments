@@ -2,7 +2,7 @@
 title: HUGO & MemE | 踩坑实录
 date: 2022-05-02T01:35:26.079Z
 draft: true
-lastmod: 2022-05-02T02:39:35.263Z
+lastmod: 2022-05-02T02:41:59.411Z
 description: ""
 tags:
   - HUGO
@@ -12,7 +12,7 @@ tags:
 
 写博客的原因很简单，我需要一个**能写很多字/确保不丢失/没有审查/被看到**的平台，多亏了[Missing不想睡](https://hugo-missingid.vercel.app/)的帮助和[塔塔](https://mantyke.icu/)的教程，我才接触到了HUGO静态博客。
 
-本贴又我和[Missing不想睡](https://hugo-missingid.vercel.app/)的聊天记录整理而成！
+本贴由我和[Missing不想睡](https://hugo-missingid.vercel.app/)的聊天记录整理而成！
 
 ### HUGO
 
@@ -38,17 +38,23 @@ tags:
 
 #### 写文章
 
+##### forestry.io
+
 如果想简化一点，可以跟着[Missing不想睡](https://hugo-missingid.vercel.app/)的这一篇[forestry.io 进行博客写作](https://hugo-missingid.vercel.app/p/forestry/)进行。
 
 用forestry.io需要注意的是一定要把GitHub转成公开！
 
+##### front matter
+
 我目前主要用的是vscord中的front matter插件，主要是看了[HUGO gastby nextjs zola 等静态博客可视化编辑器 front matter | forestry.io | 像WORDPRESS一样轻松编写 markdown](https://www.youtube.com/watch?v=s1Gdu4RZDp4&t=303s)的视频，觉得也很好用，现在两边都有用。
+
+##### vscord
 
 也可以追求极简直接用vscord写，右击根目录GIT bash Here，输入
 ```
 hugo new posts/文章名.md
 ```
-他会自动生成一个，熟悉markdown的话会方便一些。
+他会自动生成一个模板，熟悉markdown的话会方便一些。
 
 ### MemE
 
