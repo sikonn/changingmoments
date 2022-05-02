@@ -2,7 +2,7 @@
 title: HUGO & MemE | 踩坑实录
 date: 2022-05-02T01:35:26.079Z
 draft: true
-lastmod: 2022-05-02T02:26:49.229Z
+lastmod: 2022-05-02T02:31:21.531Z
 description: ""
 tags:
   - HUGO
@@ -23,8 +23,11 @@ tags:
 #### 配置SSH
 
 ***生成SSH***
+
 虽然大家应该没有我这么笨，但是$符号复制塔塔的代码的时候记得删掉，我当时没有删掉就not found了
+
 ***连接SSH***
+
 如果没有直接显示successful，yes一定要好好输入，我当时一时手快又显示不了了
 
 #### 安装主题
@@ -47,7 +50,9 @@ tags:
 
 #### 添加图片
 
-就是说我也没想到我添加图片都不会，添加图片的话frontmatter会帮你生成markdown链接，也可以再forestry中直接添加。
+就是说我也没想到我添加图片都不会
+
+添加图片的话frontmatter会帮你生成markdown链接，也可以再forestry中直接添加。
 
 如果你想修改正文图片大小，可以用下面这个代码
 ```
@@ -63,7 +68,7 @@ tags:
 
 MemE自带文章字数统计，但是没有全站字数统计，但是真的很想知道自己一共写了多少字，所以加上了这一部分。
 
-在footer.html中改动，需要将config中的页脚关闭，否则会重叠。
+在themes\meme\layouts\partials\footer.html中改动，需要将config.toml中的页脚关闭，否则会重叠。
 
 ```
 <center>
