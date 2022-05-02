@@ -2,7 +2,7 @@
 title: HUGO & MemE | 踩坑实录
 date: 2022-05-02T01:35:26.079Z
 draft: true
-lastmod: 2022-05-02T02:31:21.531Z
+lastmod: 2022-05-02T02:39:35.263Z
 description: ""
 tags:
   - HUGO
@@ -43,6 +43,12 @@ tags:
 用forestry.io需要注意的是一定要把GitHub转成公开！
 
 我目前主要用的是vscord中的front matter插件，主要是看了[HUGO gastby nextjs zola 等静态博客可视化编辑器 front matter | forestry.io | 像WORDPRESS一样轻松编写 markdown](https://www.youtube.com/watch?v=s1Gdu4RZDp4&t=303s)的视频，觉得也很好用，现在两边都有用。
+
+也可以追求极简直接用vscord写，右击根目录GIT bash Here，输入
+```
+hugo new posts/文章名.md
+```
+他会自动生成一个，熟悉markdown的话会方便一些。
 
 ### MemE
 
