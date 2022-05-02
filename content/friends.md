@@ -5,14 +5,14 @@ draft: true
 menu: main
 weight: 60
 comment: false
-lastmod: 2022-05-01T15:05:39.756Z
+lastmod: 2022-05-02T16:43:36.963Z
 description: 我的赛博好友们！
 ---
 ### [Missing不想睡](https://hugo-missingid.vercel.app/)
 
-长毛象热心网友！没有她就没有本站！
+和我一起做赛博宵夜吧!
 
-### [Muko](https://hugo-stack-theme-mod-mukokka.vercel.app/)
+### [Muko](https://hugo-mukokka.vercel.app/)
 
-虽然还没想好，但是飞速入住了我的好友圈！
+我以前没的选，现在我想做个绝望的文盲。
 
