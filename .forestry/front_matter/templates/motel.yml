@@ -33,7 +33,7 @@ fields:
 - name: picture
   type: file
   config:
-    maxSize: 64
+    maxSize: 32
   label: 图片
 - name: nai-you
   type: textarea
