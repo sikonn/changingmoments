@@ -81,6 +81,11 @@
     </footer>
 {{ end }}
 
+{{$scratch := newScratch}}
+{{ range (where .Site.Pages "Kind" "page" )}}
+    {{$scratch.Add "total" .WordCount}}
+{{ end }}
+
 <section class="copyright">
     &copy; 
     {{ if and (.Site.Params.footer.since) (ne .Site.Params.footer.since (int (now.Format "2006"))) }}
@@ -89,7 +94,3 @@
     {{ now.Format "2006" }} 浅慕澈天·<i class="fas fa-bell"></i> <a id="days">0</a>Days<br>共嘟嘟了 {{$scratch.Get "total" }}字·共 {{ len (where .Site.RegularPages "Section" "post") }}篇文章</br><span><p>
 </section>
 
-{{$scratch := newScratch}}
-{{ range (where .Site.Pages "Kind" "page" )}}
-    {{$scratch.Add "total" .WordCount}}
-{{ end }}
