@@ -595,7 +595,7 @@ uglyURLs = false
     disqusShortname = ""
 
     ## Valine
-    enableValine = false
+    enableValine = true
     valineAppId = ""
     valineAppKey = ""
     valinePlaceholder = "Just go go"
@@ -619,7 +619,7 @@ uglyURLs = false
     enableWaline = true
     walineServerURL = "https://sikonn-jc1po88kd-sikonn.vercel.app/"
     walinePlaceholder = "mhzhang0831@gmail.com"
-    walineAvatar = "mp"
+    walineAvatar = "'monsterid'"
     walineMeta = ["nick", "mail", "link"]
     walinePageSize = 10
     walineLang = "zh-CN"
