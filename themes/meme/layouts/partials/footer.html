@@ -81,6 +81,11 @@
     </footer>
 {{ end }}
 
+{{$scratch := newScratch}}
+{{ range (where .Site.Pages "Kind" "page" )}} 
+    {{$scratch.Add "total" .WordCount}}
+{{ end }}
+
 <center>
     <section class="copyright">
         &copy; 
