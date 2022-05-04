@@ -617,7 +617,7 @@ uglyURLs = false
  
     ## Waline
     enableWaline = true
-    walineServerURL = "https://sikonn.vercel.app/"
+    walineServerURL = "https://sikonn-jc1po88kd-sikonn.vercel.app/"
     walinePlaceholder = "mhzhang0831@gmail.com"
     walineAvatar = "mp"
     walineMeta = ["nick", "mail", "link"]
