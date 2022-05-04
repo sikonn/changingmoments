@@ -18,26 +18,7 @@
                     <h1>{{ i18n "pageNotFound" }}</h1>
                     <div class="fof-footer">
                         <a href="{{ print `/` | relLangURL }}">{{ i18n "fofLinkText" }}</a>
-                    </div>
-                    <head>
-                        <!-- ... -->
-                        <script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
-                        <link
-                          rel="stylesheet"
-                          href="https://unpkg.com/@waline/client@v2/dist/waline.css"
-                        />
-                        <!-- ... -->
-                      </head>
-                      <body>
-                        <!-- ... -->
-                        <div id="waline"></div>
-                        <script>
-                          Waline.init({
-                            el: '#waline',
-                            serverURL: 'https://your-domain.vercel.app',
-                          });
-                        </script>
-                      </body>                      
+                    </div>              
                 </div>
             </main>
         </div>
