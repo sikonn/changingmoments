@@ -412,7 +412,7 @@ uglyURLs = false
     # 注意：请遵循格式 https://gohugo.io/functions/format/
 
     # 日期的位置
-    listDatePosition = "right"
+    listDatePosition = "left"
     # 说明：left（左边）或 right（右边）
 
     # 是否按月份分隔列表
@@ -456,7 +456,7 @@ uglyURLs = false
     # Atom & RSS
 
     # 是否包括全文内容
-    includeContent = false
+    includeContent = true
     # 说明：如果否，则只会包含文章的摘要。关于摘
     #      要，Hugo 能按你设置的字数限制自动截
     #      取，你也可以在文章中通过
@@ -477,7 +477,7 @@ uglyURLs = false
     enableDarkMode = true
 
     # 默认模式
-    defaultTheme = "dark（深色模式）"
+    defaultTheme = "dark"
     # 说明：light（浅色模式）或 dark（深色模式）
 
     # 是否隐藏模式切换开关
@@ -614,21 +614,20 @@ uglyURLs = false
     valineEnableQQ = false
     valineRequiredFields = []
     # 说明：https://valine.js.org/
-    
+
     ## Waline
     enableWaline = true
     walineServerURL = "https://comments-sikonn.vercel.app/"
-    walinePlaceholder = "mhzhang0831@gmail.com"
-    walineAvatar = "mp"
+    walineWordLimit = 0
     walineMeta = ["nick", "mail", "link"]
     walinePageSize = 10
     walineLang = "zh-CN"
     walineHighlight = true
-    walineAvatarCDN = "https://cdn.v2ex.com/gravatar/"
-    walineRequiredFields = ["nick", "mail"]
+    walineEmoji = ["https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/weibo", "https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili"]
+    walineRequiredMeta = ["nick", "mail"]
+    walineLogin = "enabled"
+    walineCopyright = true
     # 说明：https://waline.js.org/
-
-
 
     ## Utterances
     enableUtterances = false
