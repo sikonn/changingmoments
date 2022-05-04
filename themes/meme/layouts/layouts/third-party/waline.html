@@ -28,7 +28,7 @@
         };
         new Waline({
             el: '#waline',
-            dark: 'html[data-theme="dark"]',
+            dark: 'html[data-user-color-scheme="dark"]',
             serverURL: '{{ .Site.Params.walineServerURL }}',
             wordLimit: {{ .Site.Params.walineWordLimit }},          
             meta: {{ .Site.Params.walineMeta }},
