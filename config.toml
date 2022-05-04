@@ -1367,3 +1367,41 @@ uglyURLs = false
     fofVideoWebm = ""
     fofVideoMp4 = ""
     # 说明：视频地址可留空（""）
+
+    ## Valine
+    enableValine = false
+    valineAppId = ""
+    valineAppKey = ""
+    valinePlaceholder = "Just go go"
+    valinePath = ""
+    valineAvatar = "mm"
+    valineMeta = ["nick", "mail", "link"]
+    valinePageSize = 10
+    valineLang = "zh-cn"
+    valineVisitor = false
+    valineHighlight = true
+    valineAvatarForce = false
+    valineRecordIP = false
+    valineServerURLs = ""
+    valineEmojiCDN = ""
+    valineEmojiMaps = {}
+    valineEnableQQ = false
+    valineRequiredFields = []
+    # 说明：https://valine.js.org/
+
+    ## Waline
+    enableWaline = true
+    walineServerURL = ""
+    walinePlaceholder = "请填写正确的昵称和邮箱，方便接收评论回复信息哦。"
+    walineAvatar = "mp"
+    walineMeta = ["nick", "mail", "link"]
+    walinePageSize = 10
+    walineLang = "zh-CN"
+    walineHighlight = true
+    walineAvatarCDN = "https://cdn.v2ex.com/gravatar/"
+    walineRequiredFields = ["nick", "mail"]
+    # 说明：https://waline.js.org/
+
+
+
+
