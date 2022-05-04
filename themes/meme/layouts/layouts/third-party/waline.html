@@ -23,7 +23,7 @@
     function newWaline() {
         new Waline({
             el: '#waline',
-            serverURL: '{{ .https://comments-sikonn.vercel.app/ }}',
+            serverURL: '{{ .Site.Params.walineServerURL }}',
             placeholder: '{{ .Site.Params.walinePlaceholder }}',
             avatar: '{{ .Site.Params.walineAvatar }}',
             meta: {{ .Site.Params.walineMeta }},
