@@ -412,7 +412,7 @@ uglyURLs = false
     # 注意：请遵循格式 https://gohugo.io/functions/format/
 
     # 日期的位置
-    listDatePosition = "left"
+    listDatePosition = "right"
     # 说明：left（左边）或 right（右边）
 
     # 是否按月份分隔列表
