@@ -21,17 +21,25 @@
         }
     }
     function newWaline() {
+        const locale = {
+            nick: "浅慕澈天*",
+            mail: "mhzhang0831@gmail.com*",
+            placeholder: "请填写正确的昵称和邮箱，方便接收评论回复信息。若随意填写邮箱地址，发布包括但不限于广告、攻击性、无意义等内容文字，将会视该评论为垃圾评论，作删除处理。"
+        };
         new Waline({
             el: '#waline',
+            dark: 'html[data-theme="dark"]',
             serverURL: '{{ .Site.Params.walineServerURL }}',
-            placeholder: '{{ .Site.Params.walinePlaceholder }}',
-            avatar: '{{ .Site.Params.walineAvatar }}',
+            wordLimit: {{ .Site.Params.walineWordLimit }},          
             meta: {{ .Site.Params.walineMeta }},
             pageSize: {{ .Site.Params.walinePageSize }},
             lang: '{{ .Site.Params.walineLang }}',
             highlight: {{ .Site.Params.walineHighlight }},
-            avatarCDN: '{{ .Site.Params.walineAvatarCDN }}',
-            requiredFields: {{ .Site.Params.walineRequiredFields }}
+            emoji: {{ .Site.Params.walineEmoji }},
+            requiredMeta: {{ .Site.Params.walineRequiredMeta }},
+            login: '{{ .Site.Params.walineLogin }}',
+            copyright: {{ .Site.Params.walineCopyright }},
+            locale
         });
     }
 </script>
