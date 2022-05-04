@@ -37,7 +37,7 @@
     }
 }
 
-@media (prefers-color-scheme: auto) {
+@media (prefers-color-scheme: dark) {
     :root:not([data-theme]) {
         @include dark-theme;
     }
