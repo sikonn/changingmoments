@@ -19,12 +19,12 @@
     title = "Email"
     weight = 2
 
-[[socials]]
-    id = "mastodon"
-    url = "https://me.ns.ci/web/accounts/108128370169473214"
-    icon = "mastodon"
-    title = "mastodon"
-    weight = 3
+#[[socials]]
+#    id = "mastodon"
+#    url = "https://me.ns.ci/web/accounts/108128370169473214"
+#    icon = "mastodon"
+#    title = "mastodon"
+#    weight = 3
 
 [[socials]]
     id = "twitter"
@@ -33,9 +33,9 @@
     title = "Twitter"
     weight = 4
 
-[[socials]]
-    id = "insgram"
-    url = "https://www.instagram.com/soranosorasora/"
-    icon = "insgram"
-    title = "Insgram"
-    weight = 5
+#[[socials]]
+#    id = "insgram"
+#    url = "https://www.instagram.com/soranosorasora/"
+#    icon = "insgram"
+#    title = "Insgram"
+#    weight = 5
