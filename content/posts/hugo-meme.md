@@ -2,7 +2,7 @@
 title: HUGO & MemE | 踩坑实录
 date: 2022-05-02T01:35:26.079Z
 draft: true
-lastmod: 2022-05-02T02:44:35.915Z
+lastmod: 2022-05-04T01:27:39.713Z
 description: ""
 tags:
   - HUGO
@@ -86,18 +86,20 @@ MemE自带文章字数统计，但是没有全站字数统计，但是真的很�
 <center>
     <section class="copyright">
         &copy; 
-        {{ if and (.Site.Params.footer.since) (ne .Site.Params.footer.since (int (now.Format "2022"))) }}
+        {{ if and (.Site.Params.footer.since) (ne .Site.Params.footer.since (int (now.Format "2006"))) }}
             {{ .Site.Params.footer.since }} - 
         {{ end }}
-        {{ now.Format "2022" }} {{ .Site.Title }}
-        <br/>
-        共 {{ len (where .Site.RegularPages "Section" "posts") }} 篇文章
-        {{$scratch := newScratch}}
-        {{ range (where .Site.Pages "Kind" "page" )}}
-            {{$scratch.Add "total" .WordCount}}
-        {{ end }}
-        共嘟嘟了{{ div ($scratch.Get "total") 1000.0 | lang.FormatNumber 2 }}k字.
+        {{ now.Format "2006" }} <a href="https://stack-theme-mod.vercel.app/">浅慕澈天</a>·<i class="fas fa-bell"></i> <a id="days">0</a>Days<br>
+      {{$var :=  $scratch.Get "total"}}{{$var = div $var 100.0}}{{$var = math.Ceil $var}}{{$var = div $var 10.0}}共嘟嘟了{{$var}}k字·共 {{ len (where .Site.RegularPages "Section" "posts") }}篇文章</br><span><p>
     </section>
+    <script>
+        var s1 = '2022-04-27';//设置为建站时间
+        s1 = new Date(s1.replace(/-/g, "/"));
+        s2 = new Date();
+        var days = s2.getTime() - s1.getTime();
+        var number_of_days = parseInt(days / (1000 * 60 * 60 * 24));
+        document.getElementById('days').innerHTML = number_of_days;
+    </script>
 </center>
 ```
 
