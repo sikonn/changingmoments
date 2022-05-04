@@ -1218,13 +1218,13 @@ uglyURLs = false
     # 页脚
 
     # 是否开启
-    enableFooter = false
+    enableFooter = true
 
     # 是否显示
-    displayFooter = false
+    displayFooter = true
 
     # 是否在首页显示
-    displayFooterInHome = false
+    displayFooterInHome = true
 
     displayCopyleftSymbol = false
     # 是否显示版权符号（©）
