@@ -595,7 +595,7 @@ uglyURLs = false
     disqusShortname = ""
 
     ## Valine
-    enableValine = true
+    enableValine = false
     valineAppId = ""
     valineAppKey = ""
     valinePlaceholder = "Just go go"
