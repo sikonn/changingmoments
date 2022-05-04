@@ -84,10 +84,10 @@
 <center>
     <section class="copyright">
         &copy; 
-        {{ if and (.Site.Params.footer.since) (ne .Site.Params.footer.since (int (now.Format ""))) }}
+        {{ if and (.Site.Params.footer.since) (ne .Site.Params.footer.since (int (now.Format "2022"))) }}
             {{ .Site.Params.footer.since }} - 
         {{ end }}
-        {{ now.Format "" }} {{ .Site.Title }}
+        {{ now.Format "2022" }} {{ .Site.Title }}
         <br/>
         共 {{ len (where .Site.RegularPages "Section" "posts") }} 篇文章
         {{$scratch := newScratch}}
