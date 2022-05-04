@@ -1202,13 +1202,13 @@ uglyURLs = false
     enableBackToTop = true
 
     # 是否开启自动隐藏
-    enableBackToTopAutoHide = true
+    enableBackToTopAutoHide = false
 
     # 是否在首页显示
     displayBackToTopInHome = true
 
     # 是否在移动端显示
-    displayBackToTopOnMobile = false
+    displayBackToTopOnMobile = true
 
     # 按钮图标
     backToTopIcon = "arrow-up"
@@ -1258,7 +1258,7 @@ uglyURLs = false
     #      https://busuanzi.ibruce.info/
 
     # 社交链接
-    enableSocials = false
+    enableSocials = true
     # 说明：见 data/Socials.toml
 
 
