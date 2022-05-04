@@ -614,19 +614,6 @@ uglyURLs = false
     valineEnableQQ = false
     valineRequiredFields = []
     # 说明：https://valine.js.org/
- 
-    ## Waline
-    enableWaline = true
-    walineServerURL = "https://sikonn-sikonn.vercel.app/"
-    walinePlaceholder = "mhzhang0831@gmail.com"
-    walineAvatar = "'monsterid'"
-    walineMeta = ["nick", "mail", "link"]
-    walinePageSize = 10
-    walineLang = "zh-CN"
-    walineHighlight = true
-    walineAvatarCDN = "https://cdn.v2ex.com/gravatar/"
-    walineRequiredFields = ["nick", "mail"]
-    # 说明：https://waline.js.org/
 
     ## Utterances
     enableUtterances = false
