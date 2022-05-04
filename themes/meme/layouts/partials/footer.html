@@ -96,11 +96,11 @@
     <script>
       Waline.init({
         el: '#waline',
-        serverURL: 'https://your-domain.vercel.app',
+        serverURL: 'https://comments-sikonn.vercel.app/',
       });
     </script>
   </body>
-  
+
 {{$scratch := newScratch}}
 {{ range (where .Site.Pages "Kind" "page" )}} 
     {{$scratch.Add "total" .WordCount}}
