@@ -1225,7 +1225,7 @@ uglyURLs = false
     # 是否在首页显示
     displayFooterInHome = false
 
-    displayCopyleftSymbol = true
+    displayCopyleftSymbol = false
     # 是否显示版权符号（©）
     displayCopyrightSymbol = false
 
@@ -1233,7 +1233,7 @@ uglyURLs = false
     displaySiteCreatedYear = false
 
     # 年份与作者之间的图标，留空（""）则无
-    iconBetweenYearAndAuthor = "heart"
+    iconBetweenYearAndAuthor = ""
     # 图标颜色
     iconColor = "#00C5CD"
     # 是否开启图标的跳动效果
@@ -1247,7 +1247,7 @@ uglyURLs = false
 
     # 自定义页脚（支持 Markdown）customFooter =  "就在此刻，改变时刻。"
 
-    displayBusuanziSiteUVAndPV = true
+    displayBusuanziSiteUVAndPV = false
     busuanziSiteUVText = "本站访客数"
     busuanziSiteUVIcon = "user"
     busuanziSitePVText = "本站访问量"
@@ -1257,7 +1257,7 @@ uglyURLs = false
     #      https://busuanzi.ibruce.info/
 
     # 社交链接
-    enableSocials = true
+    enableSocials = false
     # 说明：见 data/Socials.toml
 
 
