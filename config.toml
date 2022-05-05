@@ -1,8 +1,8 @@
 ##########################################
 # 站点配置
 
-baseURL = "https://example.com/"
-title = "Hugo 主题 MemE"
+baseURL = "https://changingmoments.vercel.app/"
+title = "欢迎来到我的世界"
 languageCode = "zh-CN"
 hasCJKLanguage = true
 # 版权信息（支持 Markdown）
@@ -37,7 +37,7 @@ enableGitInfo = false
 enableRobotsTXT = true
 
 # 每一分页的文章数（仅对「文章摘要」首页布局有效）
-paginate = 5
+paginate = 10
 
 # URL 相关
 disablePathToLower = false
@@ -96,9 +96,9 @@ uglyURLs = false
 # 作者信息
 [author]
     # 名字
-    name = "reuixiy"
+    name = "浅慕澈天"
     # 邮箱
-    email = "reuixiy@gmail.com"
+    email = "mhzhang0831@gmail.com"
     # 座右铭或简介
     motto = "Viva La Vida"
     # 头像
@@ -106,7 +106,7 @@ uglyURLs = false
     # 网站（默认值：baseURL）
     website = "https://io-oi.me/"
     # 推特
-    twitter = "reuixiy"
+    twitter = ""
 
 # 相关文章
 [related]
@@ -197,38 +197,38 @@ uglyURLs = false
     #     post = "home"
     [[menu.main]]
         pageref = "/posts/"
-        name = "文章"
+        name = "Posts"
         weight = 2
         pre = "internal"
         post = "archive"
-    [[menu.main]]
-        pageref = "/categories/"
-        name = "分类"
-        weight = 3
-        pre = "internal"
-        post = "th"
+    #[[menu.main]]
+    #    pageref = "/categories/"
+    #    name = "分类"
+    #    weight = 3
+    #    pre = "internal"
+    #    post = "th"
     [[menu.main]]
         pageref = "/tags/"
         name = "标签"
         weight = 4
         pre = "internal"
         post = "tags"
-    [[menu.main]]
-        pageref = "/about/"
-        name = "关于"
-        weight = 5
-        pre = "internal"
-        post = "user-circle"
+    #[[menu.main]]
+    #    pageref = "/about/"
+    #    name = "关于"
+    #    weight = 5
+    #    pre = "internal"
+    #    post = "user-circle"
     [[menu.main]]
         weight = 6
         identifier = "theme-switcher"
     [[menu.main]]
         weight = 7
         identifier = "lang-switcher"
-    # [[menu.main]]
-    #     weight = 8
-    #     identifier = "search"
-    #     post = "search"
+    [[menu.main]]
+        weight = 8
+        identifier = "search"
+        post = "search"
 
 
 
@@ -420,7 +420,7 @@ uglyURLs = false
     displayListTitle = true
 
     # 日期的格式
-    listDateFormat = "1 月 2 日"
+    listDateFormat = "1 / 2 "
     # 注意：请遵循格式 https://gohugo.io/functions/format/
 
     # 日期的位置
@@ -428,7 +428,7 @@ uglyURLs = false
     # 说明：left（左边）或 right（右边）
 
     # 是否按月份分隔列表
-    groupByMonth = true
+    groupByMonth = false
 
     # 是否开启十二生肖
     chineseZodiac = true
@@ -489,7 +489,7 @@ uglyURLs = false
     enableDarkMode = true
 
     # 默认模式
-    defaultTheme = "light"
+    defaultTheme = "dark"
     # 说明：light（浅色模式）或 dark（深色模式）
 
     # 是否隐藏模式切换开关
@@ -627,6 +627,20 @@ uglyURLs = false
     valineRequiredFields = []
     # 说明：https://valine.js.org/
 
+    ## Waline
+    enableWaline = true
+    walineServerURL = "https://comments-sikonn.vercel.app/"
+    walineWordLimit = 0
+    walineMeta = ["nick", "mail", "link"]
+    walinePageSize = 10
+    walineLang = "zh-CN"
+    walineHighlight = true
+    walineEmoji = ["https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/weibo", "https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili"]
+    walineRequiredMeta = ["nick", "mail"]
+    walineLogin = "enabled"
+    walineCopyright = true
+    # 说明：https://waline.js.org/
+
     ## Utterances
     enableUtterances = false
     utterancesRepo = ""
@@ -705,9 +719,9 @@ uglyURLs = false
     duration = 0.5
 
     # 浅色模式的主色
-    primaryColorLight = "220, 90%, 56%"
+    primaryColorLight = "180, 60%, 50%"
     # 深色模式的主色
-    primaryColorDark = "201, 65%, 62%"
+    primaryColorDark = "180, 60%, 50%"
     # 注意：只支持 HSL 颜色值
 
     # 文章的内容宽度
@@ -762,7 +776,7 @@ uglyURLs = false
     expiredDateIcon = "calendar-times"
 
     # 是否显示分类
-    displayCategory = true
+    displayCategory = false
     # 分类的图标
     categoryIcon = "folder"
     # 分类之间的分隔符
@@ -866,7 +880,7 @@ uglyURLs = false
     enableImageHost = false
 
     # 图片外链地址
-    imageHostURL = "https://example.com/"
+    imageHostURL = "https://changingmoments.vercel.app/"
 
     # 是否将 HTML 的头部元数据中的图片链接也替换为外链
     headAlso = false
@@ -887,7 +901,7 @@ uglyURLs = false
     enableVideoHost = false
 
     # 视频外链地址
-    videoHostURL = "https://example.com/"
+    videoHostURL = "https://changingmoments.vercel.app/"
 
 
     ######################################
