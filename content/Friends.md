@@ -5,10 +5,9 @@ draft: true
 menu: main
 weight: 60
 comment: false
-lastmod: 2022-05-05T09:53:08.908Z
+lastmod: 2022-05-05T10:26:15.743Z
 description: 快来和我交换友链吧！
 ---
-<center>
 
 ### 我的友链
 
@@ -33,4 +32,3 @@ description: 快来和我交换友链吧！
 #### [落叶地](https://good-luck.vercel.app/)
 
 思绪飘荡于此地
-</center>
