@@ -2,7 +2,7 @@
 title: Waline | 在HUGO&MemE上构建评论区
 date: 2022-05-05T07:13:16.516Z
 draft: true
-lastmod: 2022-05-05T07:13:17.632Z
+lastmod: 2022-05-05T07:24:15.804Z
 description: ""
 tags:
   - HUGO
@@ -38,6 +38,7 @@ tags:
 > ~/layouts/partials/components/comments.html
 ~/layouts/layouts/third-party/script.html
 ~/layouts/layouts/third-party/waline.html
+
 这三个文件夹需要在根目录新建！千万不要跑到meme里面改动！
 
 因为这个文档内容并不是最新的，他的github里有最新内容，我贴在这里
