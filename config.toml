@@ -219,13 +219,13 @@ uglyURLs = false
     #    weight = 5
     #    pre = "internal"
     #    post = "user-circle"
-    [[menu.main]]
-        url = "/blogroll/"
-        name = "Friends"
-        weight = 5
-        pre = "internal"
-        post = "pagelines"
-        identifier = "friends"
+    #[[menu.main]]
+    #    url = "/blogroll/"
+    #    name = "Friends"
+    #    weight = 5
+    #    pre = "internal"
+    #    post = "pagelines"
+    #    identifier = "friends"
     [[menu.main]]
         weight = 6
         identifier = "theme-switcher"
@@ -642,7 +642,7 @@ uglyURLs = false
     walinePageSize = 10
     walineLang = "zh-CN"
     walineHighlight = true
-    walineEmoji = ["https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/weibo", "https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili"]
+    walineEmoji = ["https://cdn.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs", "https://cdn.jsdelivr.net/gh/norevi/blob-emoji-for-waline@2.0/blobs-gif","https://cdn.jsdelivr.net/gh/norevi/blob-emoji-for-waline@2.0/blobs-png"]
     walineRequiredMeta = ["nick", "mail"]
     walineLogin = "enabled"
     walineCopyright = true
