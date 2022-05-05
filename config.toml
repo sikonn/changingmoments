@@ -220,6 +220,12 @@ uglyURLs = false
     #    pre = "internal"
     #    post = "user-circle"
     [[menu.main]]
+        pageref = "/links/"
+        name = "Links"
+        weight = 5
+        pre = "internal"
+        post = "links"
+    [[menu.main]]
         weight = 6
         identifier = "theme-switcher"
     [[menu.main]]
