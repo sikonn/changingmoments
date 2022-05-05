@@ -5,9 +5,11 @@ draft: true
 menu: main
 weight: 60
 comment: false
-lastmod: 2022-05-05T09:48:17.899Z
+lastmod: 2022-05-05T09:51:16.235Z
 description: 快来和我交换友链吧！
 ---
+
+<center>
 
 ### 我的友链
 
@@ -21,14 +23,15 @@ description: 快来和我交换友链吧！
 
 ### 我的赛博邻居
 
-### [Missing不想睡](https://hugo-missingid.vercel.app/)
+#### [Missing不想睡](https://hugo-missingid.vercel.app/)
 
 和我一起做赛博宵夜吧!
 
-### [Muko](https://hugo-mukokka.vercel.app/)
+#### [Muko](https://hugo-mukokka.vercel.app/)
 
 我以前没的选，现在我想做个绝望的文盲。
 
-### [落叶地](https://good-luck.vercel.app/)
+#### [落叶地](https://good-luck.vercel.app/)
 
 思绪飘荡于此地
+</center>
