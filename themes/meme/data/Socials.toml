@@ -14,28 +14,28 @@
 
 [[socials]]
     id = "email"
-    url = "mhzhang0831@gmail.com"
+    url = "mailto:reuixiy@gmail.com"
     icon = "envelope"
     title = "Email"
     weight = 2
 
-#[[socials]]
-#    id = "mastodon"
-#    url = "https://me.ns.ci/web/accounts/108128370169473214"
-#    icon = "mastodon"
-#    title = "mastodon"
-#    weight = 3
+[[socials]]
+    id = "github"
+    url = "https://github.com/reuixiy"
+    icon = "github"
+    title = "GitHub"
+    weight = 3
 
 [[socials]]
     id = "twitter"
-    url = "https://mobile.twitter.com/e9te9sbgovi37XS"
+    url = "https://twitter.com/reuixiy"
     icon = "twitter"
     title = "Twitter"
     weight = 4
 
-#[[socials]]
-#    id = "insgram"
-#    url = "https://www.instagram.com/soranosorasora/"
-#    icon = "insgram"
-#    title = "Insgram"
-#    weight = 5
+[[socials]]
+    id = "telegram"
+    url = "https://t.me/yixiuer"
+    icon = "telegram"
+    title = "Telegram"
+    weight = 5

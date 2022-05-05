@@ -1,8 +1,8 @@
 ##########################################
 # 站点配置
 
-baseURL = "hhttps://changingmoments.vercel.app/"
-title = "欢迎来到我的世界"
+baseURL = "https://example.com/"
+title = "Hugo 主题 MemE"
 languageCode = "zh-CN"
 hasCJKLanguage = true
 # 版权信息（支持 Markdown）
@@ -37,7 +37,7 @@ enableGitInfo = false
 enableRobotsTXT = true
 
 # 每一分页的文章数（仅对「文章摘要」首页布局有效）
-paginate = 10
+paginate = 5
 
 # URL 相关
 disablePathToLower = false
@@ -96,11 +96,11 @@ uglyURLs = false
 # 作者信息
 [author]
     # 名字
-    name = "浅慕澈天"
+    name = "reuixiy"
     # 邮箱
-    email = "mhzhang0831@gmail.com"
+    email = "reuixiy@gmail.com"
     # 座右铭或简介
-    motto = "決して最後まであきらめない"
+    motto = "Viva La Vida"
     # 头像
     avatar = "/icons/apple-touch-icon.png"
     # 网站（默认值：baseURL）
@@ -197,16 +197,28 @@ uglyURLs = false
     #     post = "home"
     [[menu.main]]
         pageref = "/posts/"
-        name = "Posts"
+        name = "文章"
         weight = 2
         pre = "internal"
         post = "archive"
     [[menu.main]]
+        pageref = "/categories/"
+        name = "分类"
+        weight = 3
+        pre = "internal"
+        post = "th"
+    [[menu.main]]
         pageref = "/tags/"
-        name = "Tags"
+        name = "标签"
         weight = 4
         pre = "internal"
         post = "tags"
+    [[menu.main]]
+        pageref = "/about/"
+        name = "关于"
+        weight = 5
+        pre = "internal"
+        post = "user-circle"
     [[menu.main]]
         weight = 6
         identifier = "theme-switcher"
@@ -247,7 +259,7 @@ uglyURLs = false
     # 说明：居中布局（center）或弹性布局（flex）
 
     # 在窄视图下隐藏菜单栏并显示一个按钮？
-    enableNavToggle = false
+    enableNavToggle = true
 
     navHeight = "10em"
     # 说明：菜单栏展开时的高度
@@ -326,12 +338,12 @@ uglyURLs = false
     # 说明：用于 JSON-LD、Open Graph
 
     # 站点的描述
-    siteDescription = "就在此刻，改变时刻。"
+    siteDescription = "MemE 是一个强大且可高度定制的 GoHugo 博客主题，专为个人博客设计。"
     # 说明：用于 HTML 的头部元数据、JSON-LD、
     #      Open Graph、Atom、RSS
 
     # 站点的创建时间
-    siteCreatedTime = "2022-04-27T20:17:43+00:00"
+    siteCreatedTime = "1969-07-20T20:17:43+00:00"
     # 注意：请保持此格式，更改数字
 
     # 站点的推特帐号
@@ -391,7 +403,7 @@ uglyURLs = false
     # 字号单位
     fontUnit = "em"
     # 最大字号
-    largestFontSize = 3
+    largestFontSize = 2.5
     # 最小字号
     smallestFontSize = 1
 
@@ -408,7 +420,7 @@ uglyURLs = false
     displayListTitle = true
 
     # 日期的格式
-    listDateFormat = "1 / 2 "
+    listDateFormat = "1 月 2 日"
     # 注意：请遵循格式 https://gohugo.io/functions/format/
 
     # 日期的位置
@@ -416,13 +428,13 @@ uglyURLs = false
     # 说明：left（左边）或 right（右边）
 
     # 是否按月份分隔列表
-    groupByMonth = false
+    groupByMonth = true
 
     # 是否开启十二生肖
     chineseZodiac = true
 
     # 是否翻译年份（仅对年份标题有效）
-    i18nYear = false
+    i18nYear = true
     # 是否翻译月份（仅对月份标题有效）
     i18nMonth = true
 
@@ -477,7 +489,7 @@ uglyURLs = false
     enableDarkMode = true
 
     # 默认模式
-    defaultTheme = "dark"
+    defaultTheme = "light"
     # 说明：light（浅色模式）或 dark（深色模式）
 
     # 是否隐藏模式切换开关
@@ -583,7 +595,7 @@ uglyURLs = false
     # 说明：仅在生产环境（production）下渲染
 
     # 是否开启（全局设置）
-    enableComments = true
+    enableComments = false
     # 说明：文章的 Front Matter 中的 `comments`
     #      的优先级高于此处
 
@@ -614,20 +626,6 @@ uglyURLs = false
     valineEnableQQ = false
     valineRequiredFields = []
     # 说明：https://valine.js.org/
-
-    ## Waline
-    enableWaline = true
-    walineServerURL = "https://comments-sikonn.vercel.app/"
-    walineWordLimit = 0
-    walineMeta = ["nick", "mail", "link"]
-    walinePageSize = 10
-    walineLang = "zh-CN"
-    walineHighlight = true
-    walineEmoji = ["https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/weibo", "https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili"]
-    walineRequiredMeta = ["nick", "mail"]
-    walineLogin = "enabled"
-    walineCopyright = true
-    # 说明：https://waline.js.org/
 
     ## Utterances
     enableUtterances = false
@@ -707,13 +705,13 @@ uglyURLs = false
     duration = 0.5
 
     # 浅色模式的主色
-    primaryColorLight = "179, 60%, 50%"
+    primaryColorLight = "220, 90%, 56%"
     # 深色模式的主色
-    primaryColorDark = "179, 60%, 50%"
+    primaryColorDark = "201, 65%, 62%"
     # 注意：只支持 HSL 颜色值
 
     # 文章的内容宽度
-    postWidth = 42
+    postWidth = 36
     # 说明：如果留空（""），则用 42 作为默认值
     #      单位：em
 
@@ -754,7 +752,7 @@ uglyURLs = false
     publishedDateIcon = "calendar-alt"
 
     # 是否显示修改时间
-    displayModifiedDate = false
+    displayModifiedDate = true
     # 修改时间的图标
     modifiedDateIcon = "calendar-check"
 
@@ -865,13 +863,13 @@ uglyURLs = false
     #      (~/blog/static/images/meme.jpg)
 
     # 是否开启
-    enableImageHost = true
+    enableImageHost = false
 
     # 图片外链地址
-    imageHostURL = "https://changingmoments.vercel.app/"
+    imageHostURL = "https://example.com/"
 
     # 是否将 HTML 的头部元数据中的图片链接也替换为外链
-    headAlso = true
+    headAlso = false
 
 
     ######################################
@@ -889,7 +887,7 @@ uglyURLs = false
     enableVideoHost = false
 
     # 视频外链地址
-    videoHostURL = "https://changingmoments.vercel.app/"
+    videoHostURL = "https://example.com/"
 
 
     ######################################
@@ -1115,7 +1113,7 @@ uglyURLs = false
     # 文章分享
 
     # 是否开启
-    enablePostShare = false
+    enablePostShare = true
 
     # 是否显示（全局设置）
     displayPostShare = true
@@ -1202,13 +1200,13 @@ uglyURLs = false
     enableBackToTop = true
 
     # 是否开启自动隐藏
-    enableBackToTopAutoHide = false
+    enableBackToTopAutoHide = true
 
     # 是否在首页显示
     displayBackToTopInHome = true
 
     # 是否在移动端显示
-    displayBackToTopOnMobile = true
+    displayBackToTopOnMobile = false
 
     # 按钮图标
     backToTopIcon = "arrow-up"
@@ -1218,35 +1216,36 @@ uglyURLs = false
     # 页脚
 
     # 是否开启
-    enableFooter = false
+    enableFooter = true
 
     # 是否显示
-    displayFooter = false
+    displayFooter = true
 
     # 是否在首页显示
-    displayFooterInHome = false
+    displayFooterInHome = true
 
     displayCopyleftSymbol = false
     # 是否显示版权符号（©）
-    displayCopyrightSymbol = false
+    displayCopyrightSymbol = true
 
     # 是否显示站点的创建年份
-    displaySiteCreatedYear = false
+    displaySiteCreatedYear = true
 
     # 年份与作者之间的图标，留空（""）则无
-    iconBetweenYearAndAuthor = ""
+    iconBetweenYearAndAuthor = "heart"
     # 图标颜色
-    iconColor = "#00C5CD"
+    iconColor = "#f06292"
     # 是否开启图标的跳动效果
-    iconAnimation = false
+    iconAnimation = true
 
     # 是否显示 Hugo 和 MemE 的链接
-    displayPoweredBy = false
+    displayPoweredBy = true
 
     # 是否显示站点的版权信息
-    displaySiteCopyright = false
+    displaySiteCopyright = true
 
-    # 自定义页脚（支持 Markdown）customFooter =  "就在此刻，改变时刻。"
+    # 自定义页脚（支持 Markdown）
+    customFooter = ""
 
     displayBusuanziSiteUVAndPV = false
     busuanziSiteUVText = "本站访客数"
@@ -1266,7 +1265,7 @@ uglyURLs = false
     # 多语言
 
     # 是否开启多语言按钮
-    enableLangToggle = true
+    enableLangToggle = false
 
     # 是否在首页隐藏多语言按钮
     hideLangToggleInHome = false
@@ -1381,7 +1380,3 @@ uglyURLs = false
     fofVideoWebm = ""
     fofVideoMp4 = ""
     # 说明：视频地址可留空（""）
-
-
-
-
