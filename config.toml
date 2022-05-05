@@ -209,7 +209,7 @@ uglyURLs = false
     #    post = "th"
     [[menu.main]]
         pageref = "/tags/"
-        name = "标签"
+        name = "Tags"
         weight = 4
         pre = "internal"
         post = "tags"
