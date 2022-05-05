@@ -219,13 +219,13 @@ uglyURLs = false
     #    weight = 5
     #    pre = "internal"
     #    post = "user-circle"
-    #[[menu.main]]
-    #    url = "/blogroll/"
-    #    name = "Friends"
-    #    weight = 5
-    #    pre = "internal"
-    #    post = "pagelines"
-    #    identifier = "friends"
+    [[menu.main]]
+        url = "/blogroll/"
+        name = "Friends"
+        weight = 5
+        pre = "internal"
+        post = "pagelines"
+        identifier = "friends"
     [[menu.main]]
         weight = 6
         identifier = "theme-switcher"
