@@ -8,13 +8,13 @@
 [[blogroll]]
   name = "Muko"
   url = "https://hugo-mukokka.vercel.app/"
-  avatar = "https://hugo-mukokka.vercel.app/img/avatar_huf38b03914a1374735254c07fad57406f_154583_300x0_resize_box_2.png"
+  avatar = "https://hugo-mukokka.vercel.app/img/avatar.png"
   description = "我以前没的选，现在我想做个绝望的文盲。"
   weight = 2
 
 [[blogroll]]
   name = "落叶地"
   url = "https://good-luck.vercel.app/"
-  avatar = "/images/friends/pwner.jpg"
-  description = "https://good-luck.vercel.app/img/avatar_hu7f60be3216d8dd21550bddf8588278b4_322696_300x0_resize_box_3.png"
+  avatar = "https://good-luck.vercel.app/img/avatar.png"
+  description = "思绪飘荡于此地"
   weight = 3
