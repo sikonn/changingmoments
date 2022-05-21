@@ -334,7 +334,7 @@ uglyURLs = false
     # 站点信息
 
     # 站点的 LOGO
-    siteLogo = "static\icons\favicon.png"
+    siteLogo = "\icons\favicon.png"
     # 说明：用于 JSON-LD、Open Graph
 
     # 站点的描述
