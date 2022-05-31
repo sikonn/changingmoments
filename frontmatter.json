@@ -8,5 +8,6 @@
       "path": "[[workspace]]"
     }
   ],
-  "frontMatter.content.autoUpdateDate": true
+  "frontMatter.content.autoUpdateDate": true,
+  "frontMatter.templates.enabled": false
 }
