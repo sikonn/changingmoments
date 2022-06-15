@@ -2,7 +2,7 @@
 title: HUGO & MemE | 踩坑实录
 date: 2022-05-02T01:35:26.079Z
 draft: true
-lastmod: 2022-05-04T01:27:39.713Z
+lastmod: 2022-06-15T07:45:04.099Z
 description: ""
 tags:
   - HUGO
@@ -80,9 +80,14 @@ hugo new posts/文章名.md
 
 MemE自带文章字数统计，但是没有全站字数统计，但是真的很想知道自己一共写了多少字，所以加上了这一部分。
 
-在themes\meme\layouts\partials\footer.html中改动，需要将config.toml中的页脚关闭，否则会重叠。
+在layouts\partials\footer.html中改动，需要将config.toml中的页脚关闭，否则会重叠。
 
 ```
+ {{$scratch := newScratch}}  
+{{ range (where .Site.Pages "Kind" "page" )}} 
+    {{$scratch.Add "total" .WordCount}}
+{{ end }}
+
 <center>
     <section class="copyright">
         &copy; 
