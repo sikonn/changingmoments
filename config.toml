@@ -2,7 +2,7 @@
 # 站点配置
 
 baseURL = "https://changingmoments.vercel.app/"
-title = "就在此刻，改变时刻"
+title = "蝴蝶"
 languageCode = "zh-CN"
 hasCJKLanguage = true
 # 版权信息（支持 Markdown）
