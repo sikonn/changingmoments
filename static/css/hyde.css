@@ -56,7 +56,7 @@
   .sidebar {
     text-align: center;
     padding: 2rem 1rem;
-    color: rgba(255,255,255,.5);
+    color: rgb(0, 0, 0);
     background-color: #5cccb9;
   }
   @media (min-width: 60em) {
@@ -72,12 +72,12 @@
   
   /* Sidebar links */
   .sidebar a {
-    color: #fff;
+    color: rgb(0, 0, 0);
   }
   
   /* About section */
   .sidebar-about h1 {
-    color: #fff;
+    color: rgb(0, 0, 0);
     margin-top: 0;
     font-family: "Abril Fatface", serif;
     font-size: 3.25rem;
