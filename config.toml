@@ -187,12 +187,6 @@ uglyURLs = false
 #               的值：`theme-switcher`、
 #               `lang-switcher`、`search`）
 
-[Menus]
-  main = [
-      {Name = "Github", URL = "https://github.com/username/"},
-      {Name = "LinkedIn", URL = "https://www.linkedin.com/in/username/"}
-  ]
-
 [menu]
     ## 菜单栏
     # [[menu.main]]
