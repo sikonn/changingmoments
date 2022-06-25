@@ -40,16 +40,16 @@ menu:
       weight: 1
 
     - identifier: archives
-      name: Archives
-      title: Archives
+      name: Posts
+      title: Posts
       url: /posts/
       weight: 2
 
-    - identifier: categories
-      name: Categories
-      title: Categories
-      url: /categories/
-      weight: 3
+    #- identifier: categories
+    #  name: Categories
+    #  title: Categories
+    #  url: /categories/
+    #  weight: 3
 
     - identifier: tags
       name: Tags
@@ -57,15 +57,15 @@ menu:
       url: /tags/
       weight: 4
 
-    - identifier: about
-      name: About
-      title: About
-      url: /about/
-      weight: 5
+    #- identifier: about
+    #  name: About
+    #  title: About
+    #  url: /about/
+    #  weight: 5
 
 
 params:
-  since: 2017
+  since: 2022
   dateFormatToUse: "2006-01-02"
   enablePostCopyright: true
   copyright_link: http://creativecommons.org/licenses/by/4.0/deed.zh
@@ -78,8 +78,8 @@ params:
     langs: ["python", "javascript"] # refer to http://staticfile.org/, search highlight.js, already have highlight.min.js
 
   tag_cloud:
-    min: 8
-    max: 20
+    min: 30
+    max: 30
   # Allows you to specify an override stylesheet
   # put custom.css in $hugo_root_dir/static/
   # customCSS: css/custom.css
@@ -87,7 +87,7 @@ params:
   menuIcons:
     enable: true  # 是否启用导航菜单图标
     home: icon-home-fill
-    archives: icon-archives-fill
+    posts: icon-archives-fill
     categories: icon-folder
     tags: icon-tags
     repository: icon-project
@@ -100,17 +100,17 @@ params:
     enabled: true # Whether to show profile bar
     avatar: avatar.png
     gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
-    author: xiaoheiAh
+    author: 浅慕澈天
     author_title: author title
-    author_description: Good Good Study, Day Day Up~
-    location: Shanghai, China
-    follow: https://github.com/xiaoheiAh
+    author_description: 就在此刻，改变时刻
+    #location: Shanghai, China
+    #follow: https://github.com/xiaoheiAh
     # Social Links
     social:
       links:
-        github: https://github.com/xiaoheiAh
+        github: https://github.com/sikonn
         # weibo: http://weibo.com/{yourid}
-        # twitter: https://twitter.com/
+        twitter: https://mobile.twitter.com/e9te9sbgovi37XS
         # facebook: /
         rss: /index.xml
       link_tooltip: false # enable the social link tooltip, options: true, false
@@ -168,9 +168,9 @@ params:
   # PV
   pv:
     busuanzi:
-      enable: false # 不蒜子统计
+      enable: true # 不蒜子统计
     leancloud:
-      enable: false # leancloud统计
+      enable: true # leancloud统计
       app_id: # leancloud <AppID>
       app_key: # leancloud <AppKey>
 
