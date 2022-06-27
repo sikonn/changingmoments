@@ -63,3 +63,5 @@ description = "Visit blog"
 
 [permalinks]
 posts = "/:year/:month/:title/"
+
+page_view_conter=true
