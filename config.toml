@@ -58,7 +58,7 @@ github = "sikonn"
 
 # The blog button should not be removed.
 [params.blogButton]
-title = "Posts"
+title = "Blog"
 description = "Visit blog"
 
 [permalinks]
