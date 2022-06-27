@@ -1,5 +1,5 @@
 # Basic
-title = "Vno Hugo"
+title = "蝴蝶"
 baseURL = "https://changingmoments.vercel.app/"
 theme = "vno-hugo"
 
