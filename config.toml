@@ -23,12 +23,18 @@ paginatePath = "page"
     weight = 20
 [taxonomies]
     tag = "tags"
+ [[menu.main]]
+    name = "Pages"
+    identifier = "Pages"
+    url = "/https://changingmoments.vercel.app/"
+    weight = 20    
+    
     
 [params]
-author = "onevcat"
-subtitle = "A blog-orientation theme for Hugo"
-description = "Vno Hugo is a port of Vno Jekyll."
-welcomeMessage = "Oh What a World"
+author = "蝴蝶"
+subtitle = "就在此刻，改变时刻"
+description = "日记，思考，感受."
+welcomeMessage = "欢迎来到我的世界"
 
 # supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
 coverColor = ""
@@ -45,15 +51,15 @@ repo = ""
 owner = ""
 
 [params.social]
-weibo = "onevcat"
-github = "onevcat"
-twitter = "onevcat"
-gplus = "107108267983477358170"
-mail = "onev@onevcat.com"
+#weibo = "onevcat"
+github = "sikonn"
+#twitter = "onevcat"
+#gplus = "107108267983477358170"
+#mail = "onev@onevcat.com"
 
-[params.ga]
-ID = "your_ga_id"
-host = "your_host"
+#[params.ga]
+#ID = "your_ga_id"
+#host = "your_host"
 
 # The blog button should not be removed.
 [params.blogButton]
