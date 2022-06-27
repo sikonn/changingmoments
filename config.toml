@@ -16,8 +16,6 @@ paginatePath = "page"
     identifier = "posts"
     url = "/posts/"
     weight = 10
-[taxonomies]
-    post = "posts"
  [[menu.main]]
     name = "Tags"
     identifier = "Tags"
