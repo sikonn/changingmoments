@@ -11,23 +11,18 @@ paginatePath = "page"
   home = ["HTML", "RSS"]
 
 [menu]
-  [[menu.main]]
-    name = "Posts"
-    identifier = "posts"
-    url = "/posts/"
-    weight = 10
  [[menu.main]]
     name = "Tags"
     identifier = "Tags"
     url = "/tags/"
-    weight = 20
+    weight = 10
 [taxonomies]
     tag = "tags"
  [[menu.main]]
     name = "Friends"
     identifier = "Friends"
     url = "https://changingmoments.vercel.app/2022/04/friends/"
-    weight = 10
+    weight = 20
     
     
 [params]
