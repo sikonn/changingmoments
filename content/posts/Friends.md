@@ -2,18 +2,18 @@
 title: Friends
 date: 2022-04-28T19:06:26+08:00
 draft: true
-lastmod: 2022-06-27T13:44:34.730Z
+lastmod: 2022-06-27T14:08:40.765Z
 ---
 
 ### 我的友链
 
-昵称：sikonn
+昵称：チョウ
 
 网址：https://changingmoments.vercel.app/
 
-简介：但愿来自内心的东西能够真心诚意地维持下去。
+简介：就在此刻，改变时刻
 
-头像：https://me.ns.ci/system/accounts/avatars/108/128/370/169/473/214/original/dc23f05b3fc773a5.gif
+头像：https://ramen-fsm.eu.org/@food
 
 ### 我的赛博邻居
 
