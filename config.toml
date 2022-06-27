@@ -1,6 +1,6 @@
 # Basic
 title = "Vno Hugo"
-baseURL = "https://vno-hugo.netlify.app/"
+baseURL = "https://changingmoments.vercel.app/"
 theme = "vno-hugo"
 
 # Pagination
