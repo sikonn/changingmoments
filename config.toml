@@ -57,9 +57,9 @@ github = "sikonn"
 #host = "your_host"
 
 # The blog button should not be removed.
-[params.blogButton]
-title = "Blog"
-description = "Visit blog"
+#[params.blogButton]
+#title = "Blog"
+#description = "Visit blog"
 
 [permalinks]
 posts = "/:year/:month/:title/"
