@@ -12,9 +12,9 @@ paginatePath = "page"
 
 [menu]
   [[menu.main]]
-    name = "Posts"
-    identifier = "posts"
-    url = "posts"
+    name = "Post"
+    identifier = "post"
+    url = "/post/"
     weight = 10
  [[menu.main]]
     name = "Tags"
