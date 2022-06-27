@@ -23,6 +23,11 @@ paginatePath = "page"
     weight = 20
 [taxonomies]
     tag = "tags"
+ [[menu.main]]
+    name = "Friends"
+    identifier = "Friends"
+    url = "https://changingmoments.vercel.app/2022/04/friends/"
+    weight = 10
     
     
 [params]

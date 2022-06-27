@@ -2,10 +2,9 @@
 title: Friends
 date: 2022-04-28T19:06:26+08:00
 draft: true
-menu: main
 weight: 60
 comment: false
-lastmod: 2022-05-05T10:26:15.743Z
+lastmod: 2022-06-27T13:40:22.973Z
 description: 快来和我交换友链吧！
 ---
 
