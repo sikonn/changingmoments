@@ -23,11 +23,6 @@ paginatePath = "page"
     weight = 20
 [taxonomies]
     tag = "tags"
- [[menu.main]]
-    name = "首页"
-    identifier = "首页"
-    url = "/https://changingmoments.vercel.app/"
-    weight = 50    
     
     
 [params]
