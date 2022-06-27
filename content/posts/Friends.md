@@ -2,7 +2,7 @@
 title: Friends
 date: 2022-04-28T19:06:26+08:00
 draft: true
-lastmod: 2022-06-27T15:32:55.495Z
+lastmod: 2022-06-27T15:34:10.144Z
 ---
 ### 我的赛博邻居
 
@@ -17,7 +17,7 @@ lastmod: 2022-06-27T15:32:55.495Z
 #### [落叶地](https://good-luck.vercel.app/)
 思绪飘荡于此地
 
-> ### ！欢迎在下方评论区留言交换友链！
+> ### 在下方评论区留言交换友链——！
 > 昵称：チョウ 
 > 
 > 网址：https://changingmoments.vercel.app/ 
