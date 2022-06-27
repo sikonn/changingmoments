@@ -2,8 +2,8 @@
 title: HUGO & MemE | 踩坑实录
 date: 2022-05-02T01:35:26.079Z
 draft: true
-lastmod: 2022-06-15T07:45:04.099Z
-description: ""
+lastmod: 2022-06-27T16:09:46.400Z
+layout: post ""
 tags:
   - HUGO
   - MemE
@@ -120,7 +120,7 @@ menu: main
 weight: 60
 comment: false
 lastmod: 2022-05-01T15:05:39.756Z
-description: 
+layout: post 
 ---
 ```
 只要添加menu：true就可以在菜单栏显示了！如果以后还想添加什么也可以照这个方法做。
