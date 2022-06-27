@@ -1,26 +1,43 @@
 {{ define "main" }}
-<article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
-    <header class="post-header">
-        <div class="post-meta">
-            <time datetime="{{ .Date.Format " 2006-01-02 15:04:05 -0700 " }}" itemprop="datePublished" class="post-meta__date date">{{ .Date.Format "2006-01-02" }}</time>
-            {{ with .Params.tags }} <span class="post-meta__tags tags"> {{ range . }}  • <a href="{{ "tags" | absURL }}/{{ . | urlize }}">{{ . }}</a> {{ end }} </span> {{ end }}
-        </div>
-        <h1 class="post-title">{{ .Title }}</h1>
-    </header>
-    <section class="post">
-        {{ range (.Site.RegularPages.GroupByDate "2006") }}
-    <h3>{{ .Key }}</h3>
+<main class="main" role="main">
+    <article class="post">
+        <header class="post__header">
+            <h1 class="post__title">{{ .Title }}</h1>
+            {{- with .Params.lead }}
+            <p class="post__lead">{{ . }}</p>
+            {{- end }}
+            {{ with partial "post_meta.html" . -}}
+            <div class="post__meta meta">{{ . }}</div>
+            {{- end }}
+        </header>
+        {{- if .Params.thumbnail }}
+        <figure class="post__thumbnail">
+            <img src="{{ .Params.thumbnail | relURL }}" alt="{{ .Title }}">
+        </figure>
+        {{- end }}
+        {{- partial "post_toc.html" . -}}
+        <div class="content post__content clearfix">
+            {{ range (.Site.RegularPages.GroupByDate "2006") }}
+            <h3>{{ .Key }}</h3>
 
-        <ul class="archive-list">
-        {{ range (where .Pages "Type" "post") }}
-            <li>
-            {{ .PublishDate.Format "2006-01-02" }}
-            ->
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-            </li>
+            <ul class="archive-list">
+                {{ range (where .Pages "Type" "post") }}
+                    <li>
+                        {{ .PublishDate.Format "2006-01-02" }}
+                        ->
+                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    </li>
+                {{ end }}
+            </ul>
         {{ end }}
-    </ul>
-{{ end }}
-    </section>
-</article>
+        </div>
+        {{- if .Params.tags }}
+        <footer class="post__footer">
+            {{ partial "post_tags.html" . }}
+        </footer>
+        {{- end }}
+    </article>
+</main>
+{{ partial "authorbox.html" . }}
+{{ partial "comments.html" . }}
 {{ end }}
