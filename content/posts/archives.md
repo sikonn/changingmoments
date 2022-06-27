@@ -1,9 +1,9 @@
 ---
-title: Archives
-layout: archives
-hidden: true
-type: posts
-summary: 历史文章按照年月归档.
-url: /archives/
-lastmod: 2022-06-27T14:59:26.199Z
+title: Archive
+type: archive
+menu:
+  main:
+    name: Archive
+    weight: 1
+lastmod: 2022-06-27T15:11:04.621Z
 ---
