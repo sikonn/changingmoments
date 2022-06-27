@@ -65,6 +65,6 @@ description = "Visit blog"
 posts = "/:year/:month/:title/"
 
 # Site settings
-languageCode = "zh-cn"
+languageCode = "en-us"
 # 网站有 CJK 字符（中日韩统一表意文字），设置 hasCJKLanguage = true 
 hasCJKLanguage = true 
