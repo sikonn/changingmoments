@@ -28,7 +28,7 @@ paginatePath = "page"
 [params]
 author = "蝴蝶"
 subtitle = "就在此刻，改变时刻"
-description = "日记，思考，感受."
+description = "日记，思考，感受，书影，野球."
 welcomeMessage = "欢迎来到我的世界"
 
 # supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
