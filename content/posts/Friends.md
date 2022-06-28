@@ -2,8 +2,8 @@
 layout: post
 title: Friends
 date: 2022-04-28T19:06:26+08:00
-draft: true
-lastmod: 2022-06-28T00:41:22.579Z
+draft: false
+lastmod: 2022-06-28T01:00:02.689Z
 ---
 ### 我的赛博邻居
 

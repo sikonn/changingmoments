@@ -1,8 +1,8 @@
 ---
 title: HUGO & MemE | 踩坑实录
 date: 2022-05-02T01:35:26.079Z
-draft: true
-lastmod: 2022-06-27T16:13:22.690Z
+draft: false
+lastmod: 2022-06-28T01:00:02.774Z
 layout: post
 tags:
   - HUGO
@@ -115,7 +115,7 @@ MemE自带文章字数统计，但是没有全站字数统计，但是真的很�
 ---
 title: Friends
 date: 2022-04-28T19:06:26+08:00
-draft: true
+draft: false
 menu: main
 weight: 60
 comment: false

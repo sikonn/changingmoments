@@ -1,8 +1,8 @@
 ---
 title: HUGO&MemE&Waline | 踩坑实录
 date: 2022-05-05T07:13:16.516Z
-draft: true
-lastmod: 2022-06-27T16:13:22.656Z
+draft: false
+lastmod: 2022-06-28T01:00:02.755Z
 layout: post
 tags:
   - HUGO
