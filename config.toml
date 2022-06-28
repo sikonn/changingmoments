@@ -22,7 +22,7 @@ paginatePath = "page"
  [[menu.main]]
     name = "Friends"
     identifier = "Friends"
-    url = "https://changingmoments.vercel.app/2022/04/friends/"
+    url = "http://localhost:1313/2022/04/friends/"
     weight = 20
     
     
