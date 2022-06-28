@@ -3,7 +3,7 @@ layout: post
 title: Friends
 date: 2022-04-28T19:06:26+08:00
 draft: false
-lastmod: 2022-06-28T01:05:15.264Z
+lastmod: 2022-06-28T02:20:27.150Z
 ---
 ### 我的赛博邻居
 
@@ -15,7 +15,18 @@ lastmod: 2022-06-28T01:05:15.264Z
 
 [**谢谢所有的鱼**](https://gregueria.icu/):Hope my veins will bleed out of beautiful words.
 
+[**小球飞鱼**](https://mantyke.icu/):我们会一起遇见鲸鱼吗？
+
+[**一片痴心俱成灰**](https://akaito.xyz/):跳跃式移动，电波系发言。
+
+[**咖啡冰河**](https://blog.mysto.cyou/):无感而发，随性而谈
+
+[**红豆年糕汤**](https://bibli.info/):咯咯哒
+
+[**Mengru**](https://mengru.space/):Mengru在互联网上的小小角落
+
 > ### 在下方评论区留言交换友链——！
+> 
 > 昵称：チョウ 
 > 
 > 网址：https://changingmoments.vercel.app/ 
