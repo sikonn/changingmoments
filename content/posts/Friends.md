@@ -3,10 +3,8 @@ layout: post
 title: Friends
 date: 2022-04-28T19:06:26+08:00
 draft: false
-lastmod: 2022-06-28T02:20:27.150Z
+lastmod: 2022-06-28T02:21:48.446Z
 ---
-### 我的赛博邻居
-
 [**Missing不想睡**](https://hugo-missingid.vercel.app/):和我一起做赛博宵夜吧!
 
 [**Muko**](https://hugo-mukokka.vercel.app/):我以前没的选，现在我想做个绝望的文盲。
