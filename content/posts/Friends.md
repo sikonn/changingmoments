@@ -3,7 +3,7 @@ layout: post
 title: Friends
 date: 2022-04-28T19:06:26+08:00
 draft: true
-lastmod: 2022-06-27T16:21:00.665Z
+lastmod: 2022-06-28T00:41:22.579Z
 ---
 ### 我的赛博邻居
 
@@ -17,6 +17,9 @@ lastmod: 2022-06-27T16:21:00.665Z
 
 #### [落叶地](https://good-luck.vercel.app/)
 思绪飘荡于此地
+
+#### [谢谢所有的鱼](https://gregueria.icu/)
+Hope my veins will bleed out of beautiful words.
 
 > ### 在下方评论区留言交换友链——！
 > 昵称：チョウ 
