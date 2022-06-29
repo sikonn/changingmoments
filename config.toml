@@ -78,3 +78,5 @@ description = "Visit blog"
 
 [permalinks]
 posts = "/:year/:month/:title/"
+
+prefers-color-scheme: dark
