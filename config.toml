@@ -28,18 +28,21 @@ paginatePath = "page"
     name = "Albums"
     weight = 20
  [[menu.main]]
-    name = "1.飯"
+    name = "-飯"
     identifier = "Albums"
+    parent = "Albums"
     url = "https://ramen-fsm.eu.org/tags/%E5%A4%A9%E5%A4%A9%E7%9B%BC%E7%9D%80%E5%90%83%E9%A5%AD"
     weight = 1
  [[menu.main]]
-    name = "2.夢"
+    name = "-夢"
     identifier = "Albums"
+    parent = "Albums"
     url = "https://ramen-fsm.eu.org/tags/%E5%A4%A9%E5%A4%A9%E6%A2%A6%E6%B8%B8%E4%BB%99%E5%A2%83"
     weight = 2
  [[menu.main]]
-    name = "3.楽"
+    name = "-楽"
     identifier = "Albums"
+    parent = "Albums"
     url = "https://ramen-fsm.eu.org/tags/%E5%9D%A0%E8%90%BD%E5%A4%A9%E8%BE%B9%E7%9A%84%E5%BF%AB%E4%B9%90%E7%A2%8E%E7%89%87"
     weight = 3
     
