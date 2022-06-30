@@ -26,6 +26,7 @@ paginatePath = "page"
     weight = 30
  [[menu.main]]
     name = "Albums"
+    dentifier = "Albums"
     weight = 20
  [[menu.main]]
     name = "-飯"
