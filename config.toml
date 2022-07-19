@@ -49,9 +49,9 @@ welcomeMessage = "欢迎来到我的世界"
 # supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
 coverColor = ""
 
-#[params.comment]
-#disqus = "vno-hugo"
-#duoshuo = ""
+[params.comment]
+disqus = "vno-hugo"
+duoshuo = ""
 
 # Take a look on https://github.com/gitalk/gitalk#usage for more info.
 [params.comment.gitalk]
