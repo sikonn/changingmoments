@@ -67,9 +67,9 @@ github = "sikonn"
 #gplus = "107108267983477358170"
 #mail = "onev@onevcat.com"
 
-#[params.ga]
-#ID = "your_ga_id"
-#host = "your_host"
+[params.ga]
+ID = "your_ga_id"
+host = "your_host"
 
 # The blog button should not be removed.
 [params.blogButton]
