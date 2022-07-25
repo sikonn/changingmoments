@@ -54,22 +54,22 @@ disqus = "vno-hugo"
 duoshuo = ""
 
 # Take a look on https://github.com/gitalk/gitalk#usage for more info.
-[params.comment.gitalk]
-ID = ""
-secret = ""
-repo = ""
-owner = ""
+#[params.comment.gitalk]
+#ID = ""
+#secret = ""
+#repo = ""
+#owner = ""
 
 [params.social]
 #weibo = "onevcat"
 github = "sikonn"
 #twitter = "onevcat"
 #gplus = "107108267983477358170"
-#mail = "onev@onevcat.com"
+mail = "changingmoments.tyou@gmail.com"
 
-[params.ga]
-ID = "your_ga_id"
-host = "your_host"
+#[params.ga]
+#ID = "your_ga_id"
+#host = "your_host"
 
 # The blog button should not be removed.
 [params.blogButton]
