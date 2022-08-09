@@ -3,7 +3,7 @@ layout: post
 title: Friends
 date: 2022-04-28T19:06:26+08:00
 draft: false
-lastmod: 2022-08-07T13:00:23.818Z
+lastmod: 2022-08-09T13:55:23.118Z
 ---
 [**Missing不想睡**](https://hugo-missingid.vercel.app/):和我一起做赛博宵夜吧!
 
@@ -23,7 +23,7 @@ lastmod: 2022-08-07T13:00:23.818Z
 
 [**Mengru**](https://mengru.space/):Mengru在互联网上的小小角落
 
-[**是小菜啊**](https://blog-shixiaocaia.vercel.app/):Stay hungry,Stay foolish.
+[**Shixiaocaia**](https://shixiaocaia.fun):道阻且长。
 
 [**手倦拋書午夢長**](https://www.shingireservation.com/):Some random stuff.
 
