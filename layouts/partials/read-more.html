@@ -6,7 +6,7 @@
         <p class="excerpt">{{ .Next.Summary | truncate 70}}&hellip;</p>
         <div class="post-list__meta">
             <time datetime="{{ .Date.Format " 2006-01-02 15:04:05 -0700" }}" class="post-list__meta--date date">{{ .Next.Date.Format "2006-01-02" }}</time>
-            {{ with .Last.Params.tags }} <span class="post-list__meta--tags tags"> {{ range . }}  • <a href="{{ "tags" | absURL }}/{{ . | urlize }}">{{ . }}</a> {{ end }} </span> {{ end }}
+            {{ with .Next.Params.tags }} <span class="post-list__meta--tags tags"> {{ range . }}  • <a href="{{ "tags" | absURL }}/{{ . | urlize }}">{{ . }}</a> {{ end }} </span> {{ end }}
             <a class="btn-border-small" href="{{ .Last.RelPermalink }}">more...</a>
         </div>
     </div>
