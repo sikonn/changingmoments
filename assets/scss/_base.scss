@@ -132,7 +132,7 @@ code {
     font-size: 15px;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
-    background-color: #eef;
+    background-color: rgb(0, 0, 0);
 }
 
 code {
@@ -210,12 +210,12 @@ pre {
  */
 details {
     border-radius: 3px;
-    background: $gray-lighter;
+    background: $primary-color-dark;
     margin: 1em 0;
   }
   
   summary {
-    background: $gray-light;
+    background: $primary-color-dark;
     color: $gray-darkest;
     border-radius: 3px;
     padding: 5px 10px;
@@ -223,7 +223,7 @@ details {
   }
   
   details[open] summary {
-    background: $primary-color;
+    background: $primary-color-dark;
     color: $gray-lightest;
   }
   
