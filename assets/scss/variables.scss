@@ -1,11 +1,11 @@
 
-$gray-lightest:     #333333;
-$gray-lighter:      #666666;
-$gray-light:        #999999;
+$gray-lightest:     #F8F8F8;
+$gray-lighter:      #EEEEEE;
+$gray-light:        #DDDDDD;
 $gray:              #CCCCCC;
-$gray-dark:         #DDDDDD;
-$gray-darker:       #EEEEEE;
-$gray-darkest:      #F8F8F8;
+$gray-dark:         #999999;
+$gray-darker:       #666666;
+$gray-darkest:      #333333;
 
 $green:             #156F78;
 $purple:            #493252;
@@ -21,8 +21,8 @@ $primary-color-dark:#22272E;
 $secondary-color-dark:#ADBAC7;
 
 $link-color:        $primary-color;
-$hover-color:       darken($gray-lightest, 100%);
-$body-color:        darken($gray-lightest, 100%);
+$hover-color:       darken($gray-darkest, 15%);
+$body-color:        darken($gray-darkest, 15%);
 
 $sans-font:         "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
 $serif-font:        "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
