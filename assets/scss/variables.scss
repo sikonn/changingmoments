@@ -21,7 +21,7 @@ $primary-color-dark:#22272E;
 $secondary-color-dark:#ADBAC7;
 
 $link-color:        $primary-color;
-$hover-color:       darken($link-color, 15%);
+$hover-color:       darken($gray-lightest, 100%);
 $body-color:        darken($gray-lightest, 100%);
 
 $sans-font:         "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
