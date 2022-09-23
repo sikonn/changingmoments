@@ -27,7 +27,7 @@ enableCodeCopy = true
 
 [article]
   showDate = true
-  #showViews = false
+  showViews = false
   showDateUpdated = false
   showAuthor = true
   showBreadcrumbs = true
