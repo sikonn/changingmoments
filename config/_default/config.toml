@@ -1,10 +1,8 @@
-theme = "blowfish"
-
 # -- Site Configuration --
 # Refer to the theme docs for more details about each of these parameters.
 # https://nunocoracao.github.io/blowfish/docs/getting-started/
 
-# baseURL = "https://changingmoments.vercel.app/"
+# baseURL = "https://your_domain.com/"
 defaultContentLanguage = "en"
 
 enableRobotsTXT = true
