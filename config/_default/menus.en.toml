@@ -28,7 +28,7 @@
 [[main]]
   name = "Friends"
   url = "https://changingmoments.vercel.app/posts/friends/"
-  weight = 20
+  weight = 30
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before
