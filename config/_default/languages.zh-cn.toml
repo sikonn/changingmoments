@@ -1,7 +1,7 @@
-languageCode = "ch"
+languageCode = "zh-cn"
 languageName = "Chinese"
-displayName = "CN"
-isoCode = "cn"
+displayName = "ZH-CN"
+isoCode = "zh-cn"
 weight = 1
 rtl = false
 
