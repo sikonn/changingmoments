@@ -6,10 +6,10 @@ hasCJKLanguage = true
 # https://nunocoracao.github.io/blowfish/docs/getting-started/
 
 # baseURL = "https://changingmoments.vercel.app/"
-defaultContentLanguage = "en"
+defaultContentLanguage = "zh-cn"
 
 enableRobotsTXT = true
-paginate = 20
+paginate = 7
 summaryLength = 30
 
 buildDrafts = false
