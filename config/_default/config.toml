@@ -5,7 +5,7 @@ theme = "blowfish"
 # https://nunocoracao.github.io/blowfish/docs/getting-started/
 
 # baseURL = "https://changingmoments.vercel.app/"
-defaultContentLanguage = "en"
+defaultContentLanguage = "ch"
 
 enableRobotsTXT = true
 paginate = 20
