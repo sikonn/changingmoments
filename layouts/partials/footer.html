@@ -1,3 +1,6 @@
+
+
+
 {{$scratch := newScratch}}  
 {{ range (where .Site.Pages "Kind" "page" )}} 
     {{$scratch.Add "total" .WordCount}}
@@ -21,3 +24,6 @@
         document.getElementById('days').innerHTML = number_of_days;
     </script>
 </center>
+
+
+
