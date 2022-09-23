@@ -14,7 +14,7 @@ dateFormat = "2 January 2006"
 
 [author]
   name = "チョウ"
-  image = "img/blowfish_logo.png"
+  image = "assets\author.jpg"
   headline = "天天开心"
   bio = "A little bit about you"
   # links = [
