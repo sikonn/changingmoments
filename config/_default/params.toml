@@ -16,10 +16,10 @@ enableCodeCopy = true
 # robots = ""
 
 [footer]
-  showCopyright = true
-  showThemeAttribution = true
-  showAppearanceSwitcher = true
-  showScrollToTop = true
+  showCopyright = false
+  showThemeAttribution = false
+  showAppearanceSwitcher = false
+  showScrollToTop = false
 
 [homepage]
   layout = "profile" # valid options: page, profile, custom
