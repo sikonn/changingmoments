@@ -14,7 +14,7 @@ dateFormat = "2 January 2006"
 
 [author]
   name = "チョウ"
-  image = "static\images\apple-touch-icon.png"
+  image = "static\images\android-chrome-192x192.png"
   headline = "天天开心"
   bio = "A little bit about you"
   # links = [
