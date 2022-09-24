@@ -19,4 +19,6 @@ dateFormat = "2 January 2006"
   bio = "to my world"
   links = [
     { email = "changingmoments.tyou@gmail.com" },
+    { github = "https://github.com/sikonn" },
+    { mastodon = "https://ramen-fsm.tk/web/@food" },
   ]
