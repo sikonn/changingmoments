@@ -13,10 +13,9 @@ description = "Another perfect day"
 dateFormat = "2 January 2006"
 
 [author]
-  name = "欢迎来到我的世界"
+  name = "Welcome"
   image = "img/blowfish_logo.png"
-  headline = "创作是有力量的，在创作中我接纳自己的情绪，用这份力量来滋养自己，也发出呼喊，我们还拥有可以发声的口，除此之外已无路可走。"
-  bio = "真的是一只蝴蝶"
+  headline = "RUN AND REBEL"
   links = [
     { email = "mailto:hello@your_domain.com" },
   ]
