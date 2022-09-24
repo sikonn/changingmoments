@@ -3,7 +3,7 @@ layout: post
 title: Friends
 date: 2022-04-28T19:06:26+08:00
 draft: false
-lastmod: 2022-08-09T13:55:23.118Z
+lastmod: 2022-09-24T17:13:35.020Z
 ---
 [**Missing不想睡**](https://hugo-missingid.vercel.app/):和我一起做赛博宵夜吧!
 
@@ -31,7 +31,7 @@ lastmod: 2022-08-09T13:55:23.118Z
 
 [**Sbeam.dev**](https://sbeam.dev/):Tech, life and open discussion
 
-> ### 在下方评论区留言交换友链——！
+> ### 交换友链——！
 > 
 > 昵称：チョウ 
 > 
