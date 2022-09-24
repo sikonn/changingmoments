@@ -14,7 +14,7 @@ dateFormat = "2 January 2006"
 
 [author]
   name = "暂时是一只河豚"
-  image = "static/author.png"
+  image = "img/blowfish_logo.png"
   headline = "蝴蝶不知道被谁施了魔咒"
   bio = "但是真的是一只蝴蝶"
   links = [
