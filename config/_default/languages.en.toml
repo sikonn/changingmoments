@@ -6,7 +6,7 @@ weight = 1
 rtl = false
 
 title = "蝴蝶曾在此处"
-# logo = "static/images/favicon.png"
+# logo = "resources\_gens\images\blowfish_logo.png"
 description = "就在此刻，改变时刻"
 # copyright = "Copy, _right?_ :thinking_face:"
 
@@ -14,7 +14,7 @@ dateFormat = "2 January 2006"
 
 [author]
   name = "チョウ"
-  image = "assets/author.png"
+  image = "resources\_gens\images\blowfish_logo.png"
   headline = "天天开心"
   bio = "A little bit about you"
   # links = [
