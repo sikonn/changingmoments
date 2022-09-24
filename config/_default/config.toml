@@ -9,7 +9,7 @@ hasCJKLanguage = true
 defaultContentLanguage = "en"
 
 enableRobotsTXT = true
-paginate = 7
+paginate = 6
 summaryLength = 30
 
 buildDrafts = false
