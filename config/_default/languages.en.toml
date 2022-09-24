@@ -5,20 +5,20 @@ isoCode = "en"
 weight = 1
 rtl = false
 
-title = "蝴蝶曾在此处"
-# logo = "resources\_gens\images\blowfish_logo.png"
-description = "就在此刻，改变时刻"
+title = "Blowfish"
+# logo = "img/logo.png"
+description = "My awesome website"
 # copyright = "Copy, _right?_ :thinking_face:"
 
 dateFormat = "2 January 2006"
 
 [author]
-  name = "チョウ"
-  image = "resources/_gens/images/blowfish_logo.png"
-  headline = "天天开心"
+  name = "Your name here"
+  image = "img/blowfish_logo.png"
+  headline = "I'm only human"
   bio = "A little bit about you"
   # links = [
-  #   { email = "changingmoments.tyou@gmail.com" },
+  #   { email = "mailto:hello@your_domain.com" },
   #   { link = "https://link-to-some-website.com/" },
   #   { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
   #   { apple = "https://www.apple.com" },
