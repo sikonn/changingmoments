@@ -6,9 +6,9 @@ weight = 1
 rtl = false
 
 title = "蝴蝶曾在此处"
-# logo = "img/logo.png"
+logo = "img/logo.png"
 description = "Another perfect day"
-# copyright = "Copy, _right?_ :thinking_face:"
+copyright = "Copy, _right?_ :thinking_face:"
 
 dateFormat = "2 January 2006"
 
