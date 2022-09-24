@@ -16,6 +16,7 @@ dateFormat = "2 January 2006"
   name = "Welcome"
   image = "img/blowfish_logo.png"
   headline = "RUN AND REBEL"
+  bio = "to my world"
   links = [
     { email = "changingmoments.tyou@gmail.com" },
   ]
