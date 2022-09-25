@@ -13,7 +13,7 @@ description = "Another perfect day"
 dateFormat = "2 January 2006"
 
 [author]
-  name = "東京ヤクルトスワローズ二連覇おめでとうございます！"
+  # name = "東京ヤクルトスワローズ二連覇おめでとうございます！"
   # image = "img/blowfish_logo.png"
   headline = "![1](/img/20220925_223534.jpg)"
   bio = "to tyou's world"
