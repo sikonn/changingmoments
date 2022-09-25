@@ -15,7 +15,7 @@ dateFormat = "2 January 2006"
 [author]
   name = "Welcome"
   image = "img/blowfish_logo.png"
-  headline = "RUN AND REBEL"
+  headline = "RUN AND REBEL ![tsuba](/img/20220925_220204.jpg)"
   bio = "to tyou's world"
   links = [
     { email = "changingmoments.tyou@gmail.com" },
