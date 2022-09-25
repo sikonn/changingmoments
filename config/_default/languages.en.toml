@@ -13,9 +13,9 @@ description = "Another perfect day"
 dateFormat = "2 January 2006"
 
 [author]
-  name = "Welcome"
-  image = "img/blowfish_logo.png"
-  headline = "RUN AND REBEL ![tsuba](/img/20220925_220204.jpg)"
+  name = "東京ヤクルトスワローズ二連覇おめでとうございます！"
+  # image = "img/blowfish_logo.png"
+  headline = "![1](/img/20220925_223534.jpg)"
   bio = "to tyou's world"
   links = [
     { email = "changingmoments.tyou@gmail.com" },
