@@ -3,7 +3,7 @@ layout: post
 title: Friends
 date: 2022-04-28T19:06:26+08:00
 draft: false
-lastmod: 2022-09-24T17:13:35.020Z
+lastmod: 2022-09-28T09:51:40.020Z
 ---
 [**Missing不想睡**](https://hugo-missingid.vercel.app/):和我一起做赛博宵夜吧!
 
@@ -30,6 +30,8 @@ lastmod: 2022-09-24T17:13:35.020Z
 [**漫游者某某号**](https://notion-next-six-henna.vercel.app/):那么就向繁星更深处启程吧
 
 [**Sbeam.dev**](https://sbeam.dev/):Tech, life and open discussion
+
+[**小触手的书房**](https://heiheihei.ca/):艺用笔记博客
 
 > ### 交换友链——！
 > 

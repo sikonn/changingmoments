@@ -6,6 +6,10 @@
     {
       "title": "changingmoments",
       "path": "[[workspace]]"
+    },
+    {
+      "title": "content\\posts",
+      "path": "[[workspace]]/.frontmatter"
     }
   ],
   "frontMatter.content.autoUpdateDate": true,
