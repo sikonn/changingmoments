@@ -5,7 +5,7 @@ isoCode = "en"
 weight = 1
 rtl = false
 
-title = "東京ヤクルトスワローズ"
+title = "蝴蝶曾在此处"
 # logo = "img/blowfish_logo_transparent.png"
 description = "Another perfect day"
 # copyright = "Copy, _right?_ :thinking_face:"
@@ -13,9 +13,9 @@ description = "Another perfect day"
 dateFormat = "2 January 2006"
 
 [author]
-  name = "🎉二連覇おめでとうございます🍻！"
-  # image = "img/blowfish_logo.png"
-  headline = "![1](/img/20220925_223534.jpg)"
+  name = "WELCOME！"
+  image = "img/blowfish_logo.png"
+  headline = "RUN AND REBEL)"
   bio = "to tyou's world"
   links = [
     { email = "changingmoments.tyou@gmail.com" },
