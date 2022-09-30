@@ -11,7 +11,7 @@
 # ordered by weight from lowest to highest.
 
 [[main]]
-  name = "POSTS"
+  name = "Posts"
   pageRef = "posts"
   weight = 10
 
@@ -21,12 +21,12 @@
 #  weight = 20
 
 [[main]]
-  name = "TAGS"
+  name = "Tags"
   pageRef = "tags"
   weight = 20
 
 [[main]]
-  name = "FRIENDS"
+  name = "Friends"
   url = "https://changingmoments.vercel.app/posts/friends/"
   weight = 30
 
