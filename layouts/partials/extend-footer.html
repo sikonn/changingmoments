@@ -10,7 +10,7 @@
             {{ .Site.Params.footer.since }} - 
         {{ end }}
         {{ now.Format "2006" }} <a href="https://stack-theme-mod.vercel.app/">チョウ</a>·<i class="fas fa-bell"></i> <a id="days">0</a>Days<br>
-      {{$var :=  $scratch.Get "total"}}{{$var = div $var 100.0}}{{$var = math.Ceil $var}}{{$var = div $var 10.0}}共嘟嘟了{{$var}}k字·共 {{ len (where .Site.RegularPages "Section" "posts") }}篇文章</br><span><p>
+      {{$var :=  $scratch.Get "total"}}{{$var = div $var 100.0}}{{$var = math.Ceil $var}}{{$var = div $var 10.0}}共创作了{{$var}}k字えらい！・共 {{ len (where .Site.RegularPages "Section" "posts") }}篇文章よしよし！</br><span><p>
     </section>
     <script>
         var s1 = '2022-04-27';//设置为建站时间
