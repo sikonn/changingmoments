@@ -1,13 +1,3 @@
-@font-face {
-    font-family: font;
-    src: url('/fonts/font.ttf');
-}
-
-html {
-    font-family: font;
-}
-
-  
 <style>
   :root {
     --sys-font-family: "Noto Serif SC";

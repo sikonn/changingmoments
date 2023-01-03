@@ -1,1 +1,10 @@
-<link href="https://fonts.googleapis.com/css?family=Noto Serif SC:400,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+@font-face {
+    font-family: font;
+    src: url('/fonts/font.ttf');
+}
+
+html {
+    font-family: font;
+}
+
+  
