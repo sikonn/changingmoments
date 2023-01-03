@@ -3,7 +3,7 @@ layout: post
 title: Friends
 date: 2022-04-28T19:06:26+08:00
 draft: false
-lastmod: 2023-01-03T02:02:10.988Z
+lastmod: 2023-01-03T12:26:00.203Z
 ---
 [**Missing不想睡**](https://hugo-missingid.vercel.app/):和我一起做赛博宵夜吧!
 
@@ -34,6 +34,8 @@ lastmod: 2023-01-03T02:02:10.988Z
 [**小触手的书房**](https://heiheihei.ca/):艺用笔记博客
 
 [**呆呆不是槑**](http://clear0804.vercel.app):梦想是实现旺仔牛奶自由
+
+[**一只脆脆鲨**](http://woods.sharktale.xyz/):遇见一只脆脆鲨
 
 > ### 交换友链——！
 > 
