@@ -31,7 +31,7 @@ enableCodeCopy = true
 
 [homepage]
   layout = "background" # valid options: page, profile, hero, card, background, custom
-  #homepageImage = "IMAGE.jpg" # used in: hero, and card
+  #homepageImage = "static\img\MVIMG_20230102_183712.jpg" # used in: hero, and card
   showRecent = true
   showRecentItems = 5
   showMoreLink = true
@@ -39,7 +39,6 @@ enableCodeCopy = true
   cardView = true
   cardViewScreenWidth = true
   layoutBackgroundBlur = false # only used when layout equals background
-  homepage.homepageImage = static\img\MVIMG_20230102_183712.jpg
 
 [article]
   showDate = true
