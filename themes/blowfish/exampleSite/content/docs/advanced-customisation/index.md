@@ -5,6 +5,8 @@ draft: false
 description: "Learn how to build Blowfish manually."
 slug: "advanced-customisation"
 tags: ["advanced", "css", "docs"]
+series: ["Documentation"]
+series_order: 13
 ---
 
 There are many ways you can make advanced changes to Blowfish. Read below to learn more about what can be customised and the best way of achieving your desired result.
@@ -28,6 +30,24 @@ The correct way to adjust any theme behaviour is by overriding files using Hugo'
 For example, if you wanted to override the main article template in Blowfish, you can simply create your own `layouts/_default/single.html` file and place it in the root of your project. This file will then override the `single.html` from the theme without ever changing the theme itself. This works for any theme files - HTML templates, partials, shortcodes, config files, data, assets, etc.
 
 As long as you follow this simple practice, you will always be able to update the theme (or test different theme versions) without worrying that you will lose any of your custom changes.
+
+## Change image optimization settings
+
+Hugo has various builtin methods to resize, crop and optimize images.
+
+As an example - in `layouts/partials/article-link/card.html`, you have the following code:
+
+```go
+{{ with .Fill "600x600" }}
+<div class="w-full thumbnail_card nozoom" style="background-image:url({{ .RelPermalink }});"></div>
+{{ end }}
+```
+
+The default behavior of Hugo here is to use Smartcrop to dynamically set the anchor point (crop placement) on the image and resize it to fill 600x600px.
+
+It is worth noting here that default image configurations such as [anchor point](https://gohugo.io/content-management/image-processing/#anchor) can also be set in your [site configuration](https://gohugo.io/content-management/image-processing/#processing-options) as well as in the template itself.
+
+See the [Hugo docs on image processing](https://gohugo.io/content-management/image-processing/#image-processing-methods) for more info.
 
 ## Colour schemes
 
@@ -54,6 +74,35 @@ Use one of the existing theme stylesheets as a template. You are free to define 
 Sometimes you need to add a custom style to style your own HTML elements. Blowfish provides for this scenario by allowing you to override the default styles in your own CSS stylesheet. Simply create a `custom.css` file in your project's `assets/css/` folder.
 
 The `custom.css` file will be minified by Hugo and loaded automatically after all the other theme styles which means anything in your custom file will take precedence over the defaults.
+
+### Using additional fonts
+
+Blowfish allows you to easily change the font for your site. After creating a `custom.css` file in your project's `assets/css/` folder, place you font file inside a `fonts` folder withing the `static` root folder.
+
+```shell
+.
+├── assets
+│   └── css
+│       └── custom.css
+...
+└─── static
+    └── fonts
+        └─── font.ttf
+
+```
+
+This makes the font available to the website. Now, the font can just import it in your `custom.css` and replaced wherever you see fit. The example below shows what replacing the font for the entire `html` would look like.
+
+```css
+@font-face {
+    font-family: font;
+    src: url('/fonts/font.ttf');
+}
+
+html {
+    font-family: font;
+}
+```
 
 ### Adjusting the font size
 
@@ -121,7 +170,7 @@ In order to take advantage of the default configuration, your project should loo
 │       └── _index.md
 ├── layouts  # custom layouts for your site
 │   ├── partials
-│   │   └── extend-article-link.html
+│   │   └── extend-article-link/simple.html
 │   ├── projects
 │   │   └── list.html
 │   └── shortcodes

@@ -1,9 +1,11 @@
 ---
-title: "Welcome to Blowfish 🐡"
+title: "Welcome to Blowfish"
 date: 2022-01-19
 draft: false
 description: "Discover what's new in Blowfish version 2.0."
 tags: ["new", "docs"]
+series: ["Documentation"]
+series_order: 1
 ---
 
 {{< lead >}}
@@ -75,5 +77,3 @@ The new image resizing features also provide full control over `alt` and `title`
 ## A whole lot more
 
 There's countless other features to explore. From being able to display taxonomies on articles and list pages, to using the new `headline` author parameter to customise your homepage. There's also improved JSON-LD strucured data which further optimises SEO performance. 
-
----

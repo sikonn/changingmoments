@@ -15,6 +15,9 @@ article:
   views:
     one: "{{ .Count }} visualização"
     other: "{{ .Count }} visualizaçōes"
+  part_of_series: "This article is part of a series."
+  part: "Part"
+  this_article: "This Article"
 
 author:
   byline_title: "Autor"
@@ -56,3 +59,6 @@ sharing:
 
 shortcode:
   recent_articles: "Recente"
+
+recent:
+  show_more: "Mostrar Mais"

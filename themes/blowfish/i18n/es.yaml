@@ -12,6 +12,9 @@ article:
   word_count:
     one: "{{ .Count }} palabra"
     other: "{{ .Count }} palabras"
+  part_of_series: "Este artículo es parte de una serie."
+  part: "Parte"
+  this_article: "Este artículo"
 
 author:
   byline_title: "Autor"
@@ -53,3 +56,6 @@ sharing:
 
 shortcode:
   recent_articles: "Reciente"
+
+recent:
+  show_more: "Mostrar Más"
