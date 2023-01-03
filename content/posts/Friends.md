@@ -3,7 +3,7 @@ layout: post
 title: Friends
 date: 2022-04-28T19:06:26+08:00
 draft: false
-lastmod: 2022-12-31T02:19:07.637Z
+lastmod: 2023-01-03T02:02:10.988Z
 ---
 [**Missing不想睡**](https://hugo-missingid.vercel.app/):和我一起做赛博宵夜吧!
 
@@ -39,7 +39,7 @@ lastmod: 2022-12-31T02:19:07.637Z
 > 
 > 昵称：チョウ 
 > 
-> 网址：https://changingmoments.vercel.app/ 
+> 网址：https://changingmoments.one
 > 
 > 简介：就在此刻，改变时刻 
 > 
