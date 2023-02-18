@@ -1,10 +1,10 @@
 @font-face {
-  font-family: NotoSerifSC;
+  font-family: Noto Serif SC;
   src: url('/fonts/font.ttf');
 }
 
 html {
-  font-family: NotoSerifSC;
+  font-family: Noto Serif SC;
 }
 
 /* Increase the default font size */
