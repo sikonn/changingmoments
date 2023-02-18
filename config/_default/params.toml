@@ -66,7 +66,7 @@ enableCodeCopy = true
   showAuthorsBadges = true
   showWordCount = true
   showSummary = true
-  # sharingLinks = [ "linkedin", "twitter", "reddit", "pinterest", "facebook", "email"]
+  sharingLinks = false
 
 [list]
   #showHero = true
