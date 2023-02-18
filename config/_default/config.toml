@@ -36,17 +36,3 @@ buildFuture = false
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
-
-    ## Waline
-    enableWaline = true
-    walineServerURL = "https://comments-sikonn.vercel.app/"
-    walineWordLimit = 0
-    walineMeta = ["nick", "mail", "link"]
-    walinePageSize = 10
-    walineLang = "zh-CN"
-    walineHighlight = true
-    walineEmoji = ["https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/weibo", "https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/bilibili"]
-    walineRequiredMeta = ["nick", "mail"]
-    walineLogin = "enabled"
-    walineCopyright = true
-    # 说明：https://waline.js.org/
