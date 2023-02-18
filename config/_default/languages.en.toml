@@ -10,7 +10,7 @@ title = "蝴蝶曾在此处"
 description = "Another perfect day"
 # copyright = "Copy, _right?_ :thinking_face:"
 
-dateFormat = "2006/1/2"
+dateFormat = "2006/01/02"
 
 [author]
   name = "TYOU"
