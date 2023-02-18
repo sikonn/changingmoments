@@ -3,10 +3,13 @@ layout: post
 tags:
   - 天天盼着吃饭
 title: 食谱 | 我的年度食谱
+series:
+  - recipes
+series_order: 1
 date: 2022-12-28T14:01:35.343Z
 math: false
 draft: false
-lastmod: 2023-01-03T13:12:14.730Z
+lastmod: 2023-02-18T11:56:02.049Z
 ---
 ## 早餐
 
