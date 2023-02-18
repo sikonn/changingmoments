@@ -1,3 +1,17 @@
+@font-face {
+    font-family: 'Noto Serif SC', serif;
+    src: url('/fonts/font.ttf');
+}
+
+html {
+    font-family: 'Noto Serif SC', serif;
+}
+
+/* Increase the default font size */
+html {
+  font-size: 13pt;
+}
+
 <style>
 	@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap');
   </style>
