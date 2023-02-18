@@ -27,7 +27,7 @@
 
 [[main]]
   name = "Friends"
-  url = "https://changingmoments.vercel.app/posts/friends/"
+  url = "https://changingmoments.one/posts/friends/"
   weight = 30
 
 # -- Footer Menu --
