@@ -1,8 +1,0 @@
-@font-face {
-    font-family: 'Noto Serif SC', serif;
-    src: url('/fonts/font.otf');
-}
-
-html {
-    font-family: 'Noto Serif SC', serif;
-}
