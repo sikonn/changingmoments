@@ -1,8 +1,8 @@
 @font-face {
-    font-family: Noto_Serif_SC;
+    font-family: 'Noto Serif SC', serif;
     src: url('/fonts/font.otf');
 }
 
 html {
-    font-family: Noto_Serif_SC;
+    font-family: 'Noto Serif SC', serif;
 }
