@@ -3,7 +3,7 @@ layout: post
 title: Friends
 date: 2022-04-28T19:06:26+08:00
 draft: false
-lastmod: 2023-02-09T03:23:33.086Z
+lastmod: 2023-06-11T17:31:21.884Z
 ---
 [**Missing不想睡**](https://hugo-missingid.vercel.app/):和我一起做赛博宵夜吧!
 
@@ -36,6 +36,8 @@ lastmod: 2023-02-09T03:23:33.086Z
 [**呆呆不是槑**](https://graugris.icu/):梦想是实现旺仔牛奶自由
 
 [**一只脆脆鲨**](http://woods.sharktale.xyz/):遇见一只脆脆鲨
+
+[**盐**](sunnkynews.icu/):想要一块芝士碱水球吗
 
 > ### 交换友链——！
 > 
