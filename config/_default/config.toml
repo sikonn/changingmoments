@@ -1,6 +1,3 @@
-theme = "blowfish"
-hasCJKLanguage = true
-
 # -- Site Configuration --
 # Refer to the theme docs for more details about each of these parameters.
 # https://blowfish.page/docs/getting-started/
@@ -8,12 +5,13 @@ hasCJKLanguage = true
 # theme = "blowfish"
 # baseURL = "https://changingmoments.one/"
 defaultContentLanguage = "en"
+hasCJKLanguage = true
 
 # pluralizeListTitles = "true" # hugo function useful for non-english languages, find out more in  https://gohugo.io/getting-started/configuration/#pluralizelisttitles
 
 enableRobotsTXT = true
-paginate = 12
-summaryLength = 0
+paginate = 20
+summaryLength = 30
 
 buildDrafts = false
 buildFuture = false

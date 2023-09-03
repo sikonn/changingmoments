@@ -25,10 +25,6 @@
   pageRef = "tags"
   weight = 20
 
-[[main]]
-  name = "Friends"
-  url = "https://changingmoments.one/posts/friends/"
-  weight = 30
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before
@@ -57,7 +53,7 @@
 [[footer]]
   name = "Yakult—swallows"
   url = "https://ramen-fsm.eu.org/tags/%E3%83%A4%E3%82%AF%E3%83%AB%E3%83%88%E3%82%B9%E3%83%AF%E3%83%AD%E3%83%BC%E3%82%BA"
-
+  
 [[footer]]
   name = "推し"
   url = "https://ramen-fsm.eu.org/tags/%E6%8E%A8%E3%81%97%E3%81%97%E3%81%8B%E5%8B%9D%E3%81%9F%E3%82%93"
@@ -65,3 +61,14 @@
 [[footer]]
   name = "猫"
   url = "https://ramen-fsm.eu.org/tags/%E8%99%8E%E7%9A%AE%E8%9B%8B%E7%B3%95%E5%91%BC%E5%99%9C%E5%8D%B7"
+
+
+# [[footer]]
+#   name = "Tags"
+#   pageRef = "tags"
+#   weight = 10
+
+# [[footer]]
+#   name = "Categories"
+#   pageRef = "categories"
+#   weight = 20

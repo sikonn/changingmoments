@@ -7,7 +7,7 @@
 
 colorScheme = "avocado"
 defaultAppearance = "dark" # valid options: light or dark
-autoSwitchAppearance = false
+autoSwitchAppearance = true
 
 enableSearch = true
 enableCodeCopy = true
@@ -47,7 +47,6 @@ enableCodeCopy = true
   showDateUpdated = false
   showAuthor = true
   showHero = true
-  showComments = true
   heroStyle = "background" # valid options: basic, big, background, thumbAndBackground
   layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
   layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
@@ -65,8 +64,8 @@ enableCodeCopy = true
   showTaxonomies = true
   showAuthorsBadges = true
   showWordCount = true
-  showSummary = true
-  sharingLinks = false
+  showSummary = false
+  #sharingLinks = [ "linkedin", "twitter", "reddit", "pinterest", "facebook", "email"]
 
 [list]
   #showHero = true
@@ -74,7 +73,7 @@ enableCodeCopy = true
   #layoutBackgroundBlur = true # only used when heroStyle equals background or thumbAndBackground
   #layoutBackgroundHeaderSpace = true # only used when heroStyle equals background
   showBreadcrumbs = false
-  showSummary = true
+  showSummary = false
   #showViews = true
   #showLikes = true
   showTableOfContents = false
