@@ -6,7 +6,7 @@ title: 旅行 | 旅行是一件不会后悔的事情
 date: 2023-08-04T02:02:24.897Z
 math: false
 draft: false
-lastmod: 2023-09-03T16:54:55.455Z
+lastmod: 2023-09-03T17:01:15.753Z
 ---
 
 在疫情之前，暑假寒假的旅游是一种日常。疫情三年，我都要忘记旅行是什么感觉了，甚至可能有一部分的自己在说“我本来就喜欢呆在家里”。如果不是今年频繁的旅行，我旅行的快乐就会“被”抹去吧。
@@ -26,12 +26,12 @@ lastmod: 2023-09-03T16:54:55.455Z
 > 后来觉得，真的是一个融合的特别好的地方，适应的特别好的地方，尽心，舒服，却又商业化，这样的古城还是第一个。
 >
 {{< gallery >}}
-  <img src="IMG_6588.JPG" class="grid-w33" />
-  <img src="IMG_6629.JPG" class="grid-w33" />
-  <img src="IMG_6634.JPG" class="grid-w33" />
-  <img src="01037e187dca1b90477841ab8f090609b163b39b2d.jpg" class="grid-w33" />
-  <img src="01a63592f4a0b3feeadedace7d5f99de1e37274569.jpg" class="grid-w33" />
-  <img src="018ce0b3398ad14e3bfe956799b9c03fc54798e307.jpg" class="grid-w33" />
+  <img src="img/IMG_6588.JPG" class="grid-w33" />
+  <img src="img/IMG_6629.JPG" class="grid-w33" />
+  <img src="img/IMG_6634.JPG" class="grid-w33" />
+  <img src="img/01037e187dca1b90477841ab8f090609b163b39b2d.jpg" class="grid-w33" />
+  <img src="img/01a63592f4a0b3feeadedace7d5f99de1e37274569.jpg" class="grid-w33" />
+  <img src="img/018ce0b3398ad14e3bfe956799b9c03fc54798e307.jpg" class="grid-w33" />
   <img src="img/0186e6e5522d3f63afa5a30e14ad0c3a854a4dcda1.jpg" class="grid-w33" />
 {{< /gallery >}}
 
