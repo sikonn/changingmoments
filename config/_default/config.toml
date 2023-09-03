@@ -2,8 +2,8 @@
 # Refer to the theme docs for more details about each of these parameters.
 # https://blowfish.page/docs/getting-started/
 
-# theme = "blowfish"
-# baseURL = "https://changingmoments.one/"
+theme = "blowfish"
+baseURL = "https://changingmoments.one/"
 defaultContentLanguage = "en"
 hasCJKLanguage = true
 
