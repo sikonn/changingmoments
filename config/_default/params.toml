@@ -131,3 +131,5 @@ enableCodeCopy = true
   # bing = ""
   # pinterest = ""
   # yandex = ""
+
+enableimgloop: true
