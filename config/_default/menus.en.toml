@@ -25,6 +25,10 @@
   pageRef = "tags"
   weight = 20
 
+[[main]]
+  name = "Friends"
+  url = "https://changingmoments.one/posts/friends/"
+  weight = 30
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before
