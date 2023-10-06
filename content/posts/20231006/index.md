@@ -2,14 +2,14 @@
 layout: post
 tags:
   - 天天的快乐日记
-title: 月记 | 9月:踏上人生新旅途
+title: 月记 | 9月:人生就是在摆烂后冲刺
 series:
   - monthly
 series_order: 9
 date: 2023-10-06T04:15:28.966Z
 math: false
 draft: false
-lastmod: 2023-10-06T06:33:21.996Z
+lastmod: 2023-10-06T06:40:52.120Z
 ---
 再来趁热打铁写一下九月月记！有热情的时候就要快点开始！
 
