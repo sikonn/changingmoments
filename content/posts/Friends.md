@@ -3,7 +3,7 @@ layout: post
 title: Friends
 date: 2022-04-28T19:06:26+08:00
 draft: false
-lastmod: 2023-06-24T15:13:41.805Z
+lastmod: 2024-01-18T03:33:20.868Z
 ---
 [**Missing不想睡**](https://hugo-missingid.vercel.app/):和我一起做赛博宵夜吧!
 
@@ -38,6 +38,10 @@ lastmod: 2023-06-24T15:13:41.805Z
 [**一只脆脆鲨**](http://woods.sharktale.xyz/):遇见一只脆脆鲨
 
 [**盐**](http://sunnkynews.icu/):想要一块芝士碱水球吗
+
+[**晴空**](https://www.summeringway.icu/):像鸟儿编辑它们的飞行一般书写。
+
+[**一支咏叹调**](https://turquoise.one/):SONGS ABOUT TURQUOISE
 
 > ### 交换友链——！
 > 
