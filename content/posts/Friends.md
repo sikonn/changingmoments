@@ -51,4 +51,4 @@ lastmod: 2024-01-18T03:33:20.868Z
 > 
 > 简介：就在此刻，改变时刻 
 > 
-> 头像：https://changingmoments.vercel.app/images/avatar.jpg
+> 头像：https://changingmoments.one/images/avatar.jpg
