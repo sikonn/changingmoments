@@ -15,12 +15,18 @@ enableCodeCopy = true
 mainSections = ["docs"]
 # robots = ""
 
-disableImageOptimization = true
+disableImageOptimization = false
+disableTextInHeader = false
 
-defaultBackgroundImage = "/img/iceland.jpg"
+defaultBackgroundImage = "/img/ocean.jpg"
+defaultFeaturedImage = "/img/ocean.jpg"
+
+highlightCurrentMenuArea = true
+smartTOC = true
+smartTOCHideUnfocusedChildren = false
 
 [header]
-  layout = "fixed" # valid options: basic, fixed
+  layout = "fixed" # valid options: basic, fixed, fixed-fill, fixed-fill-blur
 
 [footer]
   showMenu = true
@@ -31,9 +37,9 @@ defaultBackgroundImage = "/img/iceland.jpg"
 
 [homepage]
   layout = "custom" # valid options: page, profile, hero, card, background, custom
-  homepageImage = "/img/iceland.jpg" # used in: hero, and card
+  # homepageImage = "/img/iceland.jpg" # used in: hero, and card
   showRecent = false
-  showRecentItems = 10
+  showRecentItems = 12
   showMoreLink = true
   showMoreLinkDest = "docs"
   cardView = false
@@ -60,11 +66,13 @@ defaultBackgroundImage = "/img/iceland.jpg"
   invertPagination = false
   showReadingTime = true
   showTableOfContents = true
+  showRelatedContent = true
+  relatedContentLimit = 6
   showTaxonomies = true 
   showAuthorsBadges = true 
   showWordCount = false
-  showSummary = true
-  sharingLinks = [ "linkedin", "twitter", "reddit", "pinterest", "facebook", "email"]
+  sharingLinks = [ "linkedin", "twitter", "reddit", "whatsapp", "telegram", "pinterest", "facebook", "email"]
+  showZenMode = true
 
 [list]
   showHero = true
@@ -80,9 +88,10 @@ defaultBackgroundImage = "/img/iceland.jpg"
   groupByYear = false
   cardView = true
   cardViewScreenWidth = false
+  constrainItemsWidth = false
 
 [sitemap]
-  excludedKinds = ["taxonomy","term"]
+  excludedKinds = []
 
 [taxonomy]
   showTermCount = true
@@ -93,7 +102,6 @@ defaultBackgroundImage = "/img/iceland.jpg"
   showLikes = true
   showTableOfContents = true
   cardView = false
-
 
 [term]
   showHero = true
@@ -106,7 +114,6 @@ defaultBackgroundImage = "/img/iceland.jpg"
   cardView = true
   cardViewScreenWidth = false
   
-
 [firebase]
   apiKey = "AIzaSyB5tqlqDky77Vb4Tc4apiHV4hRZI18KGiY"
   authDomain = "blowfish-21fff.firebaseapp.com"

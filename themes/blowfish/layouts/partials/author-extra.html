@@ -1,8 +1,11 @@
-<div class="flex mt-4">
+{{ $disableImageOptimization := .Site.Params.disableImageOptimization | default false }}
+<div class="flex author author-extra mt-4">
   {{ with .data.image }}
   {{ $authorImage := resources.Get . }}
   {{ if $authorImage }}
-  {{ $authorImage := $authorImage.Fill "192x192" }}
+  {{ if not $disableImageOptimization }}
+  {{ $authorImage = $authorImage.Fill "192x192" }}
+  {{ end }}
   <img class="!mt-0 !mb-0 h-24 w-24 rounded-full ltr:mr-4 rtl:ml-4" width="96" height="96"
     src="{{ $authorImage.RelPermalink }}" />
   {{ end }}
@@ -13,7 +16,7 @@
     <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
       {{ i18n "author.byline_title" | markdownify | emojify }}
     </div>
-    <a {{ if $link }} href="{{ $link }}" target="_blank" {{ end }} class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+    <a {{ if $link }} href="{{ $link }}" {{ end }} class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
       {{ . }}
     </a>
     {{ end }}

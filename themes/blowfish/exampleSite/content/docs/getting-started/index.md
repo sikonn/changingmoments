@@ -13,6 +13,15 @@ series_order: 3
 This section assumes you have already [installed the Blowfish theme]({{< ref "docs/installation" >}}).
 {{< /alert >}}
 
+</br>
+{{< alert "fire" >}}
+We just launched a CLI tool to help you get started with Blowfish. It will help you with installation and configuration. Install the CLI tool globally using:
+```bash
+npx blowfish-tools
+```
+{{< /alert >}}
+
+
 The config files that ship with Blowfish contain all of the possible settings that the theme recognises. By default, many of these are commented out but you can simply uncomment them to activate or change a specific feature.
 
 ## Basic configuration
@@ -189,15 +198,67 @@ The `name` parameter specifies the text that is used in the menu link. You can a
 
 The `pageRef` parameter allows you to easily reference Hugo content pages and taxonomies. It is the quickest way to configure the menu as you can simply refer to any Hugo content item and it will automatically build the correct link. To link to external URLs, the `url` parameter can be used.
 
-The `pre` parameter allows you to place an icon from [Blowfish's icon set](http://localhost:1313/samples/icons/) on the menu entry. This parameter can be used with `name` parameter or by itself. If you want to use multiple menu entries with just icons please set the `identifier`parameter otherwise Hugo will default to the naming tag as the id and probably not display all the menu entries.
+The `pre` parameter allows you to place an icon from [Blowfish's icon set]({{< ref "samples/icons" >}}) on the menu entry. This parameter can be used with `name` parameter or by itself. If you want to use multiple menu entries with just icons please set the `identifier`parameter otherwise Hugo will default to the naming tag as the id and probably not display all the menu entries.
 
 Menu links will be sorted from lowest to highest `weight`, and then alphabetically by `name`.
 
 Both menus are completely optional and can be commented out if not required. Use the template provided in the file as a guide.
 
+### Nested menus
+
+The theme also supports nested menus. In order to use them you just need to define a parent entry in `menu.toml` and its sub-menus using the `parent` parameter to reference the parent. All properties can be used for sub-menus. `pageRef` and `url` can also be used in the parent entry. Nested menus are only available in the main menu not for the footer.
+
+```toml
+# config/_default/menus.toml
+
+[[main]]
+  name = "Parent"
+  weight = 20
+
+[[main]]
+  name = "sub-menu 1"
+  parent = "Parent"
+  pageRef = "samples"
+  weight = 20
+
+[[main]]
+  name = "sub-menu 2"
+  parent = "Parent"
+  pageRef = "samples"
+  weight = 20
+
+[[main]]
+  name = "sub-menu 3"
+  parent = "Parent"
+  pre = "github"
+  pageRef = "samples"
+  weight = 20
+```
+
+### Sub-Navigation menu
+
+Additionally, you can also configure a sub-navigation menu. Just define new menu entries as `subnavigation` in `menus.toml`.
+This will render a second line with sub-categories below the main header menu.
+
+```toml
+# config/_default/menus.toml
+
+[[subnavigation]]
+  name = "An interesting topic"
+  pageRef = "tags/interesting-topic"
+  weight = 10
+
+[[subnavigation]]
+  name = "My Awesome Category"
+  pageRef = "categories/awesome"
+  weight = 20
+```
+
+The default `name` is the `pageRef` title cased.
+
 ## Thumbnails & Backgrounds
 
-Blowfish was built so it would be easy to add visual support to your articles. If your familiar with Hugo article strucutre, you just need to place an image file (almost all formats are supported bue we recommend `.png` or `.jpg`) that starts with `feature*` inside your article folder. And that's it, Blowfish will then able to both use the image as a thumbnail within your website as well as for <a target="_blank" href="https://oembed.com/">oEmbed</a> cards across social platforms. 
+Blowfish was built so it would be easy to add visual support to your articles. If your familiar with Hugo article structure, you just need to place an image file (almost all formats are supported but we recommend `.png` or `.jpg`) that starts with `feature*` inside your article folder. And that's it, Blowfish will then able to both use the image as a thumbnail within your website as well as for <a target="_blank" href="https://oembed.com/">oEmbed</a> cards across social platforms. 
 
 [Here]({{< ref "thumbnails" >}}) is also a guide with more info and a [sample]({{< ref "thumbnail_sample" >}}) if you want to see how you can do it.
 
