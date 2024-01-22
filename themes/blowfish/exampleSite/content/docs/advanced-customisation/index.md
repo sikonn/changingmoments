@@ -21,7 +21,7 @@ Before leaping into it, first a quick note about [Hugo project structure](https:
 **In summary:** Never directly edit the theme files. Only make customisations in your Hugo project's sub-directories, not in the themes directory itself.
 {{< /alert >}}
 
-Blowfish is built to take advantage of all the standard Hugo practices. It is designed to allow all aspects of the theme to be customised and overridden without changing any of the core theme files. This allows for a seamless upgrade experience while giving you total control over the look and feel of your website.
+Blowfish is built to take advantage of all the standard Hugo practices. It is designed to allow all aspects of the theme to be customised and overriden without changing any of the core theme files. This allows for a seamless upgrade experience while giving you total control over the look and feel of your website.
 
 In order to achieve this, you should never manually adjust any of the theme files directly. Whether you install using Hugo modules, as a git submodule or manually include the theme in your `themes/` directory, you should always leave these files intact.
 
@@ -38,12 +38,12 @@ Hugo has various builtin methods to resize, crop and optimize images.
 As an example - in `layouts/partials/article-link/card.html`, you have the following code:
 
 ```go
-{{ with .Resize "600x" }}
+{{ with .Fill "600x600" }}
 <div class="w-full thumbnail_card nozoom" style="background-image:url({{ .RelPermalink }});"></div>
 {{ end }}
 ```
 
-The default behavior of Hugo here is to resize the image to 600px keeping the ratio.
+The default behavior of Hugo here is to use Smartcrop to dynamically set the anchor point (crop placement) on the image and resize it to fill 600x600px.
 
 It is worth noting here that default image configurations such as [anchor point](https://gohugo.io/content-management/image-processing/#anchor) can also be set in your [site configuration](https://gohugo.io/content-management/image-processing/#processing-options) as well as in the template itself.
 
@@ -54,11 +54,6 @@ See the [Hugo docs on image processing](https://gohugo.io/content-management/ima
 Blowfish ships with a number of colour schemes out of the box. To change the basic colour scheme, you can set the `colorScheme` theme parameter. Refer to the [Getting Started]({{< ref "getting-started#colour-schemes" >}}) section to learn more about the built-in schemes.
 
 In addition to the default schemes, you can also create your own and re-style the entire website to your liking. Schemes are created by by placing a `<scheme-name>.css` file in the `assets/css/schemes/` folder. Once the file is created, simply refer to it by name in the theme configuration.
-
-{{< alert "github">}}
-**Note:** generating these files manually can be hard, I've built a `nodejs` terminal tool to help with that, [Fugu](https://github.com/nunocoracao/fugu). In a nutshell, you pass the main three `hex` values of your color palette and the program will output a css file that can be imported directly into Blowfish.
-{{< /alert >}}
-
 
 Blowfish defines a three-colour palette that is used throughout the theme. The three colours are defined as `neutral`, `primary` and `secondary` variants, each containing ten shades of colour.
 
@@ -82,7 +77,7 @@ The `custom.css` file will be minified by Hugo and loaded automatically after al
 
 ### Using additional fonts
 
-Blowfish allows you to easily change the font for your site. After creating a `custom.css` file in your project's `assets/css/` folder, place you font file inside a `fonts` folder within the `static` root folder.
+Blowfish allows you to easily change the font for your site. After creating a `custom.css` file in your project's `assets/css/` folder, place you font file inside a `fonts` folder withing the `static` root folder.
 
 ```shell
 .

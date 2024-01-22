@@ -1,10 +1,9 @@
 # Blowfish
 
-<a href="https://www.buymeacoffee.com/nunocoracao" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+<a target="_blank" href="https://www.buymeacoffee.com/nunocoracao"><img class="nozoom" src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=nunocoracao&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
 <a target="_blank" href="http://tee.pub/lic/qwSlWVBL5zc"><img class="nozoom" src="https://img.buymeacoffee.com/button-api/?text=Merch Store &emoji=💎&slug=nunocoracao&button_colour=5F7FFF&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00" /></a>
 
-[![Deploy Production to Firebase](https://github.com/nunocoracao/blowfish/actions/workflows/firebase-production.yml/badge.svg)](https://github.com/nunocoracao/blowfish/actions/workflows/firebase-production.yml)
-[![Deploy Production to GitHub pages](https://github.com/nunocoracao/blowfish/actions/workflows/pages.yml/badge.svg)](https://github.com/nunocoracao/blowfish/actions/workflows/pages.yml)
+[![Blowfish Docs Deploy](https://github.com/nunocoracao/blowfish/actions/workflows/pages.yml/badge.svg)](https://github.com/nunocoracao/blowfish/actions/workflows/pages.yml)
 [![Minimum Hugo Version](https://img.shields.io/static/v1?label=min-HUGO-version&message=0.87.0&color=blue&logo=hugo)](https://github.com/gohugoio/hugo/releases/tag/v0.87.0)
 [![GitHub](https://img.shields.io/github/license/nunocoracao/blowfish)](https://github.com/nunocoracao/blowfish/blob/main/LICENSE)
 [![Blowfish](https://img.shields.io/badge/Hugo--Themes-@Blowfish-blue)](https://themes.gohugo.io/themes/blowfish/)
@@ -29,17 +28,12 @@ Blowfish is designed to be a powerful, lightweight theme for [Hugo](https://gohu
 - Highly customisable configuration
 - Firebase integration to support dynamic data
 - Views count & like mechanism
-- Related articles
 - Multiple homepage layouts
-- Multiple authors
-- Series of articles
-- Zen mode for article reading
+- Support for multiple authors
+- Support for series of articles
 - Flexible with any content types, taxonomies and menus
-- Header and footer menus
-- Nested menus & sub-navigation menu
-- Multilingual content support including support for RTL languages
+- Multilingual content support inlcuding support for RTL languages
 - Ability to link to posts on third-party websites
-- Support for several shortcodes like Gallery, Timeline, GitHub cards, and Carousels
 - Buymeacoffee integration
 - Client-side site search powered by Fuse.js
 - Diagrams and visualisations using Mermaid
@@ -70,27 +64,6 @@ Blowfish has [extensive documentation](https://blowfish.page/docs/) that covers 
 Blowfish supports several installation methods - as a git submodule, a Hugo Module, or as a completely manual install.
 
 Detailed instructions for each method can be found in the [Installation](https://blowfish.page/docs/installation) docs. You should consult the documentation for the simplest setup experience. Below is a quick start guide using submodules if you are using git, or Hugo modules if you're already confident installing Hugo themes.
-
-### Quick start using Blowfish Tools
-
-> **Note:** Ensure you have **Node.js**, **Git**, **Go** and **Hugo** installed, and that you have created a new Hugo project before proceeding.
-
-We just launched a new CLI tool to help you get started with Blowfish. It will create a new Hugo project, install the theme and set up the theme configuration files for you. It's still in beta so please [report any issues you find](https://github.com/nunocoracao/blowfish-tools).
-
-Install the CLI tool globally using npm (or other package manager):
-```shell
-npm i -g blowfish-tools
-```
-
-Then run the command `blowfish-tools` to start an interactive run which will guide you through creation and configuration use-cases.
-```shell
-blowfish-tools
-```
-
-You can also run the command `blowfish-tools new` to create a new Hugo project and install the theme in one go. Check the CLI help for more information.
-```shell
-blowfish-tools new mynewsite
-```
 
 ### Quick start using git submodules
 

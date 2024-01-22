@@ -6,7 +6,6 @@ draft: false
 description: "Icon support in Blowfish."
 slug: "icons"
 tags: ["icons", "sample", "shortcodes"]
-type: 'sample'
 ---
 
 Blowfish has built-in support for a number of [FontAwesome 6](https://fontawesome.com/icons) icons. These can be included in your website through either the [icon partial]({{< ref "docs/partials#icon" >}}) or [icon shortcode]({{< ref "docs/shortcodes#icon" >}}).
@@ -22,7 +21,6 @@ The full list of built-in icons and their corresponding names can referenced bel
 | bars                 | {{< icon bars >}}                 |
 | bell                 | {{< icon bell >}}                 |
 | blogger              | {{< icon blogger >}}              |
-| bluesky              | {{< icon bluesky >}}              |
 | bomb                 | {{< icon bomb >}}                 |
 | bug                  | {{< icon bug >}}                  |
 | check                | {{< icon check >}}                |
@@ -38,20 +36,16 @@ The full list of built-in icons and their corresponding names can referenced bel
 | edit                 | {{< icon edit >}}                 |
 | email                | {{< icon email >}}                |
 | envelope             | {{< icon envelope >}}             |
-| expand               | {{< icon expand >}}               |
 | eye                  | {{< icon eye >}}                  |
 | facebook             | {{< icon facebook >}}             |
 | fire                 | {{< icon fire >}}                 |
 | flickr               | {{< icon flickr >}}               |
-| fork                 | {{< icon fork >}}                 |
 | foursquare           | {{< icon foursquare >}}           |
 | ghost                | {{< icon ghost >}}                |
 | github               | {{< icon github >}}               |
 | gitlab               | {{< icon gitlab >}}               |
-| globe                | {{< icon globe >}}                |
 | goodreads            | {{< icon goodreads >}}            |
 | google               | {{< icon google >}}               |
-| graduation-cap       | {{< icon graduation-cap >}}       |
 | hackernews           | {{< icon hackernews >}}           |
 | hashnode             | {{< icon hashnode >}}             |
 | heart-empty          | {{< icon heart-empty >}}          |
@@ -86,7 +80,6 @@ The full list of built-in icons and their corresponding names can referenced bel
 | researchgate         | {{< icon researchgate >}}         |
 | rss                  | {{< icon rss >}}                  |
 | rss-square           | {{< icon rss-square >}}           |
-| scale-balanced       | {{< icon scale-balanced >}}       |
 | search               | {{< icon search >}}               |
 | shield               | {{< icon shield >}}               |
 | skull-crossbones     | {{< icon skull-crossbones >}}     |
@@ -94,10 +87,8 @@ The full list of built-in icons and their corresponding names can referenced bel
 | snapchat             | {{< icon snapchat >}}             |
 | soundcloud           | {{< icon soundcloud >}}           |
 | stack-overflow       | {{< icon stack-overflow >}}       |
-| star                 | {{< icon star >}}                 |
 | steam                | {{< icon steam >}}                |
 | stripe               | {{< icon stripe >}}               |
-| substack             | {{< icon substack >}}             |
 | sun                  | {{< icon sun >}}                  |
 | tag                  | {{< icon tag >}}                  |
 | telegram             | {{< icon telegram >}}             |
@@ -108,6 +99,5 @@ The full list of built-in icons and their corresponding names can referenced bel
 | twitter              | {{< icon twitter >}}              |
 | wand-magic-sparkles  | {{< icon wand-magic-sparkles >}}  |
 | whatsapp             | {{< icon whatsapp >}}             |
-| x-twitter            | {{< icon x-twitter >}}            |
 | xmark                | {{< icon xmark >}}                |
 | youtube              | {{< icon youtube >}}              |

@@ -1,18 +1,15 @@
 ---
 title: "Welcome to Blowfish! :tada:"
-description: "This page was built using the Blowfish theme for Hugo."
+description: "This is a demo of the Blowfish theme for Hugo."
 ---
 
-Welcome to Blowfish, one of the most flexible and robust Hugo themes. It is designed to be simple, fast and content-focused. Learn more about how to install [here]({{< ref "docs/installation" >}}) or get started with our CLI using:
+<!--center style="display:flex;align-items:center;flex-wrap:wrap;justify-content:space-evenly;">
+<a target="_blank" href="https://www.buymeacoffee.com/nunocoracao"><img class="nozoom" src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=nunocoracao&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
 
-```node
-npx blowfish-tools
-```  
-<iframe width="100%" height="350" src="https://www.youtube.com/embed/SgXhGb-7QbU?si=ce44baicuQ6zMeXz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<a target="_blank" href="http://tee.pub/lic/qwSlWVBL5zc"><img class="nozoom" src="https://img.buymeacoffee.com/button-api/?text=Merch Store &emoji=💎&slug=nunocoracao&button_colour=5F7FFF&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00" /></a>
+</center-->
 
-<!--You can also find the complete theme documentation in [docs]({{< ref "docs" >}}). Blowfish is highly customizable and can be configured to fit your needs: from a static website to a blog. Checkout some [examples](/examples) and what some of our [users](/users) have been building.
-
-Explore the [shortcode list]({{< ref "docs/shortcodes" >}}) and [sample pages]({{< ref "samples" >}}) to get a feel for what Blowfish can do. If you like what you see, check out the project on <a target="_blank" href="https://github.com/nunocoracao/blowfish">Github</a> or read the [Installation guide]({{< ref "docs/installation" >}}) to get started.-->
+This is a demo site built entirely using Blowfish. It also contains a complete set of [theme documentation]({{< ref "docs" >}}). Blowfish is flexible and is great for both static page-based content (like this demo) or a traditional blog with a feed of recent posts.
 
 <div class="flex px-4 py-2 mb-8 text-base rounded-md bg-primary-100 dark:bg-primary-900">
   <span class="flex items-center ltr:pr-3 rtl:pl-3 text-primary-400">
@@ -29,4 +26,4 @@ Explore the [shortcode list]({{< ref "docs/shortcodes" >}}) and [sample pages]({
   </span>
 </div>
 
-
+Explore the [sample pages]({{< ref "samples" >}}) to get a feel for what Blowfish can do. If you like what you see, check out the project on <a target="_blank" href="https://github.com/nunocoracao/blowfish">Github</a> or read the [Installation guide]({{< ref "docs/installation" >}}) to get started.

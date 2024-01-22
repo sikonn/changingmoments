@@ -51,7 +51,7 @@ To enable the Background layout, set `homepage.layout = "background"` and `homep
 
 ## Card layout
 
-The card layout is an extension of the page layout. It provides the same level of flexibility by also displaying your markdown content and adds a card image to display visual content.
+The card layout is an extension of the page layout. It provides the same level of flexivbility by also displaying your markdown content and adds a card image to display visual content.
 
 <img class="thumbnailshadow" src="img/home-card.png"/>
 
@@ -80,7 +80,7 @@ The articles listed in this section are derived from the `mainSections` setting 
 
 ## Thumbnails
 
-Blowfish was built so it would be easy to add visual support to your articles. If your familiar with Hugo article structure, you just need to place an image file (almost all formats are supported bue we recommend `.png` or `.jpg`) that starts with `feature*` inside your article folder. And that's it, Blowfish will then able to both use the image as a thumbnail within your website as well as for <a target="_blank" href="https://oembed.com/">oEmbed</a> cards across social platforms. 
+Blowfish was built so it would be easy to add visual support to your articles. If your familiar with Hugo article strucutre, you just need to place an image file (almost all formats are supported bue we recommend `.png` or `.jpg`) that starts with `feature*` inside your article folder. And that's it, Blowfish will then able to both use the image as a thumbnail within your website as well as for <a target="_blank" href="https://oembed.com/">oEmbed</a> cards across social platforms. 
 
 [Here]({{< ref "thumbnails" >}}) is a guide with more info and a [sample]({{< ref "thumbnail_sample" >}}) if you want to see an example.
 

@@ -1,6 +1,3 @@
-global:
-  language: "🇨🇿"
-
 article:
   anchor_label: "Kotva"
   date: "{{ .Date }}"
@@ -24,7 +21,6 @@ article:
   part_of_series: "Tento článek patří do série."
   part: "Část"
   this_article: "Tento článek"
-  related_articles: "Related"
 
 author:
   byline_title: "Autor"

@@ -1,6 +1,3 @@
-global:
-  language: "🇩🇪"
-
 article:
   anchor_label: "Anker"
   date: "{{ .Date }}"
@@ -15,10 +12,9 @@ article:
   word_count:
    one: "{{ .Count }} Wort"
    other: "{{ .Count }} Wörter"
-  part_of_series: "Dieser Artikel ist Teil einer Serie."
-  part: "Teil"
-  this_article: "Dieser Artikel"
-  related_articles: "Verwandte Artikel"
+  part_of_series: "This article is part of a series."
+  part: "Part"
+  this_article: "This Article"
 
 author:
   byline_title: "Autor"
@@ -63,4 +59,4 @@ shortcode:
 
 
 recent:
-  show_more: "Zeige Mehr"
+  show_more: "Zeig Mehr"
