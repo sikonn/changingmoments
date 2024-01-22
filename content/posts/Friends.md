@@ -3,7 +3,7 @@ layout: post
 title: Friends
 date: 2022-04-28T19:06:26+08:00
 draft: false
-lastmod: 2024-01-18T03:33:20.868Z
+lastmod: 2024-01-22T03:11:47.812Z
 ---
 [**Missing不想睡**](https://hugo-missingid.vercel.app/):和我一起做赛博宵夜吧!
 
@@ -42,6 +42,8 @@ lastmod: 2024-01-18T03:33:20.868Z
 [**晴空**](https://www.summeringway.icu/):像鸟儿编辑它们的飞行一般书写。
 
 [**一支咏叹调**](https://turquoise.one/):SONGS ABOUT TURQUOISE
+
+[**绯鞠的博客**](https://loli.fj.cn):一只爱折腾的绯鞠
 
 > ### 交换友链——！
 > 
