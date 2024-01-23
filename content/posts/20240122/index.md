@@ -9,7 +9,7 @@ series_order: 5
 date: 2024-01-22T11:16:13.892Z
 math: false
 draft: false
-lastmod: 2024-01-22T13:34:27.914Z
+lastmod: 2024-01-23T13:16:26.974Z
 ---
 2022.1.13 第一次听全部あなたのせいなんだ——2022年度歌曲。
 
@@ -18,8 +18,6 @@ lastmod: 2024-01-22T13:34:27.914Z
 2024.1.13 第一次来IDLMs的live——2024最新老公。
 
 其实我算不上是在听歌上有很喜欢的人或乐队的那种，最喜欢的功能是discover weekly和一些daily mix，top mix之类的，我常听的音乐就这样不断扩展，但主要还是J-POP听得多一点。
-
-{{< carousel images="{img/005Pd0pMgy1hkuhc3b6zvj30e611cad7.jpg, img/005Pd0pMgy1hkuhc3adv1j30e60v0goc.jpg}" >}}
 
 ![1](/img/005Pd0pMgy1hkuhc3b6zvj30e611cad7.jpg)
 ![2](/img/005Pd0pMgy1hkuhc3adv1j30e60v0goc.jpg)
