@@ -1,27 +1,24 @@
 languageCode = "en"
 languageName = "English"
+displayName = "EN"
+isoCode = "en"
 weight = 1
-title = "Blowfish"
+rtl = false
 
-[params]
-  displayName = "EN"
-  isoCode = "en"
-  rtl = false
-  dateFormat = "2 January 2006"
-  logo = "img/blowfish_logo_transparent.png"
-  # secondaryLogo = "PATH"
-  description = "A powerful, lightweight theme for Hugo built with Tailwind CSS."
-  # copyright = "Copy, _right?_ :thinking_face:"
+title = "蝴蝶曾在此处"
+# logo = "img/blowfish_logo_transparent.png"
+description = "My awesome website"
+# copyright = "Copy, _right?_ :thinking_face:"
+
+dateFormat = "2 January 2006"
 
 [author]
-  name = "Blowfish"
+  name = "TYOU"
   image = "img/blowfish_logo.png"
-  headline = "A powerful, lightweight theme for Hugo built with Tailwind CSS."
-  bio = "A powerful, lightweight theme for Hugo built with Tailwind CSS."
-  links = [
-    { x-twitter = "https://twitter.com/burufugu" },
-    { mastodon = "https://masto.ai/@blowfish" },
-    { github = "https://github.com/nunocoracao/blowfish" },
-  ]
-
-  
+  headline = "ACCOMPLISH SOMETHING"
+  bio = "就在此刻，改变时刻"
+   links = [
+     { email = "changingmoments.tyou@gmail.com" },
+     { github = "https://github.com/sikonn" },
+     { mastodon = "https://ramen-fsm.tk/web/@food" },
+   ]
