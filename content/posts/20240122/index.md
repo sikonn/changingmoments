@@ -8,8 +8,8 @@ series:
 series_order: 5
 date: 2024-01-22T11:16:13.892Z
 math: false
-draft: false
-lastmod: 2024-01-25T04:18:43.350Z
+draft: true
+lastmod: 2024-02-03T14:46:52.460Z
 ---
 2022.1.13 第一次听全部あなたのせいなんだ——2022年度歌曲。
 
