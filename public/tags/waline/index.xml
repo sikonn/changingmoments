@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Waline on Seven 主题</title>
+    <link>https://changingmoments.one/tags/waline/</link>
+    <description>Recent content in Waline on Seven 主题</description>
+    <generator>Hugo</generator>
+    <language>zh-hans</language>
+    <lastBuildDate>Wed, 15 May 2024 16:46:13 +0800</lastBuildDate>
+    <atom:link href="https://changingmoments.one/tags/waline/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HUGO&amp;MemE&amp;Waline | 踩坑实录</title>
+      <link>https://changingmoments.one/posts/waline/</link>
+      <pubDate>Thu, 05 May 2022 07:13:16 +0000</pubDate>
+      <guid>https://changingmoments.one/posts/waline/</guid>
+      <description>写在前面注意不要在meme文件夹中直接修改，要改什么都在根目录下添加。 参考资料 Waline官方文档-快速上手 Waline 评论系统的介绍与基础配置 Hugo | 为</description>
+    </item>
+  </channel>
+</rss>
