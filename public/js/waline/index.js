@@ -7698,7 +7698,7 @@ Component that was made reactive: `,
       window.devtoolsFormatters = [formatter];
     }
   }
-  var version = "3.4.26";
+  var version = "3.4.27";
   var warn2 = true ? warn$1 : NOOP;
 
   // node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js
@@ -11657,622 +11657,621 @@ ${content}</tr>
 
   // node_modules/@waline/client/dist/slim.js
   var import_recaptcha_v3 = __toESM(require_ReCaptcha(), 1);
-  var Yt = ["nick", "mail", "link"];
-  var Ze = (e2) => e2.filter((a) => Yt.includes(a));
-  var Xe = ["//unpkg.com/@waline/emojis@1.1.0/weibo"];
-  var Qt = ["//unpkg.com/@waline/emojis/tieba/tieba_agree.png", "//unpkg.com/@waline/emojis/tieba/tieba_look_down.png", "//unpkg.com/@waline/emojis/tieba/tieba_sunglasses.png", "//unpkg.com/@waline/emojis/tieba/tieba_pick_nose.png", "//unpkg.com/@waline/emojis/tieba/tieba_awkward.png", "//unpkg.com/@waline/emojis/tieba/tieba_sleep.png"];
-  var el = (e2) => new Promise((a, l) => {
-    if (e2.size > 128 * 1e3)
-      return l(new Error("File too large! File size limit 128KB"));
-    const t2 = new FileReader();
-    t2.readAsDataURL(e2), t2.onload = () => {
-      var o2;
-      return a(((o2 = t2.result) == null ? void 0 : o2.toString()) || "");
-    }, t2.onerror = l;
+  var Jt = ["nick", "mail", "link"];
+  var Ge = (e2) => e2.filter((n2) => Jt.includes(n2));
+  var Ke = ["//unpkg.com/@waline/emojis@1.1.0/weibo"];
+  var Yt = ["//unpkg.com/@waline/emojis/tieba/tieba_agree.png", "//unpkg.com/@waline/emojis/tieba/tieba_look_down.png", "//unpkg.com/@waline/emojis/tieba/tieba_sunglasses.png", "//unpkg.com/@waline/emojis/tieba/tieba_pick_nose.png", "//unpkg.com/@waline/emojis/tieba/tieba_awkward.png", "//unpkg.com/@waline/emojis/tieba/tieba_sleep.png"];
+  var Qt = (e2) => new Promise((n2, t2) => {
+    if (e2.size > 128e3)
+      return t2(new Error("File too large! File size limit 128KB"));
+    const l = new FileReader();
+    l.readAsDataURL(e2), l.onload = () => {
+      var a;
+      return n2(((a = l.result) == null ? void 0 : a.toString()) ?? "");
+    }, l.onerror = t2;
   });
-  var tl = (e2) => e2 === true ? '<p class="wl-tex">TeX is not available in preview</p>' : '<span class="wl-tex">TeX is not available in preview</span>';
-  var ll = (e2) => {
-    const a = async (l, t2 = {}) => fetch(`https://api.giphy.com/v1/gifs/${l}?${new URLSearchParams({ lang: e2, limit: "20", rating: "g", api_key: "6CIMLkNMMOhRcXPoMCPkFy4Ybk2XUiMp", ...t2 }).toString()}`).then((o2) => o2.json()).then(({ data: o2 }) => o2.map((n2) => ({ title: n2.title, src: n2.images.downsized_medium.url })));
-    return { search: (l) => a("search", { q: l, offset: "0" }), default: () => a("trending", {}), more: (l, t2 = 0) => a("search", { q: l, offset: t2.toString() }) };
+  var el = (e2) => e2 === true ? '<p class="wl-tex">TeX is not available in preview</p>' : '<span class="wl-tex">TeX is not available in preview</span>';
+  var tl = (e2) => {
+    const n2 = async (t2, l = {}) => fetch(`https://api.giphy.com/v1/gifs/${t2}?${new URLSearchParams({ lang: e2, limit: "20", rating: "g", api_key: "6CIMLkNMMOhRcXPoMCPkFy4Ybk2XUiMp", ...l }).toString()}`).then((a) => a.json()).then(({ data: a }) => a.map((i) => ({ title: i.title, src: i.images.downsized_medium.url })));
+    return { search: (t2) => n2("search", { q: t2, offset: "0" }), default: () => n2("trending", {}), more: (t2, l = 0) => n2("search", { q: t2, offset: l.toString() }) };
   };
-  var al = /[\u4E00-\u9FFF\u3400-\u4dbf\uf900-\ufaff\u3040-\u309f\uac00-\ud7af\u0400-\u04FF]+|\w+/;
-  var nl = /</;
-  var ol = /(?:^|\s)\/\/(.+?)$/gm;
-  var il = /\/\*([\S\s]*?)\*\//gm;
-  var rl = new RegExp(`(${al.source}|${nl.source})|((?:${ol.source})|(?:${il.source}))`, "gmi");
-  var Je = ["23AC69", "91C132", "F19726", "E8552D", "1AAB8E", "E1147F", "2980C1", "1BA1E6", "9FA0A0", "F19726", "E30B20", "E30B20", "A3338B"];
-  var xe = {};
-  var sl = (e2) => {
-    let a = 0;
-    return e2.replace(rl, (l, t2, o2) => {
-      if (o2)
-        return `<span style="color: slategray">${o2}</span>`;
-      if (t2 === "<")
+  var ll = /[\u4E00-\u9FFF\u3400-\u4dbf\uf900-\ufaff\u3040-\u309f\uac00-\ud7af\u0400-\u04FF]+|\w+/;
+  var al = /</;
+  var nl = /(?:^|\s)\/\/(.+?)$/gm;
+  var ol = /\/\*([\S\s]*?)\*\//gm;
+  var il = new RegExp(`(${ll.source}|${al.source})|((?:${nl.source})|(?:${ol.source}))`, "gmi");
+  var Ze = ["23AC69", "91C132", "F19726", "E8552D", "1AAB8E", "E1147F", "2980C1", "1BA1E6", "9FA0A0", "F19726", "E30B20", "E30B20", "A3338B"];
+  var Ee = {};
+  var rl = (e2) => {
+    let n2 = 0;
+    return e2.replace(il, (t2, l, a) => {
+      if (a)
+        return `<span style="color: slategray">${a}</span>`;
+      if (l === "<")
         return "&lt;";
-      let n2;
-      xe[t2] ? n2 = xe[t2] : (n2 = Je[a], xe[t2] = n2);
-      const m2 = `<span style="color: #${n2}">${t2}</span>`;
-      return a = ++a % Je.length, m2;
+      let i;
+      Ee[l] ? i = Ee[l] : (i = Ze[n2], Ee[l] = i);
+      const h2 = `<span style="color: #${i}">${l}</span>`;
+      return n2 = ++n2 % Ze.length, h2;
     });
   };
-  var cl = ["nick", "nickError", "mail", "mailError", "link", "optional", "placeholder", "sofa", "submit", "like", "cancelLike", "reply", "cancelReply", "comment", "refresh", "more", "preview", "emoji", "uploadImage", "seconds", "minutes", "hours", "days", "now", "uploading", "login", "logout", "admin", "sticky", "word", "wordHint", "anonymous", "level0", "level1", "level2", "level3", "level4", "level5", "gif", "gifSearchPlaceholder", "profile", "approved", "waiting", "spam", "unsticky", "oldest", "latest", "hottest", "reactionTitle"];
-  var ne = (e2) => Object.fromEntries(e2.map((a, l) => [cl[l], a]));
-  var Ye = ne(["NickName", "NickName cannot be less than 3 bytes.", "E-Mail", "Please confirm your email address.", "Website", "Optional", "Comment here...", "No comment yet.", "Submit", "Like", "Cancel like", "Reply", "Cancel reply", "Comments", "Refresh", "Load More...", "Preview", "Emoji", "Upload Image", "seconds ago", "minutes ago", "hours ago", "days ago", "just now", "Uploading", "Login", "logout", "Admin", "Sticky", "Words", `Please input comments between $0 and $1 words!
+  var sl = ["nick", "nickError", "mail", "mailError", "link", "optional", "placeholder", "sofa", "submit", "like", "cancelLike", "reply", "cancelReply", "comment", "refresh", "more", "preview", "emoji", "uploadImage", "seconds", "minutes", "hours", "days", "now", "uploading", "login", "logout", "admin", "sticky", "word", "wordHint", "anonymous", "level0", "level1", "level2", "level3", "level4", "level5", "gif", "gifSearchPlaceholder", "profile", "approved", "waiting", "spam", "unsticky", "oldest", "latest", "hottest", "reactionTitle"];
+  var oe = (e2) => Object.fromEntries(e2.map((n2, t2) => [sl[t2], n2]));
+  var Xe = oe(["NickName", "NickName cannot be less than 3 bytes.", "E-Mail", "Please confirm your email address.", "Website", "Optional", "Comment here...", "No comment yet.", "Submit", "Like", "Cancel like", "Reply", "Cancel reply", "Comments", "Refresh", "Load More...", "Preview", "Emoji", "Upload Image", "seconds ago", "minutes ago", "hours ago", "days ago", "just now", "Uploading", "Login", "logout", "Admin", "Sticky", "Words", `Please input comments between $0 and $1 words!
  Current word number: $2`, "Anonymous", "Dwarves", "Hobbits", "Ents", "Wizards", "Elves", "Maiar", "GIF", "Search GIF", "Profile", "Approved", "Waiting", "Spam", "Unsticky", "Oldest", "Latest", "Hottest", "What do you think?"]);
-  var Qe = ne(["Pseudo", "Le pseudo ne peut pas faire moins de 3 octets.", "E-mail", "Veuillez confirmer votre adresse e-mail.", "Site Web", "Optionnel", "Commentez ici...", "Aucun commentaire pour l'instant.", "Envoyer", "J'aime", "Annuler le j'aime", "R\xE9pondre", "Annuler la r\xE9ponse", "Commentaires", "Actualiser", "Charger plus...", "Aper\xE7u", "Emoji", "T\xE9l\xE9charger une image", "Il y a quelques secondes", "Il y a quelques minutes", "Il y a quelques heures", "Il y a quelques jours", "\xC0 l'instant", "T\xE9l\xE9chargement en cours", "Connexion", "D\xE9connexion", "Admin", "\xC9pingl\xE9", "Mots", `Veuillez saisir des commentaires entre $0 et $1 mots !
+  var Je = oe(["Pseudo", "Le pseudo ne peut pas faire moins de 3 octets.", "E-mail", "Veuillez confirmer votre adresse e-mail.", "Site Web", "Optionnel", "Commentez ici...", "Aucun commentaire pour l'instant.", "Envoyer", "J'aime", "Annuler le j'aime", "R\xE9pondre", "Annuler la r\xE9ponse", "Commentaires", "Actualiser", "Charger plus...", "Aper\xE7u", "Emoji", "T\xE9l\xE9charger une image", "Il y a quelques secondes", "Il y a quelques minutes", "Il y a quelques heures", "Il y a quelques jours", "\xC0 l'instant", "T\xE9l\xE9chargement en cours", "Connexion", "D\xE9connexion", "Admin", "\xC9pingl\xE9", "Mots", `Veuillez saisir des commentaires entre $0 et $1 mots !
  Nombre actuel de mots : $2`, "Anonyme", "Nains", "Hobbits", "Ents", "Mages", "Elfes", "Ma\xEFar", "GIF", "Rechercher un GIF", "Profil", "Approuv\xE9", "En attente", "Ind\xE9sirable", "D\xE9tacher", "Le plus ancien", "Dernier", "Le plus populaire", "Qu'en pensez-vous ?"]);
-  var et = ne(["\u30CB\u30C3\u30AF\u30CD\u30FC\u30E0", "3\u30D0\u30A4\u30C8\u4EE5\u4E0A\u306E\u30CB\u30C3\u30AF\u30CD\u30FC\u30E0\u3092\u3054\u5165\u529B\u304F\u3060\u3055\u3044.", "\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9", "\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9\u3092\u3054\u78BA\u8A8D\u304F\u3060\u3055\u3044.", "\u30B5\u30A4\u30C8", "\u30AA\u30D7\u30B7\u30E7\u30F3", "\u3053\u3053\u306B\u30B3\u30E1\u30F3\u30C8", "\u30B3\u30E1\u30F3\u30C8\u3057\u307E\u3057\u3087\u3046~", "\u63D0\u51FA\u3059\u308B", "Like", "Cancel like", "\u8FD4\u4FE1\u3059\u308B", "\u30AD\u30E3\u30F3\u30BB\u30EB", "\u30B3\u30E1\u30F3\u30C8", "\u66F4\u65B0", "\u3055\u3089\u306B\u8AAD\u307F\u8FBC\u3080", "\u30D7\u30EC\u30D3\u30E5\u30FC", "\u7D75\u6587\u5B57", "\u753B\u50CF\u3092\u30A2\u30C3\u30D7\u30ED\u30FC\u30C9", "\u79D2\u524D", "\u5206\u524D", "\u6642\u9593\u524D", "\u65E5\u524D", "\u305F\u3063\u3060\u4ECA", "\u30A2\u30C3\u30D7\u30ED\u30FC\u30C9", "\u30ED\u30B0\u30A4\u30F3\u3059\u308B", "\u30ED\u30B0\u30A2\u30A6\u30C8", "\u7BA1\u7406\u8005", "\u30C8\u30C3\u30D7\u306B\u7F6E\u304F", "\u30EF\u30FC\u30C9", `\u30B3\u30E1\u30F3\u30C8\u306F $0 \u304B\u3089 $1 \u30EF\u30FC\u30C9\u306E\u9593\u3067\u306A\u3051\u308C\u3070\u306A\u308A\u307E\u305B\u3093!
+  var Ye = oe(["\u30CB\u30C3\u30AF\u30CD\u30FC\u30E0", "3\u30D0\u30A4\u30C8\u4EE5\u4E0A\u306E\u30CB\u30C3\u30AF\u30CD\u30FC\u30E0\u3092\u3054\u5165\u529B\u304F\u3060\u3055\u3044.", "\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9", "\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9\u3092\u3054\u78BA\u8A8D\u304F\u3060\u3055\u3044.", "\u30B5\u30A4\u30C8", "\u30AA\u30D7\u30B7\u30E7\u30F3", "\u3053\u3053\u306B\u30B3\u30E1\u30F3\u30C8", "\u30B3\u30E1\u30F3\u30C8\u3057\u307E\u3057\u3087\u3046~", "\u63D0\u51FA\u3059\u308B", "Like", "Cancel like", "\u8FD4\u4FE1\u3059\u308B", "\u30AD\u30E3\u30F3\u30BB\u30EB", "\u30B3\u30E1\u30F3\u30C8", "\u66F4\u65B0", "\u3055\u3089\u306B\u8AAD\u307F\u8FBC\u3080", "\u30D7\u30EC\u30D3\u30E5\u30FC", "\u7D75\u6587\u5B57", "\u753B\u50CF\u3092\u30A2\u30C3\u30D7\u30ED\u30FC\u30C9", "\u79D2\u524D", "\u5206\u524D", "\u6642\u9593\u524D", "\u65E5\u524D", "\u305F\u3063\u3060\u4ECA", "\u30A2\u30C3\u30D7\u30ED\u30FC\u30C9", "\u30ED\u30B0\u30A4\u30F3\u3059\u308B", "\u30ED\u30B0\u30A2\u30A6\u30C8", "\u7BA1\u7406\u8005", "\u30C8\u30C3\u30D7\u306B\u7F6E\u304F", "\u30EF\u30FC\u30C9", `\u30B3\u30E1\u30F3\u30C8\u306F $0 \u304B\u3089 $1 \u30EF\u30FC\u30C9\u306E\u9593\u3067\u306A\u3051\u308C\u3070\u306A\u308A\u307E\u305B\u3093!
  \u73FE\u5728\u306E\u5358\u8A9E\u756A\u53F7: $2`, "\u533F\u540D", "\u3046\u3048\u306B\u3093", "\u306A\u304B\u306B\u3093", "\u3057\u3082\u304A\u3057", "\u7279\u306B\u3057\u3082\u304A\u3057", "\u304B\u3052", "\u306A\u306C\u3057", "GIF", "\u63A2\u3059 GIF", "\u500B\u4EBA\u60C5\u5831", "\u627F\u8A8D\u6E08\u307F", "\u5F85\u3063\u3066\u3044\u308B", "\u30B9\u30D1\u30E0", "\u3079\u305F\u3064\u304B\u306A\u3044", "\u9006\u9806", "\u6B63\u9806", "\u4EBA\u6C17\u9806", "\u3069\u3046\u601D\u3044\u307E\u3059\u304B\uFF1F"]);
-  var ul = ne(["Apelido", "Apelido n\xE3o pode ser menor que 3 bytes.", "E-Mail", "Por favor, confirme seu endere\xE7o de e-mail.", "Website", "Opcional", "Comente aqui...", "Nenhum coment\xE1rio, ainda.", "Enviar", "Like", "Cancel like", "Responder", "Cancelar resposta", "Coment\xE1rios", "Refrescar", "Carregar Mais...", "Visualizar", "Emoji", "Enviar Imagem", "segundos atr\xE1s", "minutos atr\xE1s", "horas atr\xE1s", "dias atr\xE1s", "agora mesmo", "Enviando", "Entrar", "Sair", "Admin", "Sticky", "Palavras", `Favor enviar coment\xE1rio com $0 a $1 palavras!
+  var cl = oe(["Apelido", "Apelido n\xE3o pode ser menor que 3 bytes.", "E-Mail", "Por favor, confirme seu endere\xE7o de e-mail.", "Website", "Opcional", "Comente aqui...", "Nenhum coment\xE1rio, ainda.", "Enviar", "Like", "Cancel like", "Responder", "Cancelar resposta", "Coment\xE1rios", "Refrescar", "Carregar Mais...", "Visualizar", "Emoji", "Enviar Imagem", "segundos atr\xE1s", "minutos atr\xE1s", "horas atr\xE1s", "dias atr\xE1s", "agora mesmo", "Enviando", "Entrar", "Sair", "Admin", "Sticky", "Palavras", `Favor enviar coment\xE1rio com $0 a $1 palavras!
  N\xFAmero de palavras atuais: $2`, "An\xF4nimo", "Dwarves", "Hobbits", "Ents", "Wizards", "Elves", "Maiar", "GIF", "Pesquisar GIF", "informa\xE7\xE3o pessoal", "Aprovado", "Espera", "Spam", "Unsticky", "Mais velho", "Mais recentes", "Mais quente", "O que voc\xEA acha?"]);
-  var tt = ne(["\u041F\u0441\u0435\u0432\u0434\u043E\u043D\u0438\u043C", "\u041D\u0438\u043A\u043D\u0435\u0439\u043C \u043D\u0435 \u043C\u043E\u0436\u0435\u0442 \u0431\u044B\u0442\u044C \u043C\u0435\u043D\u044C\u0448\u0435 3 \u0431\u0430\u0439\u0442.", "\u042D\u043B. \u0430\u0434\u0440\u0435\u0441", "\u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430, \u043F\u043E\u0434\u0442\u0432\u0435\u0440\u0434\u0438\u0442\u0435 \u0430\u0434\u0440\u0435\u0441 \u0432\u0430\u0448\u0435\u0439 \u044D\u043B\u0435\u043A\u0442\u0440\u043E\u043D\u043D\u043E\u0439 \u043F\u043E\u0447\u0442\u044B.", "\u0412\u0435\u0431-\u0441\u0430\u0439\u0442", "\u041D\u0435\u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0439", "\u041A\u043E\u043C\u043C\u0435\u043D\u0442\u0430\u0440\u0438\u0439 \u0437\u0434\u0435\u0441\u044C...", "\u041F\u043E\u043A\u0430 \u043D\u0435\u0442 \u043A\u043E\u043C\u043C\u0435\u043D\u0442\u0430\u0440\u0438\u0435\u0432.", "\u041E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C", "Like", "Cancel like", "\u041E\u0442\u0432\u0435\u0447\u0430\u0442\u044C", "\u041E\u0442\u043C\u0435\u043D\u0438\u0442\u044C \u043E\u0442\u0432\u0435\u0442", "\u041A\u043E\u043C\u043C\u0435\u043D\u0442\u0430\u0440\u0438\u0438", "\u041E\u0431\u043D\u043E\u0432\u0438\u0442\u044C", "\u0417\u0430\u0433\u0440\u0443\u0437\u0438 \u0431\u043E\u043B\u044C\u0448\u0435...", "\u041F\u0440\u0435\u0432\u044C\u044E", "\u044D\u043C\u043E\u0434\u0437\u0438", "\u0417\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044C \u0438\u0437\u043E\u0431\u0440\u0430\u0436\u0435\u043D\u0438\u0435", "\u0441\u0435\u043A\u0443\u043D\u0434 \u043D\u0430\u0437\u0430\u0434", "\u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E \u043C\u0438\u043D\u0443\u0442 \u043D\u0430\u0437\u0430\u0434", "\u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E \u0447\u0430\u0441\u043E\u0432 \u043D\u0430\u0437\u0430\u0434", "\u0434\u043D\u0435\u0439 \u043D\u0430\u0437\u0430\u0434", "\u043F\u0440\u044F\u043C\u043E \u0441\u0435\u0439\u0447\u0430\u0441", "\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430", "\u0410\u0432\u0442\u043E\u0440\u0438\u0437\u043E\u0432\u0430\u0442\u044C\u0441\u044F", "\u0412\u044B\u0445\u043E\u0434 \u0438\u0437 \u0441\u0438\u0441\u0442\u0435\u043C\u044B", "\u0410\u0434\u043C\u0438\u043D", "\u041B\u0438\u043F\u043A\u0438\u0439", "\u0421\u043B\u043E\u0432\u0430", `\u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430, \u0432\u0432\u0435\u0434\u0438\u0442\u0435 \u043A\u043E\u043C\u043C\u0435\u043D\u0442\u0430\u0440\u0438\u0438 \u043E\u0442 $0 \u0434\u043E $1 \u0441\u043B\u043E\u0432!
+  var Qe = oe(["\u041F\u0441\u0435\u0432\u0434\u043E\u043D\u0438\u043C", "\u041D\u0438\u043A\u043D\u0435\u0439\u043C \u043D\u0435 \u043C\u043E\u0436\u0435\u0442 \u0431\u044B\u0442\u044C \u043C\u0435\u043D\u044C\u0448\u0435 3 \u0431\u0430\u0439\u0442.", "\u042D\u043B. \u0430\u0434\u0440\u0435\u0441", "\u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430, \u043F\u043E\u0434\u0442\u0432\u0435\u0440\u0434\u0438\u0442\u0435 \u0430\u0434\u0440\u0435\u0441 \u0432\u0430\u0448\u0435\u0439 \u044D\u043B\u0435\u043A\u0442\u0440\u043E\u043D\u043D\u043E\u0439 \u043F\u043E\u0447\u0442\u044B.", "\u0412\u0435\u0431-\u0441\u0430\u0439\u0442", "\u041D\u0435\u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0439", "\u041A\u043E\u043C\u043C\u0435\u043D\u0442\u0430\u0440\u0438\u0439 \u0437\u0434\u0435\u0441\u044C...", "\u041F\u043E\u043A\u0430 \u043D\u0435\u0442 \u043A\u043E\u043C\u043C\u0435\u043D\u0442\u0430\u0440\u0438\u0435\u0432.", "\u041E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C", "Like", "Cancel like", "\u041E\u0442\u0432\u0435\u0447\u0430\u0442\u044C", "\u041E\u0442\u043C\u0435\u043D\u0438\u0442\u044C \u043E\u0442\u0432\u0435\u0442", "\u041A\u043E\u043C\u043C\u0435\u043D\u0442\u0430\u0440\u0438\u0438", "\u041E\u0431\u043D\u043E\u0432\u0438\u0442\u044C", "\u0417\u0430\u0433\u0440\u0443\u0437\u0438 \u0431\u043E\u043B\u044C\u0448\u0435...", "\u041F\u0440\u0435\u0432\u044C\u044E", "\u044D\u043C\u043E\u0434\u0437\u0438", "\u0417\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044C \u0438\u0437\u043E\u0431\u0440\u0430\u0436\u0435\u043D\u0438\u0435", "\u0441\u0435\u043A\u0443\u043D\u0434 \u043D\u0430\u0437\u0430\u0434", "\u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E \u043C\u0438\u043D\u0443\u0442 \u043D\u0430\u0437\u0430\u0434", "\u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E \u0447\u0430\u0441\u043E\u0432 \u043D\u0430\u0437\u0430\u0434", "\u0434\u043D\u0435\u0439 \u043D\u0430\u0437\u0430\u0434", "\u043F\u0440\u044F\u043C\u043E \u0441\u0435\u0439\u0447\u0430\u0441", "\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430", "\u0410\u0432\u0442\u043E\u0440\u0438\u0437\u043E\u0432\u0430\u0442\u044C\u0441\u044F", "\u0412\u044B\u0445\u043E\u0434 \u0438\u0437 \u0441\u0438\u0441\u0442\u0435\u043C\u044B", "\u0410\u0434\u043C\u0438\u043D", "\u041B\u0438\u043F\u043A\u0438\u0439", "\u0421\u043B\u043E\u0432\u0430", `\u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430, \u0432\u0432\u0435\u0434\u0438\u0442\u0435 \u043A\u043E\u043C\u043C\u0435\u043D\u0442\u0430\u0440\u0438\u0438 \u043E\u0442 $0 \u0434\u043E $1 \u0441\u043B\u043E\u0432!
 \u041D\u043E\u043C\u0435\u0440 \u0442\u0435\u043A\u0443\u0449\u0435\u0433\u043E \u0441\u043B\u043E\u0432\u0430: $2`, "\u0410\u043D\u043E\u043D\u0438\u043C\u043D\u044B\u0439", "Dwarves", "Hobbits", "Ents", "Wizards", "Elves", "Maiar", "GIF", "\u041F\u043E\u0438\u0441\u043A GIF", "\u041F\u0435\u0440\u0441\u043E\u043D\u0430\u043B\u044C\u043D\u044B\u0435 \u0434\u0430\u043D\u043D\u044B\u0435", "\u041E\u0434\u043E\u0431\u0440\u0435\u043D\u043D\u044B\u0439", "\u041E\u0436\u0438\u0434\u0430\u044E\u0449\u0438\u0439", "\u0421\u043F\u0430\u043C", "\u041D\u0435\u043B\u0438\u043F\u043A\u0438\u0439", "\u0441\u0430\u043C\u044B\u0439 \u0441\u0442\u0430\u0440\u044B\u0439", "\u043F\u043E\u0441\u043B\u0435\u0434\u043D\u0438\u0439", "\u0441\u0430\u043C\u044B\u0439 \u0433\u043E\u0440\u044F\u0447\u0438\u0439", "\u0427\u0442\u043E \u0432\u044B \u0434\u0443\u043C\u0430\u0435\u0442\u0435?"]);
-  var lt = ne(["T\xEAn", "T\xEAn kh\xF4ng \u0111\u01B0\u1EE3c nh\u1ECF h\u01A1n 3 k\xFD t\u1EF1.", "E-Mail", "Vui l\xF2ng x\xE1c nh\u1EADp \u0111\u1ECBa ch\u1EC9 email c\u1EE7a b\u1EA1n.", "Website", "T\xF9y ch\u1ECDn", "H\xE3y b\xECnh lu\u1EADn c\xF3 v\u0103n ho\xE1!", "Ch\u01B0a c\xF3 b\xECnh lu\u1EADn", "G\u1EEDi", "Th\xEDch", "B\u1ECF th\xEDch", "Tr\u1EA3 l\u1EDDi", "H\u1EE7y b\u1ECF", "b\xECnh lu\u1EADn", "L\xE0m m\u1EDBi", "T\u1EA3i th\xEAm...", "Xem tr\u01B0\u1EDBc", "Emoji", "T\u1EA3i l\xEAn h\xECnh \u1EA3nh", "gi\xE2y tr\u01B0\u1EDBc", "ph\xFAt tr\u01B0\u1EDBc", "gi\u1EDD tr\u01B0\u1EDBc", "ng\xE0y tr\u01B0\u1EDBc", "V\u1EEBa xong", "\u0110ang t\u1EA3i l\xEAn", "\u0110\u0103ng nh\u1EADp", "\u0111\u0103ng xu\u1EA5t", "Qu\u1EA3n tr\u1ECB vi\xEAn", "D\xEDnh", "t\u1EEB", `B\xECnh lu\u1EADn ph\u1EA3i c\xF3 \u0111\u1ED9 d\xE0i gi\u1EEFa $0 v\xE0 $1 t\u1EEB!
+  var et = oe(["T\xEAn", "T\xEAn kh\xF4ng \u0111\u01B0\u1EE3c nh\u1ECF h\u01A1n 3 k\xFD t\u1EF1.", "E-Mail", "Vui l\xF2ng x\xE1c nh\u1EADp \u0111\u1ECBa ch\u1EC9 email c\u1EE7a b\u1EA1n.", "Website", "T\xF9y ch\u1ECDn", "H\xE3y b\xECnh lu\u1EADn c\xF3 v\u0103n ho\xE1!", "Ch\u01B0a c\xF3 b\xECnh lu\u1EADn", "G\u1EEDi", "Th\xEDch", "B\u1ECF th\xEDch", "Tr\u1EA3 l\u1EDDi", "H\u1EE7y b\u1ECF", "b\xECnh lu\u1EADn", "L\xE0m m\u1EDBi", "T\u1EA3i th\xEAm...", "Xem tr\u01B0\u1EDBc", "Emoji", "T\u1EA3i l\xEAn h\xECnh \u1EA3nh", "gi\xE2y tr\u01B0\u1EDBc", "ph\xFAt tr\u01B0\u1EDBc", "gi\u1EDD tr\u01B0\u1EDBc", "ng\xE0y tr\u01B0\u1EDBc", "V\u1EEBa xong", "\u0110ang t\u1EA3i l\xEAn", "\u0110\u0103ng nh\u1EADp", "\u0111\u0103ng xu\u1EA5t", "Qu\u1EA3n tr\u1ECB vi\xEAn", "D\xEDnh", "t\u1EEB", `B\xECnh lu\u1EADn ph\u1EA3i c\xF3 \u0111\u1ED9 d\xE0i gi\u1EEFa $0 v\xE0 $1 t\u1EEB!
  S\u1ED1 t\u1EEB hi\u1EC7n t\u1EA1i: $2`, "V\xF4 danh", "Ng\u01B0\u1EDDi l\xF9n", "Ng\u01B0\u1EDDi t\xED hon", "Th\u1EA7n r\u1EEBng", "Ph\xE1p s\u01B0", "Ti\xEAn t\u1ED9c", "Maiar", "\u1EA2nh GIF", "T\xECm ki\u1EBFm \u1EA3nh GIF", "th\xF4ng tin c\xE1 nh\xE2n", "\u0110\xE3 \u0111\u01B0\u1EE3c ph\xEA duy\u1EC7t", "\u0110ang ch\u1EDD \u0111\u1EE3i", "Th\u01B0 r\xE1c", "Kh\xF4ng d\xEDnh", "l\xE2u \u0111\u1EDDi nh\u1EA5t", "mu\u1ED9n nh\u1EA5t", "n\xF3ng nh\u1EA5t", "What do you think?"]);
-  var at = ne(["\u6635\u79F0", "\u6635\u79F0\u4E0D\u80FD\u5C11\u4E8E3\u4E2A\u5B57\u7B26", "\u90AE\u7BB1", "\u8BF7\u586B\u5199\u6B63\u786E\u7684\u90AE\u4EF6\u5730\u5740", "\u7F51\u5740", "\u53EF\u9009", "\u6B22\u8FCE\u8BC4\u8BBA", "\u6765\u53D1\u8BC4\u8BBA\u5427~", "\u63D0\u4EA4", "\u559C\u6B22", "\u53D6\u6D88\u559C\u6B22", "\u56DE\u590D", "\u53D6\u6D88\u56DE\u590D", "\u8BC4\u8BBA", "\u5237\u65B0", "\u52A0\u8F7D\u66F4\u591A...", "\u9884\u89C8", "\u8868\u60C5", "\u4E0A\u4F20\u56FE\u7247", "\u79D2\u524D", "\u5206\u949F\u524D", "\u5C0F\u65F6\u524D", "\u5929\u524D", "\u521A\u521A", "\u6B63\u5728\u4E0A\u4F20", "\u767B\u5F55", "\u9000\u51FA", "\u535A\u4E3B", "\u7F6E\u9876", "\u5B57", `\u8BC4\u8BBA\u5B57\u6570\u5E94\u5728 $0 \u5230 $1 \u5B57\u4E4B\u95F4\uFF01
+  var tt = oe(["\u6635\u79F0", "\u6635\u79F0\u4E0D\u80FD\u5C11\u4E8E3\u4E2A\u5B57\u7B26", "\u90AE\u7BB1", "\u8BF7\u586B\u5199\u6B63\u786E\u7684\u90AE\u4EF6\u5730\u5740", "\u7F51\u5740", "\u53EF\u9009", "\u6B22\u8FCE\u8BC4\u8BBA", "\u6765\u53D1\u8BC4\u8BBA\u5427~", "\u63D0\u4EA4", "\u559C\u6B22", "\u53D6\u6D88\u559C\u6B22", "\u56DE\u590D", "\u53D6\u6D88\u56DE\u590D", "\u8BC4\u8BBA", "\u5237\u65B0", "\u52A0\u8F7D\u66F4\u591A...", "\u9884\u89C8", "\u8868\u60C5", "\u4E0A\u4F20\u56FE\u7247", "\u79D2\u524D", "\u5206\u949F\u524D", "\u5C0F\u65F6\u524D", "\u5929\u524D", "\u521A\u521A", "\u6B63\u5728\u4E0A\u4F20", "\u767B\u5F55", "\u9000\u51FA", "\u535A\u4E3B", "\u7F6E\u9876", "\u5B57", `\u8BC4\u8BBA\u5B57\u6570\u5E94\u5728 $0 \u5230 $1 \u5B57\u4E4B\u95F4\uFF01
 \u5F53\u524D\u5B57\u6570\uFF1A$2`, "\u533F\u540D", "\u6F5C\u6C34", "\u5192\u6CE1", "\u5410\u69FD", "\u6D3B\u8DC3", "\u8BDD\u75E8", "\u4F20\u8BF4", "\u8868\u60C5\u5305", "\u641C\u7D22\u8868\u60C5\u5305", "\u4E2A\u4EBA\u8D44\u6599", "\u901A\u8FC7", "\u5F85\u5BA1\u6838", "\u5783\u573E", "\u53D6\u6D88\u7F6E\u9876", "\u6309\u5012\u5E8F", "\u6309\u6B63\u5E8F", "\u6309\u70ED\u5EA6", "\u4F60\u8BA4\u4E3A\u8FD9\u7BC7\u6587\u7AE0\u600E\u4E48\u6837\uFF1F"]);
-  var vl = ne(["\u66B1\u7A31", "\u66B1\u7A31\u4E0D\u80FD\u5C11\u65BC3\u500B\u5B57\u5143", "\u90F5\u7BB1", "\u8ACB\u586B\u5BEB\u6B63\u78BA\u7684\u90F5\u4EF6\u5730\u5740", "\u7DB2\u5740", "\u53EF\u9078", "\u6B61\u8FCE\u7559\u8A00", "\u4F86\u767C\u7559\u8A00\u5427~", "\u9001\u51FA", "\u559C\u6B61", "\u53D6\u6D88\u559C\u6B61", "\u56DE\u8986", "\u53D6\u6D88\u56DE\u8986", "\u7559\u8A00", "\u91CD\u6574", "\u8F09\u5165\u66F4\u591A...", "\u9810\u89BD", "\u8868\u60C5", "\u4E0A\u50B3\u5716\u7247", "\u79D2\u524D", "\u5206\u9418\u524D", "\u5C0F\u6642\u524D", "\u5929\u524D", "\u525B\u525B", "\u6B63\u5728\u4E0A\u50B3", "\u767B\u5165", "\u767B\u51FA", "\u7BA1\u7406\u8005", "\u7F6E\u9802", "\u5B57", `\u7559\u8A00\u5B57\u6578\u61C9\u5728 $0 \u5230 $1 \u5B57\u4E4B\u9593\uFF01
+  var ul = oe(["\u66B1\u7A31", "\u66B1\u7A31\u4E0D\u80FD\u5C11\u65BC3\u500B\u5B57\u5143", "\u90F5\u7BB1", "\u8ACB\u586B\u5BEB\u6B63\u78BA\u7684\u90F5\u4EF6\u5730\u5740", "\u7DB2\u5740", "\u53EF\u9078", "\u6B61\u8FCE\u7559\u8A00", "\u4F86\u767C\u7559\u8A00\u5427~", "\u9001\u51FA", "\u559C\u6B61", "\u53D6\u6D88\u559C\u6B61", "\u56DE\u8986", "\u53D6\u6D88\u56DE\u8986", "\u7559\u8A00", "\u91CD\u6574", "\u8F09\u5165\u66F4\u591A...", "\u9810\u89BD", "\u8868\u60C5", "\u4E0A\u50B3\u5716\u7247", "\u79D2\u524D", "\u5206\u9418\u524D", "\u5C0F\u6642\u524D", "\u5929\u524D", "\u525B\u525B", "\u6B63\u5728\u4E0A\u50B3", "\u767B\u5165", "\u767B\u51FA", "\u7BA1\u7406\u8005", "\u7F6E\u9802", "\u5B57", `\u7559\u8A00\u5B57\u6578\u61C9\u5728 $0 \u5230 $1 \u5B57\u4E4B\u9593\uFF01
 \u76EE\u524D\u5B57\u6578\uFF1A$2`, "\u533F\u540D", "\u6F5B\u6C34", "\u5192\u6CE1", "\u5410\u69FD", "\u6D3B\u8E8D", "\u591A\u8A71", "\u50B3\u8AAA", "\u8868\u60C5\u5305", "\u641C\u5C0B\u8868\u60C5\u5305", "\u500B\u4EBA\u8CC7\u6599", "\u901A\u904E", "\u5F85\u5BE9\u6838", "\u5783\u573E", "\u53D6\u6D88\u7F6E\u9802", "\u6700\u65E9", "\u6700\u65B0", "\u71B1\u9580", "\u4F60\u8A8D\u70BA\u9019\u7BC7\u6587\u7AE0\u600E\u9EBC\u6A23\uFF1F"]);
-  var nt = "en-US";
-  var ye = { zh: at, "zh-cn": at, "zh-tw": vl, en: Ye, "en-us": Ye, fr: Qe, "fr-fr": Qe, jp: et, "jp-jp": et, "pt-br": ul, ru: tt, "ru-ru": tt, vi: lt, "vi-vn": lt };
-  var ot = (e2) => ye[e2.toLowerCase()] || ye[nt];
-  var ml = (e2) => Object.keys(ye).includes(e2.toLowerCase()) ? e2 : nt;
-  var it = (e2) => {
+  var lt = "en-US";
+  var ke = { zh: tt, "zh-cn": tt, "zh-tw": ul, en: Xe, "en-us": Xe, fr: Je, "fr-fr": Je, jp: Ye, "jp-jp": Ye, "pt-br": cl, ru: Qe, "ru-ru": Qe, vi: et, "vi-vn": et };
+  var at = (e2) => ke[e2.toLowerCase()] || ke[lt];
+  var vl = (e2) => Object.keys(ke).includes(e2.toLowerCase()) ? e2 : lt;
+  var nt = (e2) => {
     try {
       e2 = decodeURI(e2);
     } catch {
     }
     return e2;
   };
-  var rt = (e2 = "") => e2.replace(/\/$/u, "");
-  var st = (e2) => /^(https?:)?\/\//.test(e2);
-  var ke = (e2) => {
-    const a = rt(e2);
-    return st(a) ? a : `https://${a}`;
+  var ot = (e2 = "") => e2.replace(/\/$/u, "");
+  var it = (e2) => /^(https?:)?\/\//.test(e2);
+  var be = (e2) => {
+    const n2 = ot(e2);
+    return it(n2) ? n2 : `https://${n2}`;
   };
-  var dl = (e2) => Array.isArray(e2) ? e2 : e2 ? [0, e2] : false;
-  var Re = (e2, a) => typeof e2 == "function" ? e2 : e2 === false ? false : a;
-  var pl = ({ serverURL: e2, path: a = location.pathname, lang: l = typeof navigator > "u" ? "en-US" : navigator.language, locale: t2, emoji: o2 = Xe, meta: n2 = ["nick", "mail", "link"], requiredMeta: m2 = [], dark: d2 = false, pageSize: g = 10, wordLimit: c2, imageUploader: f2, highlighter: _, texRenderer: p3, copyright: M = true, login: S = "enable", search: E, reaction: y2, recaptchaV3Key: i = "", turnstileKey: w2 = "", commentSorting: F = "latest", ...D }) => ({ serverURL: ke(e2), path: it(a), lang: ml(l), locale: { ...ot(l), ...typeof t2 == "object" ? t2 : {} }, wordLimit: dl(c2), meta: Ze(n2), requiredMeta: Ze(m2), imageUploader: Re(f2, el), highlighter: Re(_, sl), texRenderer: Re(p3, tl), dark: d2, emoji: typeof o2 == "boolean" ? o2 ? Xe : [] : o2, pageSize: g, login: S, copyright: M, search: E === false ? false : typeof E == "object" ? E : ll(l), recaptchaV3Key: i, turnstileKey: w2, reaction: Array.isArray(y2) ? y2 : y2 === true ? Qt : [], commentSorting: F, ...D });
-  var se = (e2) => typeof e2 == "string";
-  var Ae = "{--waline-white:#000;--waline-light-grey:#666;--waline-dark-grey:#999;--waline-color:#888;--waline-bg-color:#1e1e1e;--waline-bg-color-light:#272727;--waline-bg-color-hover: #444;--waline-border-color:#333;--waline-disable-bg-color:#444;--waline-disable-color:#272727;--waline-bq-color:#272727;--waline-info-bg-color:#272727;--waline-info-color:#666}";
-  var gl = (e2) => se(e2) ? e2 === "auto" ? `@media(prefers-color-scheme:dark){body${Ae}}` : `${e2}${Ae}` : e2 === true ? `:root${Ae}` : "";
-  var Me = (e2, a) => {
-    let l = e2.toString();
-    for (; l.length < a; )
-      l = "0" + l;
-    return l;
+  var ml = (e2) => Array.isArray(e2) ? e2 : e2 ? [0, e2] : false;
+  var xe = (e2, n2) => typeof e2 == "function" ? e2 : e2 === false ? false : n2;
+  var dl = ({ serverURL: e2, path: n2 = location.pathname, lang: t2 = typeof navigator > "u" ? "en-US" : navigator.language, locale: l, emoji: a = Ke, meta: i = ["nick", "mail", "link"], requiredMeta: h2 = [], dark: c2 = false, pageSize: C2 = 10, wordLimit: u2, imageUploader: w2, highlighter: S, texRenderer: g, copyright: _ = true, login: M = "enable", search: $2, reaction: y2, recaptchaV3Key: o2 = "", turnstileKey: f2 = "", commentSorting: F = "latest", ...q }) => ({ serverURL: be(e2), path: nt(n2), lang: vl(t2), locale: { ...at(t2), ...typeof l == "object" ? l : {} }, wordLimit: ml(u2), meta: Ge(i), requiredMeta: Ge(h2), imageUploader: xe(w2, Qt), highlighter: xe(S, rl), texRenderer: xe(g, el), dark: c2, emoji: typeof a == "boolean" ? a ? Ke : [] : a, pageSize: C2, login: M, copyright: _, search: $2 === false ? false : typeof $2 == "object" ? $2 : tl(t2), recaptchaV3Key: o2, turnstileKey: f2, reaction: Array.isArray(y2) ? y2 : y2 === true ? Yt : [], commentSorting: F, ...q });
+  var re = (e2) => typeof e2 == "string";
+  var Re = "{--waline-white:#000;--waline-light-grey:#666;--waline-dark-grey:#999;--waline-color:#888;--waline-bg-color:#1e1e1e;--waline-bg-color-light:#272727;--waline-bg-color-hover: #444;--waline-border-color:#333;--waline-disable-bg-color:#444;--waline-disable-color:#272727;--waline-bq-color:#272727;--waline-info-bg-color:#272727;--waline-info-color:#666}";
+  var pl = (e2) => re(e2) ? e2 === "auto" ? `@media(prefers-color-scheme:dark){body${Re}}` : `${e2}${Re}` : e2 === true ? `:root${Re}` : "";
+  var Ae = (e2, n2) => {
+    let t2 = e2.toString();
+    for (; t2.length < n2; )
+      t2 = "0" + t2;
+    return t2;
   };
-  var hl = (e2) => {
-    const a = Me(e2.getDate(), 2), l = Me(e2.getMonth() + 1, 2);
-    return `${Me(e2.getFullYear(), 2)}-${l}-${a}`;
+  var gl = (e2) => {
+    const n2 = Ae(e2.getDate(), 2), t2 = Ae(e2.getMonth() + 1, 2);
+    return `${Ae(e2.getFullYear(), 2)}-${t2}-${n2}`;
   };
-  var fl = (e2, a, l) => {
+  var hl = (e2, n2, t2) => {
     if (!e2)
       return "";
-    const t2 = se(e2) ? new Date(e2.indexOf(" ") !== -1 ? e2.replace(/-/g, "/") : e2) : e2, o2 = a.getTime() - t2.getTime(), n2 = Math.floor(o2 / (24 * 3600 * 1e3));
-    if (n2 === 0) {
-      const m2 = o2 % 864e5, d2 = Math.floor(m2 / (3600 * 1e3));
-      if (d2 === 0) {
-        const g = m2 % 36e5, c2 = Math.floor(g / (60 * 1e3));
-        if (c2 === 0) {
-          const f2 = g % 6e4;
-          return `${Math.round(f2 / 1e3)} ${l.seconds}`;
+    const l = re(e2) ? new Date(e2.indexOf(" ") !== -1 ? e2.replace(/-/g, "/") : e2) : e2, a = n2.getTime() - l.getTime(), i = Math.floor(a / (24 * 3600 * 1e3));
+    if (i === 0) {
+      const h2 = a % 864e5, c2 = Math.floor(h2 / (3600 * 1e3));
+      if (c2 === 0) {
+        const C2 = h2 % 36e5, u2 = Math.floor(C2 / (60 * 1e3));
+        if (u2 === 0) {
+          const w2 = C2 % 6e4;
+          return `${Math.round(w2 / 1e3)} ${t2.seconds}`;
         }
-        return `${c2} ${l.minutes}`;
+        return `${u2} ${t2.minutes}`;
       }
-      return `${d2} ${l.hours}`;
+      return `${c2} ${t2.hours}`;
     }
-    return n2 < 0 ? l.now : n2 < 8 ? `${n2} ${l.days}` : hl(t2);
+    return i < 0 ? t2.now : i < 8 ? `${i} ${t2.days}` : gl(l);
   };
-  var wl = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
-  var yl = (e2) => wl.test(e2);
-  var kl = (e2) => !!/@[0-9]+\.[0-9]+\.[0-9]+/.test(e2);
-  var bl = (e2) => {
-    const a = useStorage("WALINE_EMOJI", {}), l = kl(e2);
-    if (l) {
-      const t2 = a.value[e2];
-      if (t2)
-        return Promise.resolve(t2);
+  var fl = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+  var wl = (e2) => fl.test(e2);
+  var yl = (e2) => !!/@[0-9]+\.[0-9]+\.[0-9]+/.test(e2);
+  var kl = (e2) => {
+    const n2 = useStorage("WALINE_EMOJI", {}), t2 = yl(e2);
+    if (t2) {
+      const l = n2.value[e2];
+      if (l)
+        return Promise.resolve(l);
     }
-    return fetch(`${e2}/info.json`).then((t2) => t2.json()).then((t2) => {
-      const o2 = { folder: e2, ...t2 };
-      return l && (a.value[e2] = o2), o2;
+    return fetch(`${e2}/info.json`).then((l) => l.json()).then((l) => {
+      const a = { folder: e2, ...l };
+      return t2 && (n2.value[e2] = a), a;
     });
   };
-  var ct = (e2, a = "", l = "", t2 = "") => `${a ? `${a}/` : ""}${l}${e2}${t2 ? `.${t2}` : ""}`;
-  var Cl = (e2) => Promise.all(e2.map((a) => se(a) ? bl(rt(a)) : Promise.resolve(a))).then((a) => {
-    const l = { tabs: [], map: {} };
-    return a.forEach((t2) => {
-      const { name: o2, folder: n2, icon: m2, prefix: d2, type: g, items: c2 } = t2;
-      l.tabs.push({ name: o2, icon: ct(m2, n2, d2, g), items: c2.map((f2) => {
-        const _ = `${d2 || ""}${f2}`;
-        return l.map[_] = ct(f2, n2, d2, g), _;
+  var rt = (e2, n2 = "", t2 = "", l = "") => `${n2 ? `${n2}/` : ""}${t2}${e2}${l ? `.${l}` : ""}`;
+  var bl = (e2) => Promise.all(e2.map((n2) => re(n2) ? kl(ot(n2)) : Promise.resolve(n2))).then((n2) => {
+    const t2 = { tabs: [], map: {} };
+    return n2.forEach((l) => {
+      const { name: a, folder: i, icon: h2, prefix: c2 = "", type: C2, items: u2 } = l;
+      t2.tabs.push({ name: a, icon: rt(h2, i, c2, C2), items: u2.map((w2) => {
+        const S = `${c2}${w2}`;
+        return t2.map[S] = rt(w2, i, c2, C2), S;
       }) });
-    }), l;
+    }), t2;
   });
-  var ut = (e2) => {
+  var st = (e2) => {
     e2.name !== "AbortError" && console.error(e2.message);
   };
-  var Ue = (e2) => e2 instanceof HTMLElement ? e2 : se(e2) ? document.querySelector(e2) : null;
-  var $l = (e2) => e2.type.includes("image");
-  var vt = (e2) => {
-    const a = Array.from(e2).find($l);
-    return a ? a.getAsFile() : null;
+  var _e = (e2) => e2 instanceof HTMLElement ? e2 : re(e2) ? document.querySelector(e2) : null;
+  var Cl = (e2) => e2.type.includes("image");
+  var ct = (e2) => {
+    const n2 = Array.from(e2).find(Cl);
+    return n2 ? n2.getAsFile() : null;
   };
-  var Ll = /\$.*?\$/;
-  var El = /^\$(.*?)\$/;
+  var $l = /\$.*?\$/;
+  var Ll = /^\$(.*?)\$/;
   var Il = /^(?:\s{0,3})\$\$((?:[^\n]|\n[^\n])+?)\n{0,1}\$\$/;
-  var xl = (e2) => [{ name: "blockMath", level: "block", tokenizer(a) {
-    const l = Il.exec(a);
-    if (l !== null)
-      return { type: "html", raw: l[0], text: e2(true, l[1]) };
-  } }, { name: "inlineMath", level: "inline", start(a) {
-    const l = a.search(Ll);
-    return l !== -1 ? l : a.length;
-  }, tokenizer(a) {
-    const l = El.exec(a);
-    if (l !== null)
-      return { type: "html", raw: l[0], text: e2(false, l[1]) };
+  var El = (e2) => [{ name: "blockMath", level: "block", tokenizer(n2) {
+    const t2 = Il.exec(n2);
+    if (t2 !== null)
+      return { type: "html", raw: t2[0], text: e2(true, t2[1]) };
+  } }, { name: "inlineMath", level: "inline", start(n2) {
+    const t2 = n2.search($l);
+    return t2 !== -1 ? t2 : n2.length;
+  }, tokenizer(n2) {
+    const t2 = Ll.exec(n2);
+    if (t2 !== null)
+      return { type: "html", raw: t2[0], text: e2(false, t2[1]) };
   } }];
-  var mt = (e2 = "", a = {}) => e2.replace(/:(.+?):/g, (l, t2) => a[t2] ? `<img class="wl-emoji" src="${a[t2]}" alt="${t2}">` : l);
-  var Rl = (e2, { emojiMap: a, highlighter: l, texRenderer: t2 }) => {
-    const o2 = new Marked();
-    if (o2.setOptions({ breaks: true }), l && o2.use(markedHighlight({ highlight: l })), t2) {
-      const n2 = xl(t2);
-      o2.use({ extensions: n2 });
+  var ut = (e2 = "", n2 = {}) => e2.replace(/:(.+?):/g, (t2, l) => n2[l] ? `<img class="wl-emoji" src="${n2[l]}" alt="${l}">` : t2);
+  var xl = (e2, { emojiMap: n2, highlighter: t2, texRenderer: l }) => {
+    const a = new Marked();
+    if (a.setOptions({ breaks: true }), t2 && a.use(markedHighlight({ highlight: t2 })), l) {
+      const i = El(l);
+      a.use({ extensions: i });
     }
-    return o2.parse(mt(e2, a));
+    return a.parse(ut(e2, n2));
   };
-  var Se = (e2) => e2.dataset.path || null;
-  var Al = (e2) => e2.match(/[\w\d\s,.\u00C0-\u024F\u0400-\u04FF]+/giu);
-  var Ml = (e2) => e2.match(/[\u4E00-\u9FD5]/gu);
-  var Ul = (e2) => {
-    var a, l;
-    return (((a = Al(e2)) == null ? void 0 : a.reduce((t2, o2) => t2 + (["", ",", "."].includes(o2.trim()) ? 0 : o2.trim().split(/\s+/u).length), 0)) || 0) + (((l = Ml(e2)) == null ? void 0 : l.length) || 0);
+  var Me = (e2) => e2.dataset.path ?? null;
+  var Rl = (e2) => e2.match(/[\w\d\s,.\u00C0-\u024F\u0400-\u04FF]+/giu);
+  var Al = (e2) => e2.match(/[\u4E00-\u9FD5]/gu);
+  var _l = (e2) => {
+    var n2, t2;
+    return (((n2 = Rl(e2)) == null ? void 0 : n2.reduce((l, a) => l + (["", ",", "."].includes(a.trim()) ? 0 : a.trim().split(/\s+/u).length), 0)) ?? 0) + (((t2 = Al(e2)) == null ? void 0 : t2.length) ?? 0);
   };
-  var Sl = async () => {
+  var Ml = async () => {
     if (!navigator)
       return "";
     const { userAgentData: e2 } = navigator;
-    let a = navigator.userAgent;
+    let n2 = navigator.userAgent;
     if (!e2 || e2.platform !== "Windows")
-      return a;
-    const { platformVersion: l } = await e2.getHighEntropyValues(["platformVersion"]);
-    return l && parseInt(l.split(".")[0]) >= 13 && (a = a.replace("Windows NT 10.0", "Windows NT 11.0")), a;
+      return n2;
+    const { platformVersion: t2 } = await e2.getHighEntropyValues(["platformVersion"]);
+    return t2 && parseInt(t2.split(".")[0]) >= 13 && (n2 = n2.replace("Windows NT 10.0", "Windows NT 11.0")), n2;
   };
-  var dt = ({ serverURL: e2, path: a = window.location.pathname, selector: l = ".waline-comment-count", lang: t2 = navigator.language }) => {
-    const o2 = new AbortController(), n2 = document.querySelectorAll(l);
-    return n2.length && f({ serverURL: ke(e2), paths: Array.from(n2).map((m2) => it(Se(m2) || a)), lang: t2, signal: o2.signal }).then((m2) => {
-      n2.forEach((d2, g) => {
-        d2.innerText = m2[g].toString();
+  var vt = ({ serverURL: e2, path: n2 = window.location.pathname, selector: t2 = ".waline-comment-count", lang: l = navigator.language }) => {
+    const a = new AbortController(), i = document.querySelectorAll(t2);
+    return i.length && f({ serverURL: be(e2), paths: Array.from(i).map((h2) => nt(Me(h2) ?? n2)), lang: l, signal: a.signal }).then((h2) => {
+      i.forEach((c2, C2) => {
+        c2.innerText = h2[C2].toString();
       });
-    }).catch(ut), o2.abort.bind(o2);
+    }).catch(st), a.abort.bind(a);
   };
-  var pt = ({ size: e2 }) => h("svg", { class: "wl-close-icon", viewBox: "0 0 1024 1024", width: e2, height: e2 }, [h("path", { d: "M697.173 85.333h-369.92c-144.64 0-241.92 101.547-241.92 252.587v348.587c0 150.613 97.28 252.16 241.92 252.16h369.92c144.64 0 241.494-101.547 241.494-252.16V337.92c0-151.04-96.854-252.587-241.494-252.587z", fill: "currentColor" }), h("path", { d: "m640.683 587.52-75.947-75.861 75.904-75.862a37.29 37.29 0 0 0 0-52.778 37.205 37.205 0 0 0-52.779 0l-75.946 75.818-75.862-75.946a37.419 37.419 0 0 0-52.821 0 37.419 37.419 0 0 0 0 52.821l75.947 75.947-75.776 75.733a37.29 37.29 0 1 0 52.778 52.821l75.776-75.776 75.947 75.947a37.376 37.376 0 0 0 52.779-52.821z", fill: "#888" })]);
-  var _l = () => h("svg", { viewBox: "0 0 1024 1024", width: "24", height: "24" }, h("path", { d: "m341.013 394.667 27.755 393.45h271.83l27.733-393.45h64.106l-28.01 397.952a64 64 0 0 1-63.83 59.498H368.768a64 64 0 0 1-63.83-59.52l-28.053-397.93h64.128zm139.307 19.818v298.667h-64V414.485h64zm117.013 0v298.667h-64V414.485h64zM181.333 288h640v64h-640v-64zm453.483-106.667v64h-256v-64h256z", fill: "red" }));
-  var jl = () => h("svg", { viewBox: "0 0 1024 1024", width: "24", height: "24" }, h("path", { d: "M563.2 463.3 677 540c1.7 1.2 3.7 1.8 5.8 1.8.7 0 1.4-.1 2-.2 2.7-.5 5.1-2.1 6.6-4.4l25.3-37.8c1.5-2.3 2.1-5.1 1.6-7.8s-2.1-5.1-4.4-6.6l-73.6-49.1 73.6-49.1c2.3-1.5 3.9-3.9 4.4-6.6.5-2.7 0-5.5-1.6-7.8l-25.3-37.8a10.1 10.1 0 0 0-6.6-4.4c-.7-.1-1.3-.2-2-.2-2.1 0-4.1.6-5.8 1.8l-113.8 76.6c-9.2 6.2-14.7 16.4-14.7 27.5.1 11 5.5 21.3 14.7 27.4zM387 348.8h-45.5c-5.7 0-10.4 4.7-10.4 10.4v153.3c0 5.7 4.7 10.4 10.4 10.4H387c5.7 0 10.4-4.7 10.4-10.4V359.2c0-5.7-4.7-10.4-10.4-10.4zm333.8 241.3-41-20a10.3 10.3 0 0 0-8.1-.5c-2.6.9-4.8 2.9-5.9 5.4-30.1 64.9-93.1 109.1-164.4 115.2-5.7.5-9.9 5.5-9.5 11.2l3.9 45.5c.5 5.3 5 9.5 10.3 9.5h.9c94.8-8 178.5-66.5 218.6-152.7 2.4-5 .3-11.2-4.8-13.6zm186-186.1c-11.9-42-30.5-81.4-55.2-117.1-24.1-34.9-53.5-65.6-87.5-91.2-33.9-25.6-71.5-45.5-111.6-59.2-41.2-14-84.1-21.1-127.8-21.1h-1.2c-75.4 0-148.8 21.4-212.5 61.7-63.7 40.3-114.3 97.6-146.5 165.8-32.2 68.1-44.3 143.6-35.1 218.4 9.3 74.8 39.4 145 87.3 203.3.1.2.3.3.4.5l36.2 38.4c1.1 1.2 2.5 2.1 3.9 2.6 73.3 66.7 168.2 103.5 267.5 103.5 73.3 0 145.2-20.3 207.7-58.7 37.3-22.9 70.3-51.5 98.1-85 27.1-32.7 48.7-69.5 64.2-109.1 15.5-39.7 24.4-81.3 26.6-123.8 2.4-43.6-2.5-87-14.5-129zm-60.5 181.1c-8.3 37-22.8 72-43 104-19.7 31.1-44.3 58.6-73.1 81.7-28.8 23.1-61 41-95.7 53.4-35.6 12.7-72.9 19.1-110.9 19.1-82.6 0-161.7-30.6-222.8-86.2l-34.1-35.8c-23.9-29.3-42.4-62.2-55.1-97.7-12.4-34.7-18.8-71-19.2-107.9-.4-36.9 5.4-73.3 17.1-108.2 12-35.8 30-69.2 53.4-99.1 31.7-40.4 71.1-72 117.2-94.1 44.5-21.3 94-32.6 143.4-32.6 49.3 0 97 10.8 141.8 32 34.3 16.3 65.3 38.1 92 64.8 26.1 26 47.5 56 63.6 89.2 16.2 33.2 26.6 68.5 31 105.1 4.6 37.5 2.7 75.3-5.6 112.3z", fill: "currentColor" }));
-  var zl = () => h("svg", { viewBox: "0 0 1024 1024", width: "24", height: "24" }, [h("path", { d: "M784 112H240c-88 0-160 72-160 160v480c0 88 72 160 160 160h544c88 0 160-72 160-160V272c0-88-72-160-160-160zm96 640c0 52.8-43.2 96-96 96H240c-52.8 0-96-43.2-96-96V272c0-52.8 43.2-96 96-96h544c52.8 0 96 43.2 96 96v480z", fill: "currentColor" }), h("path", { d: "M352 480c52.8 0 96-43.2 96-96s-43.2-96-96-96-96 43.2-96 96 43.2 96 96 96zm0-128c17.6 0 32 14.4 32 32s-14.4 32-32 32-32-14.4-32-32 14.4-32 32-32zm462.4 379.2-3.2-3.2-177.6-177.6c-25.6-25.6-65.6-25.6-91.2 0l-80 80-36.8-36.8c-25.6-25.6-65.6-25.6-91.2 0L200 728c-4.8 6.4-8 14.4-8 24 0 17.6 14.4 32 32 32 9.6 0 16-3.2 22.4-9.6L380.8 640l134.4 134.4c6.4 6.4 14.4 9.6 24 9.6 17.6 0 32-14.4 32-32 0-9.6-4.8-17.6-9.6-24l-52.8-52.8 80-80L769.6 776c6.4 4.8 12.8 8 20.8 8 17.6 0 32-14.4 32-32 0-8-3.2-16-8-20.8z", fill: "currentColor" })]);
-  var Vl = ({ active: e2 = false }) => h("svg", { viewBox: "0 0 1024 1024", width: "24", height: "24" }, [h("path", { d: `M850.654 323.804c-11.042-25.625-26.862-48.532-46.885-68.225-20.022-19.61-43.258-34.936-69.213-45.73-26.78-11.124-55.124-16.727-84.375-16.727-40.622 0-80.256 11.123-114.698 32.135A214.79 214.79 0 0 0 512 241.819a214.79 214.79 0 0 0-23.483-16.562c-34.442-21.012-74.076-32.135-114.698-32.135-29.25 0-57.595 5.603-84.375 16.727-25.872 10.711-49.19 26.12-69.213 45.73-20.105 19.693-35.843 42.6-46.885 68.225-11.453 26.615-17.303 54.877-17.303 83.963 0 27.439 5.603 56.03 16.727 85.117 9.31 24.307 22.659 49.52 39.715 74.981 27.027 40.293 64.188 82.316 110.33 124.915 76.465 70.615 152.189 119.394 155.402 121.371l19.528 12.525c8.652 5.52 19.776 5.52 28.427 0l19.529-12.525c3.213-2.06 78.854-50.756 155.401-121.371 46.143-42.6 83.304-84.622 110.33-124.915 17.057-25.46 30.487-50.674 39.716-74.981 11.124-29.087 16.727-57.678 16.727-85.117.082-29.086-5.768-57.348-17.221-83.963z${e2 ? "" : "M512 761.5S218.665 573.55 218.665 407.767c0-83.963 69.461-152.023 155.154-152.023 60.233 0 112.473 33.618 138.181 82.727 25.708-49.109 77.948-82.727 138.18-82.727 85.694 0 155.155 68.06 155.155 152.023C805.335 573.551 512 761.5 512 761.5z"}`, fill: e2 ? "red" : "currentColor" })]);
-  var Hl = () => h("svg", { viewBox: "0 0 1024 1024", width: "24", height: "24" }, [h("path", { d: "M710.816 654.301c70.323-96.639 61.084-230.578-23.705-314.843-46.098-46.098-107.183-71.109-172.28-71.109-65.008 0-126.092 25.444-172.28 71.109-45.227 46.098-70.756 107.183-70.756 172.106 0 64.923 25.444 126.007 71.194 172.106 46.099 46.098 107.184 71.109 172.28 71.109 51.414 0 100.648-16.212 142.824-47.404l126.53 126.006c7.058 7.06 16.297 10.979 26.406 10.979 10.105 0 19.343-3.919 26.402-10.979 14.467-14.467 14.467-38.172 0-52.723L710.816 654.301zm-315.107-23.265c-65.88-65.88-65.88-172.54 0-238.42 32.069-32.07 74.245-49.149 119.471-49.149 45.227 0 87.407 17.603 119.472 49.149 65.88 65.879 65.88 172.539 0 238.42-63.612 63.178-175.242 63.178-238.943 0zm0 0", fill: "currentColor" }), h("path", { d: "M703.319 121.603H321.03c-109.8 0-199.469 89.146-199.469 199.38v382.034c0 109.796 89.236 199.38 199.469 199.38h207.397c20.653 0 37.384-16.645 37.384-37.299 0-20.649-16.731-37.296-37.384-37.296H321.03c-68.582 0-124.352-55.77-124.352-124.267V321.421c0-68.496 55.77-124.267 124.352-124.267h382.289c68.582 0 124.352 55.771 124.352 124.267V524.72c0 20.654 16.736 37.299 37.385 37.299 20.654 0 37.384-16.645 37.384-37.299V320.549c-.085-109.8-89.321-198.946-199.121-198.946zm0 0", fill: "currentColor" })]);
-  var Tl = () => h("svg", { width: "16", height: "16", ariaHidden: "true" }, h("path", { d: "M14.85 3H1.15C.52 3 0 3.52 0 4.15v7.69C0 12.48.52 13 1.15 13h13.69c.64 0 1.15-.52 1.15-1.15v-7.7C16 3.52 15.48 3 14.85 3zM9 11H7V8L5.5 9.92 4 8v3H2V5h2l1.5 2L7 5h2v6zm2.99.5L9.5 8H11V5h2v3h1.5l-2.51 3.5z", fill: "currentColor" }));
-  var Fl = () => h("svg", { viewBox: "0 0 1024 1024", width: "24", height: "24" }, h("path", { d: "M810.667 213.333a64 64 0 0 1 64 64V704a64 64 0 0 1-64 64H478.336l-146.645 96.107a21.333 21.333 0 0 1-33.024-17.856V768h-85.334a64 64 0 0 1-64-64V277.333a64 64 0 0 1 64-64h597.334zm0 64H213.333V704h149.334v63.296L459.243 704h351.424V277.333zm-271.36 213.334v64h-176.64v-64h176.64zm122.026-128v64H362.667v-64h298.666z", fill: "currentColor" }));
-  var Nl = () => h("svg", { viewBox: "0 0 1024 1024", width: "24", height: "24" }, h("path", { d: "M813.039 318.772L480.53 651.278H360.718V531.463L693.227 198.961C697.904 194.284 704.027 192 710.157 192C716.302 192 722.436 194.284 727.114 198.961L813.039 284.88C817.72 289.561 820 295.684 820 301.825C820 307.95 817.72 314.093 813.039 318.772ZM710.172 261.888L420.624 551.431V591.376H460.561L750.109 301.825L710.172 261.888ZM490.517 291.845H240.906V771.09H720.156V521.479C720.156 504.947 733.559 491.529 750.109 491.529C766.653 491.529 780.063 504.947 780.063 521.479V791.059C780.063 813.118 762.18 831 740.125 831H220.937C198.882 831 181 813.118 181 791.059V271.872C181 249.817 198.882 231.935 220.937 231.935H490.517C507.06 231.935 520.47 245.352 520.47 261.888C520.47 278.424 507.06 291.845 490.517 291.845Z", fill: "currentColor" }));
-  var Wl = () => h("svg", { class: "verified-icon", viewBox: "0 0 1024 1024", width: "14", height: "14" }, h("path", { d: "m894.4 461.56-54.4-63.2c-10.4-12-18.8-34.4-18.8-50.4v-68c0-42.4-34.8-77.2-77.2-77.2h-68c-15.6 0-38.4-8.4-50.4-18.8l-63.2-54.4c-27.6-23.6-72.8-23.6-100.8 0l-62.8 54.8c-12 10-34.8 18.4-50.4 18.4h-69.2c-42.4 0-77.2 34.8-77.2 77.2v68.4c0 15.6-8.4 38-18.4 50l-54 63.6c-23.2 27.6-23.2 72.4 0 100l54 63.6c10 12 18.4 34.4 18.4 50v68.4c0 42.4 34.8 77.2 77.2 77.2h69.2c15.6 0 38.4 8.4 50.4 18.8l63.2 54.4c27.6 23.6 72.8 23.6 100.8 0l63.2-54.4c12-10.4 34.4-18.8 50.4-18.8h68c42.4 0 77.2-34.8 77.2-77.2v-68c0-15.6 8.4-38.4 18.8-50.4l54.4-63.2c23.2-27.6 23.2-73.2-.4-100.8zm-216-25.2-193.2 193.2a30 30 0 0 1-42.4 0l-96.8-96.8a30.16 30.16 0 0 1 0-42.4c11.6-11.6 30.8-11.6 42.4 0l75.6 75.6 172-172c11.6-11.6 30.8-11.6 42.4 0 11.6 11.6 11.6 30.8 0 42.4z", fill: "#27ae60" }));
+  var mt = ({ size: e2 }) => h("svg", { class: "wl-close-icon", viewBox: "0 0 1024 1024", width: e2, height: e2 }, [h("path", { d: "M697.173 85.333h-369.92c-144.64 0-241.92 101.547-241.92 252.587v348.587c0 150.613 97.28 252.16 241.92 252.16h369.92c144.64 0 241.494-101.547 241.494-252.16V337.92c0-151.04-96.854-252.587-241.494-252.587z", fill: "currentColor" }), h("path", { d: "m640.683 587.52-75.947-75.861 75.904-75.862a37.29 37.29 0 0 0 0-52.778 37.205 37.205 0 0 0-52.779 0l-75.946 75.818-75.862-75.946a37.419 37.419 0 0 0-52.821 0 37.419 37.419 0 0 0 0 52.821l75.947 75.947-75.776 75.733a37.29 37.29 0 1 0 52.778 52.821l75.776-75.776 75.947 75.947a37.376 37.376 0 0 0 52.779-52.821z", fill: "#888" })]);
+  var Sl = () => h("svg", { viewBox: "0 0 1024 1024", width: "24", height: "24" }, h("path", { d: "m341.013 394.667 27.755 393.45h271.83l27.733-393.45h64.106l-28.01 397.952a64 64 0 0 1-63.83 59.498H368.768a64 64 0 0 1-63.83-59.52l-28.053-397.93h64.128zm139.307 19.818v298.667h-64V414.485h64zm117.013 0v298.667h-64V414.485h64zM181.333 288h640v64h-640v-64zm453.483-106.667v64h-256v-64h256z", fill: "red" }));
+  var Ul = () => h("svg", { viewBox: "0 0 1024 1024", width: "24", height: "24" }, h("path", { d: "M563.2 463.3 677 540c1.7 1.2 3.7 1.8 5.8 1.8.7 0 1.4-.1 2-.2 2.7-.5 5.1-2.1 6.6-4.4l25.3-37.8c1.5-2.3 2.1-5.1 1.6-7.8s-2.1-5.1-4.4-6.6l-73.6-49.1 73.6-49.1c2.3-1.5 3.9-3.9 4.4-6.6.5-2.7 0-5.5-1.6-7.8l-25.3-37.8a10.1 10.1 0 0 0-6.6-4.4c-.7-.1-1.3-.2-2-.2-2.1 0-4.1.6-5.8 1.8l-113.8 76.6c-9.2 6.2-14.7 16.4-14.7 27.5.1 11 5.5 21.3 14.7 27.4zM387 348.8h-45.5c-5.7 0-10.4 4.7-10.4 10.4v153.3c0 5.7 4.7 10.4 10.4 10.4H387c5.7 0 10.4-4.7 10.4-10.4V359.2c0-5.7-4.7-10.4-10.4-10.4zm333.8 241.3-41-20a10.3 10.3 0 0 0-8.1-.5c-2.6.9-4.8 2.9-5.9 5.4-30.1 64.9-93.1 109.1-164.4 115.2-5.7.5-9.9 5.5-9.5 11.2l3.9 45.5c.5 5.3 5 9.5 10.3 9.5h.9c94.8-8 178.5-66.5 218.6-152.7 2.4-5 .3-11.2-4.8-13.6zm186-186.1c-11.9-42-30.5-81.4-55.2-117.1-24.1-34.9-53.5-65.6-87.5-91.2-33.9-25.6-71.5-45.5-111.6-59.2-41.2-14-84.1-21.1-127.8-21.1h-1.2c-75.4 0-148.8 21.4-212.5 61.7-63.7 40.3-114.3 97.6-146.5 165.8-32.2 68.1-44.3 143.6-35.1 218.4 9.3 74.8 39.4 145 87.3 203.3.1.2.3.3.4.5l36.2 38.4c1.1 1.2 2.5 2.1 3.9 2.6 73.3 66.7 168.2 103.5 267.5 103.5 73.3 0 145.2-20.3 207.7-58.7 37.3-22.9 70.3-51.5 98.1-85 27.1-32.7 48.7-69.5 64.2-109.1 15.5-39.7 24.4-81.3 26.6-123.8 2.4-43.6-2.5-87-14.5-129zm-60.5 181.1c-8.3 37-22.8 72-43 104-19.7 31.1-44.3 58.6-73.1 81.7-28.8 23.1-61 41-95.7 53.4-35.6 12.7-72.9 19.1-110.9 19.1-82.6 0-161.7-30.6-222.8-86.2l-34.1-35.8c-23.9-29.3-42.4-62.2-55.1-97.7-12.4-34.7-18.8-71-19.2-107.9-.4-36.9 5.4-73.3 17.1-108.2 12-35.8 30-69.2 53.4-99.1 31.7-40.4 71.1-72 117.2-94.1 44.5-21.3 94-32.6 143.4-32.6 49.3 0 97 10.8 141.8 32 34.3 16.3 65.3 38.1 92 64.8 26.1 26 47.5 56 63.6 89.2 16.2 33.2 26.6 68.5 31 105.1 4.6 37.5 2.7 75.3-5.6 112.3z", fill: "currentColor" }));
+  var jl = () => h("svg", { viewBox: "0 0 1024 1024", width: "24", height: "24" }, [h("path", { d: "M784 112H240c-88 0-160 72-160 160v480c0 88 72 160 160 160h544c88 0 160-72 160-160V272c0-88-72-160-160-160zm96 640c0 52.8-43.2 96-96 96H240c-52.8 0-96-43.2-96-96V272c0-52.8 43.2-96 96-96h544c52.8 0 96 43.2 96 96v480z", fill: "currentColor" }), h("path", { d: "M352 480c52.8 0 96-43.2 96-96s-43.2-96-96-96-96 43.2-96 96 43.2 96 96 96zm0-128c17.6 0 32 14.4 32 32s-14.4 32-32 32-32-14.4-32-32 14.4-32 32-32zm462.4 379.2-3.2-3.2-177.6-177.6c-25.6-25.6-65.6-25.6-91.2 0l-80 80-36.8-36.8c-25.6-25.6-65.6-25.6-91.2 0L200 728c-4.8 6.4-8 14.4-8 24 0 17.6 14.4 32 32 32 9.6 0 16-3.2 22.4-9.6L380.8 640l134.4 134.4c6.4 6.4 14.4 9.6 24 9.6 17.6 0 32-14.4 32-32 0-9.6-4.8-17.6-9.6-24l-52.8-52.8 80-80L769.6 776c6.4 4.8 12.8 8 20.8 8 17.6 0 32-14.4 32-32 0-8-3.2-16-8-20.8z", fill: "currentColor" })]);
+  var zl = ({ active: e2 = false }) => h("svg", { viewBox: "0 0 1024 1024", width: "24", height: "24" }, [h("path", { d: `M850.654 323.804c-11.042-25.625-26.862-48.532-46.885-68.225-20.022-19.61-43.258-34.936-69.213-45.73-26.78-11.124-55.124-16.727-84.375-16.727-40.622 0-80.256 11.123-114.698 32.135A214.79 214.79 0 0 0 512 241.819a214.79 214.79 0 0 0-23.483-16.562c-34.442-21.012-74.076-32.135-114.698-32.135-29.25 0-57.595 5.603-84.375 16.727-25.872 10.711-49.19 26.12-69.213 45.73-20.105 19.693-35.843 42.6-46.885 68.225-11.453 26.615-17.303 54.877-17.303 83.963 0 27.439 5.603 56.03 16.727 85.117 9.31 24.307 22.659 49.52 39.715 74.981 27.027 40.293 64.188 82.316 110.33 124.915 76.465 70.615 152.189 119.394 155.402 121.371l19.528 12.525c8.652 5.52 19.776 5.52 28.427 0l19.529-12.525c3.213-2.06 78.854-50.756 155.401-121.371 46.143-42.6 83.304-84.622 110.33-124.915 17.057-25.46 30.487-50.674 39.716-74.981 11.124-29.087 16.727-57.678 16.727-85.117.082-29.086-5.768-57.348-17.221-83.963z${e2 ? "" : "M512 761.5S218.665 573.55 218.665 407.767c0-83.963 69.461-152.023 155.154-152.023 60.233 0 112.473 33.618 138.181 82.727 25.708-49.109 77.948-82.727 138.18-82.727 85.694 0 155.155 68.06 155.155 152.023C805.335 573.551 512 761.5 512 761.5z"}`, fill: e2 ? "red" : "currentColor" })]);
+  var Vl = () => h("svg", { viewBox: "0 0 1024 1024", width: "24", height: "24" }, [h("path", { d: "M710.816 654.301c70.323-96.639 61.084-230.578-23.705-314.843-46.098-46.098-107.183-71.109-172.28-71.109-65.008 0-126.092 25.444-172.28 71.109-45.227 46.098-70.756 107.183-70.756 172.106 0 64.923 25.444 126.007 71.194 172.106 46.099 46.098 107.184 71.109 172.28 71.109 51.414 0 100.648-16.212 142.824-47.404l126.53 126.006c7.058 7.06 16.297 10.979 26.406 10.979 10.105 0 19.343-3.919 26.402-10.979 14.467-14.467 14.467-38.172 0-52.723L710.816 654.301zm-315.107-23.265c-65.88-65.88-65.88-172.54 0-238.42 32.069-32.07 74.245-49.149 119.471-49.149 45.227 0 87.407 17.603 119.472 49.149 65.88 65.879 65.88 172.539 0 238.42-63.612 63.178-175.242 63.178-238.943 0zm0 0", fill: "currentColor" }), h("path", { d: "M703.319 121.603H321.03c-109.8 0-199.469 89.146-199.469 199.38v382.034c0 109.796 89.236 199.38 199.469 199.38h207.397c20.653 0 37.384-16.645 37.384-37.299 0-20.649-16.731-37.296-37.384-37.296H321.03c-68.582 0-124.352-55.77-124.352-124.267V321.421c0-68.496 55.77-124.267 124.352-124.267h382.289c68.582 0 124.352 55.771 124.352 124.267V524.72c0 20.654 16.736 37.299 37.385 37.299 20.654 0 37.384-16.645 37.384-37.299V320.549c-.085-109.8-89.321-198.946-199.121-198.946zm0 0", fill: "currentColor" })]);
+  var Hl = () => h("svg", { width: "16", height: "16", ariaHidden: "true" }, h("path", { d: "M14.85 3H1.15C.52 3 0 3.52 0 4.15v7.69C0 12.48.52 13 1.15 13h13.69c.64 0 1.15-.52 1.15-1.15v-7.7C16 3.52 15.48 3 14.85 3zM9 11H7V8L5.5 9.92 4 8v3H2V5h2l1.5 2L7 5h2v6zm2.99.5L9.5 8H11V5h2v3h1.5l-2.51 3.5z", fill: "currentColor" }));
+  var Tl = () => h("svg", { viewBox: "0 0 1024 1024", width: "24", height: "24" }, h("path", { d: "M810.667 213.333a64 64 0 0 1 64 64V704a64 64 0 0 1-64 64H478.336l-146.645 96.107a21.333 21.333 0 0 1-33.024-17.856V768h-85.334a64 64 0 0 1-64-64V277.333a64 64 0 0 1 64-64h597.334zm0 64H213.333V704h149.334v63.296L459.243 704h351.424V277.333zm-271.36 213.334v64h-176.64v-64h176.64zm122.026-128v64H362.667v-64h298.666z", fill: "currentColor" }));
+  var Fl = () => h("svg", { viewBox: "0 0 1024 1024", width: "24", height: "24" }, h("path", { d: "M813.039 318.772L480.53 651.278H360.718V531.463L693.227 198.961C697.904 194.284 704.027 192 710.157 192C716.302 192 722.436 194.284 727.114 198.961L813.039 284.88C817.72 289.561 820 295.684 820 301.825C820 307.95 817.72 314.093 813.039 318.772ZM710.172 261.888L420.624 551.431V591.376H460.561L750.109 301.825L710.172 261.888ZM490.517 291.845H240.906V771.09H720.156V521.479C720.156 504.947 733.559 491.529 750.109 491.529C766.653 491.529 780.063 504.947 780.063 521.479V791.059C780.063 813.118 762.18 831 740.125 831H220.937C198.882 831 181 813.118 181 791.059V271.872C181 249.817 198.882 231.935 220.937 231.935H490.517C507.06 231.935 520.47 245.352 520.47 261.888C520.47 278.424 507.06 291.845 490.517 291.845Z", fill: "currentColor" }));
+  var Nl = () => h("svg", { class: "verified-icon", viewBox: "0 0 1024 1024", width: "14", height: "14" }, h("path", { d: "m894.4 461.56-54.4-63.2c-10.4-12-18.8-34.4-18.8-50.4v-68c0-42.4-34.8-77.2-77.2-77.2h-68c-15.6 0-38.4-8.4-50.4-18.8l-63.2-54.4c-27.6-23.6-72.8-23.6-100.8 0l-62.8 54.8c-12 10-34.8 18.4-50.4 18.4h-69.2c-42.4 0-77.2 34.8-77.2 77.2v68.4c0 15.6-8.4 38-18.4 50l-54 63.6c-23.2 27.6-23.2 72.4 0 100l54 63.6c10 12 18.4 34.4 18.4 50v68.4c0 42.4 34.8 77.2 77.2 77.2h69.2c15.6 0 38.4 8.4 50.4 18.8l63.2 54.4c27.6 23.6 72.8 23.6 100.8 0l63.2-54.4c12-10.4 34.4-18.8 50.4-18.8h68c42.4 0 77.2-34.8 77.2-77.2v-68c0-15.6 8.4-38.4 18.8-50.4l54.4-63.2c23.2-27.6 23.2-73.2-.4-100.8zm-216-25.2-193.2 193.2a30 30 0 0 1-42.4 0l-96.8-96.8a30.16 30.16 0 0 1 0-42.4c11.6-11.6 30.8-11.6 42.4 0l75.6 75.6 172-172c11.6-11.6 30.8-11.6 42.4 0 11.6 11.6 11.6 30.8 0 42.4z", fill: "#27ae60" }));
   var ve = ({ size: e2 = 100 }) => h("svg", { width: e2, height: e2, viewBox: "0 0 100 100", preserveAspectRatio: "xMidYMid" }, h("circle", { cx: 50, cy: 50, fill: "none", stroke: "currentColor", strokeWidth: "4", r: "40", "stroke-dasharray": "85 30" }, h("animateTransform", { attributeName: "transform", type: "rotate", repeatCount: "indefinite", dur: "1s", values: "0 50 50;360 50 50", keyTimes: "0;1" })));
-  var Pl = () => h("svg", { width: 24, height: 24, fill: "currentcolor", viewBox: "0 0 24 24" }, [h("path", { style: "transform: translateY(0.5px)", d: "M18.968 10.5H15.968V11.484H17.984V12.984H15.968V15H14.468V9H18.968V10.5V10.5ZM8.984 9C9.26533 9 9.49967 9.09367 9.687 9.281C9.87433 9.46833 9.968 9.70267 9.968 9.984V10.5H6.499V13.5H8.468V12H9.968V14.016C9.968 14.2973 9.87433 14.5317 9.687 14.719C9.49967 14.9063 9.26533 15 8.984 15H5.984C5.70267 15 5.46833 14.9063 5.281 14.719C5.09367 14.5317 5 14.2973 5 14.016V9.985C5 9.70367 5.09367 9.46933 5.281 9.282C5.46833 9.09467 5.70267 9.001 5.984 9.001H8.984V9ZM11.468 9H12.968V15H11.468V9V9Z" }), h("path", { d: "M18.5 3H5.75C3.6875 3 2 4.6875 2 6.75V18C2 20.0625 3.6875 21.75 5.75 21.75H18.5C20.5625 21.75 22.25 20.0625 22.25 18V6.75C22.25 4.6875 20.5625 3 18.5 3ZM20.75 18C20.75 19.2375 19.7375 20.25 18.5 20.25H5.75C4.5125 20.25 3.5 19.2375 3.5 18V6.75C3.5 5.5125 4.5125 4.5 5.75 4.5H18.5C19.7375 4.5 20.75 5.5125 20.75 6.75V18Z" })]);
-  var Dl = () => useStorage("WALINE_USER_META", { nick: "", mail: "", link: "" });
-  var Bl = () => useStorage("WALINE_COMMENT_BOX_EDITOR", "");
-  var Ol = "WALINE_LIKE";
+  var Wl = () => h("svg", { width: 24, height: 24, fill: "currentcolor", viewBox: "0 0 24 24" }, [h("path", { style: "transform: translateY(0.5px)", d: "M18.968 10.5H15.968V11.484H17.984V12.984H15.968V15H14.468V9H18.968V10.5V10.5ZM8.984 9C9.26533 9 9.49967 9.09367 9.687 9.281C9.87433 9.46833 9.968 9.70267 9.968 9.984V10.5H6.499V13.5H8.468V12H9.968V14.016C9.968 14.2973 9.87433 14.5317 9.687 14.719C9.49967 14.9063 9.26533 15 8.984 15H5.984C5.70267 15 5.46833 14.9063 5.281 14.719C5.09367 14.5317 5 14.2973 5 14.016V9.985C5 9.70367 5.09367 9.46933 5.281 9.282C5.46833 9.09467 5.70267 9.001 5.984 9.001H8.984V9ZM11.468 9H12.968V15H11.468V9V9Z" }), h("path", { d: "M18.5 3H5.75C3.6875 3 2 4.6875 2 6.75V18C2 20.0625 3.6875 21.75 5.75 21.75H18.5C20.5625 21.75 22.25 20.0625 22.25 18V6.75C22.25 4.6875 20.5625 3 18.5 3ZM20.75 18C20.75 19.2375 19.7375 20.25 18.5 20.25H5.75C4.5125 20.25 3.5 19.2375 3.5 18V6.75C3.5 5.5125 4.5125 4.5 5.75 4.5H18.5C19.7375 4.5 20.75 5.5125 20.75 6.75V18Z" })]);
+  var Pl = () => useStorage("WALINE_USER_META", { nick: "", mail: "", link: "" });
+  var Dl = () => useStorage("WALINE_COMMENT_BOX_EDITOR", "");
+  var Bl = "WALINE_LIKE";
+  var dt = null;
+  var pt = () => dt ?? (dt = useStorage(Bl, []));
+  var Ol = "WALINE_REACTION";
   var gt = null;
-  var ht = () => gt || (gt = useStorage(Ol, []));
-  var ql = "WALINE_REACTION";
-  var ft = null;
-  var Gl = () => ft ?? (ft = useStorage(ql, {}));
-  var wt = {};
-  var Kl = (e2) => {
-    const a = wt[e2] ?? (wt[e2] = (0, import_recaptcha_v3.load)(e2, { useRecaptchaNet: true, autoHideBadge: true }));
-    return { execute: (l) => a.then((t2) => t2.execute(l)) };
+  var ql = () => gt ?? (gt = useStorage(Ol, {}));
+  var ht = {};
+  var Gl = (e2) => {
+    const n2 = ht[e2] ?? (ht[e2] = (0, import_recaptcha_v3.load)(e2, { useRecaptchaNet: true, autoHideBadge: true }));
+    return { execute: (t2) => n2.then((l) => l.execute(t2)) };
   };
-  var Zl = (e2) => ({ execute: async (a) => {
-    const { load: l } = useScriptTag("https://challenges.cloudflare.com/turnstile/v0/api.js", void 0, { async: false });
-    await l();
-    const t2 = window == null ? void 0 : window.turnstile;
-    return new Promise((o2) => {
-      t2 == null || t2.ready(() => {
-        t2 == null || t2.render(".wl-captcha-container", { sitekey: e2, action: a, size: "compact", callback: o2 });
+  var Kl = (e2) => ({ execute: async (n2) => {
+    const { load: t2 } = useScriptTag("https://challenges.cloudflare.com/turnstile/v0/api.js", void 0, { async: false });
+    await t2();
+    const l = window == null ? void 0 : window.turnstile;
+    return new Promise((a) => {
+      l == null || l.ready(() => {
+        l == null || l.render(".wl-captcha-container", { sitekey: e2, action: n2, size: "compact", callback: a });
       });
     });
   } });
-  var Xl = "WALINE_USER";
-  var yt = null;
-  var be = () => yt ?? (yt = useStorage(Xl, {}));
-  var Jl = { key: 0, class: "wl-reaction" };
-  var Yl = ["textContent"];
-  var Ql = { class: "wl-reaction-list" };
-  var ea = ["onClick"];
-  var ta = { class: "wl-reaction-img" };
-  var la = ["src", "alt"];
+  var Zl = "WALINE_USER";
+  var ft = null;
+  var Ce = () => ft ?? (ft = useStorage(Zl, {}));
+  var Xl = { key: 0, class: "wl-reaction" };
+  var Jl = ["textContent"];
+  var Yl = { class: "wl-reaction-list" };
+  var Ql = ["onClick"];
+  var ea = { class: "wl-reaction-img" };
+  var ta = ["src", "alt"];
+  var la = ["textContent"];
   var aa = ["textContent"];
-  var na = ["textContent"];
-  var oa = defineComponent({ __name: "ArticleReaction", setup(e2, { expose: a }) {
-    a();
-    const l = Gl(), t2 = inject("config"), o2 = ref(-1), n2 = ref([]), m2 = computed2(() => t2.value.locale), d2 = computed2(() => t2.value.reaction.length > 0), g = computed2(() => {
-      const { reaction: p3, path: M } = t2.value;
-      return p3.map((S, E) => ({ icon: S, desc: m2.value[`reaction${E}`], active: l.value[M] === E }));
+  var na = defineComponent({ __name: "ArticleReaction", setup(e2, { expose: n2 }) {
+    n2();
+    const t2 = ql(), l = inject("config"), a = ref(-1), i = ref([]), h2 = computed2(() => l.value.locale), c2 = computed2(() => l.value.reaction.length > 0), C2 = computed2(() => {
+      const { reaction: g, path: _ } = l.value;
+      return g.map((M, $2) => ({ icon: M, desc: h2.value[`reaction${$2}`], active: t2.value[_] === $2 }));
     });
-    let c2;
-    const f2 = async () => {
-      if (!d2.value)
+    let u2;
+    const w2 = async () => {
+      if (!c2.value)
         return;
-      const { serverURL: p3, lang: M, path: S, reaction: E } = t2.value, y2 = new AbortController();
-      c2 = y2.abort.bind(y2);
-      const i = await p({ serverURL: p3, lang: M, paths: [S], type: E.map((w2, F) => `reaction${F}`), signal: y2.signal });
-      n2.value = E.map((w2, F) => i[0][`reaction${F}`]);
-    }, _ = async (p3) => {
-      if (o2.value === -1) {
-        const { serverURL: M, lang: S, path: E } = t2.value, y2 = l.value[E];
-        o2.value = p3, y2 !== void 0 && (await d({ serverURL: M, lang: S, path: E, type: `reaction${y2}`, action: "desc" }), n2.value[y2] = Math.max(n2.value[y2] - 1, 0)), y2 !== p3 && (await d({ serverURL: M, lang: S, path: E, type: `reaction${p3}` }), n2.value[p3] = (n2.value[p3] || 0) + 1), y2 === p3 ? delete l.value[E] : l.value[E] = p3, o2.value = -1;
+      const { serverURL: g, lang: _, path: M, reaction: $2 } = l.value, y2 = new AbortController();
+      u2 = y2.abort.bind(y2);
+      const o2 = await p({ serverURL: g, lang: _, paths: [M], type: $2.map((f2, F) => `reaction${F}`), signal: y2.signal });
+      i.value = $2.map((f2, F) => o2[0][`reaction${F}`]);
+    }, S = async (g) => {
+      if (a.value === -1) {
+        const { serverURL: _, lang: M, path: $2 } = l.value, y2 = t2.value[$2];
+        a.value = g, y2 !== void 0 && (await d({ serverURL: _, lang: M, path: $2, type: `reaction${y2}`, action: "desc" }), i.value[y2] = Math.max(i.value[y2] - 1, 0)), y2 !== g && (await d({ serverURL: _, lang: M, path: $2, type: `reaction${g}` }), i.value[g] = (i.value[g] || 0) + 1), y2 === g ? delete t2.value[$2] : t2.value[$2] = g, a.value = -1;
       }
     };
     return onMounted(() => {
-      watch(() => [t2.value.serverURL, t2.value.path], () => {
-        f2();
+      watch(() => [l.value.serverURL, l.value.path], () => {
+        w2();
       }, { immediate: true });
-    }), onUnmounted(() => c2 == null ? void 0 : c2()), (p3, M) => g.value.length ? (openBlock(), createElementBlock("div", Jl, [createBaseVNode("div", { class: "wl-reaction-title", textContent: toDisplayString(m2.value.reactionTitle) }, null, 8, Yl), createBaseVNode("ul", Ql, [(openBlock(true), createElementBlock(Fragment, null, renderList(g.value, ({ active: S, icon: E, desc: y2 }, i) => (openBlock(), createElementBlock("li", { key: i, class: normalizeClass(["wl-reaction-item", { active: S }]), onClick: (w2) => _(i) }, [createBaseVNode("div", ta, [createBaseVNode("img", { src: E, alt: y2 }, null, 8, la), o2.value === i ? (openBlock(), createBlock(unref(ve), { key: 0, class: "wl-reaction-loading" })) : (openBlock(), createElementBlock("div", { key: 1, class: "wl-reaction-votes", textContent: toDisplayString(n2.value[i] || 0) }, null, 8, aa))]), createBaseVNode("div", { class: "wl-reaction-text", textContent: toDisplayString(y2) }, null, 8, na)], 10, ea))), 128))])])) : createCommentVNode("v-if", true);
+    }), onUnmounted(() => u2 == null ? void 0 : u2()), (g, _) => C2.value.length ? (openBlock(), createElementBlock("div", Xl, [createBaseVNode("div", { class: "wl-reaction-title", textContent: toDisplayString(h2.value.reactionTitle) }, null, 8, Jl), createBaseVNode("ul", Yl, [(openBlock(true), createElementBlock(Fragment, null, renderList(C2.value, ({ active: M, icon: $2, desc: y2 }, o2) => (openBlock(), createElementBlock("li", { key: o2, class: normalizeClass(["wl-reaction-item", { active: M }]), onClick: (f2) => S(o2) }, [createBaseVNode("div", ea, [createBaseVNode("img", { src: $2, alt: y2 }, null, 8, ta), a.value === o2 ? (openBlock(), createBlock(unref(ve), { key: 0, class: "wl-reaction-loading" })) : (openBlock(), createElementBlock("div", { key: 1, class: "wl-reaction-votes", textContent: toDisplayString(i.value[o2] || 0) }, null, 8, la))]), createBaseVNode("div", { class: "wl-reaction-text", textContent: toDisplayString(y2) }, null, 8, aa)], 10, Ql))), 128))])])) : createCommentVNode("v-if", true);
   } });
-  var me = (e2, a) => {
-    const l = e2.__vccOpts || e2;
-    for (const [t2, o2] of a)
-      l[t2] = o2;
-    return l;
+  var me = (e2, n2) => {
+    const t2 = e2.__vccOpts || e2;
+    for (const [l, a] of n2)
+      t2[l] = a;
+    return t2;
   };
-  var ia = me(oa, [["__file", "ArticleReaction.vue"]]);
-  var ra = ["data-index"];
-  var sa = ["src", "title", "onClick"];
-  var ca = defineComponent({ __name: "ImageWall", props: { items: { default: () => [] }, columnWidth: { default: 300 }, gap: { default: 0 } }, emits: ["insert"], setup(e2, { expose: a }) {
-    const l = e2;
-    a();
-    let t2 = null;
-    const o2 = ref(null), n2 = ref({}), m2 = ref([]), d2 = () => {
-      const p3 = Math.floor((o2.value.getBoundingClientRect().width + l.gap) / (l.columnWidth + l.gap));
-      return p3 > 0 ? p3 : 1;
-    }, g = (p3) => new Array(p3).fill(null).map(() => []), c2 = async (p3) => {
-      var M;
-      if (p3 >= l.items.length)
+  var oa = me(na, [["__file", "ArticleReaction.vue"]]);
+  var ia = ["data-index"];
+  var ra = ["src", "title", "onClick"];
+  var sa = defineComponent({ __name: "ImageWall", props: { items: { default: () => [] }, columnWidth: { default: 300 }, gap: { default: 0 } }, emits: ["insert"], setup(e2, { expose: n2 }) {
+    const t2 = e2;
+    n2();
+    let l = null;
+    const a = ref(null), i = ref({}), h2 = ref([]), c2 = () => {
+      const g = Math.floor((a.value.getBoundingClientRect().width + t2.gap) / (t2.columnWidth + t2.gap));
+      return g > 0 ? g : 1;
+    }, C2 = (g) => new Array(g).fill(null).map(() => []), u2 = async (g) => {
+      var _;
+      if (g >= t2.items.length)
         return;
       await nextTick();
-      const S = Array.from(((M = o2.value) == null ? void 0 : M.children) || []).reduce((E, y2) => y2.getBoundingClientRect().height < E.getBoundingClientRect().height ? y2 : E);
-      m2.value[Number(S.dataset.index)].push(p3), await c2(p3 + 1);
-    }, f2 = async (p3 = false) => {
-      if (m2.value.length === d2() && !p3)
+      const M = Array.from(((_ = a.value) == null ? void 0 : _.children) ?? []).reduce(($2, y2) => y2.getBoundingClientRect().height < $2.getBoundingClientRect().height ? y2 : $2);
+      h2.value[Number(M.dataset.index)].push(g), await u2(g + 1);
+    }, w2 = async (g = false) => {
+      if (h2.value.length === c2() && !g)
         return;
-      m2.value = g(d2());
-      const M = window.scrollY;
-      await c2(0), window.scrollTo({ top: M });
-    }, _ = (p3) => {
-      n2.value[p3.target.src] = true;
+      h2.value = C2(c2());
+      const _ = window.scrollY;
+      await u2(0), window.scrollTo({ top: _ });
+    }, S = (g) => {
+      i.value[g.target.src] = true;
     };
     return onMounted(() => {
-      f2(true), t2 = new ResizeObserver(() => {
-        f2();
-      }), t2.observe(o2.value), watch(() => [l.items], () => {
-        n2.value = {}, f2(true);
-      }), watch(() => [l.columnWidth, l.gap], () => {
-        f2();
+      w2(true), l = new ResizeObserver(() => {
+        w2();
+      }), l.observe(a.value), watch(() => [t2.items], () => {
+        i.value = {}, w2(true);
+      }), watch(() => [t2.columnWidth, t2.gap], () => {
+        w2();
       });
-    }), onBeforeUnmount(() => t2.unobserve(o2.value)), (p3, M) => (openBlock(), createElementBlock("div", { ref_key: "wall", ref: o2, class: "wl-gallery", style: normalizeStyle({ gap: `${p3.gap}px` }) }, [(openBlock(true), createElementBlock(Fragment, null, renderList(m2.value, (S, E) => (openBlock(), createElementBlock("div", { key: E, class: "wl-gallery-column", "data-index": E, style: normalizeStyle({ gap: `${p3.gap}px` }) }, [(openBlock(true), createElementBlock(Fragment, null, renderList(S, (y2) => (openBlock(), createElementBlock(Fragment, { key: y2 }, [n2.value[p3.items[y2].src] ? createCommentVNode("v-if", true) : (openBlock(), createBlock(unref(ve), { key: 0, size: 36, style: { margin: "20px auto" } })), createBaseVNode("img", { class: "wl-gallery-item", src: p3.items[y2].src, title: p3.items[y2].title, loading: "lazy", onLoad: _, onClick: (i) => p3.$emit("insert", `![](${p3.items[y2].src})`) }, null, 40, sa)], 64))), 128))], 12, ra))), 128))], 4));
+    }), onBeforeUnmount(() => l.unobserve(a.value)), (g, _) => (openBlock(), createElementBlock("div", { ref_key: "wall", ref: a, class: "wl-gallery", style: normalizeStyle({ gap: `${g.gap}px` }) }, [(openBlock(true), createElementBlock(Fragment, null, renderList(h2.value, (M, $2) => (openBlock(), createElementBlock("div", { key: $2, class: "wl-gallery-column", "data-index": $2, style: normalizeStyle({ gap: `${g.gap}px` }) }, [(openBlock(true), createElementBlock(Fragment, null, renderList(M, (y2) => (openBlock(), createElementBlock(Fragment, { key: y2 }, [i.value[g.items[y2].src] ? createCommentVNode("v-if", true) : (openBlock(), createBlock(unref(ve), { key: 0, size: 36, style: { margin: "20px auto" } })), createBaseVNode("img", { class: "wl-gallery-item", src: g.items[y2].src, title: g.items[y2].title, loading: "lazy", onLoad: S, onClick: (o2) => g.$emit("insert", `![](${g.items[y2].src})`) }, null, 40, ra)], 64))), 128))], 12, ia))), 128))], 4));
   } });
-  var ua = me(ca, [["__file", "ImageWall.vue"]]);
-  var va = { class: "wl-comment" };
-  var ma = { key: 0, class: "wl-login-info" };
-  var da = { class: "wl-avatar" };
+  var ca = me(sa, [["__file", "ImageWall.vue"]]);
+  var ua = { class: "wl-comment" };
+  var va = { key: 0, class: "wl-login-info" };
+  var ma = { class: "wl-avatar" };
+  var da = ["title"];
   var pa = ["title"];
-  var ga = ["title"];
-  var ha = ["src"];
-  var fa = ["title", "textContent"];
-  var wa = { class: "wl-panel" };
-  var ya = ["for", "textContent"];
-  var ka = ["id", "onUpdate:modelValue", "name", "type"];
-  var ba = ["placeholder"];
-  var Ca = { class: "wl-preview" };
-  var $a = createBaseVNode("hr", null, null, -1);
-  var La = ["innerHTML"];
-  var Ea = { class: "wl-footer" };
+  var ga = ["src"];
+  var ha = ["title", "textContent"];
+  var fa = { class: "wl-panel" };
+  var wa = ["for", "textContent"];
+  var ya = ["id", "onUpdate:modelValue", "name", "type"];
+  var ka = ["placeholder"];
+  var ba = { class: "wl-preview" };
+  var Ca = createBaseVNode("hr", null, null, -1);
+  var $a = ["innerHTML"];
+  var La = { class: "wl-footer" };
   var Ia = { class: "wl-actions" };
-  var xa = { href: "https://guides.github.com/features/mastering-markdown/", title: "Markdown Guide", "aria-label": "Markdown is supported", class: "wl-action", target: "_blank", rel: "noopener noreferrer" };
+  var Ea = { href: "https://guides.github.com/features/mastering-markdown/", title: "Markdown Guide", "aria-label": "Markdown is supported", class: "wl-action", target: "_blank", rel: "noopener noreferrer" };
+  var xa = ["title"];
   var Ra = ["title"];
   var Aa = ["title"];
-  var Ma = ["title"];
-  var Ua = ["title"];
-  var Sa = { class: "wl-info" };
-  var _a = createBaseVNode("div", { class: "wl-captcha-container" }, null, -1);
-  var ja = { class: "wl-text-number" };
-  var za = { key: 0 };
+  var _a = ["title"];
+  var Ma = { class: "wl-info" };
+  var Sa = createBaseVNode("div", { class: "wl-captcha-container" }, null, -1);
+  var Ua = { class: "wl-text-number" };
+  var ja = { key: 0 };
+  var za = ["textContent"];
   var Va = ["textContent"];
-  var Ha = ["textContent"];
-  var Ta = ["disabled"];
-  var Fa = ["placeholder"];
-  var Na = { key: 1, class: "wl-loading" };
-  var Wa = { key: 0, class: "wl-tab-wrapper" };
-  var Pa = ["title", "onClick"];
-  var Da = ["src", "alt"];
-  var Ba = { key: 0, class: "wl-tabs" };
-  var Oa = ["onClick"];
-  var qa = ["src", "alt", "title"];
-  var Ga = ["title"];
-  var Ka = defineComponent({ __name: "CommentBox", props: { edit: { default: null }, rootId: { default: "" }, replyId: { default: "" }, replyUser: { default: "" } }, emits: ["log", "cancelEdit", "cancelReply", "submit"], setup(e2, { expose: a, emit: l }) {
-    const t2 = e2, o2 = l;
-    a();
-    const n2 = inject("config"), m2 = Bl(), d2 = Dl(), g = be(), c2 = ref({}), f2 = ref(null), _ = ref(null), p3 = ref(null), M = ref(null), S = ref(null), E = ref(null), y2 = ref(null), i = ref({ tabs: [], map: {} }), w2 = ref(0), F = ref(false), D = ref(false), R2 = ref(false), z = ref(""), ie = ref(0), H = reactive({ loading: true, list: [] }), oe = ref(0), ee = ref(false), de = ref(""), Y = ref(false), $2 = ref(false), k = computed2(() => n2.value.locale), j2 = computed2(() => {
-      var v2;
-      return !!((v2 = g.value) != null && v2.token);
-    }), G = computed2(() => n2.value.imageUploader !== false), B = (v2) => {
-      const s2 = f2.value, b = s2.selectionStart, V = s2.selectionEnd || 0, C2 = s2.scrollTop;
-      m2.value = s2.value.substring(0, b) + v2 + s2.value.substring(V, s2.value.length), s2.focus(), s2.selectionStart = b + v2.length, s2.selectionEnd = b + v2.length, s2.scrollTop = C2;
-    }, X = (v2) => {
-      const s2 = v2.key;
-      (v2.ctrlKey || v2.metaKey) && s2 === "Enter" && je();
-    }, K = (v2) => {
-      const s2 = `![${n2.value.locale.uploading} ${v2.name}]()`;
-      return B(s2), Y.value = true, Promise.resolve().then(() => n2.value.imageUploader(v2)).then((b) => {
-        m2.value = m2.value.replace(s2, `\r
-![${v2.name}](${b})`);
-      }).catch((b) => {
-        alert(b.message), m2.value = m2.value.replace(s2, "");
+  var Ha = ["disabled"];
+  var Ta = ["placeholder"];
+  var Fa = { key: 1, class: "wl-loading" };
+  var Na = { key: 0, class: "wl-tab-wrapper" };
+  var Wa = ["title", "onClick"];
+  var Pa = ["src", "alt"];
+  var Da = { key: 0, class: "wl-tabs" };
+  var Ba = ["onClick"];
+  var Oa = ["src", "alt", "title"];
+  var qa = ["title"];
+  var Ga = defineComponent({ __name: "CommentBox", props: { edit: { default: null }, rootId: { default: "" }, replyId: { default: "" }, replyUser: { default: "" } }, emits: ["log", "cancelEdit", "cancelReply", "submit"], setup(e2, { emit: n2 }) {
+    const t2 = e2, l = n2, a = inject("config"), i = Dl(), h2 = Pl(), c2 = Ce(), C2 = ref({}), u2 = ref(null), w2 = ref(null), S = ref(null), g = ref(null), _ = ref(null), M = ref(null), $2 = ref(null), y2 = ref({ tabs: [], map: {} }), o2 = ref(0), f2 = ref(false), F = ref(false), q = ref(false), x = ref(""), z = ref(0), H = reactive({ loading: true, list: [] }), ee = ref(0), te = ref(false), de = ref(""), Y = ref(false), se = ref(false), d2 = computed2(() => a.value.locale), U2 = computed2(() => {
+      var m2;
+      return !!((m2 = c2.value) != null && m2.token);
+    }), j2 = computed2(() => a.value.imageUploader !== false), G = (m2) => {
+      const s2 = u2.value, k = s2.selectionStart, V = s2.selectionEnd || 0, b = s2.scrollTop;
+      i.value = s2.value.substring(0, k) + m2 + s2.value.substring(V, s2.value.length), s2.focus(), s2.selectionStart = k + m2.length, s2.selectionEnd = k + m2.length, s2.scrollTop = b;
+    }, K = (m2) => {
+      const s2 = m2.key;
+      (m2.ctrlKey || m2.metaKey) && s2 === "Enter" && pe();
+    }, Z = (m2) => {
+      const s2 = `![${a.value.locale.uploading} ${m2.name}]()`;
+      return G(s2), Y.value = true, Promise.resolve().then(() => a.value.imageUploader(m2)).then((k) => {
+        i.value = i.value.replace(s2, `\r
+![${m2.name}](${k})`);
+      }).catch((k) => {
+        alert(k.message), i.value = i.value.replace(s2, "");
       }).then(() => {
         Y.value = false;
       });
-    }, ce = (v2) => {
+    }, X = (m2) => {
       var s2;
-      if ((s2 = v2.dataTransfer) != null && s2.items) {
-        const b = vt(v2.dataTransfer.items);
-        b && G.value && (K(b), v2.preventDefault());
+      if ((s2 = m2.dataTransfer) != null && s2.items) {
+        const k = ct(m2.dataTransfer.items);
+        k && j2.value && (Z(k), m2.preventDefault());
       }
-    }, _e = (v2) => {
-      if (v2.clipboardData) {
-        const s2 = vt(v2.clipboardData.items);
-        s2 && G.value && K(s2);
+    }, ce = (m2) => {
+      if (m2.clipboardData) {
+        const s2 = ct(m2.clipboardData.items);
+        s2 && j2.value && Z(s2);
       }
-    }, Ce = () => {
-      const v2 = _.value;
-      v2.files && G.value && K(v2.files[0]).then(() => {
-        v2.value = "";
+    }, Se = () => {
+      const m2 = w2.value;
+      m2.files && j2.value && Z(m2.files[0]).then(() => {
+        m2.value = "";
       });
-    }, je = async () => {
-      var v2, s2, b, V, C2, O;
-      const { serverURL: N, lang: Q, login: pe, wordLimit: Ne, requiredMeta: We, recaptchaV3Key: Pe, turnstileKey: De } = n2.value, It = await Sl(), T = { comment: de.value, nick: d2.value.nick, mail: d2.value.mail, link: d2.value.link, url: n2.value.path, ua: It };
-      if ((v2 = g.value) != null && v2.token && !t2.edit)
-        T.nick = g.value.display_name, T.mail = g.value.email, T.link = g.value.url;
+    }, pe = async () => {
+      var m2, s2, k, V, b, D;
+      const { serverURL: N, lang: Q, login: ge, wordLimit: Ve, requiredMeta: He, recaptchaV3Key: Te, turnstileKey: Fe } = a.value, It = await Ml(), T = { comment: de.value, nick: h2.value.nick, mail: h2.value.mail, link: h2.value.link, url: a.value.path, ua: It };
+      if ((m2 = c2.value) != null && m2.token && !t2.edit)
+        T.nick = c2.value.display_name, T.mail = c2.value.email, T.link = c2.value.url;
       else {
-        if (pe === "force")
+        if (ge === "force")
           return;
-        if (We.indexOf("nick") > -1 && !T.nick)
-          return (s2 = c2.value.nick) == null || s2.focus(), alert(k.value.nickError);
-        if (We.indexOf("mail") > -1 && !T.mail || T.mail && !yl(T.mail))
-          return (b = c2.value.mail) == null || b.focus(), alert(k.value.mailError);
-        T.nick || (T.nick = k.value.anonymous);
+        if (He.indexOf("nick") > -1 && !T.nick)
+          return (s2 = C2.value.nick) == null || s2.focus(), alert(d2.value.nickError);
+        if (He.indexOf("mail") > -1 && !T.mail || T.mail && !wl(T.mail))
+          return (k = C2.value.mail) == null || k.focus(), alert(d2.value.mailError);
+        T.nick || (T.nick = d2.value.anonymous);
       }
       if (!T.comment) {
-        (V = f2.value) == null || V.focus();
+        (V = u2.value) == null || V.focus();
         return;
       }
-      if (!ee.value)
-        return alert(k.value.wordHint.replace("$0", Ne[0].toString()).replace("$1", Ne[1].toString()).replace("$2", ie.value.toString()));
-      T.comment = mt(T.comment, i.value.map), t2.replyId && t2.rootId && (T.pid = t2.replyId, T.rid = t2.rootId, T.at = t2.replyUser), Y.value = true;
+      if (!te.value)
+        return alert(d2.value.wordHint.replace("$0", Ve[0].toString()).replace("$1", Ve[1].toString()).replace("$2", z.value.toString()));
+      T.comment = ut(T.comment, y2.value.map), t2.replyId && t2.rootId && (T.pid = t2.replyId, T.rid = t2.rootId, T.at = t2.replyUser), Y.value = true;
       try {
-        Pe && (T.recaptchaV3 = await Kl(Pe).execute("social")), De && (T.turnstile = await Zl(De).execute("social"));
-        const ge = { serverURL: N, lang: Q, token: (C2 = g.value) == null ? void 0 : C2.token, comment: T }, $e = await (t2.edit ? U({ objectId: t2.edit.objectId, ...ge }) : u(ge));
+        Te && (T.recaptchaV3 = await Gl(Te).execute("social")), Fe && (T.turnstile = await Kl(Fe).execute("social"));
+        const he = { serverURL: N, lang: Q, token: (b = c2.value) == null ? void 0 : b.token, comment: T }, $e = await (t2.edit ? U({ objectId: t2.edit.objectId, ...he }) : u(he));
         if (Y.value = false, $e.errmsg)
           return alert($e.errmsg);
-        o2("submit", $e.data), m2.value = "", z.value = "", t2.replyId && o2("cancelReply"), (O = t2.edit) != null && O.objectId && o2("cancelEdit");
-      } catch (ge) {
-        Y.value = false, alert(ge.message);
+        l("submit", $e.data), i.value = "", x.value = "", t2.replyId && l("cancelReply"), (D = t2.edit) != null && D.objectId && l("cancelEdit");
+      } catch (he) {
+        Y.value = false, alert(he.message);
       }
-    }, Lt = (v2) => {
-      v2.preventDefault();
-      const { lang: s2, serverURL: b } = n2.value;
-      R({ serverURL: b, lang: s2 }).then((V) => {
-        g.value = V, (V.remember ? localStorage : sessionStorage).setItem("WALINE_USER", JSON.stringify(V)), o2("log");
+    }, Ct = (m2) => {
+      m2.preventDefault();
+      const { lang: s2, serverURL: k } = a.value;
+      R({ serverURL: k, lang: s2 }).then((V) => {
+        c2.value = V, (V.remember ? localStorage : sessionStorage).setItem("WALINE_USER", JSON.stringify(V)), l("log");
       });
-    }, Et = () => {
-      g.value = {}, localStorage.setItem("WALINE_USER", "null"), sessionStorage.setItem("WALINE_USER", "null"), o2("log");
-    }, ze = (v2) => {
-      v2.preventDefault();
-      const { lang: s2, serverURL: b } = n2.value, V = 800, C2 = 800, O = (window.innerWidth - V) / 2, N = (window.innerHeight - C2) / 2, Q = new URLSearchParams({ lng: s2, token: g.value.token }), pe = window.open(`${b}/ui/profile?${Q.toString()}`, "_blank", `width=${V},height=${C2},left=${O},top=${N},scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no`);
-      pe == null || pe.postMessage({ type: "TOKEN", data: g.value.token }, "*");
-    }, Ve = (v2) => {
-      var s2, b, V, C2;
-      !((s2 = p3.value) != null && s2.contains(v2.target)) && !((b = M.value) != null && b.contains(v2.target)) && (F.value = false), !((V = S.value) != null && V.contains(v2.target)) && !((C2 = E.value) != null && C2.contains(v2.target)) && (D.value = false);
-    }, He = async (v2) => {
+    }, $t = () => {
+      c2.value = {}, localStorage.setItem("WALINE_USER", "null"), sessionStorage.setItem("WALINE_USER", "null"), l("log");
+    }, Ue = (m2) => {
+      m2.preventDefault();
+      const { lang: s2, serverURL: k } = a.value, V = 800, b = 800, D = (window.innerWidth - V) / 2, N = (window.innerHeight - b) / 2, Q = new URLSearchParams({ lng: s2, token: c2.value.token }), ge = window.open(`${k}/ui/profile?${Q.toString()}`, "_blank", `width=${V},height=${b},left=${D},top=${N},scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no`);
+      ge == null || ge.postMessage({ type: "TOKEN", data: c2.value.token }, "*");
+    }, Lt = (m2) => {
+      var s2, k, V, b;
+      !((s2 = S.value) != null && s2.contains(m2.target)) && !((k = g.value) != null && k.contains(m2.target)) && (f2.value = false), !((V = _.value) != null && V.contains(m2.target)) && !((b = M.value) != null && b.contains(m2.target)) && (F.value = false);
+    }, je = async (m2) => {
       var s2;
-      const { scrollTop: b, clientHeight: V, scrollHeight: C2 } = v2.target, O = (V + b) / C2, N = n2.value.search, Q = ((s2 = y2.value) == null ? void 0 : s2.value) || "";
-      O < 0.9 || H.loading || $2.value || (H.loading = true, (N.more && H.list.length ? await N.more(Q, H.list.length) : await N.search(Q)).length ? H.list = [...H.list, ...N.more && H.list.length ? await N.more(Q, H.list.length) : await N.search(Q)] : $2.value = true, H.loading = false, setTimeout(() => {
-        v2.target.scrollTop = b;
+      const { scrollTop: k, clientHeight: V, scrollHeight: b } = m2.target, D = (V + k) / b, N = a.value.search, Q = ((s2 = $2.value) == null ? void 0 : s2.value) ?? "";
+      D < 0.9 || H.loading || se.value || (H.loading = true, (N.more && H.list.length ? await N.more(Q, H.list.length) : await N.search(Q)).length ? H.list = [...H.list, ...N.more && H.list.length ? await N.more(Q, H.list.length) : await N.search(Q)] : se.value = true, H.loading = false, setTimeout(() => {
+        m2.target.scrollTop = k;
       }, 50));
-    }, Te = useDebounceFn((v2) => {
-      H.list = [], $2.value = false, He(v2);
+    }, ze = useDebounceFn((m2) => {
+      H.list = [], se.value = false, je(m2);
     }, 300);
-    watch([n2, ie], ([v2, s2]) => {
-      const { wordLimit: b } = v2;
-      b ? s2 < b[0] && b[0] !== 0 ? (oe.value = b[0], ee.value = false) : s2 > b[1] ? (oe.value = b[1], ee.value = false) : (oe.value = b[1], ee.value = true) : (oe.value = 0, ee.value = true);
-    }, { immediate: true });
-    const Fe = ({ data: v2 }) => {
-      !v2 || v2.type !== "profile" || (g.value = { ...g.value, ...v2.data }, [localStorage, sessionStorage].filter((s2) => s2.getItem("WALINE_USER")).forEach((s2) => s2.setItem("WALINE_USER", JSON.stringify(g))));
-    };
-    return onMounted(() => {
-      var v2;
-      document.body.addEventListener("click", Ve), window.addEventListener("message", Fe), (v2 = t2.edit) != null && v2.objectId && (m2.value = t2.edit.orig), watch(D, async (s2) => {
-        if (!s2)
-          return;
-        const b = n2.value.search;
-        y2.value && (y2.value.value = ""), H.loading = true, H.list = b.default ? await b.default() : await b.search(""), H.loading = false;
-      }), watch(() => m2.value, (s2) => {
-        const { highlighter: b, texRenderer: V } = n2.value;
-        de.value = s2, z.value = Rl(s2, { emojiMap: i.value.map, highlighter: b, texRenderer: V }), ie.value = Ul(s2), s2 ? autosize_esm_default(f2.value) : autosize_esm_default.destroy(f2.value);
-      }, { immediate: true }), watch(() => n2.value.emoji, (s2) => Cl(s2).then((b) => {
-        i.value = b;
+    return watch([a, z], ([m2, s2]) => {
+      const { wordLimit: k } = m2;
+      k ? s2 < k[0] && k[0] !== 0 ? (ee.value = k[0], te.value = false) : s2 > k[1] ? (ee.value = k[1], te.value = false) : (ee.value = k[1], te.value = true) : (ee.value = 0, te.value = true);
+    }, { immediate: true }), useEventListener("click", Lt), useEventListener("message", ({ data: m2 }) => {
+      !m2 || m2.type !== "profile" || (c2.value = { ...c2.value, ...m2.data }, [localStorage, sessionStorage].filter((s2) => s2.getItem("WALINE_USER")).forEach((s2) => s2.setItem("WALINE_USER", JSON.stringify(c2))));
+    }), watch(F, async (m2) => {
+      var s2;
+      if (!m2)
+        return;
+      const k = a.value.search;
+      $2.value && ($2.value.value = ""), H.loading = true, H.list = await (((s2 = k.default) == null ? void 0 : s2.call(k)) ?? k.search("")), H.loading = false;
+    }), onMounted(() => {
+      var m2;
+      (m2 = t2.edit) != null && m2.objectId && (i.value = t2.edit.orig), watch(() => i.value, (s2) => {
+        const { highlighter: k, texRenderer: V } = a.value;
+        de.value = s2, x.value = xl(s2, { emojiMap: y2.value.map, highlighter: k, texRenderer: V }), z.value = _l(s2), s2 ? autosize_esm_default(u2.value) : autosize_esm_default.destroy(u2.value);
+      }, { immediate: true }), watch(() => a.value.emoji, (s2) => bl(s2).then((k) => {
+        y2.value = k;
       }), { immediate: true });
-    }), onUnmounted(() => {
-      document.body.removeEventListener("click", Ve), window.removeEventListener("message", Fe);
-    }), (v2, s2) => {
-      var b, V;
-      return openBlock(), createElementBlock("div", va, [unref(n2).login !== "disable" && j2.value && !((b = v2.edit) != null && b.objectId) ? (openBlock(), createElementBlock("div", ma, [createBaseVNode("div", da, [createBaseVNode("button", { type: "submit", class: "wl-logout-btn", title: k.value.logout, onClick: Et }, [createVNode(unref(pt), { size: 14 })], 8, pa), createBaseVNode("a", { href: "#", class: "wl-login-nick", "aria-label": "Profile", title: k.value.profile, onClick: ze }, [createBaseVNode("img", { src: unref(g).avatar, alt: "avatar" }, null, 8, ha)], 8, ga)]), createBaseVNode("a", { href: "#", class: "wl-login-nick", "aria-label": "Profile", title: k.value.profile, onClick: ze, textContent: toDisplayString(unref(g).display_name) }, null, 8, fa)])) : createCommentVNode("v-if", true), createBaseVNode("div", wa, [unref(n2).login !== "force" && unref(n2).meta.length && !j2.value ? (openBlock(), createElementBlock("div", { key: 0, class: normalizeClass(["wl-header", `item${unref(n2).meta.length}`]) }, [(openBlock(true), createElementBlock(Fragment, null, renderList(unref(n2).meta, (C2) => (openBlock(), createElementBlock("div", { key: C2, class: "wl-header-item" }, [createBaseVNode("label", { for: `wl-${C2}`, textContent: toDisplayString(k.value[C2] + (unref(n2).requiredMeta.includes(C2) || !unref(n2).requiredMeta.length ? "" : `(${k.value.optional})`)) }, null, 8, ya), withDirectives(createBaseVNode("input", { id: `wl-${C2}`, ref_for: true, ref: (O) => {
-        O && (c2.value[C2] = O);
-      }, "onUpdate:modelValue": (O) => unref(d2)[C2] = O, class: normalizeClass(["wl-input", `wl-${C2}`]), name: C2, type: C2 === "mail" ? "email" : "text" }, null, 10, ka), [[vModelDynamic, unref(d2)[C2]]])]))), 128))], 2)) : createCommentVNode("v-if", true), withDirectives(createBaseVNode("textarea", { id: "wl-edit", ref_key: "editorRef", ref: f2, "onUpdate:modelValue": s2[0] || (s2[0] = (C2) => isRef(m2) ? m2.value = C2 : null), class: "wl-editor", placeholder: v2.replyUser ? `@${v2.replyUser}` : k.value.placeholder, onKeydown: X, onDrop: ce, onPaste: _e }, null, 40, ba), [[vModelText, unref(m2)]]), withDirectives(createBaseVNode("div", Ca, [$a, createBaseVNode("h4", null, toDisplayString(k.value.preview) + ":", 1), createBaseVNode("div", { class: "wl-content", innerHTML: z.value }, null, 8, La)], 512), [[vShow, R2.value]]), createBaseVNode("div", Ea, [createBaseVNode("div", Ia, [createBaseVNode("a", xa, [createVNode(unref(Tl))]), withDirectives(createBaseVNode("button", { ref_key: "emojiButtonRef", ref: p3, type: "button", class: normalizeClass(["wl-action", { active: F.value }]), title: k.value.emoji, onClick: s2[1] || (s2[1] = (C2) => F.value = !F.value) }, [createVNode(unref(jl))], 10, Ra), [[vShow, i.value.tabs.length]]), unref(n2).search ? (openBlock(), createElementBlock("button", { key: 0, ref_key: "gifButtonRef", ref: S, type: "button", class: normalizeClass(["wl-action", { active: D.value }]), title: k.value.gif, onClick: s2[2] || (s2[2] = (C2) => D.value = !D.value) }, [createVNode(unref(Pl))], 10, Aa)) : createCommentVNode("v-if", true), createBaseVNode("input", { id: "wl-image-upload", ref_key: "imageUploadRef", ref: _, class: "upload", type: "file", accept: ".png,.jpg,.jpeg,.webp,.bmp,.gif", onChange: Ce }, null, 544), G.value ? (openBlock(), createElementBlock("label", { key: 1, for: "wl-image-upload", class: "wl-action", title: k.value.uploadImage }, [createVNode(unref(zl))], 8, Ma)) : createCommentVNode("v-if", true), createBaseVNode("button", { type: "button", class: normalizeClass(["wl-action", { active: R2.value }]), title: k.value.preview, onClick: s2[3] || (s2[3] = (C2) => R2.value = !R2.value) }, [createVNode(unref(Hl))], 10, Ua)]), createBaseVNode("div", Sa, [_a, createBaseVNode("div", ja, [createTextVNode(toDisplayString(ie.value) + " ", 1), unref(n2).wordLimit ? (openBlock(), createElementBlock("span", za, [createTextVNode(" \xA0/\xA0 "), createBaseVNode("span", { class: normalizeClass({ illegal: !ee.value }), textContent: toDisplayString(oe.value) }, null, 10, Va)])) : createCommentVNode("v-if", true), createTextVNode(" \xA0" + toDisplayString(k.value.word), 1)]), unref(n2).login !== "disable" && !j2.value ? (openBlock(), createElementBlock("button", { key: 0, type: "button", class: "wl-btn", onClick: Lt, textContent: toDisplayString(k.value.login) }, null, 8, Ha)) : createCommentVNode("v-if", true), unref(n2).login !== "force" || j2.value ? (openBlock(), createElementBlock("button", { key: 1, type: "submit", class: "primary wl-btn", title: "Cmd|Ctrl + Enter", disabled: Y.value, onClick: je }, [Y.value ? (openBlock(), createBlock(unref(ve), { key: 0, size: 16 })) : (openBlock(), createElementBlock(Fragment, { key: 1 }, [createTextVNode(toDisplayString(k.value.submit), 1)], 64))], 8, Ta)) : createCommentVNode("v-if", true)]), createBaseVNode("div", { ref_key: "gifPopupRef", ref: E, class: normalizeClass(["wl-gif-popup", { display: D.value }]) }, [createBaseVNode("input", { ref_key: "gifSearchInputRef", ref: y2, type: "text", placeholder: k.value.gifSearchPlaceholder, onInput: s2[4] || (s2[4] = (...C2) => unref(Te) && unref(Te)(...C2)) }, null, 40, Fa), H.list.length ? (openBlock(), createBlock(ua, { key: 0, items: H.list, "column-width": 200, gap: 6, onInsert: s2[5] || (s2[5] = (C2) => B(C2)), onScroll: He }, null, 8, ["items"])) : createCommentVNode("v-if", true), H.loading ? (openBlock(), createElementBlock("div", Na, [createVNode(unref(ve), { size: 30 })])) : createCommentVNode("v-if", true)], 2), createBaseVNode("div", { ref_key: "emojiPopupRef", ref: M, class: normalizeClass(["wl-emoji-popup", { display: F.value }]) }, [(openBlock(true), createElementBlock(Fragment, null, renderList(i.value.tabs, (C2, O) => (openBlock(), createElementBlock(Fragment, { key: C2.name }, [O === w2.value ? (openBlock(), createElementBlock("div", Wa, [(openBlock(true), createElementBlock(Fragment, null, renderList(C2.items, (N) => (openBlock(), createElementBlock("button", { key: N, type: "button", title: N, onClick: (Q) => B(`:${N}:`) }, [F.value ? (openBlock(), createElementBlock("img", { key: 0, class: "wl-emoji", src: i.value.map[N], alt: N, loading: "lazy", referrerPolicy: "no-referrer" }, null, 8, Da)) : createCommentVNode("v-if", true)], 8, Pa))), 128))])) : createCommentVNode("v-if", true)], 64))), 128)), i.value.tabs.length > 1 ? (openBlock(), createElementBlock("div", Ba, [(openBlock(true), createElementBlock(Fragment, null, renderList(i.value.tabs, (C2, O) => (openBlock(), createElementBlock("button", { key: C2.name, type: "button", class: normalizeClass(["wl-tab", { active: w2.value === O }]), onClick: (N) => w2.value = O }, [createBaseVNode("img", { class: "wl-emoji", src: C2.icon, alt: C2.name, title: C2.name, loading: "lazy", referrerPolicy: "no-referrer" }, null, 8, qa)], 10, Oa))), 128))])) : createCommentVNode("v-if", true)], 2)])]), v2.replyId || (V = v2.edit) != null && V.objectId ? (openBlock(), createElementBlock("button", { key: 1, type: "button", class: "wl-close", title: k.value.cancelReply, onClick: s2[6] || (s2[6] = (C2) => v2.$emit(v2.replyId ? "cancelReply" : "cancelEdit")) }, [createVNode(unref(pt), { size: 24 })], 8, Ga)) : createCommentVNode("v-if", true)]);
+    }), (m2, s2) => {
+      var k, V;
+      return openBlock(), createElementBlock("div", ua, [unref(a).login !== "disable" && U2.value && !((k = m2.edit) != null && k.objectId) ? (openBlock(), createElementBlock("div", va, [createBaseVNode("div", ma, [createBaseVNode("button", { type: "submit", class: "wl-logout-btn", title: d2.value.logout, onClick: $t }, [createVNode(unref(mt), { size: 14 })], 8, da), createBaseVNode("a", { href: "#", class: "wl-login-nick", "aria-label": "Profile", title: d2.value.profile, onClick: Ue }, [createBaseVNode("img", { src: unref(c2).avatar, alt: "avatar" }, null, 8, ga)], 8, pa)]), createBaseVNode("a", { href: "#", class: "wl-login-nick", "aria-label": "Profile", title: d2.value.profile, onClick: Ue, textContent: toDisplayString(unref(c2).display_name) }, null, 8, ha)])) : createCommentVNode("v-if", true), createBaseVNode("div", fa, [unref(a).login !== "force" && unref(a).meta.length && !U2.value ? (openBlock(), createElementBlock("div", { key: 0, class: normalizeClass(["wl-header", `item${unref(a).meta.length}`]) }, [(openBlock(true), createElementBlock(Fragment, null, renderList(unref(a).meta, (b) => (openBlock(), createElementBlock("div", { key: b, class: "wl-header-item" }, [createBaseVNode("label", { for: `wl-${b}`, textContent: toDisplayString(d2.value[b] + (unref(a).requiredMeta.includes(b) || !unref(a).requiredMeta.length ? "" : `(${d2.value.optional})`)) }, null, 8, wa), withDirectives(createBaseVNode("input", { id: `wl-${b}`, ref_for: true, ref: (D) => {
+        D && (C2.value[b] = D);
+      }, "onUpdate:modelValue": (D) => unref(h2)[b] = D, class: normalizeClass(["wl-input", `wl-${b}`]), name: b, type: b === "mail" ? "email" : "text" }, null, 10, ya), [[vModelDynamic, unref(h2)[b]]])]))), 128))], 2)) : createCommentVNode("v-if", true), withDirectives(createBaseVNode("textarea", { id: "wl-edit", ref_key: "editorRef", ref: u2, "onUpdate:modelValue": s2[0] || (s2[0] = (b) => isRef(i) ? i.value = b : null), class: "wl-editor", placeholder: m2.replyUser ? `@${m2.replyUser}` : d2.value.placeholder, onKeydown: K, onDrop: X, onPaste: ce }, null, 40, ka), [[vModelText, unref(i)]]), withDirectives(createBaseVNode("div", ba, [Ca, createBaseVNode("h4", null, toDisplayString(d2.value.preview) + ":", 1), createBaseVNode("div", { class: "wl-content", innerHTML: x.value }, null, 8, $a)], 512), [[vShow, q.value]]), createBaseVNode("div", La, [createBaseVNode("div", Ia, [createBaseVNode("a", Ea, [createVNode(unref(Hl))]), withDirectives(createBaseVNode("button", { ref_key: "emojiButtonRef", ref: S, type: "button", class: normalizeClass(["wl-action", { active: f2.value }]), title: d2.value.emoji, onClick: s2[1] || (s2[1] = (b) => f2.value = !f2.value) }, [createVNode(unref(Ul))], 10, xa), [[vShow, y2.value.tabs.length]]), unref(a).search ? (openBlock(), createElementBlock("button", { key: 0, ref_key: "gifButtonRef", ref: _, type: "button", class: normalizeClass(["wl-action", { active: F.value }]), title: d2.value.gif, onClick: s2[2] || (s2[2] = (b) => F.value = !F.value) }, [createVNode(unref(Wl))], 10, Ra)) : createCommentVNode("v-if", true), createBaseVNode("input", { id: "wl-image-upload", ref_key: "imageUploadRef", ref: w2, class: "upload", type: "file", accept: ".png,.jpg,.jpeg,.webp,.bmp,.gif", onChange: Se }, null, 544), j2.value ? (openBlock(), createElementBlock("label", { key: 1, for: "wl-image-upload", class: "wl-action", title: d2.value.uploadImage }, [createVNode(unref(jl))], 8, Aa)) : createCommentVNode("v-if", true), createBaseVNode("button", { type: "button", class: normalizeClass(["wl-action", { active: q.value }]), title: d2.value.preview, onClick: s2[3] || (s2[3] = (b) => q.value = !q.value) }, [createVNode(unref(Vl))], 10, _a)]), createBaseVNode("div", Ma, [Sa, createBaseVNode("div", Ua, [createTextVNode(toDisplayString(z.value) + " ", 1), unref(a).wordLimit ? (openBlock(), createElementBlock("span", ja, [createTextVNode(" \xA0/\xA0 "), createBaseVNode("span", { class: normalizeClass({ illegal: !te.value }), textContent: toDisplayString(ee.value) }, null, 10, za)])) : createCommentVNode("v-if", true), createTextVNode(" \xA0" + toDisplayString(d2.value.word), 1)]), unref(a).login !== "disable" && !U2.value ? (openBlock(), createElementBlock("button", { key: 0, type: "button", class: "wl-btn", onClick: Ct, textContent: toDisplayString(d2.value.login) }, null, 8, Va)) : createCommentVNode("v-if", true), unref(a).login !== "force" || U2.value ? (openBlock(), createElementBlock("button", { key: 1, type: "submit", class: "primary wl-btn", title: "Cmd|Ctrl + Enter", disabled: Y.value, onClick: pe }, [Y.value ? (openBlock(), createBlock(unref(ve), { key: 0, size: 16 })) : (openBlock(), createElementBlock(Fragment, { key: 1 }, [createTextVNode(toDisplayString(d2.value.submit), 1)], 64))], 8, Ha)) : createCommentVNode("v-if", true)]), createBaseVNode("div", { ref_key: "gifPopupRef", ref: M, class: normalizeClass(["wl-gif-popup", { display: F.value }]) }, [createBaseVNode("input", { ref_key: "gifSearchInputRef", ref: $2, type: "text", placeholder: d2.value.gifSearchPlaceholder, onInput: s2[4] || (s2[4] = (...b) => unref(ze) && unref(ze)(...b)) }, null, 40, Ta), H.list.length ? (openBlock(), createBlock(ca, { key: 0, items: H.list, "column-width": 200, gap: 6, onInsert: s2[5] || (s2[5] = (b) => G(b)), onScroll: je }, null, 8, ["items"])) : createCommentVNode("v-if", true), H.loading ? (openBlock(), createElementBlock("div", Fa, [createVNode(unref(ve), { size: 30 })])) : createCommentVNode("v-if", true)], 2), createBaseVNode("div", { ref_key: "emojiPopupRef", ref: g, class: normalizeClass(["wl-emoji-popup", { display: f2.value }]) }, [(openBlock(true), createElementBlock(Fragment, null, renderList(y2.value.tabs, (b, D) => (openBlock(), createElementBlock(Fragment, { key: b.name }, [D === o2.value ? (openBlock(), createElementBlock("div", Na, [(openBlock(true), createElementBlock(Fragment, null, renderList(b.items, (N) => (openBlock(), createElementBlock("button", { key: N, type: "button", title: N, onClick: (Q) => G(`:${N}:`) }, [f2.value ? (openBlock(), createElementBlock("img", { key: 0, class: "wl-emoji", src: y2.value.map[N], alt: N, loading: "lazy", referrerPolicy: "no-referrer" }, null, 8, Pa)) : createCommentVNode("v-if", true)], 8, Wa))), 128))])) : createCommentVNode("v-if", true)], 64))), 128)), y2.value.tabs.length > 1 ? (openBlock(), createElementBlock("div", Da, [(openBlock(true), createElementBlock(Fragment, null, renderList(y2.value.tabs, (b, D) => (openBlock(), createElementBlock("button", { key: b.name, type: "button", class: normalizeClass(["wl-tab", { active: o2.value === D }]), onClick: (N) => o2.value = D }, [createBaseVNode("img", { class: "wl-emoji", src: b.icon, alt: b.name, title: b.name, loading: "lazy", referrerPolicy: "no-referrer" }, null, 8, Oa)], 10, Ba))), 128))])) : createCommentVNode("v-if", true)], 2)])]), m2.replyId || (V = m2.edit) != null && V.objectId ? (openBlock(), createElementBlock("button", { key: 1, type: "button", class: "wl-close", title: d2.value.cancelReply, onClick: s2[6] || (s2[6] = (b) => m2.replyId ? l("cancelReply") : l("cancelEdit")) }, [createVNode(unref(mt), { size: 24 })], 8, qa)) : createCommentVNode("v-if", true)]);
     };
   } });
-  var kt = me(Ka, [["__file", "CommentBox.vue"]]);
-  var Za = ["id"];
-  var Xa = { class: "wl-user", "aria-hidden": "true" };
-  var Ja = ["src"];
-  var Ya = { class: "wl-card" };
-  var Qa = { class: "wl-head" };
-  var en = ["href"];
-  var tn = { key: 1, class: "wl-nick" };
+  var wt = me(Ga, [["__file", "CommentBox.vue"]]);
+  var Ka = ["id"];
+  var Za = { class: "wl-user", "aria-hidden": "true" };
+  var Xa = ["src"];
+  var Ja = { class: "wl-card" };
+  var Ya = { class: "wl-head" };
+  var Qa = ["href"];
+  var en = { key: 1, class: "wl-nick" };
+  var tn = ["textContent"];
   var ln = ["textContent"];
   var an = ["textContent"];
   var nn = ["textContent"];
   var on = ["textContent"];
-  var rn = ["textContent"];
-  var sn = { class: "wl-comment-actions" };
+  var rn = { class: "wl-comment-actions" };
+  var sn = ["title"];
   var cn = ["title"];
-  var un = ["title"];
-  var vn = { class: "wl-meta", "aria-hidden": "true" };
-  var mn = ["data-value", "textContent"];
-  var dn = ["innerHTML"];
-  var pn = { key: 1, class: "wl-admin-actions" };
-  var gn = { class: "wl-comment-status" };
-  var hn = ["disabled", "onClick", "textContent"];
-  var fn = { key: 3, class: "wl-quote" };
-  var wn = defineComponent({ __name: "CommentCard", props: { comment: {}, edit: { default: null }, rootId: {}, reply: { default: null } }, emits: ["log", "submit", "delete", "edit", "like", "status", "sticky", "reply"], setup(e2, { emit: a }) {
-    const l = e2, t2 = a, o2 = ["approved", "waiting", "spam"], n2 = inject("config"), m2 = ht(), d2 = useNow(), g = be(), c2 = computed2(() => n2.value.locale), f2 = computed2(() => {
-      const { link: i } = l.comment;
-      return i ? st(i) ? i : `https://${i}` : "";
-    }), _ = computed2(() => m2.value.includes(l.comment.objectId)), p3 = computed2(() => fl(new Date(l.comment.time), d2.value, c2.value)), M = computed2(() => g.value.type === "administrator"), S = computed2(() => l.comment.user_id && g.value.objectId === l.comment.user_id), E = computed2(() => {
-      var i;
-      return l.comment.objectId === ((i = l.reply) == null ? void 0 : i.objectId);
+  var un = { class: "wl-meta", "aria-hidden": "true" };
+  var vn = ["data-value", "textContent"];
+  var mn = { key: 0, class: "wl-content" };
+  var dn = { key: 0 };
+  var pn = ["href"];
+  var gn = createBaseVNode("span", null, ": ", -1);
+  var hn = ["innerHTML"];
+  var fn = { key: 1, class: "wl-admin-actions" };
+  var wn = { class: "wl-comment-status" };
+  var yn = ["disabled", "onClick", "textContent"];
+  var kn = { key: 3, class: "wl-quote" };
+  var bn = defineComponent({ __name: "CommentCard", props: { comment: {}, edit: { default: null }, rootId: {}, reply: { default: null } }, emits: ["log", "submit", "delete", "edit", "like", "status", "sticky", "reply"], setup(e2, { emit: n2 }) {
+    const t2 = e2, l = n2, a = ["approved", "waiting", "spam"], i = inject("config"), h2 = pt(), c2 = useNow(), C2 = Ce(), u2 = computed2(() => i.value.locale), w2 = computed2(() => {
+      const { link: o2 } = t2.comment;
+      return o2 ? it(o2) ? o2 : `https://${o2}` : "";
+    }), S = computed2(() => h2.value.includes(t2.comment.objectId)), g = computed2(() => hl(new Date(t2.comment.time), c2.value, u2.value)), _ = computed2(() => C2.value.type === "administrator"), M = computed2(() => t2.comment.user_id && C2.value.objectId === t2.comment.user_id), $2 = computed2(() => {
+      var o2;
+      return t2.comment.objectId === ((o2 = t2.reply) == null ? void 0 : o2.objectId);
     }), y2 = computed2(() => {
-      var i;
-      return l.comment.objectId === ((i = l.edit) == null ? void 0 : i.objectId);
+      var o2;
+      return t2.comment.objectId === ((o2 = t2.edit) == null ? void 0 : o2.objectId);
     });
-    return (i, w2) => {
+    return (o2, f2) => {
       var F;
-      const D = resolveComponent("CommentCard", true);
-      return openBlock(), createElementBlock("div", { id: i.comment.objectId, class: "wl-card-item" }, [createBaseVNode("div", Xa, [i.comment.avatar ? (openBlock(), createElementBlock("img", { key: 0, class: "wl-user-avatar", src: i.comment.avatar }, null, 8, Ja)) : createCommentVNode("v-if", true), i.comment.type ? (openBlock(), createBlock(unref(Wl), { key: 1 })) : createCommentVNode("v-if", true)]), createBaseVNode("div", Ya, [createBaseVNode("div", Qa, [f2.value ? (openBlock(), createElementBlock("a", { key: 0, class: "wl-nick", href: f2.value, target: "_blank", rel: "nofollow noopener noreferrer" }, toDisplayString(i.comment.nick), 9, en)) : (openBlock(), createElementBlock("span", tn, toDisplayString(i.comment.nick), 1)), i.comment.type === "administrator" ? (openBlock(), createElementBlock("span", { key: 2, class: "wl-badge", textContent: toDisplayString(c2.value.admin) }, null, 8, ln)) : createCommentVNode("v-if", true), i.comment.label ? (openBlock(), createElementBlock("span", { key: 3, class: "wl-badge", textContent: toDisplayString(i.comment.label) }, null, 8, an)) : createCommentVNode("v-if", true), i.comment.sticky ? (openBlock(), createElementBlock("span", { key: 4, class: "wl-badge", textContent: toDisplayString(c2.value.sticky) }, null, 8, nn)) : createCommentVNode("v-if", true), typeof i.comment.level == "number" ? (openBlock(), createElementBlock("span", { key: 5, class: normalizeClass(`wl-badge level${i.comment.level}`), textContent: toDisplayString(c2.value[`level${i.comment.level}`] || `Level ${i.comment.level}`) }, null, 10, on)) : createCommentVNode("v-if", true), createBaseVNode("span", { class: "wl-time", textContent: toDisplayString(p3.value) }, null, 8, rn), createBaseVNode("div", sn, [M.value || S.value ? (openBlock(), createElementBlock(Fragment, { key: 0 }, [createBaseVNode("button", { type: "button", class: "wl-edit", onClick: w2[0] || (w2[0] = (R2) => t2("edit", i.comment)) }, [createVNode(unref(Nl))]), createBaseVNode("button", { type: "button", class: "wl-delete", onClick: w2[1] || (w2[1] = (R2) => t2("delete", i.comment)) }, [createVNode(unref(_l))])], 64)) : createCommentVNode("v-if", true), createBaseVNode("button", { type: "button", class: "wl-like", title: _.value ? c2.value.cancelLike : c2.value.like, onClick: w2[2] || (w2[2] = (R2) => t2("like", i.comment)) }, [createVNode(unref(Vl), { active: _.value }, null, 8, ["active"]), createTextVNode(" " + toDisplayString("like" in i.comment ? i.comment.like : ""), 1)], 8, cn), createBaseVNode("button", { type: "button", class: normalizeClass(["wl-reply", { active: E.value }]), title: E.value ? c2.value.cancelReply : c2.value.reply, onClick: w2[3] || (w2[3] = (R2) => t2("reply", E.value ? null : i.comment)) }, [createVNode(unref(Fl))], 10, un)])]), createBaseVNode("div", vn, [(openBlock(), createElementBlock(Fragment, null, renderList(["addr", "browser", "os"], (R2) => (openBlock(), createElementBlock(Fragment, null, [i.comment[R2] ? (openBlock(), createElementBlock("span", { key: R2, class: normalizeClass(`wl-${R2}`), "data-value": i.comment[R2], textContent: toDisplayString(i.comment[R2]) }, null, 10, mn)) : createCommentVNode("v-if", true)], 64))), 64))]), y2.value ? createCommentVNode("v-if", true) : (openBlock(), createElementBlock("div", { key: 0, class: "wl-content", innerHTML: i.comment.comment }, null, 8, dn)), M.value && !y2.value ? (openBlock(), createElementBlock("div", pn, [createBaseVNode("span", gn, [(openBlock(), createElementBlock(Fragment, null, renderList(o2, (R2) => createBaseVNode("button", { key: R2, type: "submit", class: normalizeClass(`wl-btn wl-${R2}`), disabled: i.comment.status === R2, onClick: (z) => t2("status", { status: R2, comment: i.comment }), textContent: toDisplayString(c2.value[R2]) }, null, 10, hn)), 64))]), M.value && !("rid" in i.comment) ? (openBlock(), createElementBlock("button", { key: 0, type: "submit", class: "wl-btn wl-sticky", onClick: w2[4] || (w2[4] = (R2) => t2("sticky", i.comment)) }, toDisplayString(i.comment.sticky ? c2.value.unsticky : c2.value.sticky), 1)) : createCommentVNode("v-if", true)])) : createCommentVNode("v-if", true), E.value || y2.value ? (openBlock(), createElementBlock("div", { key: 2, class: normalizeClass({ "wl-reply-wrapper": E.value, "wl-edit-wrapper": y2.value }) }, [createVNode(kt, { edit: i.edit, "reply-id": (F = i.reply) == null ? void 0 : F.objectId, "reply-user": i.comment.nick, "root-id": i.rootId, onLog: w2[5] || (w2[5] = (R2) => t2("log")), onCancelReply: w2[6] || (w2[6] = (R2) => t2("reply", null)), onCancelEdit: w2[7] || (w2[7] = (R2) => t2("edit", null)), onSubmit: w2[8] || (w2[8] = (R2) => t2("submit", R2)) }, null, 8, ["edit", "reply-id", "reply-user", "root-id"])], 2)) : createCommentVNode("v-if", true), "children" in i.comment ? (openBlock(), createElementBlock("div", fn, [(openBlock(true), createElementBlock(Fragment, null, renderList(i.comment.children, (R2) => (openBlock(), createBlock(D, { key: R2.objectId, comment: R2, reply: i.reply, edit: i.edit, "root-id": i.rootId, onLog: w2[9] || (w2[9] = (z) => t2("log")), onDelete: w2[10] || (w2[10] = (z) => t2("delete", z)), onEdit: w2[11] || (w2[11] = (z) => t2("edit", z)), onLike: w2[12] || (w2[12] = (z) => t2("like", z)), onReply: w2[13] || (w2[13] = (z) => t2("reply", z)), onStatus: w2[14] || (w2[14] = (z) => t2("status", z)), onSticky: w2[15] || (w2[15] = (z) => t2("sticky", z)), onSubmit: w2[16] || (w2[16] = (z) => t2("submit", z)) }, null, 8, ["comment", "reply", "edit", "root-id"]))), 128))])) : createCommentVNode("v-if", true)])], 8, Za);
+      const q = resolveComponent("CommentCard", true);
+      return openBlock(), createElementBlock("div", { id: o2.comment.objectId, class: "wl-card-item" }, [createBaseVNode("div", Za, [o2.comment.avatar ? (openBlock(), createElementBlock("img", { key: 0, class: "wl-user-avatar", src: o2.comment.avatar }, null, 8, Xa)) : createCommentVNode("v-if", true), o2.comment.type ? (openBlock(), createBlock(unref(Nl), { key: 1 })) : createCommentVNode("v-if", true)]), createBaseVNode("div", Ja, [createBaseVNode("div", Ya, [w2.value ? (openBlock(), createElementBlock("a", { key: 0, class: "wl-nick", href: w2.value, target: "_blank", rel: "nofollow noopener noreferrer" }, toDisplayString(o2.comment.nick), 9, Qa)) : (openBlock(), createElementBlock("span", en, toDisplayString(o2.comment.nick), 1)), o2.comment.type === "administrator" ? (openBlock(), createElementBlock("span", { key: 2, class: "wl-badge", textContent: toDisplayString(u2.value.admin) }, null, 8, tn)) : createCommentVNode("v-if", true), o2.comment.label ? (openBlock(), createElementBlock("span", { key: 3, class: "wl-badge", textContent: toDisplayString(o2.comment.label) }, null, 8, ln)) : createCommentVNode("v-if", true), o2.comment.sticky ? (openBlock(), createElementBlock("span", { key: 4, class: "wl-badge", textContent: toDisplayString(u2.value.sticky) }, null, 8, an)) : createCommentVNode("v-if", true), typeof o2.comment.level == "number" ? (openBlock(), createElementBlock("span", { key: 5, class: normalizeClass(`wl-badge level${o2.comment.level}`), textContent: toDisplayString(u2.value[`level${o2.comment.level}`] || `Level ${o2.comment.level}`) }, null, 10, nn)) : createCommentVNode("v-if", true), createBaseVNode("span", { class: "wl-time", textContent: toDisplayString(g.value) }, null, 8, on), createBaseVNode("div", rn, [_.value || M.value ? (openBlock(), createElementBlock(Fragment, { key: 0 }, [createBaseVNode("button", { type: "button", class: "wl-edit", onClick: f2[0] || (f2[0] = (x) => l("edit", o2.comment)) }, [createVNode(unref(Fl))]), createBaseVNode("button", { type: "button", class: "wl-delete", onClick: f2[1] || (f2[1] = (x) => l("delete", o2.comment)) }, [createVNode(unref(Sl))])], 64)) : createCommentVNode("v-if", true), createBaseVNode("button", { type: "button", class: "wl-like", title: S.value ? u2.value.cancelLike : u2.value.like, onClick: f2[2] || (f2[2] = (x) => l("like", o2.comment)) }, [createVNode(unref(zl), { active: S.value }, null, 8, ["active"]), createTextVNode(" " + toDisplayString("like" in o2.comment ? o2.comment.like : ""), 1)], 8, sn), createBaseVNode("button", { type: "button", class: normalizeClass(["wl-reply", { active: $2.value }]), title: $2.value ? u2.value.cancelReply : u2.value.reply, onClick: f2[3] || (f2[3] = (x) => l("reply", $2.value ? null : o2.comment)) }, [createVNode(unref(Tl))], 10, cn)])]), createBaseVNode("div", un, [(openBlock(), createElementBlock(Fragment, null, renderList(["addr", "browser", "os"], (x) => (openBlock(), createElementBlock(Fragment, null, [o2.comment[x] ? (openBlock(), createElementBlock("span", { key: x, class: normalizeClass(`wl-${x}`), "data-value": o2.comment[x], textContent: toDisplayString(o2.comment[x]) }, null, 10, vn)) : createCommentVNode("v-if", true)], 64))), 64))]), y2.value ? createCommentVNode("v-if", true) : (openBlock(), createElementBlock("div", mn, [o2.comment.reply_user ? (openBlock(), createElementBlock("p", dn, [createBaseVNode("a", { href: "#" + o2.comment.pid }, "@" + toDisplayString(o2.comment.reply_user.nick), 9, pn), gn])) : createCommentVNode("v-if", true), createBaseVNode("div", { innerHTML: o2.comment.comment }, null, 8, hn)])), _.value && !y2.value ? (openBlock(), createElementBlock("div", fn, [createBaseVNode("span", wn, [(openBlock(), createElementBlock(Fragment, null, renderList(a, (x) => createBaseVNode("button", { key: x, type: "submit", class: normalizeClass(`wl-btn wl-${x}`), disabled: o2.comment.status === x, onClick: (z) => l("status", { status: x, comment: o2.comment }), textContent: toDisplayString(u2.value[x]) }, null, 10, yn)), 64))]), _.value && !("rid" in o2.comment) ? (openBlock(), createElementBlock("button", { key: 0, type: "submit", class: "wl-btn wl-sticky", onClick: f2[4] || (f2[4] = (x) => l("sticky", o2.comment)) }, toDisplayString(o2.comment.sticky ? u2.value.unsticky : u2.value.sticky), 1)) : createCommentVNode("v-if", true)])) : createCommentVNode("v-if", true), $2.value || y2.value ? (openBlock(), createElementBlock("div", { key: 2, class: normalizeClass({ "wl-reply-wrapper": $2.value, "wl-edit-wrapper": y2.value }) }, [createVNode(wt, { edit: o2.edit, "reply-id": (F = o2.reply) == null ? void 0 : F.objectId, "reply-user": o2.comment.nick, "root-id": o2.rootId, onLog: f2[5] || (f2[5] = (x) => l("log")), onCancelReply: f2[6] || (f2[6] = (x) => l("reply", null)), onCancelEdit: f2[7] || (f2[7] = (x) => l("edit", null)), onSubmit: f2[8] || (f2[8] = (x) => l("submit", x)) }, null, 8, ["edit", "reply-id", "reply-user", "root-id"])], 2)) : createCommentVNode("v-if", true), "children" in o2.comment ? (openBlock(), createElementBlock("div", kn, [(openBlock(true), createElementBlock(Fragment, null, renderList(o2.comment.children, (x) => (openBlock(), createBlock(q, { key: x.objectId, comment: x, reply: o2.reply, edit: o2.edit, "root-id": o2.rootId, onLog: f2[9] || (f2[9] = (z) => l("log")), onDelete: f2[10] || (f2[10] = (z) => l("delete", z)), onEdit: f2[11] || (f2[11] = (z) => l("edit", z)), onLike: f2[12] || (f2[12] = (z) => l("like", z)), onReply: f2[13] || (f2[13] = (z) => l("reply", z)), onStatus: f2[14] || (f2[14] = (z) => l("status", z)), onSticky: f2[15] || (f2[15] = (z) => l("sticky", z)), onSubmit: f2[16] || (f2[16] = (z) => l("submit", z)) }, null, 8, ["comment", "reply", "edit", "root-id"]))), 128))])) : createCommentVNode("v-if", true)])], 8, Ka);
     };
   } });
-  var yn = me(wn, [["__file", "CommentCard.vue"]]);
-  var bt = "3.1.3";
-  var kn = { "data-waline": "" };
-  var bn = { class: "wl-meta-head" };
-  var Cn = { class: "wl-count" };
-  var $n = ["textContent"];
-  var Ln = { class: "wl-sort" };
-  var En = ["onClick"];
-  var In = { class: "wl-cards" };
-  var xn = { key: 1, class: "wl-operation" };
-  var Rn = ["textContent"];
-  var An = { key: 2, class: "wl-loading" };
+  var Cn = me(bn, [["__file", "CommentCard.vue"]]);
+  var yt = "3.2.0";
+  var $n = { "data-waline": "" };
+  var Ln = { class: "wl-meta-head" };
+  var In = { class: "wl-count" };
+  var En = ["textContent"];
+  var xn = { class: "wl-sort" };
+  var Rn = ["onClick"];
+  var An = { class: "wl-cards" };
+  var _n = { key: 1, class: "wl-operation" };
   var Mn = ["textContent"];
-  var Un = { key: 4, class: "wl-operation" };
-  var Sn = ["textContent"];
-  var _n = { key: 5, class: "wl-power" };
-  var jn = createBaseVNode("a", { href: "https://github.com/walinejs/waline", target: "_blank", rel: "noopener noreferrer" }, " Waline ", -1);
-  var zn = defineComponent({ __name: "WalineComment", props: ["serverURL", "path", "meta", "requiredMeta", "dark", "commentSorting", "lang", "locale", "pageSize", "wordLimit", "emoji", "login", "highlighter", "texRenderer", "imageUploader", "search", "copyright", "recaptchaV3Key", "turnstileKey", "reaction"], setup(e2) {
-    const a = e2, l = { latest: "insertedAt_desc", oldest: "insertedAt_asc", hottest: "like_desc" }, t2 = Object.keys(l), o2 = be(), n2 = ht(), m2 = ref("loading"), d2 = ref(0), g = ref(1), c2 = ref(0), f2 = computed2(() => pl(a)), _ = ref(f2.value.commentSorting), p3 = ref([]), M = ref(null), S = ref(null), E = computed2(() => gl(f2.value.dark)), y2 = computed2(() => f2.value.locale);
-    useStyleTag(E, { id: "waline-darkmode" });
-    let i;
-    const w2 = ($2) => {
-      var k;
-      const { serverURL: j2, path: G, pageSize: B } = f2.value, X = new AbortController();
-      m2.value = "loading", i == null || i(), $({ serverURL: j2, lang: f2.value.lang, path: G, pageSize: B, sortBy: l[_.value], page: $2, signal: X.signal, token: (k = o2.value) == null ? void 0 : k.token }).then((K) => {
-        m2.value = "success", d2.value = K.count, p3.value.push(...K.data), g.value = $2, c2.value = K.totalPages;
-      }).catch((K) => {
-        K.name !== "AbortError" && (console.error(K.message), m2.value = "error");
-      }), i = X.abort.bind(X);
-    }, F = () => w2(g.value + 1), D = () => {
-      d2.value = 0, p3.value = [], w2(1);
-    }, R2 = ($2) => {
-      _.value !== $2 && (_.value = $2, D());
-    }, z = ($2) => {
-      M.value = $2;
-    }, ie = ($2) => {
-      S.value = $2;
-    }, H = ($2) => {
-      if (S.value)
-        S.value.comment = $2.comment, S.value.orig = $2.orig;
-      else if ("rid" in $2) {
-        const k = p3.value.find(({ objectId: j2 }) => j2 === $2.rid);
-        if (!k)
+  var Sn = { key: 2, class: "wl-loading" };
+  var Un = ["textContent"];
+  var jn = { key: 4, class: "wl-operation" };
+  var zn = ["textContent"];
+  var Vn = { key: 5, class: "wl-power" };
+  var Hn = createBaseVNode("a", { href: "https://github.com/walinejs/waline", target: "_blank", rel: "noopener noreferrer" }, " Waline ", -1);
+  var Tn = defineComponent({ __name: "WalineComment", props: ["serverURL", "path", "meta", "requiredMeta", "dark", "commentSorting", "lang", "locale", "pageSize", "wordLimit", "emoji", "login", "highlighter", "texRenderer", "imageUploader", "search", "copyright", "recaptchaV3Key", "turnstileKey", "reaction"], setup(e2) {
+    const n2 = e2, t2 = { latest: "insertedAt_desc", oldest: "insertedAt_asc", hottest: "like_desc" }, l = Object.keys(t2), a = Ce(), i = pt(), h2 = ref("loading"), c2 = ref(0), C2 = ref(1), u2 = ref(0), w2 = computed2(() => dl(n2)), S = ref(w2.value.commentSorting), g = ref([]), _ = ref(null), M = ref(null), $2 = computed2(() => pl(w2.value.dark)), y2 = computed2(() => w2.value.locale);
+    useStyleTag($2, { id: "waline-darkmode" });
+    let o2;
+    const f2 = (d2) => {
+      var U2;
+      const { serverURL: j2, path: G, pageSize: K } = w2.value, Z = new AbortController();
+      h2.value = "loading", o2 == null || o2(), $({ serverURL: j2, lang: w2.value.lang, path: G, pageSize: K, sortBy: t2[S.value], page: d2, signal: Z.signal, token: (U2 = a.value) == null ? void 0 : U2.token }).then((X) => {
+        h2.value = "success", c2.value = X.count, g.value.push(...X.data), C2.value = d2, u2.value = X.totalPages;
+      }).catch((X) => {
+        X.name !== "AbortError" && (console.error(X.message), h2.value = "error");
+      }), o2 = Z.abort.bind(Z);
+    }, F = () => f2(C2.value + 1), q = () => {
+      c2.value = 0, g.value = [], f2(1);
+    }, x = (d2) => {
+      S.value !== d2 && (S.value = d2, q());
+    }, z = (d2) => {
+      _.value = d2;
+    }, H = (d2) => {
+      M.value = d2;
+    }, ee = (d2) => {
+      if (M.value)
+        M.value.comment = d2.comment, M.value.orig = d2.orig;
+      else if ("rid" in d2) {
+        const U2 = g.value.find(({ objectId: j2 }) => j2 === d2.rid);
+        if (!U2)
           return;
-        Array.isArray(k.children) || (k.children = []), k.children.push($2);
+        Array.isArray(U2.children) || (U2.children = []), U2.children.push(d2);
       } else
-        p3.value.unshift($2), d2.value += 1;
-    }, oe = async ({ comment: $2, status: k }) => {
+        g.value.unshift(d2), c2.value += 1;
+    }, te = async ({ comment: d2, status: U2 }) => {
       var j2;
-      if ($2.status === k)
+      if (d2.status === U2)
         return;
-      const { serverURL: G, lang: B } = f2.value;
-      await U({ serverURL: G, lang: B, token: (j2 = o2.value) == null ? void 0 : j2.token, objectId: $2.objectId, comment: { status: k } }), $2.status = k;
-    }, ee = async ($2) => {
-      var k;
-      if ("rid" in $2)
+      const { serverURL: G, lang: K } = w2.value;
+      await U({ serverURL: G, lang: K, token: (j2 = a.value) == null ? void 0 : j2.token, objectId: d2.objectId, comment: { status: U2 } }), d2.status = U2;
+    }, de = async (d2) => {
+      var U2;
+      if ("rid" in d2)
         return;
-      const { serverURL: j2, lang: G } = f2.value;
-      await U({ serverURL: j2, lang: G, token: (k = o2.value) == null ? void 0 : k.token, objectId: $2.objectId, comment: { sticky: $2.sticky ? 0 : 1 } }), $2.sticky = !$2.sticky;
-    }, de = async ({ objectId: $2 }) => {
-      var k;
+      const { serverURL: j2, lang: G } = w2.value;
+      await U({ serverURL: j2, lang: G, token: (U2 = a.value) == null ? void 0 : U2.token, objectId: d2.objectId, comment: { sticky: d2.sticky ? 0 : 1 } }), d2.sticky = !d2.sticky;
+    }, Y = async ({ objectId: d2 }) => {
+      var U2;
       if (!confirm("Are you sure you want to delete this comment?"))
         return;
-      const { serverURL: j2, lang: G } = f2.value;
-      await y({ serverURL: j2, lang: G, token: (k = o2.value) == null ? void 0 : k.token, objectId: $2 }), p3.value.some((B, X) => B.objectId === $2 ? (p3.value = p3.value.filter((K, ce) => ce !== X), true) : B.children.some((K, ce) => K.objectId === $2 ? (p3.value[X].children = B.children.filter((_e, Ce) => Ce !== ce), true) : false));
-    }, Y = async ($2) => {
-      var k;
-      const { serverURL: j2, lang: G } = f2.value, { objectId: B } = $2, X = n2.value.includes(B);
-      await U({ serverURL: j2, lang: G, objectId: B, token: (k = o2.value) == null ? void 0 : k.token, comment: { like: !X } }), X ? n2.value = n2.value.filter((K) => K !== B) : (n2.value = [...n2.value, B], n2.value.length > 50 && (n2.value = n2.value.slice(-50))), $2.like = ($2.like || 0) + (X ? -1 : 1);
+      const { serverURL: j2, lang: G } = w2.value;
+      await y({ serverURL: j2, lang: G, token: (U2 = a.value) == null ? void 0 : U2.token, objectId: d2 }), g.value.some((K, Z) => K.objectId === d2 ? (g.value = g.value.filter((X, ce) => ce !== Z), true) : K.children.some((X, ce) => X.objectId === d2 ? (g.value[Z].children = K.children.filter((Se, pe) => pe !== ce), true) : false));
+    }, se = async (d2) => {
+      var U2;
+      const { serverURL: j2, lang: G } = w2.value, { objectId: K } = d2, Z = i.value.includes(K);
+      await U({ serverURL: j2, lang: G, objectId: K, token: (U2 = a.value) == null ? void 0 : U2.token, comment: { like: !Z } }), Z ? i.value = i.value.filter((X) => X !== K) : (i.value = [...i.value, K], i.value.length > 50 && (i.value = i.value.slice(-50))), d2.like = (d2.like || 0) + (Z ? -1 : 1);
     };
-    return provide("config", f2), onMounted(() => {
-      watch(() => [a.serverURL, a.path], () => D(), { immediate: true });
-    }), onUnmounted(() => i == null ? void 0 : i()), ($2, k) => (openBlock(), createElementBlock("div", kn, [createVNode(ia), M.value ? createCommentVNode("v-if", true) : (openBlock(), createBlock(kt, { key: 0, onLog: D, onSubmit: H })), createBaseVNode("div", bn, [createBaseVNode("div", Cn, [d2.value ? (openBlock(), createElementBlock("span", { key: 0, class: "wl-num", textContent: toDisplayString(d2.value) }, null, 8, $n)) : createCommentVNode("v-if", true), createTextVNode(" " + toDisplayString(y2.value.comment), 1)]), createBaseVNode("ul", Ln, [(openBlock(true), createElementBlock(Fragment, null, renderList(unref(t2), (j2) => (openBlock(), createElementBlock("li", { key: j2, class: normalizeClass([j2 === _.value ? "active" : ""]), onClick: (G) => R2(j2) }, toDisplayString(y2.value[j2]), 11, En))), 128))])]), createBaseVNode("div", In, [(openBlock(true), createElementBlock(Fragment, null, renderList(p3.value, (j2) => (openBlock(), createBlock(yn, { key: j2.objectId, "root-id": j2.objectId, comment: j2, reply: M.value, edit: S.value, onLog: D, onReply: z, onEdit: ie, onSubmit: H, onStatus: oe, onDelete: de, onSticky: ee, onLike: Y }, null, 8, ["root-id", "comment", "reply", "edit"]))), 128))]), m2.value === "error" ? (openBlock(), createElementBlock("div", xn, [createBaseVNode("button", { type: "button", class: "wl-btn", onClick: D, textContent: toDisplayString(y2.value.refresh) }, null, 8, Rn)])) : m2.value === "loading" ? (openBlock(), createElementBlock("div", An, [createVNode(unref(ve), { size: 30 })])) : p3.value.length ? g.value < c2.value ? (openBlock(), createElementBlock("div", Un, [createBaseVNode("button", { type: "button", class: "wl-btn", onClick: F, textContent: toDisplayString(y2.value.more) }, null, 8, Sn)])) : createCommentVNode("v-if", true) : (openBlock(), createElementBlock("div", { key: 3, class: "wl-empty", textContent: toDisplayString(y2.value.sofa) }, null, 8, Mn)), f2.value.copyright ? (openBlock(), createElementBlock("div", _n, [createTextVNode(" Powered by "), jn, createTextVNode(" v" + toDisplayString(unref(bt)), 1)])) : createCommentVNode("v-if", true)]));
+    return provide("config", w2), onMounted(() => {
+      watch(() => [n2.serverURL, n2.path], () => q(), { immediate: true });
+    }), onUnmounted(() => o2 == null ? void 0 : o2()), (d2, U2) => (openBlock(), createElementBlock("div", $n, [createVNode(oa), _.value ? createCommentVNode("v-if", true) : (openBlock(), createBlock(wt, { key: 0, onLog: q, onSubmit: ee })), createBaseVNode("div", Ln, [createBaseVNode("div", In, [c2.value ? (openBlock(), createElementBlock("span", { key: 0, class: "wl-num", textContent: toDisplayString(c2.value) }, null, 8, En)) : createCommentVNode("v-if", true), createTextVNode(" " + toDisplayString(y2.value.comment), 1)]), createBaseVNode("ul", xn, [(openBlock(true), createElementBlock(Fragment, null, renderList(unref(l), (j2) => (openBlock(), createElementBlock("li", { key: j2, class: normalizeClass([j2 === S.value ? "active" : ""]), onClick: (G) => x(j2) }, toDisplayString(y2.value[j2]), 11, Rn))), 128))])]), createBaseVNode("div", An, [(openBlock(true), createElementBlock(Fragment, null, renderList(g.value, (j2) => (openBlock(), createBlock(Cn, { key: j2.objectId, "root-id": j2.objectId, comment: j2, reply: _.value, edit: M.value, onLog: q, onReply: z, onEdit: H, onSubmit: ee, onStatus: te, onDelete: Y, onSticky: de, onLike: se }, null, 8, ["root-id", "comment", "reply", "edit"]))), 128))]), h2.value === "error" ? (openBlock(), createElementBlock("div", _n, [createBaseVNode("button", { type: "button", class: "wl-btn", onClick: q, textContent: toDisplayString(y2.value.refresh) }, null, 8, Mn)])) : h2.value === "loading" ? (openBlock(), createElementBlock("div", Sn, [createVNode(unref(ve), { size: 30 })])) : g.value.length ? C2.value < u2.value ? (openBlock(), createElementBlock("div", jn, [createBaseVNode("button", { type: "button", class: "wl-btn", onClick: F, textContent: toDisplayString(y2.value.more) }, null, 8, zn)])) : createCommentVNode("v-if", true) : (openBlock(), createElementBlock("div", { key: 3, class: "wl-empty", textContent: toDisplayString(y2.value.sofa) }, null, 8, Un)), w2.value.copyright ? (openBlock(), createElementBlock("div", Vn, [createTextVNode(" Powered by "), Hn, createTextVNode(" v" + toDisplayString(unref(yt)), 1)])) : createCommentVNode("v-if", true)]));
   } });
-  var Vn = me(zn, [["__file", "WalineComment.vue"]]);
-  var Ct = (e2, a) => {
-    a.forEach((l, t2) => {
-      const o2 = e2[t2].time;
-      typeof o2 == "number" && (l.innerText = o2.toString());
+  var Fn = me(Tn, [["__file", "WalineComment.vue"]]);
+  var kt = (e2, n2) => {
+    n2.forEach((t2, l) => {
+      const a = e2[l].time;
+      typeof a == "number" && (t2.innerText = a.toString());
     });
   };
-  var $t = ({ serverURL: e2, path: a = window.location.pathname, selector: l = ".waline-pageview-count", update: t2 = true, lang: o2 = navigator.language }) => {
-    const n2 = new AbortController(), m2 = Array.from(document.querySelectorAll(l)), d2 = (c2) => {
-      const f2 = Se(c2);
-      return f2 !== null && a !== f2;
-    }, g = (c2) => j({ serverURL: ke(e2), paths: c2.map((f2) => Se(f2) || a), lang: o2, signal: n2.signal }).then((f2) => Ct(f2, c2)).catch(ut);
-    if (t2) {
-      const c2 = m2.filter((_) => !d2(_)), f2 = m2.filter(d2);
-      v({ serverURL: ke(e2), path: a, lang: o2 }).then((_) => Ct(_, c2)), f2.length && g(f2);
+  var bt = ({ serverURL: e2, path: n2 = window.location.pathname, selector: t2 = ".waline-pageview-count", update: l = true, lang: a = navigator.language }) => {
+    const i = new AbortController(), h2 = Array.from(document.querySelectorAll(t2)), c2 = (u2) => {
+      const w2 = Me(u2);
+      return w2 !== null && n2 !== w2;
+    }, C2 = (u2) => j({ serverURL: be(e2), paths: u2.map((w2) => Me(w2) ?? n2), lang: a, signal: i.signal }).then((w2) => kt(w2, u2)).catch(st);
+    if (l) {
+      const u2 = h2.filter((S) => !c2(S)), w2 = h2.filter(c2);
+      v({ serverURL: be(e2), path: n2, lang: a }).then((S) => kt(S, u2)), w2.length && C2(w2);
     } else
-      g(m2);
-    return n2.abort.bind(n2);
+      C2(h2);
+    return i.abort.bind(i);
   };
-  var Hn = ({ el: e2 = "#waline", path: a = window.location.pathname, comment: l = false, pageview: t2 = false, ...o2 }) => {
-    const n2 = e2 ? Ue(e2) : null;
-    if (e2 && !n2)
+  var Nn = ({ el: e2 = "#waline", path: n2 = window.location.pathname, comment: t2 = false, pageview: l = false, ...a }) => {
+    const i = e2 ? _e(e2) : null;
+    if (e2 && !i)
       throw new Error("Option 'el' do not match any domElement!");
-    if (!o2.serverURL)
+    if (!a.serverURL)
       throw new Error("Option 'serverURL' is missing!");
-    const m2 = reactive({ ...o2 }), d2 = reactive({ comment: l, pageview: t2, path: a }), g = () => {
-      d2.comment && dt({ serverURL: m2.serverURL, path: d2.path, ...se(d2.comment) ? { selector: d2.comment } : {} });
-    }, c2 = () => {
-      d2.pageview && $t({ serverURL: m2.serverURL, path: d2.path, ...se(d2.pageview) ? { selector: d2.pageview } : {} });
-    }, f2 = n2 ? createApp(() => h(Vn, { path: d2.path, ...m2 })) : null;
-    f2 && f2.mount(n2);
-    const _ = watchEffect(g), p3 = watchEffect(c2);
-    return { el: n2, update: ({ comment: M, pageview: S, path: E = window.location.pathname, ...y2 } = {}) => {
-      Object.entries(y2).forEach(([i, w2]) => {
-        m2[i] = w2;
-      }), d2.path = E, M !== void 0 && (d2.comment = M), S !== void 0 && (d2.pageview = S);
+    const h2 = reactive({ ...a }), c2 = reactive({ comment: t2, pageview: l, path: n2 }), C2 = () => {
+      c2.comment && vt({ serverURL: h2.serverURL, path: c2.path, ...re(c2.comment) ? { selector: c2.comment } : {} });
+    }, u2 = () => {
+      c2.pageview && bt({ serverURL: h2.serverURL, path: c2.path, ...re(c2.pageview) ? { selector: c2.pageview } : {} });
+    }, w2 = i ? createApp(() => h(Fn, { path: c2.path, ...h2 })) : null;
+    w2 && w2.mount(i);
+    const S = watchEffect(C2), g = watchEffect(u2);
+    return { el: i, update: ({ comment: _, pageview: M, path: $2 = window.location.pathname, ...y2 } = {}) => {
+      Object.entries(y2).forEach(([o2, f2]) => {
+        h2[o2] = f2;
+      }), c2.path = $2, _ !== void 0 && (c2.comment = _), M !== void 0 && (c2.pageview = M);
     }, destroy: () => {
-      f2 == null || f2.unmount(), _(), p3();
+      w2 == null || w2.unmount(), S(), g();
     } };
   };
 
@@ -12285,7 +12284,7 @@ ${content}</tr>
   var serverURL = "https://seven-demo.comment.supcat.cn/.netlify/functions/comment";
 
   // <stdin>
-  Hn({
+  Nn({
     el: "#waline",
     lang,
     reaction,
@@ -12299,14 +12298,14 @@ ${content}</tr>
     locale: { reactionTitle: "" }
   });
   if (enableCounts) {
-    dt({
+    vt({
       serverURL,
       path: window.location.pathname,
       lang
     });
   }
   if (enablePageView) {
-    $t({
+    bt({
       serverURL,
       selector: ".page-info-pageview-count",
       path: window.location.pathname
@@ -12317,7 +12316,7 @@ ${content}</tr>
 
 @vue/shared/dist/shared.esm-bundler.js:
   (**
-  * @vue/shared v3.4.26
+  * @vue/shared v3.4.27
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
   * @license MIT
   **)
@@ -12325,14 +12324,14 @@ ${content}</tr>
 
 @vue/reactivity/dist/reactivity.esm-bundler.js:
   (**
-  * @vue/reactivity v3.4.26
+  * @vue/reactivity v3.4.27
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
   * @license MIT
   **)
 
 @vue/runtime-core/dist/runtime-core.esm-bundler.js:
   (**
-  * @vue/runtime-core v3.4.26
+  * @vue/runtime-core v3.4.27
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
   * @license MIT
   **)
@@ -12345,7 +12344,7 @@ ${content}</tr>
 
 @vue/runtime-dom/dist/runtime-dom.esm-bundler.js:
   (**
-  * @vue/runtime-dom v3.4.26
+  * @vue/runtime-dom v3.4.27
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
   * @license MIT
   **)
@@ -12358,7 +12357,7 @@ ${content}</tr>
 
 vue/dist/vue.runtime.esm-bundler.js:
   (**
-  * vue v3.4.26
+  * vue v3.4.27
   * (c) 2018-present Yuxi (Evan) You and Vue contributors
   * @license MIT
   **)
