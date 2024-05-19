@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>社会人になった on Seven 主题</title>
-    <link>https://changingmoments.one/tags/%E7%A4%BE%E4%BC%9A%E4%BA%BA%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%9F/</link>
+    <link>http://localhost:1313/tags/%E7%A4%BE%E4%BC%9A%E4%BA%BA%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%9F/</link>
     <description>Recent content in 社会人になった on Seven 主题</description>
     <generator>Hugo</generator>
     <language>zh-hans</language>
-    <lastBuildDate>Wed, 15 May 2024 16:46:13 +0800</lastBuildDate>
-    <atom:link href="https://changingmoments.one/tags/%E7%A4%BE%E4%BC%9A%E4%BA%BA%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%9F/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Jun 2022 09:00:16 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E7%A4%BE%E4%BC%9A%E4%BA%BA%E3%81%AB%E3%81%AA%E3%81%A3%E3%81%9F/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>日记 | 社会人になった</title>
-      <link>https://changingmoments.one/posts/20220503/</link>
+      <link>http://localhost:1313/posts/20220503/</link>
       <pubDate>Tue, 03 May 2022 15:40:43 +0000</pubDate>
-      <guid>https://changingmoments.one/posts/20220503/</guid>
+      <guid>http://localhost:1313/posts/20220503/</guid>
       <description>工作，好遥远的词汇。我认为我是不会这么早工作的，但是因为一些契机，我加入了我现在工作的地方，和我的老师们成为了同事。 工作的一天。早上六点钟便</description>
     </item>
   </channel>

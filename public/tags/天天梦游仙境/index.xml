@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>天天梦游仙境 on Seven 主题</title>
-    <link>https://changingmoments.one/tags/%E5%A4%A9%E5%A4%A9%E6%A2%A6%E6%B8%B8%E4%BB%99%E5%A2%83/</link>
+    <link>http://localhost:1313/tags/%E5%A4%A9%E5%A4%A9%E6%A2%A6%E6%B8%B8%E4%BB%99%E5%A2%83/</link>
     <description>Recent content in 天天梦游仙境 on Seven 主题</description>
     <generator>Hugo</generator>
     <language>zh-hans</language>
-    <lastBuildDate>Wed, 15 May 2024 16:46:13 +0800</lastBuildDate>
-    <atom:link href="https://changingmoments.one/tags/%E5%A4%A9%E5%A4%A9%E6%A2%A6%E6%B8%B8%E4%BB%99%E5%A2%83/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Sep 2022 01:17:02 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E5%A4%A9%E5%A4%A9%E6%A2%A6%E6%B8%B8%E4%BB%99%E5%A2%83/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>梦境 | 我不知道这里发生了什么</title>
-      <link>https://changingmoments.one/posts/20220802/</link>
+      <link>http://localhost:1313/posts/20220802/</link>
       <pubDate>Tue, 02 Aug 2022 06:47:21 +0000</pubDate>
-      <guid>https://changingmoments.one/posts/20220802/</guid>
+      <guid>http://localhost:1313/posts/20220802/</guid>
       <description>天空中回荡着直升机的声音。明明没有经历过战争，但总觉得那种声音就是战争，声音逐渐靠近，心里也在揪紧，不知道在哪一个瞬间战争就会来临，那种声音</description>
     </item>
     <item>
       <title>梦境 | 我不知道我为什么会在这里</title>
-      <link>https://changingmoments.one/posts/20220730/</link>
+      <link>http://localhost:1313/posts/20220730/</link>
       <pubDate>Sat, 30 Jul 2022 06:48:42 +0000</pubDate>
-      <guid>https://changingmoments.one/posts/20220730/</guid>
+      <guid>http://localhost:1313/posts/20220730/</guid>
       <description>我不知道我为什么会在这里，但我一直在这里。在没有问出这个问题之前，之前的之前，就在这个地方了。 环顾一下四周，我的家，可以称作是家吗？是一座废</description>
     </item>
   </channel>

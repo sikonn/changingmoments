@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>天天充满力量 on Seven 主题</title>
-    <link>https://changingmoments.one/tags/%E5%A4%A9%E5%A4%A9%E5%85%85%E6%BB%A1%E5%8A%9B%E9%87%8F/</link>
+    <link>http://localhost:1313/tags/%E5%A4%A9%E5%A4%A9%E5%85%85%E6%BB%A1%E5%8A%9B%E9%87%8F/</link>
     <description>Recent content in 天天充满力量 on Seven 主题</description>
     <generator>Hugo</generator>
     <language>zh-hans</language>
-    <lastBuildDate>Wed, 15 May 2024 16:46:13 +0800</lastBuildDate>
-    <atom:link href="https://changingmoments.one/tags/%E5%A4%A9%E5%A4%A9%E5%85%85%E6%BB%A1%E5%8A%9B%E9%87%8F/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Jan 2023 16:42:02 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E5%A4%A9%E5%A4%A9%E5%85%85%E6%BB%A1%E5%8A%9B%E9%87%8F/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>播客 | 摸鱼听什么</title>
-      <link>https://changingmoments.one/posts/20221002/</link>
+      <link>http://localhost:1313/posts/20221002/</link>
       <pubDate>Sun, 02 Oct 2022 12:56:02 +0000</pubDate>
-      <guid>https://changingmoments.one/posts/20221002/</guid>
+      <guid>http://localhost:1313/posts/20221002/</guid>
       <description>本期播客的bgm 放学以后afterschool 我的独有气味现在正在听关于气味的这一期，很温暖的一期。 我们既闻到气味，也释放气味。人可以闭上双</description>
     </item>
     <item>
       <title>播客 | 8-9月听什么</title>
-      <link>https://changingmoments.one/posts/20220925/</link>
+      <link>http://localhost:1313/posts/20220925/</link>
       <pubDate>Sat, 24 Sep 2022 17:02:45 +0000</pubDate>
-      <guid>https://changingmoments.one/posts/20220925/</guid>
+      <guid>http://localhost:1313/posts/20220925/</guid>
       <description>因为之前立志要给听过的播客写听后感，于是萎了很长一段时间都不想听了，但是又实在想推荐一下下，于是我来了，总结，甚至不是月的总结，是两个月的总</description>
     </item>
   </channel>

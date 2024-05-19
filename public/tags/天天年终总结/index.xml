@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>天天年终总结 on Seven 主题</title>
-    <link>https://changingmoments.one/tags/%E5%A4%A9%E5%A4%A9%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</link>
+    <link>http://localhost:1313/tags/%E5%A4%A9%E5%A4%A9%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</link>
     <description>Recent content in 天天年终总结 on Seven 主题</description>
     <generator>Hugo</generator>
     <language>zh-hans</language>
-    <lastBuildDate>Wed, 15 May 2024 16:46:13 +0800</lastBuildDate>
-    <atom:link href="https://changingmoments.one/tags/%E5%A4%A9%E5%A4%A9%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Feb 2024 21:00:03 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E5%A4%A9%E5%A4%A9%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2023 | 全面放弃时间管理app</title>
-      <link>https://changingmoments.one/posts/20240126/</link>
+      <link>http://localhost:1313/posts/20240126/</link>
       <pubDate>Sun, 04 Feb 2024 12:54:09 +0000</pubDate>
-      <guid>https://changingmoments.one/posts/20240126/</guid>
+      <guid>http://localhost:1313/posts/20240126/</guid>
       <description>这个世界越来越电子化，今天看到医院报告单没办法在小程序上查询到的时候我还觉得很烦躁，但是越来越多的电子化也让我很烦躁，怎么才能不烦躁？ 感觉不</description>
     </item>
     <item>
       <title>2023 | 生きていて幸せだねー</title>
-      <link>https://changingmoments.one/posts/20240101/</link>
+      <link>http://localhost:1313/posts/20240101/</link>
       <pubDate>Mon, 01 Jan 2024 15:22:42 +0000</pubDate>
-      <guid>https://changingmoments.one/posts/20240101/</guid>
+      <guid>http://localhost:1313/posts/20240101/</guid>
       <description>同样是听着年度歌单写着年终总结的我，请问大家听着年度歌单不会只想唱歌不想写吗（哈哈哈哈哈，打下今年2023，又忽然意识到已经是2024年1月</description>
     </item>
     <item>
       <title>2023 | 出轨、3p、黑车、纯爱我都要</title>
-      <link>https://changingmoments.one/posts/20231226/</link>
+      <link>http://localhost:1313/posts/20231226/</link>
       <pubDate>Tue, 26 Dec 2023 09:55:34 +0000</pubDate>
-      <guid>https://changingmoments.one/posts/20231226/</guid>
+      <guid>http://localhost:1313/posts/20231226/</guid>
       <description>又是一个在搞ddl的日子，又除了ddl什么都想搞。 今年6月我开始买dlsite！可能几百年前朋友推荐给我过，也听过一些免费的，比如那个深川绿</description>
     </item>
     <item>
       <title>2022 | 我的年终总结：兵荒马乱又一年</title>
-      <link>https://changingmoments.one/posts/20221231/</link>
+      <link>http://localhost:1313/posts/20221231/</link>
       <pubDate>Fri, 30 Dec 2022 14:20:48 +0000</pubDate>
-      <guid>https://changingmoments.one/posts/20221231/</guid>
+      <guid>http://localhost:1313/posts/20221231/</guid>
       <description>时间过的真的好快好快，2022年这操蛋的一年也终于过完了。 1月 瞎玩 2月 等成绩，几乎决定要二战 3月 选择二战 4月 进入mastodon宇宙，在象友</description>
     </item>
   </channel>

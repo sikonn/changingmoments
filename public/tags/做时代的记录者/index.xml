@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>做时代的记录者 on Seven 主题</title>
-    <link>https://changingmoments.one/tags/%E5%81%9A%E6%97%B6%E4%BB%A3%E7%9A%84%E8%AE%B0%E5%BD%95%E8%80%85/</link>
+    <link>http://localhost:1313/tags/%E5%81%9A%E6%97%B6%E4%BB%A3%E7%9A%84%E8%AE%B0%E5%BD%95%E8%80%85/</link>
     <description>Recent content in 做时代的记录者 on Seven 主题</description>
     <generator>Hugo</generator>
     <language>zh-hans</language>
-    <lastBuildDate>Wed, 15 May 2024 16:46:13 +0800</lastBuildDate>
-    <atom:link href="https://changingmoments.one/tags/%E5%81%9A%E6%97%B6%E4%BB%A3%E7%9A%84%E8%AE%B0%E5%BD%95%E8%80%85/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 Aug 2022 15:23:05 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E5%81%9A%E6%97%B6%E4%BB%A3%E7%9A%84%E8%AE%B0%E5%BD%95%E8%80%85/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>日语 | 判断力を取り戻す</title>
-      <link>https://changingmoments.one/posts/20220810/</link>
+      <link>http://localhost:1313/posts/20220810/</link>
       <pubDate>Wed, 10 Aug 2022 07:19:32 +0000</pubDate>
-      <guid>https://changingmoments.one/posts/20220810/</guid>
+      <guid>http://localhost:1313/posts/20220810/</guid>
       <description>誰でもシーソーゲームという言葉を知っているだろう。スポーツでは、追いつ追かれつの接戦という意味を指す。情報化社会の今、このような状況はSNS</description>
     </item>
     <item>
       <title>思考 | 听话的中国小孩，驯化的中国人</title>
-      <link>https://changingmoments.one/posts/20220521/</link>
+      <link>http://localhost:1313/posts/20220521/</link>
       <pubDate>Sat, 21 May 2022 03:29:56 +0000</pubDate>
-      <guid>https://changingmoments.one/posts/20220521/</guid>
+      <guid>http://localhost:1313/posts/20220521/</guid>
       <description>虽然小时候就觉得听话不是什么好词，但是还是做了一个听话的小孩，不挑食，不打游戏，按部就班的学习。 小时候其实很讨厌吃青椒，还有白萝卜，但是甚至</description>
     </item>
     <item>
       <title>感受 | 中国式家庭的民主和科学</title>
-      <link>https://changingmoments.one/posts/20220517/</link>
+      <link>http://localhost:1313/posts/20220517/</link>
       <pubDate>Sat, 21 May 2022 02:23:06 +0000</pubDate>
-      <guid>https://changingmoments.one/posts/20220517/</guid>
+      <guid>http://localhost:1313/posts/20220517/</guid>
       <description>Democracy中国式民主是什么样的民主，是明明是专制还要说自己有多民主，多以人民为中心。想起我爸讲的一个故事，说原来伯伯和爷爷说什么，说</description>
     </item>
     <item>
       <title>感受 | 生活中的厌女</title>
-      <link>https://changingmoments.one/posts/20220519/</link>
+      <link>http://localhost:1313/posts/20220519/</link>
       <pubDate>Thu, 19 May 2022 15:35:36 +0000</pubDate>
-      <guid>https://changingmoments.one/posts/20220519/</guid>
+      <guid>http://localhost:1313/posts/20220519/</guid>
       <description>生活中的厌女无处不在，几千年的男权社会已经把女人驯化成了男人想要的样子，甚至前段时间看到说化妆讨好男人的帖子，男权社会就是女人就算没有讨好男</description>
     </item>
     <item>
       <title>时代 | 做时代的记录者</title>
-      <link>https://changingmoments.one/posts/20220511/</link>
+      <link>http://localhost:1313/posts/20220511/</link>
       <pubDate>Wed, 11 May 2022 14:37:35 +0000</pubDate>
-      <guid>https://changingmoments.one/posts/20220511/</guid>
+      <guid>http://localhost:1313/posts/20220511/</guid>
       <description>我不知道我现在能做什么，除了想办法往外跑我做不了任何事情。 我害怕2025年的来临，甚至是2023年的来临。不知道文革之前，或历史上相同的事情</description>
     </item>
   </channel>
