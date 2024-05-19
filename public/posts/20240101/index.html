@@ -1,0 +1,1384 @@
+<!doctype html>
+<html lang="zh-hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      id="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>
+      2023 | 生きていて幸せだねー | Seven 主题
+    </title><meta
+  name="application-name"
+  content="Seven Demo" />
+<meta
+  name="apple-mobile-web-app-title"
+  content="Seven Demo" />
+
+
+  <meta name="title" content="2023 | 生きていて幸せだねー" />
+
+
+
+  <meta name="description" content="一款简洁、漂亮的 HUGO 博客主题" />
+<meta name="theme-color" content="#ffffff" /><link rel="icon" href="/favicon.svg" /><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffffff" />
+
+
+
+
+  
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/instantsearch.css@8.0.0/themes/reset-min.css"
+    integrity="sha256-2AeJLzExpZvqLUxMfcs+4DWcMwNfpnjUeAAvEtPr0wU="
+    crossorigin="anonymous" />
+
+  
+    
+      
+        <link rel="stylesheet" href="/css/search.min.7f9e07a0f7b636f9d65dda999e80946da98abb0e13bcc1c806366e01235f8afc.css" />
+      
+    
+
+  
+
+
+
+
+
+
+  
+    
+      
+        <link rel="stylesheet" href="/css/waline.min.ca283dedc4f01d5dfc48552cd7807b0e81de1ddabbc0811e01beb52266a2cca3.css" />
+      
+    
+  
+
+
+
+
+
+  
+    
+      <link rel="stylesheet" href="/css/styles.min.991bf85397ec60ee86720293f947ebad48003d055d3deab2bdef139d348191e1.css" />
+    
+  
+
+
+
+
+
+<link href="/font/Oswald-VariableFont_wght/result.css" rel="stylesheet" />
+
+  
+    
+    
+    
+      
+    
+    <link href="/css/syntax.min.8a989badbaded6c4614433de34a6d389f151b219400944020adaa74774d7a3b5.css" rel="stylesheet" />
+  <script
+  defer
+  src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.13.10/dist/cdn.min.js"></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.13.10/dist/cdn.min.js"></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.10/dist/cdn.min.js"></script>
+<script>
+  if (
+    localStorage.getItem("color-theme") === "dark" ||
+    (!("color-theme" in localStorage) &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches)
+  ) {
+    document.documentElement.classList.add("dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+  }
+
+  document.addEventListener("alpine:init", () => {
+    Alpine.store("darkMode", {
+      on:
+        localStorage.getItem("color-theme") === "dark" ||
+        (!("color-theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches),
+      toggle() {
+        this.on = !this.on;
+        if (this.on) {
+          document.documentElement.classList.add("dark");
+          localStorage.setItem("color-theme", "dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+          localStorage.setItem("color-theme", "light");
+        }
+      },
+    });
+  });
+</script>
+
+
+
+    <style>
+      [x-cloak] {
+        display: none !important;
+      }
+    </style>
+  </head>
+
+  <body
+    x-cloak
+    x-data="{ 
+      shrink: false,
+      enableBgAni: true,
+      scrollY: 0,
+      bgOpen: true,
+      darkImg: '/images/bg-dark.svg',
+      lightImg: '/images/bg.svg',
+      newbgImg: '',
+      bgImg: '',
+
+      init() {
+        if (this.bgOpen && $store.darkMode.on) {
+          bgImg = this.darkImg
+        } else if (this.bgOpen && !$store.darkMode.on) {
+          bgImg = this.lightImg
+        } else {
+          bgImg = ''
+        }
+      },
+
+      get bgImg () {
+        return bgImg
+      },
+
+      set bgImg(v) {
+        bgImg = v;
+      },
+
+      getNewBgImg() {
+        return bgImg;
+      },
+    }"
+    x-init="$watch('$store.darkMode.on', (value) => {
+      if (value && bgOpen) {
+        bgImg = '/images/bg-dark.svg'
+      } else if (!value && bgOpen) {
+        bgImg = '/images/bg.svg'
+      } 
+    })"
+    @click="newbgImg = getNewBgImg()"
+    @scroll.window="shrink = (window.scrollY > 10 ? true : false)"
+    x-effect="$el.style.backgroundImage = 'url(' + bgImg + ')'"
+    :style="'background-image: ' + 'url(' + newbgImg + ')'"
+    :class="{'bg-white': !bgOpen, 'dark:bg-gray-900': !bgOpen, 'bg-cover': bgOpen, 'bg-fixed': bgOpen, 'dark:delay-300': enableBgAni }"
+    class="flex h-screen flex-col scroll-auto">
+    <div
+      x-show="$store.darkMode.on && enableBgAni"
+      x-cloak
+      x-transition:enter="animate-bgScaleInTr"
+      x-transition:leave="animate-bgScaleOutTr"
+      :style="'background-image: ' + 'url(' + darkImg + ')'"
+      :class="{'bg-gray-900': !bgOpen,'dark:bg-gray-900': !bgOpen, 'bg-cover': bgOpen, 'bg-fixed': bgOpen}"
+      class="fixed left-0 top-0 -z-10 h-full w-full"></div><header x-data="{ isMobile: false }" class="z-40 h-38 w-full flex-shrink-0">
+  <nav
+    id="nav"
+    :class="{ 'h-25': shrink, 'h-38': !shrink, 'shadow-md': shrink, 'bg-white/85': shrink, 'dark:bg-gray-900/85': shrink, 'backdrop-blur-md': shrink}"
+    class="fixed inset-0 mx-auto flex items-center justify-between px-4 transition-all duration-500 ease-in-out"
+    aria-label="Global">
+    <div
+      class="mx-auto flex w-screen flex-wrap items-center justify-between place-self-center object-center px-1 md:w-[1000px] md:px-4">
+      <div class="flex lg:flex-1"><a x-data href="/" class="p-1.5">
+  <span class="sr-only">Seven 主题</span>
+  
+  
+  
+
+
+  <div class="w-[120px]">
+    
+    <img
+      x-cloak
+      x-show="!$store.darkMode.on"
+      src="/images/logo.svg"
+      class="h-[56px]"
+      alt="Logo" />
+    
+    <img
+      x-cloak
+      x-show="$store.darkMode.on"
+      src="/images/logo-footer.svg"
+      class="h-[56px]"
+      alt="Logo" />
+  </div></a>
+</div>
+
+      <div class="hidden lg:flex lg:gap-x-6">
+        
+  
+    <a
+      href="/"
+      class="hs-menus text-sm font-semibold leading-6 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
+      >文档</a
+    >
+  
+
+  
+    <a
+      href="/posts/"
+      class="hs-menus text-sm font-semibold leading-6 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
+      >博文</a
+    >
+  
+
+  
+    <a
+      href="/"
+      class="hs-menus text-sm font-semibold leading-6 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
+      >归档</a
+    >
+  
+
+  
+    <div x-data="{ isOpen: false }" class="hs-menus relative">
+      <button
+        type="button"
+        @click="isOpen = !isOpen"
+        class="group flex items-center text-sm font-semibold leading-6 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
+        aria-expanded="false">
+        其他
+        <svg
+          class="size-4 flex-none transition"
+          :class="{ 'rotate-180': isOpen }"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          aria-hidden="true">
+          <path
+            fill-rule="evenodd"
+            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+            clip-rule="evenodd" />
+        </svg>
+      </button>
+
+      <div
+        x-show="isOpen"
+        x-cloak
+        x-transition:enter="transition ease-out duration-200"
+        x-transition:enter-start="opacity-0 translate-y-1"
+        x-transition:enter-end="opacity-100 translate-y-0"
+        x-transition:leave="transition ease-in duration-150"
+        x-transition:leave-start="opacity-100 translate-y-0"
+        x-transition:leave-end="opacity-0 translate-y-1"
+        @click.away="isOpen = false"
+        @scroll.window.away="isOpen = (window.scrollY > 300 ? false : true)"
+        class="absolute -left-6 top-full z-10 mt-3 w-screen max-w-40 overflow-hidden rounded-xl bg-white/95 shadow-lg ring-1 ring-gray-900/5 backdrop-blur-xl dark:bg-gray-800/95">
+        <div class="p-2">
+          
+            <div
+              class="relative rounded-lg px-4 py-2.5 text-sm leading-6 hover:bg-gray-300/30 hover:backdrop-blur-md">
+              <a
+                href="/"
+                class="block font-semibold text-gray-900 hover:text-[--hs-text-color-hover] dark:text-gray-400 dark:hover:text-white">
+                好物
+                <span class="absolute inset-0"></span>
+              </a>
+            </div>
+          
+            <div
+              class="relative rounded-lg px-4 py-2.5 text-sm leading-6 hover:bg-gray-300/30 hover:backdrop-blur-md">
+              <a
+                href="https://seven-demo-with-twikoo.netlify.app/"
+                class="block font-semibold text-gray-900 hover:text-[--hs-text-color-hover] dark:text-gray-400 dark:hover:text-white">
+                Twikoo评论版
+                <span class="absolute inset-0"></span>
+              </a>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+
+
+
+  <div x-data="{ isOpen: false }" class="hs-menus relative">
+    <button
+      type="button"
+      @click="isOpen = !isOpen"
+      class="group flex items-center text-sm font-semibold leading-6 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
+      aria-expanded="false">
+      分类
+      <svg
+        class="size-4 flex-none transition"
+        :class="{ 'rotate-180': isOpen }"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        aria-hidden="true">
+        <path
+          fill-rule="evenodd"
+          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+          clip-rule="evenodd" />
+      </svg>
+    </button>
+
+    <div
+      x-show="isOpen"
+      x-cloak
+      x-transition:enter="transition ease-out duration-200"
+      x-transition:enter-start="opacity-0 translate-y-1"
+      x-transition:enter-end="opacity-100 translate-y-0"
+      x-transition:leave="transition ease-in duration-150"
+      x-transition:leave-start="opacity-100 translate-y-0"
+      x-transition:leave-end="opacity-0 translate-y-1"
+      @click.away="isOpen = false"
+      @scroll.window.away="isOpen = false"
+      class="absolute -left-6 top-full z-10 mt-3 w-screen max-w-40 overflow-hidden rounded-xl bg-white/95 shadow-lg ring-1 ring-gray-900/5 backdrop-blur-xl dark:bg-gray-800/95">
+      <div class="p-2">
+        
+      </div>
+    </div>
+  </div>
+
+
+      </div>
+
+      <div class="flex flex-1 items-center justify-end">
+  <div x-data="{ isOpen: false }" class="relative">
+    <button
+      type="button"
+      @click="isOpen = !isOpen"
+      class="group flex items-center rounded-full p-[11px] text-black transition hover:bg-white hover:shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:shadow-[0_5px_15px_rgba(0,0,0,0.35)]"
+      aria-expanded="false">
+      <svg
+        class="size-[18px]"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 -960 960 960">
+        <path
+          d="m476-80 182-480h84L924-80h-84l-43-122H603L560-80h-84ZM160-200l-56-56 202-202q-35-35-63.5-80T190-640h84q20 39 40 68t48 58q33-33 68.5-92.5T484-720H40v-80h280v-80h80v80h280v80H564q-21 72-63 148t-83 116l96 98-30 82-122-125-202 201Zm468-72h144l-72-204-72 204Z" />
+      </svg>
+    </button>
+
+    <div
+      x-show="isOpen"
+      x-cloak
+      x-transition:enter="transition ease-out duration-200"
+      x-transition:enter-start="opacity-0 translate-y-1"
+      x-transition:enter-end="opacity-100 translate-y-0"
+      x-transition:leave="transition ease-in duration-150"
+      x-transition:leave-start="opacity-100 translate-y-0"
+      x-transition:leave-end="opacity-0 translate-y-1"
+      @click.away="isOpen = false"
+      class="absolute -left-5 top-full z-10 mt-3 w-screen max-w-32 overflow-hidden rounded-xl bg-white/95 shadow-lg ring-1 ring-gray-900/5 backdrop-blur-xl dark:bg-gray-800/95">
+      <div class="p-2">
+        
+          <div
+            class="relative rounded-lg px-4 py-2.5 text-sm leading-6 hover:bg-gray-300/30 hover:backdrop-blur-md">
+            <a
+              class="block font-semibold text-gray-900 hover:text-[--hs-text-color-hover] dark:text-gray-400 dark:hover:text-white"
+              href="/"
+              >简体中文</a
+            >
+          </div>
+        
+          <div
+            class="relative rounded-lg px-4 py-2.5 text-sm leading-6 hover:bg-gray-300/30 hover:backdrop-blur-md">
+            <a
+              class="block font-semibold text-gray-900 hover:text-[--hs-text-color-hover] dark:text-gray-400 dark:hover:text-white"
+              href="/en/"
+              >English</a
+            >
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+<div class="flex">
+  <button
+    type="button"
+    @click="$store.darkMode.toggle()"
+    class="group rounded-full p-2.5 text-sm text-black transition hover:bg-white hover:shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:shadow-[0_5px_15px_rgba(0,0,0,0.35)]">
+    <svg
+      x-show="!$store.darkMode.on"
+      x-cloak
+      class="size-5"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 -960 960 960">
+      <path
+        d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z" />
+    </svg>
+
+    <svg
+      x-show="$store.darkMode.on"
+      x-cloak
+      class="size-5"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 -960 960 960">
+      <path
+        d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z" />
+    </svg>
+  </button>
+</div>
+
+  <div class="flex">
+    <button
+      type="button"
+      id="search-icon"
+      class="rounded-full p-2.5 text-center text-black transition hover:bg-white hover:shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:shadow-[0_5px_15px_rgba(0,0,0,0.35)]">
+      <svg
+        class="h-5 w-5"
+        fill="currentColor"
+        viewBox="0 0 1024 1024"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        p-id="4284">
+        <path
+          d="M769.323 708.992l182.741 182.699-60.373 60.373-182.699-182.741a382.293 382.293 0 0 1-239.659 84.01c-211.968 0-384-172.032-384-384s172.032-384 384-384 384 172.032 384 384a382.293 382.293 0 0 1-84.01 239.659z m-85.59-31.659a297.685 297.685 0 0 0 84.267-208c0-165.034-133.675-298.666-298.667-298.666-165.034 0-298.666 133.632-298.666 298.666C170.667 634.325 304.299 768 469.333 768a297.685 297.685 0 0 0 208-84.267l6.4-6.4z"
+          p-id="4285"></path>
+      </svg>
+    </button>
+  </div>
+
+<div class="flex lg:hidden">
+          <button
+            type="button"
+            @click="isMobile = true; scrollY = window.scrollY; document.body.style.overflow = 'hidden';"
+            class="group inline-flex items-center justify-center rounded-full p-2.5 text-center text-black transition hover:bg-white hover:shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:shadow-[0_5px_15px_rgba(0,0,0,0.35)]">
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="size-5"
+              viewBox="0 0 1024 1024"
+              version="1.1"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              p-id="9670">
+              <path
+                d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zM904 784H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zM904 472H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"
+                p-id="9671"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+  <div x-show="isMobile" x-cloak role="dialog" aria-modal="true">
+    <div class="fixed inset-0 z-10"></div>
+    <div
+      class="fixed inset-0 z-10 w-full overflow-y-auto bg-white/85 p-4 backdrop-blur-md dark:bg-gray-900/85 sm:ring-1 sm:ring-gray-900/10">
+      <div class="mx-auto mt-10 flex w-full items-center justify-center"><a x-data href="/" class="p-1.5">
+  <span class="sr-only">Seven 主题</span>
+  
+  
+  
+
+
+  <div class="w-[120px]">
+    
+    <img
+      x-cloak
+      x-show="!$store.darkMode.on"
+      src="/images/logo.svg"
+      class="h-[56px]"
+      alt="Logo" />
+    
+    <img
+      x-cloak
+      x-show="$store.darkMode.on"
+      src="/images/logo-footer.svg"
+      class="h-[56px]"
+      alt="Logo" />
+  </div></a>
+</div>
+
+      <div class="mt-6 flow-root">
+        <div class="-my-6 divide-y divide-gray-500/10">
+          <div class="flex flex-col space-y-2 py-6">
+            
+  
+    <a
+      href="/"
+      class="hs-menus w-full rounded-lg px-3 py-2 text-center text-base font-semibold leading-7 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
+      >文档</a
+    >
+  
+
+  
+    <a
+      href="/posts/"
+      class="hs-menus w-full rounded-lg px-3 py-2 text-center text-base font-semibold leading-7 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
+      >博文</a
+    >
+  
+
+  
+    <a
+      href="/"
+      class="hs-menus w-full rounded-lg px-3 py-2 text-center text-base font-semibold leading-7 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
+      >归档</a
+    >
+  
+
+  
+    <div x-data="{ subMenuOpen: false }" class="hs-menus">
+      <button
+        @click="subMenuOpen = !subMenuOpen"
+        type="button"
+        :class="{ 'text-[--hs-text-color-hover]': subMenuOpen, 'text-gray-900': !subMenuOpen, 'dark:text-[--hs-text-color-hover]': subMenuOpen, 'dark:text-white': !subMenuOpen }"
+        class="group flex w-full flex-col items-center justify-center rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:text-[--hs-text-color-hover]"
+        aria-controls="disclosure-1"
+        aria-expanded="false">
+        <span>其他</span>
+        <svg
+          :class="{ 'rotate-180': subMenuOpen }"
+          class="size-4 flex-none transition"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          aria-hidden="true">
+          <path
+            fill-rule="evenodd"
+            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+            clip-rule="evenodd" />
+        </svg>
+      </button>
+      <div
+        x-show="subMenuOpen"
+        x-cloak
+        x-collapse
+        class="flex flex-col space-y-1"
+        id="disclosure-1">
+        
+          <a
+            href="/"
+            class="w-full rounded-lg px-3 py-2 text-center text-sm font-semibold leading-7 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
+            >好物</a
+          >
+        
+          <a
+            href="https://seven-demo-with-twikoo.netlify.app/"
+            class="w-full rounded-lg px-3 py-2 text-center text-sm font-semibold leading-7 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
+            >Twikoo评论版</a
+          >
+        
+
+      </div>
+    </div>
+  
+
+
+
+  <div x-data="{ subMenuOpen: false }" class="hs-menus">
+    <button
+      @click="subMenuOpen = !subMenuOpen"
+      type="button"
+      :class="{ 'text-[--hs-text-color-hover]': subMenuOpen, 'text-gray-900': !subMenuOpen, 'dark:text-[--hs-text-color-hover]': subMenuOpen, 'dark:text-white': !subMenuOpen }"
+      class="group flex w-full flex-col items-center justify-center rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:text-[--hs-text-color-hover] dark:text-white"
+      aria-controls="disclosure-1"
+      aria-expanded="false">
+      分类
+      <svg
+        :class="{ 'rotate-180': subMenuOpen }"
+        class="size-4 flex-none transition"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        aria-hidden="true">
+        <path
+          fill-rule="evenodd"
+          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+          clip-rule="evenodd" />
+      </svg>
+    </button>
+
+    <div
+      x-show="subMenuOpen"
+      x-cloak
+      x-collapse
+      class="flex flex-col space-y-1"
+      id="disclosure-1">
+      
+
+    </div>
+  </div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-14 flex h-12 w-full flex-col items-center justify-center">
+        <button
+          @click="isMobile = false; document.body.style.overflow = ''; window.scrollTo(0, scrollY);"
+          class="buttom-circle flex h-12 w-12 items-center justify-center rounded-full bg-white/85 p-3 text-gray-900 backdrop-blur-md  hover:text-gray-500 dark:bg-gray-800/85 dark:text-gray-200">
+          <span class="sr-only">Close mobile menu</span>
+          <svg
+            fill="currentColor"
+            class="h-4 w-4"
+            viewBox="0 0 1024 1024"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            p-id="5967">
+            <path
+              d="M143.616 47.104l830.08 830.08c26.24 26.24 26.24 69.888 0 96.128-26.24 26.24-69.888 26.24-96.128 0L47.488 143.232c-17.536-26.24-17.536-69.888 0-96.128 26.24-26.24 69.888-26.24 96.128 0z m0 0"
+              p-id="5968"></path>
+            <path
+              d="M982.528 143.232L152.32 973.312c-26.24 26.24-69.888 26.24-96.128 0-26.24-26.24-26.24-69.888 0-96.128L886.4 47.104c26.24-26.24 69.888-26.24 96.128 0 17.408 26.24 17.408 69.888 0 96.128z m0 0"
+              p-id="5969"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+  
+
+  
+  
+    
+    
+      <div id="hs-feature" class="h-60 w-full md:h-120">
+
+
+
+
+<div class="h-full w-full bg-[#efd96f] text-center"></div>
+</div>
+    
+  
+
+
+  <div
+    id="hs-content-container"
+    class="my-5 w-full rounded-b-lg px-5 md:px-10 lg:px-1">
+    <div
+      class="mx-auto flex max-w-screen-xl lg:grid lg:grid-flow-col lg:grid-cols-4 xl:grid-cols-5">
+      
+      <div
+  class="hidden lg:sticky lg:top-28 lg:mt-2 lg:flex lg:max-w-60 lg:flex-col lg:items-stretch lg:overflow-y-auto"></div>
+
+      
+      <div id="hs-container" class="mx-auto w-full lg:col-span-2 xl:col-span-3">
+        <div class="py-5 md:px-1 lg:px-5">
+          <div class="flex w-full flex-col">
+            <div
+              class="hs-content-meta flex flex-row flex-wrap items-center space-x-1 pb-2 pt-1 text-xs font-normal tracking-wide text-gray-500/90 dark:text-gray-500">
+              
+              <span class="hs-content-category flex flex-row gap-1">
+                
+              </span>
+            </div>
+            <div
+              id="hs-content-title"
+              class="hs-content-title py-1 text-start text-3xl font-bold tracking-wide text-black dark:text-white lg:text-4xl">
+              2023 | 生きていて幸せだねー
+            </div>
+
+            <div
+              class="hs-content-meta flex flex-row flex-wrap items-center space-x-1 pb-1 pt-3.5 text-xs font-extralight tracking-wide text-gray-500/90 dark:text-gray-600">
+              <span>2024/01/01</span>
+              <div
+                class="h-1 w-1 rounded-full bg-red-700 dark:bg-red-700/50"></div>
+              <span>3083&nbsp;字数</span>
+              <div
+                class="h-1 w-1 rounded-full bg-red-700 dark:bg-red-700/50"></div>
+              <span>7&nbsp;分钟</span>
+              
+                <div
+                  class="h-1 w-1 rounded-full bg-red-700 dark:bg-red-700/50"></div>
+                <p>
+                  <span
+                    id="twikoo_visitors"
+                    class="page-info-pageview-count"
+                    data-path="/posts/20240101/"
+                    >...</span
+                  >
+                  &nbsp;阅读量
+                </p>
+              
+              
+                
+                  <div
+                    class="h-1 w-1 rounded-full bg-red-700 dark:bg-red-700/50"></div>
+                  <button
+                    x-data
+                    @click="toComment()"
+                    id="speed-comment-count-id"
+                    class="whitespace-nowrap hover:text-[--hs-text-color-hover] hover:underline hover:decoration-[--hs-decoration-color] hover:underline-offset-4">
+                    <span
+                      class="waline-comment-count"
+                      data-path="/posts/20240101/"
+                      >...</span
+                    >
+                    &nbsp;评论数
+                  </button>
+                
+              
+            </div>
+          </div>
+
+          
+            <div x-data="{ open: false }" class="mt-5 lg:hidden">
+              <button
+                type="button"
+                x-on:click="open = !open"
+                class="flex w-full cursor-pointer items-center justify-start rounded-lg py-2 text-gray-500/90 hover:text-gray-700 dark:hover:text-gray-300">
+                <span class="shrink-0">
+                  <svg
+                    :class="{ 'rotate-90': open }"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-6 transition"
+                    fill="currentColor"
+                    viewBox="0 -960 960 960">
+                    <path d="M400-280v-400l200 200-200 200Z" />
+                  </svg>
+                </span>
+
+                <span class="hs-toc-title text-sm font-medium">
+                  目录
+                </span>
+              </button>
+              <div
+                x-cloak
+                x-show="open"
+                x-collapse.duration.1000ms
+                x-on:keydown.escape.window="open = false"
+                class="hs-toc mb-3 mt-1 space-y-1 px-2">
+                <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#关于2023">关于2023</a></li>
+        <li><a href="#关于一切">关于一切</a></li>
+        <li><a href="#关于未来">关于未来</a></li>
+        <li><a href="#如果只能做一件事想做什么">如果只能做一件事，想做什么？</a></li>
+        <li><a href="#如果能做三件事想做什么">如果能做三件事，想做什么？</a></li>
+        <li><a href="#如果能做六件事呢想做什么">如果能做六件事呢？想做什么？</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+              </div>
+            </div>
+          
+
+
+          <div
+            id="hs-content"
+            class="hs-content format mx-auto mt-2 max-w-none dark:format-invert md:format-base format-figure:flex format-figure:flex-col format-figure:items-center format-img:cursor-zoom-in dark:text-gray-300 lg:mt-11">
+            <p>同样是听着年度歌单写着年终总结的我，请问大家听着年度歌单不会只想唱歌不想写吗（哈哈哈哈哈，打下今年2023，又忽然意识到已经是2024年1月1日，想起昨天晚上一群人坐在一起不知道0点之前的几十分钟到底干点什么好，有人说阿瓦隆，但有人说不想动脑，有人说狼人杀，但有人说不如阿瓦隆，有人说海龟汤，但有人说太恐怖了，有人说那我们分开玩吧，但有人说想大家在一起。最后大家发现，还是得打球啊！这群人除了打球是共同点居然玩不到一起去（x然后吵吵闹闹的大家完美错过了2024倒计时，但想一想在吵吵闹闹中度过也是好幸福的事情~好了我要开始回顾了，我真的要开始回顾了！</p>
+<p>2023，你写了日记263天，这给年终总结帮了大忙，感谢记得写日记的自己！你进入了人生新阶段，感谢呼噜和自己！你写了15篇博客，虽然没有每月写一篇月记但是写了很多旅游博客，旅游真的很快乐呢~今年你旅游了68天，脚步遍布上海，绍兴，南京，苏州，杭州，忻州，朔州，大同，乌兰察布，呼和浩特，榆林，不仅第一次看演唱会！还第一次实地看棒球垒球亚运会比赛！你在城市，也在郊野，你到了草原，也到了火山，普通的公园也能让人开心放松。你穿梭于城市中的咖啡厅，蛋糕店，汉堡店之中，有了很多有趣的体验。今年你打了两次联赛，成绩分别是亚军和冠军！虽然成为了四棒但离可靠的四棒还有很远，2024要加油在比赛中打出本垒打，成为走守攻三拍子的六边形战士！你读书12本，完成了目标！但是研究生比想象中的更艰辛，2024也会看很多文献吧，也要记得看闲书！浮世偷得半日闲！你看了19部电影，离目标24部只差了一点点！2024要多看好电影，少看烂片（发出怒吼！你听了播客43集，真的太喜欢听播客了！2024也要多思考，追求自由和力量！2023你独居了很久，做了很多好吃的，多做！虽然说要少看点剧但还是看了很多，尤其是甄嬛传，但是毕竟是甄嬛传，原谅了，2024等一个完整版放出。你还第一次找炮友？就很成功但是也成果对性祛魅，挺好的，整体来看都挺好的！</p>
+<p>
+<a
+  href="https://alive.bar/@inblossom/111670376018673525"
+  
+    target="_blank"
+  
+  >以下是根据象友嘟文对自己进行的一些灵魂拷问！</a
+>
+</p>
+<h3 class="group head-tag" id="关于2023">关于2023<a data-title-of-head class="group-hover:after:content-['__#'] no-underline hover:text-[--hs-text-color-hover]" href="#%e5%85%b3%e4%ba%8e2023"></a></h3><p><strong>1 2023你最佩服自己的top3件事是什么？</strong></p>
+<p>首先是不再试图“拯救”别人，过好自己的生活，和父母分开住，坚定选择独居。其次是不再做自己讨厌的事情，不会再委屈自己，表达出来有什么事情解决就可以。最后是有勇气自己一个人去旅行，收获了很多自由和感动。</p>
+<p><strong>2 你今年做了哪些之前没有做过的事？</strong></p>
+<p>今年做了以前没做过的爱（不好意思nsfw没有预警，还打了本垒打，棒球人生的第一个冠军！还第一次看演唱会！第一次实地看棒垒球亚运会！现场果然是最好的！第一次来到草原和火山，第一次和大家一起过圣诞，组装圣诞树，第一次和百利甜加奶，第一次和大家一起跨年，2024也要把更多时间放到线下的感受上。</p>
+<p><strong>3与去年的这个时候相比，你是：感到更快乐还是更悲伤？变得更瘦还是更胖了？变得更富还是更穷了？</strong></p>
+<p>去年这个时候一边乐呵呵的等成绩一边又紧张的寻找出路，希望不会再有那么痛苦的时刻，我现在无疑是更快乐，体重没有变很多吧，变有钱了！（赶紧给我发奖学金！！！！！！！！</p>
+<p><strong>4 你想念哪些人？</strong></p>
+<p>我想念爸爸妈妈，姥姥姥爷，过年了也会想回去了，想念曾经一起打球的队友，希望之后还有机会一起打球！</p>
+<p><strong>5 今年最好的人生体验是什么？</strong></p>
+<p>演唱会！！！真的是leo的演唱会！从来没有这么强烈的感觉到异世界的体验，感觉整个人都被包裹在快乐中，感觉世界上只有我和她两个人，听着歌挥舞手臂然后流下眼泪，走出场馆我都有点踉跄，我真的不想离开。</p>
+<p><strong>6 2023年你发现了自己身上的哪些特质？</strong></p>
+<p>发现我还是很热爱生活的，也得到了象友们很多热爱生活的印象。原来我以前不热爱生活只是因为生活不值得热爱，现在我的生活值得热爱，因为这是我自己构建的生活。</p>
+<p><strong>7 这一年你买过的最难忘的东西是什么？</strong></p>
+<p>生日的时候买了新手套！新的一年也よろしく！三拍子揃っている不動な四番になるから頑張ってね！</p>
+<p><strong>8 这一年里，你最想感谢自己什么？</strong></p>
+<p>感谢自己愿意走出来探索世界！感谢自己在面对世界中很有力量！感谢自己追求自由！感谢自己坚持自我！</p>
+<p><strong>9 你的年度图书/电影？</strong></p>
+<p>一下子想不出来呢，看来明年要多读闲书！</p>
+<p><strong>10 介绍一位你今年新认识的朋友，或不限于朋友或现实生活中你新认识的欣赏的人。</strong></p>
+<p>同门是一个很厉害的人！她很有自己的想法，也很会积极表达自己的想法，要和她学习！</p>
+<p><strong>11今年花的最大的一笔钱是什么？</strong></p>
+<p>今年花了很多钱但是都是小钱集合起来的大钱！明年真的要买一些大物件！这样才有花钱的实感（？</p>
+<p><strong>12今年最大的快乐和痛苦？</strong></p>
+<p>最大的快乐是终于本垒打，痛苦就是没在期待的时候打出来。</p>
+<p><strong>13今年发生的公共事件，对你影响最大的是什么？</strong></p>
+<p>还有什么公共事件能影响我，我希望他早点死。</p>
+<p><strong>14 关于2023的愿望或目标，哪些达成了，哪些没有？</strong></p>
+<p>大部分都完成了就是那个，那个，减肥毫无进展，其实也瘦了4斤？但是，但是，一年4斤是不是有点太，我也准备去做一些检查看看我是不是内分泌出了问题，有问题就解决！</p>
+<p><strong>15 2023年去过最喜欢的地方？</strong></p>
+<p>南京！超爱南京，原来我真的很害怕南京，因为一些大家都知道的原因。但是南京不仅园林都比苏州更对我胃口，而且居然还特别好吃！还有什么比好吃更重要的呢！南京，我最爱的城市！</p>
+<p><strong>16 分享2023年的任何一个场景/瞬间？</strong></p>
+<p>球撞上棒头，ピリピリ感がすごくてたまらない，挥空，被三振，くやしくてたまらない。</p>
+<p><strong>17 你在2023学会了什么新的技能、知识？</strong></p>
+<p>学德语咯！虽然还没能学到很多，但2024也要继续 ！</p>
+<p><strong>18 你在2023收到最喜欢的礼物？</strong></p>
+<p>鹰鹰送的棒球卡比，简直就是我的自画像。sy送的很多关于木兔的谷子，太爱了！</p>
+<p><strong>19 2023年的3个心动瞬间。</strong></p>
+<p>鹰鹰站在门口，门开了一点，她垂下头，扎住的头发散落下一缕在肩头。
+只有一个。</p>
+<h3 class="group head-tag" id="关于一切">关于一切<a data-title-of-head class="group-hover:after:content-['__#'] no-underline hover:text-[--hs-text-color-hover]" href="#%e5%85%b3%e4%ba%8e%e4%b8%80%e5%88%87"></a></h3><p><strong>20 你想告诉小时候的自己什么？</strong></p>
+<p>长大真的又好又不好的，你长大就明白了。</p>
+<p><strong>21 什么是别人觉得无关紧要但你觉得重要的？</strong></p>
+<p>不知道，倒是有很多别人觉得重要的但我觉得无关紧要。</p>
+<p><strong>22 什么是你花了很多心力获得、获得以后觉得也没那么想要的？</strong></p>
+<p>apple watch哈哈哈哈哈哈哈哈哈哈。</p>
+<p><strong>23 你理想的关系是怎样的？</strong></p>
+<p>参考拼团人生，我希望有多种的，自由的关系。</p>
+<p><strong>24 在你的人生中曾经历什么重大痛苦或挫折，你怎么度过，什么是对你有帮助的？</strong></p>
+<p>那肯定是因为腰椎间盘突出不能打球，但是养了一年我又回来了，真的做了很多复健训练，所以你什么时候能把体重减下来，力量练上去，彻底度过这个困难！</p>
+<p><strong>25 你最大的恐惧是什么？</strong></p>
+<p>不能打球，毫无作用，无法成为战力。</p>
+<p><strong>26 如果你能够改变关于自己的一件事，那会是什么？</strong></p>
+<p>想拥有打球到死的健康，这个也要自己努力不能只是许愿。</p>
+<p><strong>27 迄今为止，在你生活中发生过的最好的事情是什么？</strong></p>
+<p>遇到呼噜，呼噜2024也要快乐！</p>
+<p><strong>28 你生活中的人，你最敬佩谁？</strong></p>
+<p>不知道敬佩谁，那就敬佩我自己吧，只有我自己可以改变我的人生。</p>
+<h3 class="group head-tag" id="关于未来">关于未来<a data-title-of-head class="group-hover:after:content-['__#'] no-underline hover:text-[--hs-text-color-hover]" href="#%e5%85%b3%e4%ba%8e%e6%9c%aa%e6%9d%a5"></a></h3><p><strong>29 明年你想获得哪些今年没有的东西？</strong></p>
+<p>首先获得强健体魄，然后获得思考的能力。</p>
+<p><strong>30 2024发生什么会让自己很满足？</strong></p>
+<p>减肥成功，肌肉量涨涨涨，比赛中打出本垒打，成为正式三垒手，参加交换项目，完成自己想做的研究，去更多的地方旅游。</p>
+<p><strong>31 关于2024的三个愿望？</strong></p>
+<p>家人朋友平安，健康，幸福，快乐；坚持做更多事情；努力的事情都能得到好的结果。</p>
+<p>很喜欢
+<a
+  href="https://mokuyo.xyz/posts/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"
+  
+    target="_blank"
+  
+  >光明岛</a
+>
+的年终总结形式，加一个！</p>
+<h3 class="group head-tag" id="如果只能做一件事想做什么">如果只能做一件事，想做什么？<a data-title-of-head class="group-hover:after:content-['__#'] no-underline hover:text-[--hs-text-color-hover]" href="#%e5%a6%82%e6%9e%9c%e5%8f%aa%e8%83%bd%e5%81%9a%e4%b8%80%e4%bb%b6%e4%ba%8b%e6%83%b3%e5%81%9a%e4%bb%80%e4%b9%88"></a></h3><p>保持运动，身体健康，打好棒球。</p>
+<h3 class="group head-tag" id="如果能做三件事想做什么">如果能做三件事，想做什么？<a data-title-of-head class="group-hover:after:content-['__#'] no-underline hover:text-[--hs-text-color-hover]" href="#%e5%a6%82%e6%9e%9c%e8%83%bd%e5%81%9a%e4%b8%89%e4%bb%b6%e4%ba%8b%e6%83%b3%e5%81%9a%e4%bb%80%e4%b9%88"></a></h3><p>做体育相关的研究，今年就开始做准备。</p>
+<p>更多的探索世界，去香港和日本旅行，拍下喜欢的照片。</p>
+<h3 class="group head-tag" id="如果能做六件事呢想做什么">如果能做六件事呢？想做什么？<a data-title-of-head class="group-hover:after:content-['__#'] no-underline hover:text-[--hs-text-color-hover]" href="#%e5%a6%82%e6%9e%9c%e8%83%bd%e5%81%9a%e5%85%ad%e4%bb%b6%e4%ba%8b%e5%91%a2%e6%83%b3%e5%81%9a%e4%bb%80%e4%b9%88"></a></h3><p>坚持学英语和德语，为探索更大的世界做准备。</p>
+<p>学习编程，也学习教育学量化研究的方法。</p>
+<p>坚持读书，文献和闲书都要多读，多思考。</p>
+
+          </div>
+
+          <div class="hs-content-meta pb-5 pt-3">
+            
+            <span
+              class="hs-content-tag flex flex-row flex-wrap justify-start gap-2 pl-1 text-sm font-normal tracking-wide text-gray-500/90 dark:text-gray-500">
+              
+                <a
+                  class="text-center hover:text-[--hs-text-color-hover]"
+                  href="https://changingmoments.one/tags/%E5%A4%A9%E5%A4%A9%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"
+                  ><span class="text-red-700 ">#</span
+                  ><span
+                    class="hover:text-[--hs-text-color-hover] hover:underline hover:decoration-[--decoration-color] hover:underline-offset-4"
+                    >天天年终总结</span
+                  ></a
+                >
+              
+            </span>
+          </div>
+        </div>
+      </div>
+      
+      
+  <div
+    x-data="{ open: true }"
+    class="hidden lg:sticky lg:top-28 lg:flex lg:h-96 lg:min-w-60">
+    <div
+      x-show="!open"
+      x-cloak
+      x-transition:enter="ease-in-out duration-500"
+      x-transition:enter-start="opacity-0"
+      x-transition:enter-end="opacity-100"
+      x-transition:leave="ease-in-out duration-500"
+      x-transition:leave-start="opacity-100"
+      x-transition:leave-end="opacity-0"
+      class="flex">
+      <button
+        type="button"
+        @click="open = true"
+        class="absolute top-5 text-gray-300 hover:text-[--hs-text-color-hover] dark:text-gray-700 dark:hover:text-gray-300">
+        <span class="sr-only">Open sidebar</span>
+        <svg
+          class="h-7 w-7"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 -960 960 960">
+          <path
+            d="M80-240v-480h480v480H80Zm80-80h320v-320H160v320Zm480-320v-80h80v80h-80Zm0 400v-80h80v80h-80Zm160-400v-80h80v80h-80Zm0 200v-80h80v80h-80Zm0 200v-80h80v80h-80ZM320-480Z" />
+        </svg>
+      </button>
+    </div>
+    
+    <div
+      @keydown.window.escape="open = false"
+      x-show="open"
+      class="relative z-10 w-full"
+      aria-labelledby="slide-over-title"
+      role="dialog"
+      aria-modal="true">
+      <div class="overflow-hidden">
+        <div class="absolute overflow-hidden">
+          <div class="pointer-events-none right-0 flex w-full">
+            <div
+              x-show="open"
+              x-transition:enter="transform transition ease-in-out duration-500 sm:duration-700"
+              x-transition:enter-start="translate-x-full"
+              x-transition:enter-end="translate-x-0"
+              x-transition:leave="transform transition ease-in-out duration-500 sm:duration-700"
+              x-transition:leave-start="translate-x-0"
+              x-transition:leave-end="translate-x-full"
+              class="pointer-events-auto relative">
+              <div class="flex h-full flex-col py-6 shadow-xl lg:min-w-60">
+                <div class="flex items-center justify-between pr-2">
+                  <h2
+                    class="hs-toc-title text-base font-bold leading-6 text-gray-700 dark:text-gray-400"
+                    id="slide-over-title">
+                    目录
+                  </h2>
+
+                  <div
+                    x-show="open"
+                    x-transition:enter="ease-in-out duration-500"
+                    x-transition:enter-start="opacity-0"
+                    x-transition:enter-end="opacity-100"
+                    x-transition:leave="ease-in-out duration-500"
+                    x-transition:leave-start="opacity-100"
+                    x-transition:leave-end="opacity-0"
+                    class="flex">
+                    <button
+                      type="button"
+                      @click="open = false"
+                      class="text-gray-300 hover:text-black focus:outline-none dark:text-gray-400 dark:hover:text-gray-100">
+                      <span class="sr-only">Close panel</span>
+                      <svg
+                        class="h-6 w-6"
+                        xmlns="http://www.w3.org/2000/svg"
+                        stroke="currentColor"
+                        fill="currentColor"
+                        viewBox="0 -960 960 960">
+                        <path
+                          d="M400-240v-480h480v480H400Zm80-80h320v-320H480v320Zm-240 80v-80h80v80h-80Zm0-400v-80h80v80h-80ZM80-240v-80h80v80H80Zm0-200v-80h80v80H80Zm0-200v-80h80v80H80Zm560 160Z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="relative mt-6 h-128 flex-1">
+                  <div id="hs-toc" class="hs-toc text-sm lg:text-xs">
+                    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#关于2023">关于2023</a></li>
+        <li><a href="#关于一切">关于一切</a></li>
+        <li><a href="#关于未来">关于未来</a></li>
+        <li><a href="#如果只能做一件事想做什么">如果只能做一件事，想做什么？</a></li>
+        <li><a href="#如果能做三件事想做什么">如果能做三件事，想做什么？</a></li>
+        <li><a href="#如果能做六件事呢想做什么">如果能做六件事呢？想做什么？</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    </div>
+
+    
+    
+      <div
+        id="hs-comment"
+        class="mx-auto max-w-screen-xl lg:grid lg:grid-cols-4 xl:grid-cols-5">
+        <span class="hidden lg:block"></span>
+        <div class="items-stretch lg:col-span-2 lg:col-start-2 xl:col-span-3">
+
+  <div id="waline" class="py-5 md:px-2 lg:px-8 dark:text-gray-400"></div>
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  <script
+    defer
+    type="module"
+    src="/js/waline/index.min.8fccad109368b2f73c70a4e94d9220c15c2500e35fff8439377b99f4f832b4aa.js"></script>
+
+
+
+
+
+
+
+  
+
+</div>
+      </div>
+    
+
+  </div>
+
+  
+  
+    <button
+      x-data="{
+        show: false,
+        init() {
+          window.addEventListener('scroll', () => {
+            this.show = window.scrollY > 100
+          })
+        }
+      }"
+      x-show="show"
+      @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      x-cloak
+      type="button"
+      class="buttom-circle fixed bottom-24 end-8 flex h-14 w-14 items-center justify-center bg-white/85 text-gray-500 backdrop-blur-md dark:bg-gray-800/85 dark:text-gray-500 md:end-20">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="size-6"
+        fill="currentColor"
+        viewBox="0 -960 960 960">
+        <path
+          d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z" />
+      </svg>
+      <span class="sr-only">Go to Top</span>
+    </button>
+  
+
+
+
+    
+<div
+  id="search-overlay"
+  class="fixed inset-0 z-50 hidden bg-gray-900/90 backdrop-blur-lg dark:bg-gray-900/80"></div>
+<section
+  id="search-section"
+  class="hs-search z-50 flex hidden h-dvh w-full flex-col">
+  
+  <div
+    class="flex h-dvh w-full flex-col overflow-auto md:mx-auto md:w-2/3 lg:max-w-2xl">
+    
+    <div
+      id="searchBoxDiv"
+      class="hs-search-input-wrapper sticky top-[-88px] z-50 flex flex-row justify-between px-8 pt-[88px]">
+      <div id="searchBox" class="my-6 flex w-full flex-row items-center"></div>
+    </div>
+
+    
+    <div class="hs-search-results-wrapper h-[30rem] overflow-auto">
+      <div id="searchResults" class="hs-search-results my-3 px-6"></div>
+      <div
+        id="NotSearchResults"
+        class="hidden flex-col items-center justify-around space-y-4 px-6 py-10">
+        <p
+          class="hs-search-no-results text-lg font-bold tracking-wide text-gray-500">
+          找不到搜索内容
+        </p>
+      </div>
+      <div
+        id="searchError"
+        class="hidden flex-col items-center justify-around space-y-4 px-6 py-10 text-center ">
+        <p class="hs-search-error text-lg font-bold text-red-500">
+          
+        </p>
+      </div>
+      <div
+        id="searchLoading"
+        class="hidden flex-col items-center justify-around px-6 py-10">
+        <svg
+          t="1689331200868"
+          class="icon animate-spin"
+          viewBox="0 0 1024 1024"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          p-id="51409"
+          width="128"
+          height="128">
+          <path
+            d="M512 170.666667v85.333333a256 256 0 1 1-223.573333 131.2L213.930667 345.6A341.333333 341.333333 0 1 0 512 170.666667z"
+            fill="#bfbfbf"
+            opacity=".3"
+            p-id="51410"></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+  
+  <div
+    class="hs-search-other bottom-0 flex flex-col items-center justify-center space-y-2 py-8 text-xs font-bold text-gray-600">
+    <div class="hs-search-cancel hidden md:block">
+      按 ESC 取消
+    </div>
+    <div class="hs-search-powered_by flex items-center justify-center">
+      
+      由 &nbsp;<img src="/images/default/algolia-logo.svg" alt="" class="h-4" />&nbsp; 提供支持
+    </div>
+  </div>
+</section>
+
+<script
+  src="https://cdn.jsdelivr.net/npm/algoliasearch@4.17.2/dist/algoliasearch-lite.umd.js"
+  integrity="sha256-X2G+vjV8i6Jj2NSGFTvy6Z4q2AlmF5aH0HiIpWJ8eU4="
+  crossorigin="anonymous"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.56.3/dist/instantsearch.production.min.js"
+  integrity="sha256-mWvjWAfZylKMOg+S3HLq+wng1HHRnl2Idr2r8NsUzIU="
+  crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+  
+
+<script src="/js/search.min.14ac10b2ca10b31730c274dd54808456a6a9cc3cc3f3667df2571e17e665871b.js"></script>
+<footer
+  id="footer"
+  x-ref="footer"
+  class="hs-footer mx-auto mt-5 flex flex-col items-center gap-y-3 py-6 text-xs text-gray-700 dark:text-gray-500">
+  <span class="h-px w-full max-w-4xl bg-gray-700 dark:bg-gray-600"></span>
+
+  <div class="flex h-5 space-x-3">
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <a
+      href="https://github.com/mrhelloboy/seven"
+      class="text-gray-600 hover:text-[--hs-text-color-hover] dark:text-gray-400 dark:hover:text-white">
+      <svg
+        class="size-4"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 20 20">
+        <path
+          fill-rule="evenodd"
+          d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+          clip-rule="evenodd" />
+      </svg>
+      <span class="sr-only">GitHub account</span>
+    </a>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div x-data="{ openQC: false }">
+      <button
+        @click="openQC = !openQC; scrollY = window.scrollY; document.body.style.overflow = 'hidden';"
+        class="group relative block text-gray-600 hover:text-[--hs-text-color-hover] dark:text-gray-400 dark:hover:text-white">
+        <div
+          class="items-endtransition-transform relative flex h-full transform">
+          <div
+            class="transition-opacity group-hover:absolute group-hover:opacity-0">
+            <svg
+              class="size-4"
+              viewBox="0 0 1184 1024"
+              fill="currentColor"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              p-id="1495">
+              <path
+                d="M331.424 263.424q0-23.424-14.272-37.728t-37.728-14.272q-24.576 0-43.424 14.56t-18.848 37.44q0 22.272 18.848 36.864t43.424 14.56q23.424 0 37.728-14.016t14.272-37.44zM756 553.152q0-16-14.56-28.576t-37.44-12.576q-15.424 0-28.288 12.864t-12.864 28.288q0 16 12.864 28.864t28.288 12.864q22.848 0 37.44-12.576t14.56-29.152zM621.152 263.424q0-23.424-14.016-37.728t-37.44-14.272q-24.576 0-43.424 14.56t-18.848 37.44q0 22.272 18.848 36.864t43.424 14.56q23.424 0 37.44-14.016t14.016-37.44zM984 553.152q0-16-14.848-28.576t-37.152-12.576q-15.424 0-28.288 12.864t-12.864 28.288q0 16 12.864 28.864t28.288 12.864q22.272 0 37.152-12.576t14.848-29.152zM832 326.272q-17.728-2.272-40-2.272-96.576 0-177.728 44t-127.712 119.136-46.56 164.288q0 44.576 13.152 86.848-20 1.728-38.848 1.728-14.848 0-28.576-0.864t-31.424-3.712-25.44-4-31.136-6.016-28.576-6.016l-144.576 72.576 41.152-124.576q-165.728-116-165.728-280 0-96.576 55.712-177.728t150.848-127.712 207.712-46.56q100.576 0 190.016 37.728t149.728 104.288 78.016 148.864zM1170.272 646.848q0 66.848-39.136 127.712t-106.016 110.56l31.424 103.424-113.728-62.272q-85.728 21.152-124.576 21.152-96.576 0-177.728-40.288t-127.712-109.44-46.56-150.848 46.56-150.848 127.712-109.44 177.728-40.288q92 0 173.152 40.288t130.016 109.728 48.864 150.56z"
+                p-id="1496"></path>
+            </svg>
+          </div>
+
+          <div
+            class="absolute opacity-0 transition-opacity group-hover:relative group-hover:opacity-100">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="size-4"
+              fill="currentColor"
+              viewBox="0 -960 960 960">
+              <path
+                d="M520-120v-80h80v80h-80Zm-80-80v-200h80v200h-80Zm320-120v-160h80v160h-80Zm-80-160v-80h80v80h-80Zm-480 80v-80h80v80h-80Zm-80-80v-80h80v80h-80Zm360-280v-80h80v80h-80ZM180-660h120v-120H180v120Zm-60 60v-240h240v240H120Zm60 420h120v-120H180v120Zm-60 60v-240h240v240H120Zm540-540h120v-120H660v120Zm-60 60v-240h240v240H600Zm80 480v-120h-80v-80h160v120h80v80H680ZM520-400v-80h160v80H520Zm-160 0v-80h-80v-80h240v80h-80v80h-80Zm40-200v-160h80v80h80v80H400Zm-190-90v-60h60v60h-60Zm0 480v-60h60v60h-60Zm480-480v-60h60v60h-60Z" />
+            </svg>
+          </div>
+        </div>
+      </button>
+      <div
+        x-show="openQC"
+        x-transition:leave="ease-in duration-500"
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0"
+        @keydown.window.escape="openQC = false; document.body.style.overflow = ''; window.scrollTo(0, scrollY);"
+        x-cloak
+        role="dialog"
+        aria-modal="true">
+        <div
+          class="fixed inset-0 z-50 bg-gray-900/85 backdrop-blur-md transition-opacity"></div>
+        <div class="fixed inset-0 z-50 w-full">
+          <div class="mx-auto flex h-full w-full items-center justify-center">
+            <img
+              @click.away="openQC = false; document.body.style.overflow = ''; window.scrollTo(0, scrollY);"
+              class="object-cover"
+              x-transition:leave="ease-in duration-500"
+              x-transition:leave-start="opacity-100"
+              x-transition:leave-end="opacity-0"
+              :class="openQC ? 'animate-scaleInCenter' : 'animate-scaleOutCenter'"
+              src="/images/society/wechat/wechat.jpg"
+              alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+  
+
+  
+    <a
+      href=""
+      class="text-gray-600 hover:text-[--hs-text-color-hover] dark:text-gray-400 dark:hover:text-white">
+      <svg
+        class="size-4"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 20 20">
+        <path
+          fill="currentColor"
+          d="M12.186 8.672 18.743.947h-2.927l-5.005 5.9-4.44-5.9H0l7.434 9.876-6.986 8.23h2.927l5.434-6.4 4.82 6.4H20L12.186 8.672Zm-2.267 2.671L8.544 9.515 3.2 2.42h2.2l4.312 5.719 1.375 1.828 5.731 7.613h-2.2l-4.699-6.237Z" />
+      </svg>
+
+      <span class="sr-only">X page</span>
+    </a>
+  
+
+  
+
+  
+
+
+
+
+  </div>
+
+  
+  
+  <span x-data class="flex flex-row items-center justify-center"
+    >由<a href="https://gohugo.io/" aria-label="hugo link">
+    <img
+    src="/images/default/hugo-logo-wide.svg"
+    alt="Hugo"
+    class="mx-1 h-3" />
+    </a> & <a
+    href="https://github.com/mrhelloboy/seven"
+    aria-label="The github address of seven theme">
+    <img
+    x-show="!$store.darkMode.on"
+    x-cloak
+    id="footer-theme-light-logo"
+    src="/images/default/seven-logo.svg"
+    alt="seven theme logo"
+    class="mx-1 h-5" />
+
+    <img
+    x-show="$store.darkMode.on"
+    x-cloak
+    id="footer-theme-dark-logo"
+    src="/images/default/seven-logo-dark.svg"
+    alt="seven theme logo"
+    class="mx-1 h-5" />
+    </a>提供支持</span
+  >
+
+  <span class="flex flex-col items-center justify-between space-y-3">
+    &copy;
+    
+    
+    
+      2023 -
+      2024
+    
+
+    Seven
+    版权所有
+  </span>
+</footer>
+
+  
+  
+    
+  
+  <script src="/js/toc.min.5e217e8df7eeeecad3818ba808f44ec8bb744f6a71d6445164c1d804dab77b55.js"></script>
+
+  
+  
+    
+  
+  <script src="/js/zoom-img.min.3e88fd56e975ff48f8f07c9d7aa4f01d53e4744d1ea7e31e9d58c95a77e0c2de.js" defer></script>
+
+  
+  
+    
+  
+  <script src="/js/link-to-top.min.5076255797b394d888abffc233d1cc417a576c3908cd84108f0e0da6d48c2cc5.js" defer></script>
+
+  
+    
+    
+      
+    
+    <script src="/js/code-copy.min.3dd3930f503ec9bfb98b208420053da1fe1e40c9d60c89f7388a3cdafa1e3bc3.js" defer></script>
+  
+
+
+  <script>
+    function toComment() {
+      window.scrollTo({
+        top: document.getElementById("hs-comment").offsetTop - 100,
+        behavior: "smooth",
+      });
+    }
+  </script>
+
+  
+    <script
+      data-goatcounter="https://seven-demo.goatcounter.com/count"
+      async
+      src="//gc.zgo.at/count.js"></script>
+  
+
+</body>
+</html>

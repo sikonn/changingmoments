@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HUGO on Seven 主题</title>
+    <link>https://changingmoments.one/tags/hugo/</link>
+    <description>Recent content in HUGO on Seven 主题</description>
+    <generator>Hugo</generator>
+    <language>zh-hans</language>
+    <lastBuildDate>Wed, 15 May 2024 16:46:13 +0800</lastBuildDate>
+    <atom:link href="https://changingmoments.one/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HUGO &amp; VNO | 换主题踩坑实录</title>
+      <link>https://changingmoments.one/posts/20220628/</link>
+      <pubDate>Tue, 28 Jun 2022 11:08:28 +0000</pubDate>
+      <guid>https://changingmoments.one/posts/20220628/</guid>
+      <description>最近在面站开了新魂器，本站tl都是美食真的是好喜欢，而且比原来的站点主题更好看，一眼看中了极光（透明）主题。 真的好美好美，所以想把博客也做成</description>
+    </item>
+    <item>
+      <title>HUGO&amp;MemE&amp;Waline | 踩坑实录</title>
+      <link>https://changingmoments.one/posts/waline/</link>
+      <pubDate>Thu, 05 May 2022 07:13:16 +0000</pubDate>
+      <guid>https://changingmoments.one/posts/waline/</guid>
+      <description>写在前面注意不要在meme文件夹中直接修改，要改什么都在根目录下添加。 参考资料 Waline官方文档-快速上手 Waline 评论系统的介绍与基础配置 Hugo | 为</description>
+    </item>
+    <item>
+      <title>HUGO &amp; MemE | 踩坑实录</title>
+      <link>https://changingmoments.one/posts/hugo-meme/</link>
+      <pubDate>Mon, 02 May 2022 01:35:26 +0000</pubDate>
+      <guid>https://changingmoments.one/posts/hugo-meme/</guid>
+      <description>这个博客建立了6天，我已经踩了无数坑。鉴于MemE主题的帖子比较少，我也写一些自己的配置！ 写博客的原因很简单，我需要一个能写很多字/确保不丢</description>
+    </item>
+  </channel>
+</rss>

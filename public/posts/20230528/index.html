@@ -1,0 +1,1371 @@
+<!doctype html>
+<html lang="zh-hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      id="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>
+      月记 | 5月:在颠沛流离时想家，在家时想颠沛流离 | Seven 主题
+    </title><meta
+  name="application-name"
+  content="Seven Demo" />
+<meta
+  name="apple-mobile-web-app-title"
+  content="Seven Demo" />
+
+
+  <meta name="title" content="月记 | 5月:在颠沛流离时想家，在家时想颠沛流离" />
+
+
+
+  <meta name="description" content="一款简洁、漂亮的 HUGO 博客主题" />
+<meta name="theme-color" content="#ffffff" /><link rel="icon" href="/favicon.svg" /><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffffff" />
+
+
+
+
+  
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/instantsearch.css@8.0.0/themes/reset-min.css"
+    integrity="sha256-2AeJLzExpZvqLUxMfcs+4DWcMwNfpnjUeAAvEtPr0wU="
+    crossorigin="anonymous" />
+
+  
+    
+      
+        <link rel="stylesheet" href="/css/search.min.7f9e07a0f7b636f9d65dda999e80946da98abb0e13bcc1c806366e01235f8afc.css" />
+      
+    
+
+  
+
+
+
+
+
+
+  
+    
+      
+        <link rel="stylesheet" href="/css/waline.min.ca283dedc4f01d5dfc48552cd7807b0e81de1ddabbc0811e01beb52266a2cca3.css" />
+      
+    
+  
+
+
+
+
+
+  
+    
+      <link rel="stylesheet" href="/css/styles.min.991bf85397ec60ee86720293f947ebad48003d055d3deab2bdef139d348191e1.css" />
+    
+  
+
+
+
+
+
+<link href="/font/Oswald-VariableFont_wght/result.css" rel="stylesheet" />
+
+  
+    
+    
+    
+      
+    
+    <link href="/css/syntax.min.8a989badbaded6c4614433de34a6d389f151b219400944020adaa74774d7a3b5.css" rel="stylesheet" />
+  <script
+  defer
+  src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.13.10/dist/cdn.min.js"></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.13.10/dist/cdn.min.js"></script>
+<script
+  defer
+  src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.10/dist/cdn.min.js"></script>
+<script>
+  if (
+    localStorage.getItem("color-theme") === "dark" ||
+    (!("color-theme" in localStorage) &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches)
+  ) {
+    document.documentElement.classList.add("dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+  }
+
+  document.addEventListener("alpine:init", () => {
+    Alpine.store("darkMode", {
+      on:
+        localStorage.getItem("color-theme") === "dark" ||
+        (!("color-theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches),
+      toggle() {
+        this.on = !this.on;
+        if (this.on) {
+          document.documentElement.classList.add("dark");
+          localStorage.setItem("color-theme", "dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+          localStorage.setItem("color-theme", "light");
+        }
+      },
+    });
+  });
+</script>
+
+
+
+    <style>
+      [x-cloak] {
+        display: none !important;
+      }
+    </style>
+  </head>
+
+  <body
+    x-cloak
+    x-data="{ 
+      shrink: false,
+      enableBgAni: true,
+      scrollY: 0,
+      bgOpen: true,
+      darkImg: '/images/bg-dark.svg',
+      lightImg: '/images/bg.svg',
+      newbgImg: '',
+      bgImg: '',
+
+      init() {
+        if (this.bgOpen && $store.darkMode.on) {
+          bgImg = this.darkImg
+        } else if (this.bgOpen && !$store.darkMode.on) {
+          bgImg = this.lightImg
+        } else {
+          bgImg = ''
+        }
+      },
+
+      get bgImg () {
+        return bgImg
+      },
+
+      set bgImg(v) {
+        bgImg = v;
+      },
+
+      getNewBgImg() {
+        return bgImg;
+      },
+    }"
+    x-init="$watch('$store.darkMode.on', (value) => {
+      if (value && bgOpen) {
+        bgImg = '/images/bg-dark.svg'
+      } else if (!value && bgOpen) {
+        bgImg = '/images/bg.svg'
+      } 
+    })"
+    @click="newbgImg = getNewBgImg()"
+    @scroll.window="shrink = (window.scrollY > 10 ? true : false)"
+    x-effect="$el.style.backgroundImage = 'url(' + bgImg + ')'"
+    :style="'background-image: ' + 'url(' + newbgImg + ')'"
+    :class="{'bg-white': !bgOpen, 'dark:bg-gray-900': !bgOpen, 'bg-cover': bgOpen, 'bg-fixed': bgOpen, 'dark:delay-300': enableBgAni }"
+    class="flex h-screen flex-col scroll-auto">
+    <div
+      x-show="$store.darkMode.on && enableBgAni"
+      x-cloak
+      x-transition:enter="animate-bgScaleInTr"
+      x-transition:leave="animate-bgScaleOutTr"
+      :style="'background-image: ' + 'url(' + darkImg + ')'"
+      :class="{'bg-gray-900': !bgOpen,'dark:bg-gray-900': !bgOpen, 'bg-cover': bgOpen, 'bg-fixed': bgOpen}"
+      class="fixed left-0 top-0 -z-10 h-full w-full"></div><header x-data="{ isMobile: false }" class="z-40 h-38 w-full flex-shrink-0">
+  <nav
+    id="nav"
+    :class="{ 'h-25': shrink, 'h-38': !shrink, 'shadow-md': shrink, 'bg-white/85': shrink, 'dark:bg-gray-900/85': shrink, 'backdrop-blur-md': shrink}"
+    class="fixed inset-0 mx-auto flex items-center justify-between px-4 transition-all duration-500 ease-in-out"
+    aria-label="Global">
+    <div
+      class="mx-auto flex w-screen flex-wrap items-center justify-between place-self-center object-center px-1 md:w-[1000px] md:px-4">
+      <div class="flex lg:flex-1"><a x-data href="/" class="p-1.5">
+  <span class="sr-only">Seven 主题</span>
+  
+  
+  
+
+
+  <div class="w-[120px]">
+    
+    <img
+      x-cloak
+      x-show="!$store.darkMode.on"
+      src="/images/logo.svg"
+      class="h-[56px]"
+      alt="Logo" />
+    
+    <img
+      x-cloak
+      x-show="$store.darkMode.on"
+      src="/images/logo-footer.svg"
+      class="h-[56px]"
+      alt="Logo" />
+  </div></a>
+</div>
+
+      <div class="hidden lg:flex lg:gap-x-6">
+        
+  
+    <a
+      href="/"
+      class="hs-menus text-sm font-semibold leading-6 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
+      >文档</a
+    >
+  
+
+  
+    <a
+      href="/posts/"
+      class="hs-menus text-sm font-semibold leading-6 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
+      >博文</a
+    >
+  
+
+  
+    <a
+      href="/"
+      class="hs-menus text-sm font-semibold leading-6 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
+      >归档</a
+    >
+  
+
+  
+    <div x-data="{ isOpen: false }" class="hs-menus relative">
+      <button
+        type="button"
+        @click="isOpen = !isOpen"
+        class="group flex items-center text-sm font-semibold leading-6 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
+        aria-expanded="false">
+        其他
+        <svg
+          class="size-4 flex-none transition"
+          :class="{ 'rotate-180': isOpen }"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          aria-hidden="true">
+          <path
+            fill-rule="evenodd"
+            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+            clip-rule="evenodd" />
+        </svg>
+      </button>
+
+      <div
+        x-show="isOpen"
+        x-cloak
+        x-transition:enter="transition ease-out duration-200"
+        x-transition:enter-start="opacity-0 translate-y-1"
+        x-transition:enter-end="opacity-100 translate-y-0"
+        x-transition:leave="transition ease-in duration-150"
+        x-transition:leave-start="opacity-100 translate-y-0"
+        x-transition:leave-end="opacity-0 translate-y-1"
+        @click.away="isOpen = false"
+        @scroll.window.away="isOpen = (window.scrollY > 300 ? false : true)"
+        class="absolute -left-6 top-full z-10 mt-3 w-screen max-w-40 overflow-hidden rounded-xl bg-white/95 shadow-lg ring-1 ring-gray-900/5 backdrop-blur-xl dark:bg-gray-800/95">
+        <div class="p-2">
+          
+            <div
+              class="relative rounded-lg px-4 py-2.5 text-sm leading-6 hover:bg-gray-300/30 hover:backdrop-blur-md">
+              <a
+                href="/"
+                class="block font-semibold text-gray-900 hover:text-[--hs-text-color-hover] dark:text-gray-400 dark:hover:text-white">
+                好物
+                <span class="absolute inset-0"></span>
+              </a>
+            </div>
+          
+            <div
+              class="relative rounded-lg px-4 py-2.5 text-sm leading-6 hover:bg-gray-300/30 hover:backdrop-blur-md">
+              <a
+                href="https://seven-demo-with-twikoo.netlify.app/"
+                class="block font-semibold text-gray-900 hover:text-[--hs-text-color-hover] dark:text-gray-400 dark:hover:text-white">
+                Twikoo评论版
+                <span class="absolute inset-0"></span>
+              </a>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  
+
+
+
+  <div x-data="{ isOpen: false }" class="hs-menus relative">
+    <button
+      type="button"
+      @click="isOpen = !isOpen"
+      class="group flex items-center text-sm font-semibold leading-6 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
+      aria-expanded="false">
+      分类
+      <svg
+        class="size-4 flex-none transition"
+        :class="{ 'rotate-180': isOpen }"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        aria-hidden="true">
+        <path
+          fill-rule="evenodd"
+          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+          clip-rule="evenodd" />
+      </svg>
+    </button>
+
+    <div
+      x-show="isOpen"
+      x-cloak
+      x-transition:enter="transition ease-out duration-200"
+      x-transition:enter-start="opacity-0 translate-y-1"
+      x-transition:enter-end="opacity-100 translate-y-0"
+      x-transition:leave="transition ease-in duration-150"
+      x-transition:leave-start="opacity-100 translate-y-0"
+      x-transition:leave-end="opacity-0 translate-y-1"
+      @click.away="isOpen = false"
+      @scroll.window.away="isOpen = false"
+      class="absolute -left-6 top-full z-10 mt-3 w-screen max-w-40 overflow-hidden rounded-xl bg-white/95 shadow-lg ring-1 ring-gray-900/5 backdrop-blur-xl dark:bg-gray-800/95">
+      <div class="p-2">
+        
+      </div>
+    </div>
+  </div>
+
+
+      </div>
+
+      <div class="flex flex-1 items-center justify-end">
+  <div x-data="{ isOpen: false }" class="relative">
+    <button
+      type="button"
+      @click="isOpen = !isOpen"
+      class="group flex items-center rounded-full p-[11px] text-black transition hover:bg-white hover:shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:shadow-[0_5px_15px_rgba(0,0,0,0.35)]"
+      aria-expanded="false">
+      <svg
+        class="size-[18px]"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 -960 960 960">
+        <path
+          d="m476-80 182-480h84L924-80h-84l-43-122H603L560-80h-84ZM160-200l-56-56 202-202q-35-35-63.5-80T190-640h84q20 39 40 68t48 58q33-33 68.5-92.5T484-720H40v-80h280v-80h80v80h280v80H564q-21 72-63 148t-83 116l96 98-30 82-122-125-202 201Zm468-72h144l-72-204-72 204Z" />
+      </svg>
+    </button>
+
+    <div
+      x-show="isOpen"
+      x-cloak
+      x-transition:enter="transition ease-out duration-200"
+      x-transition:enter-start="opacity-0 translate-y-1"
+      x-transition:enter-end="opacity-100 translate-y-0"
+      x-transition:leave="transition ease-in duration-150"
+      x-transition:leave-start="opacity-100 translate-y-0"
+      x-transition:leave-end="opacity-0 translate-y-1"
+      @click.away="isOpen = false"
+      class="absolute -left-5 top-full z-10 mt-3 w-screen max-w-32 overflow-hidden rounded-xl bg-white/95 shadow-lg ring-1 ring-gray-900/5 backdrop-blur-xl dark:bg-gray-800/95">
+      <div class="p-2">
+        
+          <div
+            class="relative rounded-lg px-4 py-2.5 text-sm leading-6 hover:bg-gray-300/30 hover:backdrop-blur-md">
+            <a
+              class="block font-semibold text-gray-900 hover:text-[--hs-text-color-hover] dark:text-gray-400 dark:hover:text-white"
+              href="/"
+              >简体中文</a
+            >
+          </div>
+        
+          <div
+            class="relative rounded-lg px-4 py-2.5 text-sm leading-6 hover:bg-gray-300/30 hover:backdrop-blur-md">
+            <a
+              class="block font-semibold text-gray-900 hover:text-[--hs-text-color-hover] dark:text-gray-400 dark:hover:text-white"
+              href="/en/"
+              >English</a
+            >
+          </div>
+        
+      </div>
+    </div>
+  </div>
+
+<div class="flex">
+  <button
+    type="button"
+    @click="$store.darkMode.toggle()"
+    class="group rounded-full p-2.5 text-sm text-black transition hover:bg-white hover:shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:shadow-[0_5px_15px_rgba(0,0,0,0.35)]">
+    <svg
+      x-show="!$store.darkMode.on"
+      x-cloak
+      class="size-5"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 -960 960 960">
+      <path
+        d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z" />
+    </svg>
+
+    <svg
+      x-show="$store.darkMode.on"
+      x-cloak
+      class="size-5"
+      fill="currentColor"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 -960 960 960">
+      <path
+        d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z" />
+    </svg>
+  </button>
+</div>
+
+  <div class="flex">
+    <button
+      type="button"
+      id="search-icon"
+      class="rounded-full p-2.5 text-center text-black transition hover:bg-white hover:shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:shadow-[0_5px_15px_rgba(0,0,0,0.35)]">
+      <svg
+        class="h-5 w-5"
+        fill="currentColor"
+        viewBox="0 0 1024 1024"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        p-id="4284">
+        <path
+          d="M769.323 708.992l182.741 182.699-60.373 60.373-182.699-182.741a382.293 382.293 0 0 1-239.659 84.01c-211.968 0-384-172.032-384-384s172.032-384 384-384 384 172.032 384 384a382.293 382.293 0 0 1-84.01 239.659z m-85.59-31.659a297.685 297.685 0 0 0 84.267-208c0-165.034-133.675-298.666-298.667-298.666-165.034 0-298.666 133.632-298.666 298.666C170.667 634.325 304.299 768 469.333 768a297.685 297.685 0 0 0 208-84.267l6.4-6.4z"
+          p-id="4285"></path>
+      </svg>
+    </button>
+  </div>
+
+<div class="flex lg:hidden">
+          <button
+            type="button"
+            @click="isMobile = true; scrollY = window.scrollY; document.body.style.overflow = 'hidden';"
+            class="group inline-flex items-center justify-center rounded-full p-2.5 text-center text-black transition hover:bg-white hover:shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] dark:text-gray-200 dark:hover:bg-gray-800 dark:hover:shadow-[0_5px_15px_rgba(0,0,0,0.35)]">
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="size-5"
+              viewBox="0 0 1024 1024"
+              version="1.1"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              p-id="9670">
+              <path
+                d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zM904 784H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zM904 472H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"
+                p-id="9671"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+  <div x-show="isMobile" x-cloak role="dialog" aria-modal="true">
+    <div class="fixed inset-0 z-10"></div>
+    <div
+      class="fixed inset-0 z-10 w-full overflow-y-auto bg-white/85 p-4 backdrop-blur-md dark:bg-gray-900/85 sm:ring-1 sm:ring-gray-900/10">
+      <div class="mx-auto mt-10 flex w-full items-center justify-center"><a x-data href="/" class="p-1.5">
+  <span class="sr-only">Seven 主题</span>
+  
+  
+  
+
+
+  <div class="w-[120px]">
+    
+    <img
+      x-cloak
+      x-show="!$store.darkMode.on"
+      src="/images/logo.svg"
+      class="h-[56px]"
+      alt="Logo" />
+    
+    <img
+      x-cloak
+      x-show="$store.darkMode.on"
+      src="/images/logo-footer.svg"
+      class="h-[56px]"
+      alt="Logo" />
+  </div></a>
+</div>
+
+      <div class="mt-6 flow-root">
+        <div class="-my-6 divide-y divide-gray-500/10">
+          <div class="flex flex-col space-y-2 py-6">
+            
+  
+    <a
+      href="/"
+      class="hs-menus w-full rounded-lg px-3 py-2 text-center text-base font-semibold leading-7 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
+      >文档</a
+    >
+  
+
+  
+    <a
+      href="/posts/"
+      class="hs-menus w-full rounded-lg px-3 py-2 text-center text-base font-semibold leading-7 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
+      >博文</a
+    >
+  
+
+  
+    <a
+      href="/"
+      class="hs-menus w-full rounded-lg px-3 py-2 text-center text-base font-semibold leading-7 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
+      >归档</a
+    >
+  
+
+  
+    <div x-data="{ subMenuOpen: false }" class="hs-menus">
+      <button
+        @click="subMenuOpen = !subMenuOpen"
+        type="button"
+        :class="{ 'text-[--hs-text-color-hover]': subMenuOpen, 'text-gray-900': !subMenuOpen, 'dark:text-[--hs-text-color-hover]': subMenuOpen, 'dark:text-white': !subMenuOpen }"
+        class="group flex w-full flex-col items-center justify-center rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:text-[--hs-text-color-hover]"
+        aria-controls="disclosure-1"
+        aria-expanded="false">
+        <span>其他</span>
+        <svg
+          :class="{ 'rotate-180': subMenuOpen }"
+          class="size-4 flex-none transition"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          aria-hidden="true">
+          <path
+            fill-rule="evenodd"
+            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+            clip-rule="evenodd" />
+        </svg>
+      </button>
+      <div
+        x-show="subMenuOpen"
+        x-cloak
+        x-collapse
+        class="flex flex-col space-y-1"
+        id="disclosure-1">
+        
+          <a
+            href="/"
+            class="w-full rounded-lg px-3 py-2 text-center text-sm font-semibold leading-7 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
+            >好物</a
+          >
+        
+          <a
+            href="https://seven-demo-with-twikoo.netlify.app/"
+            class="w-full rounded-lg px-3 py-2 text-center text-sm font-semibold leading-7 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
+            >Twikoo评论版</a
+          >
+        
+
+      </div>
+    </div>
+  
+
+
+
+  <div x-data="{ subMenuOpen: false }" class="hs-menus">
+    <button
+      @click="subMenuOpen = !subMenuOpen"
+      type="button"
+      :class="{ 'text-[--hs-text-color-hover]': subMenuOpen, 'text-gray-900': !subMenuOpen, 'dark:text-[--hs-text-color-hover]': subMenuOpen, 'dark:text-white': !subMenuOpen }"
+      class="group flex w-full flex-col items-center justify-center rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 hover:text-[--hs-text-color-hover] dark:text-white"
+      aria-controls="disclosure-1"
+      aria-expanded="false">
+      分类
+      <svg
+        :class="{ 'rotate-180': subMenuOpen }"
+        class="size-4 flex-none transition"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        aria-hidden="true">
+        <path
+          fill-rule="evenodd"
+          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+          clip-rule="evenodd" />
+      </svg>
+    </button>
+
+    <div
+      x-show="subMenuOpen"
+      x-cloak
+      x-collapse
+      class="flex flex-col space-y-1"
+      id="disclosure-1">
+      
+
+    </div>
+  </div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-14 flex h-12 w-full flex-col items-center justify-center">
+        <button
+          @click="isMobile = false; document.body.style.overflow = ''; window.scrollTo(0, scrollY);"
+          class="buttom-circle flex h-12 w-12 items-center justify-center rounded-full bg-white/85 p-3 text-gray-900 backdrop-blur-md  hover:text-gray-500 dark:bg-gray-800/85 dark:text-gray-200">
+          <span class="sr-only">Close mobile menu</span>
+          <svg
+            fill="currentColor"
+            class="h-4 w-4"
+            viewBox="0 0 1024 1024"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            p-id="5967">
+            <path
+              d="M143.616 47.104l830.08 830.08c26.24 26.24 26.24 69.888 0 96.128-26.24 26.24-69.888 26.24-96.128 0L47.488 143.232c-17.536-26.24-17.536-69.888 0-96.128 26.24-26.24 69.888-26.24 96.128 0z m0 0"
+              p-id="5968"></path>
+            <path
+              d="M982.528 143.232L152.32 973.312c-26.24 26.24-69.888 26.24-96.128 0-26.24-26.24-26.24-69.888 0-96.128L886.4 47.104c26.24-26.24 69.888-26.24 96.128 0 17.408 26.24 17.408 69.888 0 96.128z m0 0"
+              p-id="5969"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+  
+
+  
+  
+    
+    
+      <div id="hs-feature" class="h-60 w-full md:h-120">
+
+
+
+
+<div class="h-full w-full bg-[#de903c] text-center"></div>
+</div>
+    
+  
+
+
+  <div
+    id="hs-content-container"
+    class="my-5 w-full rounded-b-lg px-5 md:px-10 lg:px-1">
+    <div
+      class="mx-auto flex max-w-screen-xl lg:grid lg:grid-flow-col lg:grid-cols-4 xl:grid-cols-5">
+      
+      <div
+  class="hidden lg:sticky lg:top-28 lg:mt-2 lg:flex lg:max-w-60 lg:flex-col lg:items-stretch lg:overflow-y-auto"></div>
+
+      
+      <div id="hs-container" class="mx-auto w-full lg:col-span-2 xl:col-span-3">
+        <div class="py-5 md:px-1 lg:px-5">
+          <div class="flex w-full flex-col">
+            <div
+              class="hs-content-meta flex flex-row flex-wrap items-center space-x-1 pb-2 pt-1 text-xs font-normal tracking-wide text-gray-500/90 dark:text-gray-500">
+              
+              <span class="hs-content-category flex flex-row gap-1">
+                
+              </span>
+            </div>
+            <div
+              id="hs-content-title"
+              class="hs-content-title py-1 text-start text-3xl font-bold tracking-wide text-black dark:text-white lg:text-4xl">
+              月记 | 5月:在颠沛流离时想家，在家时想颠沛流离
+            </div>
+
+            <div
+              class="hs-content-meta flex flex-row flex-wrap items-center space-x-1 pb-1 pt-3.5 text-xs font-extralight tracking-wide text-gray-500/90 dark:text-gray-600">
+              <span>2023/05/27</span>
+              <div
+                class="h-1 w-1 rounded-full bg-red-700 dark:bg-red-700/50"></div>
+              <span>4842&nbsp;字数</span>
+              <div
+                class="h-1 w-1 rounded-full bg-red-700 dark:bg-red-700/50"></div>
+              <span>10&nbsp;分钟</span>
+              
+                <div
+                  class="h-1 w-1 rounded-full bg-red-700 dark:bg-red-700/50"></div>
+                <p>
+                  <span
+                    id="twikoo_visitors"
+                    class="page-info-pageview-count"
+                    data-path="/posts/20230528/"
+                    >...</span
+                  >
+                  &nbsp;阅读量
+                </p>
+              
+              
+                
+                  <div
+                    class="h-1 w-1 rounded-full bg-red-700 dark:bg-red-700/50"></div>
+                  <button
+                    x-data
+                    @click="toComment()"
+                    id="speed-comment-count-id"
+                    class="whitespace-nowrap hover:text-[--hs-text-color-hover] hover:underline hover:decoration-[--hs-decoration-color] hover:underline-offset-4">
+                    <span
+                      class="waline-comment-count"
+                      data-path="/posts/20230528/"
+                      >...</span
+                    >
+                    &nbsp;评论数
+                  </button>
+                
+              
+            </div>
+          </div>
+
+          
+            <div x-data="{ open: false }" class="mt-5 lg:hidden">
+              <button
+                type="button"
+                x-on:click="open = !open"
+                class="flex w-full cursor-pointer items-center justify-start rounded-lg py-2 text-gray-500/90 hover:text-gray-700 dark:hover:text-gray-300">
+                <span class="shrink-0">
+                  <svg
+                    :class="{ 'rotate-90': open }"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="size-6 transition"
+                    fill="currentColor"
+                    viewBox="0 -960 960 960">
+                    <path d="M400-280v-400l200 200-200 200Z" />
+                  </svg>
+                </span>
+
+                <span class="hs-toc-title text-sm font-medium">
+                  目录
+                </span>
+              </button>
+              <div
+                x-cloak
+                x-show="open"
+                x-collapse.duration.1000ms
+                x-on:keydown.escape.window="open = false"
+                class="hs-toc mb-3 mt-1 space-y-1 px-2">
+                <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#shanghai">SHANGHAI</a></li>
+        <li><a href="#hometown">HOMETOWN</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+              </div>
+            </div>
+          
+
+
+          <div
+            id="hs-content"
+            class="hs-content format mx-auto mt-2 max-w-none dark:format-invert md:format-base format-figure:flex format-figure:flex-col format-figure:items-center format-img:cursor-zoom-in dark:text-gray-300 lg:mt-11">
+            <p>本期博客请搭配bgm食用</p>
+<!-- raw HTML omitted -->
+<p>谁能想到我最终会在上海呆满一个月呢！真的会发现计划赶不上变化，所幸都有解决方法。</p>
+<h3 class="group head-tag" id="shanghai">SHANGHAI<a data-title-of-head class="group-hover:after:content-['__#'] no-underline hover:text-[--hs-text-color-hover]" href="#shanghai"></a></h3><h4 class="group head-tag" id="我们这代人由友谊构成的">我们这代人由友谊构成的<a data-title-of-head class="group-hover:after:content-['__#'] no-underline hover:text-[--hs-text-color-hover]" href="#%e6%88%91%e4%bb%ac%e8%bf%99%e4%bb%a3%e4%ba%ba%e7%94%b1%e5%8f%8b%e8%b0%8a%e6%9e%84%e6%88%90%e7%9a%84"></a></h4><p>这次呆在上海基本没有一个人出门的时候，爸爸妈妈说要我去观光一下，但是连着打球，休息几天，再打球这个过程已经很累了，就只想呆在家里。感觉我没有掌控感的时候就会变成这样。我夺回生活的掌控感需要把所在的地方塑造成我熟悉的环境，比如现在独居我就会喜欢自己出门。</p>
+<p>于是，还好我还有朋友，好久好久没见到的朋友们还是那么熟悉，和高高去cp29，和贝贝大吃大喝，和队友打完球吃饭唱歌烧烤吃牛蛙做按摩，就是我全部的娱乐活动了。</p>
+<p>第一次去cp29，我的记忆还停留在大学的时候朋友去cp给我带了舟渡的谷，哇自己去的时候真的没想到，会运动量这么大。进场走路就走了6km，排队排了3h，穿着裙子感觉我大腿内侧都磨得痛痛，最终走了15km，不愧是二次元拉练。进场的时候在手机上不断打探消息，走到哪了，还要多久，前面晒不晒，人数真的让我震惊。coser也很好看，但我们只关注谷！进入黄金神威区我开始买买买，大概买了黄金神威，蓝色监狱，JOJO，咒术回战，钻石王牌的谷，进入钻石王牌区我才真正疯癫！这个也要，那个也要，怎么了！钱就是用来花的！还遇到了对外贸垒球队的姐姐，给她讲了我们五一比赛时精彩的两出局满垒分差一分的三振和面对第一天17：2的对手最后半局3分清垒打追平，现在写的时候还是会眼泪流出来，她也听得很感动，于是把御泽的板子送给我了，现在摆在我们的三垒房!</p>
+
+  <figure class="data-image-info ">
+    <img
+      class="data-image"
+      src="/img/%e5%be%ae%e4%bf%a1%e5%9b%be%e7%89%87_20230611115059.jpg"
+      alt="谷"
+      loading="lazy" />
+    <figcaption></figcaption>
+  </figure>
+
+<p>但是让人震惊的是，居然，看多了也会阳痿，看到咒术回战的时候我觉得我就阳痿了，感觉，不爱了。高高也狂看偶像梦幻祭但是和我一样阳痿了，不过我还是买了，人总会恢复激情的（帅气晃头</p>
+<p>和贝贝很久不见，真的很久很久但是真的感觉不到时间流逝，还是快乐的吃烤肉，吃甜品，然后还喝酒，感觉说着说着就开始说各种球队八卦，我走的时候A和B还是情侣，C和D还是情侣，现在A和C是情侣了，E也分手了，她说前女友怎么怎么怎么，F原来和G现在和H，都是很总之巴拉巴拉真的很震惊。以上八卦内容都是和sy聊天的时候摄入的哈哈，真的好多八卦，棒球圈太小了真的不要在打球的人中间找，感觉分手了尴尬打球的机会会变少。</p>
+<p>然后居然和贝贝说我约炮的事情，感觉喝了点酒就停不住了，这件事我只和高高，贝贝，sy说过，结果贝贝说，她上大二的时候也约过一个，真的感觉和朋友聊下来，都是在精神状态不好的时候才会约炮，现在我精神状态很好就根本不想约炮，很奇怪。</p>
+<p>还和新认识的打球人一起去吃牛蛙，3个人吃了8只牛蛙，嘻嘻嘻嘻嘻嘻。而且我发现我对自我的定位一直都是，最小的那个，需要被照顾的那个。于是我就碰到了虽然是学妹但是非常姐姐的jingjing，哇太爱了吧简直是我妈妈，好喜欢，想每次吃饭都和她一起。和队友训练完去唱歌烧烤什么的也很放松，我和一群人熟不熟的标志就是我会不会在ktv唱我根本唱不上去的歌，烧烤局就还是八卦八卦八卦，那天还正好是球队两周年，还有其他球队的交换八卦，很开心！</p>
+<p>发现四月居然没怎么说我和sy去哪玩了，sy会带我去好多虽然我也呆了四年但就是没有去过的地方，逛街，吃饭，开榴莲，唱歌，看重启人生，真的好开心，和朋友在一起好开心啊。</p>
+<h4 class="group head-tag" id="只有打球才能叫醒的游魂">只有打球才能叫醒的游魂<a data-title-of-head class="group-hover:after:content-['__#'] no-underline hover:text-[--hs-text-color-hover]" href="#%e5%8f%aa%e6%9c%89%e6%89%93%e7%90%83%e6%89%8d%e8%83%bd%e5%8f%ab%e9%86%92%e7%9a%84%e6%b8%b8%e9%ad%82"></a></h4><p>其实还少了一个，就是医院。由于不可控的医院因素，我滞留到了23号才回家。因为这样的原因我多了好多训练，周中训练，周六训练都赶上了，还赶上了球队两周年庆，开心！甚至还有凑人头的第一堂棒球课，第一次见到LOLO真实的101球速。</p>
+<p>周六训练感觉在一点点进步，之后还是要勇敢的站上不熟悉的位置，毕竟外野没有什么球可以接，首先暴露出问题才能解决问题。周中训练其实很有挫败感，就是感觉确实暴露出很多问题（笑死。站一垒球借不到，打到墙边的球也捡的太慢，地滚也会漏接，高飞那个场刺眼的照明和下雨的天气我也看不到，男的来投球感觉球一瞬间就过来了只能勉强蹭到，呜呜感觉自己没有长处，还是要打好基本功。</p>
+<p>两周年感觉还好一点，以下是当天写的棒球日记</p>
+<blockquote>
+<p><strong>打击</strong></p>
+<p>1.四球 2.右外高飞 3.二垒地滚 4.中外落地安</p>
+<p>今天最惊喜的就是最后一个打席，因为之前虽然说我可以打到网，但是并不是在比赛中打出来的，今天这一棒真的很深远，而且是中外，我一般都不会打到的方向。</p>
+<p>在这个打席中，她每投一颗球我就深呼吸一下，并且在脑海里想“向后引棒，从里面走，挥出去”的过程，投坏球就立马收棒，上一球的结果也无所畏惧，好球就等进来挥棒，那个等进来的感觉很奇妙，手感也是好久没有感觉到的好，真好。</p>
+<p>然后反思一下，跑垒的时候没有绕出去跑，还在一垒有点停住了脚步，呜呜。下次打出外野就要绕出去跑，而且要看着球的方向，快杀到我了就往回跑制造夹杀。</p>
+<p><strong>守备</strong></p>
+<p>今天接了四颗球，一颗高飞一弹返回内野，一颗补漏，两颗地滚返回内野，没有失误，夸夸。</p>
+<p>但是我之所以传球，守备和跑垒不行，就是因为我没有重视，没有练习，还是要重视起来，练习才能出成果。</p>
+</blockquote>
+<h4 class="group head-tag" id="卷进大城市郊区真的好吗">卷进大城市郊区真的好吗<a data-title-of-head class="group-hover:after:content-['__#'] no-underline hover:text-[--hs-text-color-hover]" href="#%e5%8d%b7%e8%bf%9b%e5%a4%a7%e5%9f%8e%e5%b8%82%e9%83%8a%e5%8c%ba%e7%9c%9f%e7%9a%84%e5%a5%bd%e5%90%97"></a></h4><p>没有想到的是这次去舅舅家住给我带来了一些大城市郊区的思考，我虽然一直都是想去日本的，但是也觉得宝宝要住就要住在离球场最近的地方！于是大城市郊区也在考虑范围之中。但是真的没有想到，从小就成绩好，上好大学，保研，读博，当大学老师，结婚，买房，看起来无比顺利的人都会这么累，不仅有很多房贷要还，还要考虑孩子等问题，工作也很忙经常晚回来，是没有停下来过的人生。我住在他家就觉得，他这么努力，现在买的房子却只能给亲戚住。是过着很好的生活，有洗碗机，有烘干机，冰箱里有很多高级食品，用神仙水，但是这真的值得吗，我想要过的，我将要过的是这样的生活吗？</p>
+<p>感觉我可能看到了按照社会主流生活将会过上什么样的人生的真实版，事实就是根本不会有停下来的时候，卷的人只会更卷罢了，没有什么其他的，真正想要脱离这个有限游戏，玩自己的无限游戏，就得先看完《有限游戏与无限游戏》这本书，我最近的各种思考都指向我要先读完这本书，立flag我六月会认真读这本！知道这本书是因为听了放学以后的这期播客，真的很喜欢放学以后。</p>
+<!-- raw HTML omitted -->
+<p>还有一点就是，大城市郊区的通勤时间真的太长了，一个小时都算是好的，两个小时也是司空见惯，我从这一个郊区到另一个郊区花费的时间就更长了，往返去学校打球要五个小时，和打球时间差不多。赶着末班车回到郊区更会感到一种巨大的割裂感，大城市的繁华消失，这里只有更多的平地，很多工地和很多居民区，工地的灯很大很晃眼，这里可能会成为中心吧，但现在只让人感到寂寞。</p>
+<p>大城市郊区人如何利用通勤时间应该也会是一个课题，我基本上去的路上都在听播客，回来的时候都在放空自己。接下来因为通勤时间过长而丰富的书影播客记录，可能会剧透，介意请绕行。</p>
+<table>
+<thead>
+<tr>
+<th>电影/剧集</th>
+<th>播客</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>福尔摩斯小姐1+2⭐⭐⭐⭐</strong>:本来以为是福尔摩斯的性转故事，没想到主角是福尔摩斯的妹妹，被妈妈带大的就是不一样！不断学习，阅读，还会搏斗，这是“淑女学校”绝对不会教的东西，某种程度上让我感受到了规训和斗争的对比。就是勇敢而自由，能把所学运用到破案中，“也许这是一个需要改变的世界”是我印象最深的一句话。</td>
+<td><strong>web3和元宇宙⭐⭐⭐⭐</strong>:没有想到我会听这期播客，因为总觉得和自己没有关系，就属于那种虽然很火但是与我无关。也是在很多地方推荐说这期真的讲的深入浅出，感觉还是挺有意思的，我会很期待web3和元宇宙的时代到来。在我的想象中会是创造的时自由的时代</td>
+</tr>
+<tr>
+<td><strong>小美人鱼⭐⭐</strong>：是大家很熟悉的故事，但是我买票买成了国语版，简直失去了这部音乐电影的全部乐趣，说实话还是挺无聊的，也很受不了很多人种族歧视的嘴脸，我的所有好感点大概给了螃蟹唱歌和海巫婆唱歌。</td>
+<td><strong>新的一年是最后一年</strong>⭐⭐⭐：这一期不单单是在说接下来会怎么做，而是呼吁反抗，反抗才能让人有力量感，让我也更有力量，”激进的开始，然后在行动中校准“这条也希望能运用到生活中</td>
+</tr>
+<tr>
+<td><strong>人选之人造浪者⭐⭐⭐⭐⭐</strong>:这部剧真的让我震惊，怎么会差距如此之大。现实中性骚扰无法解决，剧虽然不是现实，但能有这样的观感也很是可贵。不管是职场中的性骚扰，大家一起努力解决，还是女主作为les没有为了选上而选择道歉，还是亚琴爱上了上司的裸照事件，真的让人感到很多温暖的一部剧，我也想等待这个社会追上我们的那一天</td>
+<td><strong>万幸没有成为截然不同的人⭐⭐⭐⭐</strong>:真的很喜欢这一期，两个主播列出了想要成为的人的三个关键词，整个过程让我感到一气呵成，想成为的自己，也不是和现在截然不同的自己，而是那个更好的自己。</td>
+</tr>
+<tr>
+<td><strong>怒呛人生⭐⭐⭐⭐</strong>:这部剧真的让我大跌眼镜！这就是发疯吗，这就是发疯啊！对于发疯完全没有补救，就那样坠入深渊，真的看得有点难受。“你为什总是这么愤怒呢？”生活总是需要一个出口的，发疯这个出口就很好。</td>
+<td><strong>生育黄金年龄对于其他事也是黄金时期⭐⭐⭐</strong>:这期会觉得六层楼和我们更近了，做科普也有我们想不到的艰辛，以及一些关于妇产科的故事也挺有趣的，衰老，生育，情感，生存，科普的最终会导向这些内容，很有意思。</td>
+</tr>
+<tr>
+<td><strong>谁先爱上他的⭐⭐⭐⭐</strong>：这个其实是看了人选之人才决定看的，说谢盈萱的三个作品反映了时代迁移，这部是“同妻“的故事，感觉在通过”同妻“的身份看男同群体，最终达成了某种和解。</td>
+<td><strong>展开讲讲+随机波动beef⭐⭐⭐</strong>: 看了beef之后疯狂开始听播客，beef也是很火很火，我错峰看了一下。看了之后就真的很想被分析的心情，东亚人啊，你的名字是发疯。</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>每个租房者都见过城市的空隙⭐⭐⭐</strong>:因为我正好在考虑租房的时候，也在朋友租的房子里面住，真的听起来好感同身受</td>
+</tr>
+<tr>
+<td></td>
+<td><strong>说脱口秀，讲自由人⭐⭐⭐</strong>:这期也是国内国外情况对比让人不适的程度，国内的脱口秀，”侮辱军人不能开一点点口”，国外的脱口秀，在说这样让人不仅会心一笑还引发思考的内容，长叹。</td>
+</tr>
+</tbody>
+</table>
+<h3 class="group head-tag" id="hometown">HOMETOWN<a data-title-of-head class="group-hover:after:content-['__#'] no-underline hover:text-[--hs-text-color-hover]" href="#hometown"></a></h3><h4 class="group head-tag" id="回家就来月经魔法">回家就来月经魔法<a data-title-of-head class="group-hover:after:content-['__#'] no-underline hover:text-[--hs-text-color-hover]" href="#%e5%9b%9e%e5%ae%b6%e5%b0%b1%e6%9d%a5%e6%9c%88%e7%bb%8f%e9%ad%94%e6%b3%95"></a></h4><p>我好像有那种出行必来姨妈的魔咒，这次一回家我就来月经，心安理得的躺在床上开心开心，在家里就是那种全然放松的状态，一天什么都不用干，睡到日上三竿起床也有早餐吃，吃完了早餐午餐就好了，吃了午餐还可以睡觉，下午睡起来就又该吃饭了，吃完饭再干点什么就该睡觉了，也会和妈妈爸爸去逛街，逛公园，逛超市什么的，很快乐的啃老生活吧，但是唯一不好的就是太好了，我接受这份太好的时候，也要让自己成为一个废物，而且会被说是一个废物，可能是这样会让我不太舒服我才会更喜欢独居吧。</p>
+<h4 class="group head-tag" id="天哪我妈妈好爱我">天哪我妈妈好爱我<a data-title-of-head class="group-hover:after:content-['__#'] no-underline hover:text-[--hs-text-color-hover]" href="#%e5%a4%a9%e5%93%aa%e6%88%91%e5%a6%88%e5%a6%88%e5%a5%bd%e7%88%b1%e6%88%91"></a></h4><p>宝宝终于长大了，要给现在交的保险签字了。然后才知道我妈妈真的给我买了很多保险，意外险，重疾险，一万以上用这个，医疗险，一万以下用这个，各种各样，还有小时候就开始给我交的各种保险，还在考虑给我交养老保险，让我60岁以后还能每年领一笔钱，感觉无微不至。</p>
+<p>其实小时候妈妈跟我说，不要指望她们的财产，她们都是要捐出去的。这句话就一直在我脑子里，现在这么多钱给我未来的保障，感觉还有点神奇，看来我要先想好要捐给谁比较好，反正我也不会有孩子，能不能那会都是未知数。我觉得我可能会捐给流浪猫机构吧。</p>
+<p>妈妈真的比起爸爸来更理解我更爱我，虽然是那种传统的母爱。但她理解我想要一个人独居的心情，给我很多支持。我面试的时候，包括这次看颞颌关节的时候，我爸爸总说不着急不着急，妈妈却给了我最好的支持。刚刚我健身回来突然下雨妈妈还给我打电话让我打车回家，到家给她打电话。在电话中还说了很多她最近看书听课的体悟，有这样的妈妈真好，即使她也有很多缺点我也一样爱她。</p>
+<h4 class="group head-tag" id="没想到这里修罗场">没想到这里修罗场<a data-title-of-head class="group-hover:after:content-['__#'] no-underline hover:text-[--hs-text-color-hover]" href="#%e6%b2%a1%e6%83%b3%e5%88%b0%e8%bf%99%e9%87%8c%e4%bf%ae%e7%bd%97%e5%9c%ba"></a></h4><p>本期修罗场来自，打算回家和小狗约炮的我和在我房间发现避孕套和烟头的妈妈。妈妈还怀疑我是不是和结了婚的人在一起了，甚至还怀疑是我们教练。我也在想怎么圆这个故事呢，究竟是因为爱还是直接坦白说自己约炮。</p>
+<p>但是中间妈妈问我说：“你说不想结婚不想生孩子是不是因为被男人伤害过？”我就？？？？？？？？？？于是肯定不能说是爱，于是我就半盘托出，说做爱和结婚可以分开，把我妈雷到了，但是这样也蛮好的，省得说了一个谎言还要其他谎言弥补。</p>
+<p>结果就是我成功独居和小狗见面了，但是我心不在焉，真的，状态好的时候不想约炮。</p>
+
+          </div>
+
+          <div class="hs-content-meta pb-5 pt-3">
+            
+            <span
+              class="hs-content-tag flex flex-row flex-wrap justify-start gap-2 pl-1 text-sm font-normal tracking-wide text-gray-500/90 dark:text-gray-500">
+              
+                <a
+                  class="text-center hover:text-[--hs-text-color-hover]"
+                  href="https://changingmoments.one/tags/%E5%A4%A9%E5%A4%A9%E7%9A%84%E5%BF%AB%E4%B9%90%E6%97%A5%E8%AE%B0/"
+                  ><span class="text-red-700 ">#</span
+                  ><span
+                    class="hover:text-[--hs-text-color-hover] hover:underline hover:decoration-[--decoration-color] hover:underline-offset-4"
+                    >天天的快乐日记</span
+                  ></a
+                >
+              
+            </span>
+          </div>
+        </div>
+      </div>
+      
+      
+  <div
+    x-data="{ open: true }"
+    class="hidden lg:sticky lg:top-28 lg:flex lg:h-96 lg:min-w-60">
+    <div
+      x-show="!open"
+      x-cloak
+      x-transition:enter="ease-in-out duration-500"
+      x-transition:enter-start="opacity-0"
+      x-transition:enter-end="opacity-100"
+      x-transition:leave="ease-in-out duration-500"
+      x-transition:leave-start="opacity-100"
+      x-transition:leave-end="opacity-0"
+      class="flex">
+      <button
+        type="button"
+        @click="open = true"
+        class="absolute top-5 text-gray-300 hover:text-[--hs-text-color-hover] dark:text-gray-700 dark:hover:text-gray-300">
+        <span class="sr-only">Open sidebar</span>
+        <svg
+          class="h-7 w-7"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 -960 960 960">
+          <path
+            d="M80-240v-480h480v480H80Zm80-80h320v-320H160v320Zm480-320v-80h80v80h-80Zm0 400v-80h80v80h-80Zm160-400v-80h80v80h-80Zm0 200v-80h80v80h-80Zm0 200v-80h80v80h-80ZM320-480Z" />
+        </svg>
+      </button>
+    </div>
+    
+    <div
+      @keydown.window.escape="open = false"
+      x-show="open"
+      class="relative z-10 w-full"
+      aria-labelledby="slide-over-title"
+      role="dialog"
+      aria-modal="true">
+      <div class="overflow-hidden">
+        <div class="absolute overflow-hidden">
+          <div class="pointer-events-none right-0 flex w-full">
+            <div
+              x-show="open"
+              x-transition:enter="transform transition ease-in-out duration-500 sm:duration-700"
+              x-transition:enter-start="translate-x-full"
+              x-transition:enter-end="translate-x-0"
+              x-transition:leave="transform transition ease-in-out duration-500 sm:duration-700"
+              x-transition:leave-start="translate-x-0"
+              x-transition:leave-end="translate-x-full"
+              class="pointer-events-auto relative">
+              <div class="flex h-full flex-col py-6 shadow-xl lg:min-w-60">
+                <div class="flex items-center justify-between pr-2">
+                  <h2
+                    class="hs-toc-title text-base font-bold leading-6 text-gray-700 dark:text-gray-400"
+                    id="slide-over-title">
+                    目录
+                  </h2>
+
+                  <div
+                    x-show="open"
+                    x-transition:enter="ease-in-out duration-500"
+                    x-transition:enter-start="opacity-0"
+                    x-transition:enter-end="opacity-100"
+                    x-transition:leave="ease-in-out duration-500"
+                    x-transition:leave-start="opacity-100"
+                    x-transition:leave-end="opacity-0"
+                    class="flex">
+                    <button
+                      type="button"
+                      @click="open = false"
+                      class="text-gray-300 hover:text-black focus:outline-none dark:text-gray-400 dark:hover:text-gray-100">
+                      <span class="sr-only">Close panel</span>
+                      <svg
+                        class="h-6 w-6"
+                        xmlns="http://www.w3.org/2000/svg"
+                        stroke="currentColor"
+                        fill="currentColor"
+                        viewBox="0 -960 960 960">
+                        <path
+                          d="M400-240v-480h480v480H400Zm80-80h320v-320H480v320Zm-240 80v-80h80v80h-80Zm0-400v-80h80v80h-80ZM80-240v-80h80v80H80Zm0-200v-80h80v80H80Zm0-200v-80h80v80H80Zm560 160Z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="relative mt-6 h-128 flex-1">
+                  <div id="hs-toc" class="hs-toc text-sm lg:text-xs">
+                    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#shanghai">SHANGHAI</a></li>
+        <li><a href="#hometown">HOMETOWN</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    </div>
+
+    
+    
+      <div
+        id="hs-comment"
+        class="mx-auto max-w-screen-xl lg:grid lg:grid-cols-4 xl:grid-cols-5">
+        <span class="hidden lg:block"></span>
+        <div class="items-stretch lg:col-span-2 lg:col-start-2 xl:col-span-3">
+
+  <div id="waline" class="py-5 md:px-2 lg:px-8 dark:text-gray-400"></div>
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  <script
+    defer
+    type="module"
+    src="/js/waline/index.min.8fccad109368b2f73c70a4e94d9220c15c2500e35fff8439377b99f4f832b4aa.js"></script>
+
+
+
+
+
+
+
+  
+
+</div>
+      </div>
+    
+
+  </div>
+
+  
+  
+    <button
+      x-data="{
+        show: false,
+        init() {
+          window.addEventListener('scroll', () => {
+            this.show = window.scrollY > 100
+          })
+        }
+      }"
+      x-show="show"
+      @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      x-cloak
+      type="button"
+      class="buttom-circle fixed bottom-24 end-8 flex h-14 w-14 items-center justify-center bg-white/85 text-gray-500 backdrop-blur-md dark:bg-gray-800/85 dark:text-gray-500 md:end-20">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="size-6"
+        fill="currentColor"
+        viewBox="0 -960 960 960">
+        <path
+          d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z" />
+      </svg>
+      <span class="sr-only">Go to Top</span>
+    </button>
+  
+
+
+
+    
+<div
+  id="search-overlay"
+  class="fixed inset-0 z-50 hidden bg-gray-900/90 backdrop-blur-lg dark:bg-gray-900/80"></div>
+<section
+  id="search-section"
+  class="hs-search z-50 flex hidden h-dvh w-full flex-col">
+  
+  <div
+    class="flex h-dvh w-full flex-col overflow-auto md:mx-auto md:w-2/3 lg:max-w-2xl">
+    
+    <div
+      id="searchBoxDiv"
+      class="hs-search-input-wrapper sticky top-[-88px] z-50 flex flex-row justify-between px-8 pt-[88px]">
+      <div id="searchBox" class="my-6 flex w-full flex-row items-center"></div>
+    </div>
+
+    
+    <div class="hs-search-results-wrapper h-[30rem] overflow-auto">
+      <div id="searchResults" class="hs-search-results my-3 px-6"></div>
+      <div
+        id="NotSearchResults"
+        class="hidden flex-col items-center justify-around space-y-4 px-6 py-10">
+        <p
+          class="hs-search-no-results text-lg font-bold tracking-wide text-gray-500">
+          找不到搜索内容
+        </p>
+      </div>
+      <div
+        id="searchError"
+        class="hidden flex-col items-center justify-around space-y-4 px-6 py-10 text-center ">
+        <p class="hs-search-error text-lg font-bold text-red-500">
+          
+        </p>
+      </div>
+      <div
+        id="searchLoading"
+        class="hidden flex-col items-center justify-around px-6 py-10">
+        <svg
+          t="1689331200868"
+          class="icon animate-spin"
+          viewBox="0 0 1024 1024"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          p-id="51409"
+          width="128"
+          height="128">
+          <path
+            d="M512 170.666667v85.333333a256 256 0 1 1-223.573333 131.2L213.930667 345.6A341.333333 341.333333 0 1 0 512 170.666667z"
+            fill="#bfbfbf"
+            opacity=".3"
+            p-id="51410"></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+  
+  <div
+    class="hs-search-other bottom-0 flex flex-col items-center justify-center space-y-2 py-8 text-xs font-bold text-gray-600">
+    <div class="hs-search-cancel hidden md:block">
+      按 ESC 取消
+    </div>
+    <div class="hs-search-powered_by flex items-center justify-center">
+      
+      由 &nbsp;<img src="/images/default/algolia-logo.svg" alt="" class="h-4" />&nbsp; 提供支持
+    </div>
+  </div>
+</section>
+
+<script
+  src="https://cdn.jsdelivr.net/npm/algoliasearch@4.17.2/dist/algoliasearch-lite.umd.js"
+  integrity="sha256-X2G+vjV8i6Jj2NSGFTvy6Z4q2AlmF5aH0HiIpWJ8eU4="
+  crossorigin="anonymous"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.56.3/dist/instantsearch.production.min.js"
+  integrity="sha256-mWvjWAfZylKMOg+S3HLq+wng1HHRnl2Idr2r8NsUzIU="
+  crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+  
+
+<script src="/js/search.min.14ac10b2ca10b31730c274dd54808456a6a9cc3cc3f3667df2571e17e665871b.js"></script>
+<footer
+  id="footer"
+  x-ref="footer"
+  class="hs-footer mx-auto mt-5 flex flex-col items-center gap-y-3 py-6 text-xs text-gray-700 dark:text-gray-500">
+  <span class="h-px w-full max-w-4xl bg-gray-700 dark:bg-gray-600"></span>
+
+  <div class="flex h-5 space-x-3">
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <a
+      href="https://github.com/mrhelloboy/seven"
+      class="text-gray-600 hover:text-[--hs-text-color-hover] dark:text-gray-400 dark:hover:text-white">
+      <svg
+        class="size-4"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 20 20">
+        <path
+          fill-rule="evenodd"
+          d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+          clip-rule="evenodd" />
+      </svg>
+      <span class="sr-only">GitHub account</span>
+    </a>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div x-data="{ openQC: false }">
+      <button
+        @click="openQC = !openQC; scrollY = window.scrollY; document.body.style.overflow = 'hidden';"
+        class="group relative block text-gray-600 hover:text-[--hs-text-color-hover] dark:text-gray-400 dark:hover:text-white">
+        <div
+          class="items-endtransition-transform relative flex h-full transform">
+          <div
+            class="transition-opacity group-hover:absolute group-hover:opacity-0">
+            <svg
+              class="size-4"
+              viewBox="0 0 1184 1024"
+              fill="currentColor"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              p-id="1495">
+              <path
+                d="M331.424 263.424q0-23.424-14.272-37.728t-37.728-14.272q-24.576 0-43.424 14.56t-18.848 37.44q0 22.272 18.848 36.864t43.424 14.56q23.424 0 37.728-14.016t14.272-37.44zM756 553.152q0-16-14.56-28.576t-37.44-12.576q-15.424 0-28.288 12.864t-12.864 28.288q0 16 12.864 28.864t28.288 12.864q22.848 0 37.44-12.576t14.56-29.152zM621.152 263.424q0-23.424-14.016-37.728t-37.44-14.272q-24.576 0-43.424 14.56t-18.848 37.44q0 22.272 18.848 36.864t43.424 14.56q23.424 0 37.44-14.016t14.016-37.44zM984 553.152q0-16-14.848-28.576t-37.152-12.576q-15.424 0-28.288 12.864t-12.864 28.288q0 16 12.864 28.864t28.288 12.864q22.272 0 37.152-12.576t14.848-29.152zM832 326.272q-17.728-2.272-40-2.272-96.576 0-177.728 44t-127.712 119.136-46.56 164.288q0 44.576 13.152 86.848-20 1.728-38.848 1.728-14.848 0-28.576-0.864t-31.424-3.712-25.44-4-31.136-6.016-28.576-6.016l-144.576 72.576 41.152-124.576q-165.728-116-165.728-280 0-96.576 55.712-177.728t150.848-127.712 207.712-46.56q100.576 0 190.016 37.728t149.728 104.288 78.016 148.864zM1170.272 646.848q0 66.848-39.136 127.712t-106.016 110.56l31.424 103.424-113.728-62.272q-85.728 21.152-124.576 21.152-96.576 0-177.728-40.288t-127.712-109.44-46.56-150.848 46.56-150.848 127.712-109.44 177.728-40.288q92 0 173.152 40.288t130.016 109.728 48.864 150.56z"
+                p-id="1496"></path>
+            </svg>
+          </div>
+
+          <div
+            class="absolute opacity-0 transition-opacity group-hover:relative group-hover:opacity-100">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="size-4"
+              fill="currentColor"
+              viewBox="0 -960 960 960">
+              <path
+                d="M520-120v-80h80v80h-80Zm-80-80v-200h80v200h-80Zm320-120v-160h80v160h-80Zm-80-160v-80h80v80h-80Zm-480 80v-80h80v80h-80Zm-80-80v-80h80v80h-80Zm360-280v-80h80v80h-80ZM180-660h120v-120H180v120Zm-60 60v-240h240v240H120Zm60 420h120v-120H180v120Zm-60 60v-240h240v240H120Zm540-540h120v-120H660v120Zm-60 60v-240h240v240H600Zm80 480v-120h-80v-80h160v120h80v80H680ZM520-400v-80h160v80H520Zm-160 0v-80h-80v-80h240v80h-80v80h-80Zm40-200v-160h80v80h80v80H400Zm-190-90v-60h60v60h-60Zm0 480v-60h60v60h-60Zm480-480v-60h60v60h-60Z" />
+            </svg>
+          </div>
+        </div>
+      </button>
+      <div
+        x-show="openQC"
+        x-transition:leave="ease-in duration-500"
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0"
+        @keydown.window.escape="openQC = false; document.body.style.overflow = ''; window.scrollTo(0, scrollY);"
+        x-cloak
+        role="dialog"
+        aria-modal="true">
+        <div
+          class="fixed inset-0 z-50 bg-gray-900/85 backdrop-blur-md transition-opacity"></div>
+        <div class="fixed inset-0 z-50 w-full">
+          <div class="mx-auto flex h-full w-full items-center justify-center">
+            <img
+              @click.away="openQC = false; document.body.style.overflow = ''; window.scrollTo(0, scrollY);"
+              class="object-cover"
+              x-transition:leave="ease-in duration-500"
+              x-transition:leave-start="opacity-100"
+              x-transition:leave-end="opacity-0"
+              :class="openQC ? 'animate-scaleInCenter' : 'animate-scaleOutCenter'"
+              src="/images/society/wechat/wechat.jpg"
+              alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+  
+
+  
+    <a
+      href=""
+      class="text-gray-600 hover:text-[--hs-text-color-hover] dark:text-gray-400 dark:hover:text-white">
+      <svg
+        class="size-4"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 20 20">
+        <path
+          fill="currentColor"
+          d="M12.186 8.672 18.743.947h-2.927l-5.005 5.9-4.44-5.9H0l7.434 9.876-6.986 8.23h2.927l5.434-6.4 4.82 6.4H20L12.186 8.672Zm-2.267 2.671L8.544 9.515 3.2 2.42h2.2l4.312 5.719 1.375 1.828 5.731 7.613h-2.2l-4.699-6.237Z" />
+      </svg>
+
+      <span class="sr-only">X page</span>
+    </a>
+  
+
+  
+
+  
+
+
+
+
+  </div>
+
+  
+  
+  <span x-data class="flex flex-row items-center justify-center"
+    >由<a href="https://gohugo.io/" aria-label="hugo link">
+    <img
+    src="/images/default/hugo-logo-wide.svg"
+    alt="Hugo"
+    class="mx-1 h-3" />
+    </a> & <a
+    href="https://github.com/mrhelloboy/seven"
+    aria-label="The github address of seven theme">
+    <img
+    x-show="!$store.darkMode.on"
+    x-cloak
+    id="footer-theme-light-logo"
+    src="/images/default/seven-logo.svg"
+    alt="seven theme logo"
+    class="mx-1 h-5" />
+
+    <img
+    x-show="$store.darkMode.on"
+    x-cloak
+    id="footer-theme-dark-logo"
+    src="/images/default/seven-logo-dark.svg"
+    alt="seven theme logo"
+    class="mx-1 h-5" />
+    </a>提供支持</span
+  >
+
+  <span class="flex flex-col items-center justify-between space-y-3">
+    &copy;
+    
+    
+    
+      2023 -
+      2024
+    
+
+    Seven
+    版权所有
+  </span>
+</footer>
+
+  
+  
+    
+  
+  <script src="/js/toc.min.5e217e8df7eeeecad3818ba808f44ec8bb744f6a71d6445164c1d804dab77b55.js"></script>
+
+  
+  
+    
+  
+  <script src="/js/zoom-img.min.3e88fd56e975ff48f8f07c9d7aa4f01d53e4744d1ea7e31e9d58c95a77e0c2de.js" defer></script>
+
+  
+  
+    
+  
+  <script src="/js/link-to-top.min.5076255797b394d888abffc233d1cc417a576c3908cd84108f0e0da6d48c2cc5.js" defer></script>
+
+  
+    
+    
+      
+    
+    <script src="/js/code-copy.min.3dd3930f503ec9bfb98b208420053da1fe1e40c9d60c89f7388a3cdafa1e3bc3.js" defer></script>
+  
+
+
+  <script>
+    function toComment() {
+      window.scrollTo({
+        top: document.getElementById("hs-comment").offsetTop - 100,
+        behavior: "smooth",
+      });
+    }
+  </script>
+
+  
+    <script
+      data-goatcounter="https://seven-demo.goatcounter.com/count"
+      async
+      src="//gc.zgo.at/count.js"></script>
+  
+
+</body>
+</html>
