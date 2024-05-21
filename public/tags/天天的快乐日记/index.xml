@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>天天的快乐日记 on Seven 主题</title>
+    <title>天天的快乐日记 on 蝴蝶曾在此处</title>
     <link>http://localhost:1313/tags/%E5%A4%A9%E5%A4%A9%E7%9A%84%E5%BF%AB%E4%B9%90%E6%97%A5%E8%AE%B0/</link>
-    <description>Recent content in 天天的快乐日记 on Seven 主题</description>
+    <description>Recent content in 天天的快乐日记 on 蝴蝶曾在此处</description>
     <generator>Hugo</generator>
     <language>zh-hans</language>
-    <lastBuildDate>Wed, 03 Apr 2024 15:44:05 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 03 Apr 2024 07:41:37 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/%E5%A4%A9%E5%A4%A9%E7%9A%84%E5%BF%AB%E4%B9%90%E6%97%A5%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>月记 | 3月:春来复苏快乐多</title>
-      <link>http://localhost:1313/posts/20240403/</link>
+      <link>http://localhost:1313/months/20240403/</link>
       <pubDate>Wed, 03 Apr 2024 04:42:07 +0000</pubDate>
-      <guid>http://localhost:1313/posts/20240403/</guid>
+      <guid>http://localhost:1313/months/20240403/</guid>
       <description>来健身！终于去办健身卡了，看到学姐发朋友圈我立即私戳，获得了和美女一起健身的机会！还拉了好几个朋友一起来健身，我教练，我队友，连和我一起上选</description>
     </item>
     <item>
       <title>月记 | 2月:跌跌撞撞的寒假生活</title>
-      <link>http://localhost:1313/posts/20240308/</link>
+      <link>http://localhost:1313/months/20240308/</link>
       <pubDate>Fri, 08 Mar 2024 05:06:17 +0000</pubDate>
-      <guid>http://localhost:1313/posts/20240308/</guid>
+      <guid>http://localhost:1313/months/20240308/</guid>
       <description>二月可以有清晰的划分，前半部分是晒着太阳懒懒洋洋的过年，后半部分是躲在阴暗的房间里为我的阳光付费，谁懂啊！谁在乎啊！寒假有8篇论文的感受！ 懒</description>
     </item>
     <item>
       <title>月记 | 1月:猝不及防的2024</title>
-      <link>http://localhost:1313/posts/20240203/</link>
+      <link>http://localhost:1313/months/20240203/</link>
       <pubDate>Sat, 03 Feb 2024 14:52:13 +0000</pubDate>
-      <guid>http://localhost:1313/posts/20240203/</guid>
+      <guid>http://localhost:1313/months/20240203/</guid>
       <description>年龄小故事三则2024年1月，这么猝不及防地到来，再猝不及防地过完。小时候我以为24岁我就会长大，会变成熟，会踩着高跟鞋和小孩子说话，会呈现</description>
     </item>
     <item>
       <title>月记 | 11月:我以为的生活和我实际上的生活</title>
-      <link>http://localhost:1313/posts/20231201/</link>
+      <link>http://localhost:1313/months/20231201/</link>
       <pubDate>Fri, 15 Dec 2023 08:50:28 +0000</pubDate>
-      <guid>http://localhost:1313/posts/20231201/</guid>
+      <guid>http://localhost:1313/months/20231201/</guid>
       <description>在赶due但是叛逆心情大爆发，需要写博客调理一下。我以为我考上研过上的是每天打球的生活，没想到我过上了学习时间全学习，休息时间全打球的生活。</description>
     </item>
     <item>
       <title>月记 | 9月:人生就是在摆烂后冲刺</title>
-      <link>http://localhost:1313/posts/20231006/</link>
+      <link>http://localhost:1313/months/20231006/</link>
       <pubDate>Fri, 06 Oct 2023 04:15:28 +0000</pubDate>
-      <guid>http://localhost:1313/posts/20231006/</guid>
+      <guid>http://localhost:1313/months/20231006/</guid>
       <description>再来趁热打铁写一下九月月记！有热情的时候就要快点开始！ 新冠踏上新旅途之前，要先感受一下世界的险恶。可能是看大烂片封神的时候感染的，要是个好电</description>
     </item>
     <item>
@@ -59,30 +59,30 @@
     </item>
     <item>
       <title>月记 | 4月:离别与重逢的四重奏</title>
-      <link>http://localhost:1313/posts/20230527/</link>
+      <link>http://localhost:1313/months/20230527/</link>
       <pubDate>Sat, 27 May 2023 15:33:11 +0000</pubDate>
-      <guid>http://localhost:1313/posts/20230527/</guid>
+      <guid>http://localhost:1313/months/20230527/</guid>
       <description>现在时间5月27日23点33分，五月底开始写四月月记，这是因为谁也没有想到，原计划一周的旅行最后走了一个月，四月底我备赛前往上海，五月底我才</description>
     </item>
     <item>
       <title>月记 | 3月:永远年轻，永远做个铁人</title>
-      <link>http://localhost:1313/posts/20230421/</link>
+      <link>http://localhost:1313/months/20230421/</link>
       <pubDate>Fri, 21 Apr 2023 01:16:59 +0000</pubDate>
-      <guid>http://localhost:1313/posts/20230421/</guid>
+      <guid>http://localhost:1313/months/20230421/</guid>
       <description>这个月真是跌宕起伏，峰回路转，柳暗花明，充满波折的一个月。 回顾时间线就是(三个月写的新工具这不就用上了！) 3.01-3.18 和流浪小狗鬼混 2月底和流浪小狗开</description>
     </item>
     <item>
       <title>月记 | 2月:高强度社交/习惯性发疯/发现新工具</title>
-      <link>http://localhost:1313/posts/20230228/</link>
+      <link>http://localhost:1313/months/20230228/</link>
       <pubDate>Tue, 28 Feb 2023 14:37:23 +0000</pubDate>
-      <guid>http://localhost:1313/posts/20230228/</guid>
+      <guid>http://localhost:1313/months/20230228/</guid>
       <description>可能有点看不清，但这个截图上写的是： 永遠に寝られるから、今起きてやる。 以下内容在此bgm下书写。 2月，摆烂前半段，发疯后半段。 摆烂前半段du</description>
     </item>
     <item>
       <title>月记 | 1月：疯狂追剧/探索新可能/偶尔现充</title>
-      <link>http://localhost:1313/posts/20230206/</link>
+      <link>http://localhost:1313/docs/installation/</link>
       <pubDate>Sat, 18 Feb 2023 08:38:40 +0000</pubDate>
-      <guid>http://localhost:1313/posts/20230206/</guid>
+      <guid>http://localhost:1313/docs/installation/</guid>
       <description>二月了但是还拖着一月的月记没有写，嗯，写了就行，现在开始写已经很棒了。 结束了疯狂的卷卷卷考研，没想到比我疯的还早的是小城市放开之后的大感染。</description>
     </item>
     <item>

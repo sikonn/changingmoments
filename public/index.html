@@ -8,7 +8,7 @@
       id="viewport"
       content="width=device-width, initial-scale=1.0" />
     <title>
-      Seven 主题
+      蝴蝶曾在此处
     </title><meta
   name="application-name"
   content="Seven Demo" />
@@ -17,11 +17,11 @@
   content="Seven Demo" />
 
 
-  <meta name="title" content="Seven 主题" />
+  <meta name="title" content="蝴蝶曾在此处" />
 
 
 
-  <meta name="description" content="一款简洁、漂亮的 HUGO 博客主题" />
+  <meta name="description" content="Strength can be built." />
 <meta name="theme-color" content="#ffffff" /><link rel="icon" href="/favicon.svg" /><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffffff" />
 
 
@@ -122,7 +122,7 @@
       scrollY: 0,
       bgOpen: true,
       darkImg: '/images/bg-dark.svg',
-      lightImg: '/images/bg.svg',
+      lightImg: '/images/bg.jpg',
       newbgImg: '',
       bgImg: '',
 
@@ -152,7 +152,7 @@
       if (value && bgOpen) {
         bgImg = '/images/bg-dark.svg'
       } else if (!value && bgOpen) {
-        bgImg = '/images/bg.svg'
+        bgImg = '/images/bg.jpg'
       } 
     })"
     @click="newbgImg = getNewBgImg()"
@@ -177,7 +177,7 @@
     <div
       class="mx-auto flex w-screen flex-wrap items-center justify-between place-self-center object-center px-1 md:w-[1000px] md:px-4">
       <div class="flex lg:flex-1"><a x-data href="/" class="p-1.5">
-  <span class="sr-only">Seven 主题</span>
+  <span class="sr-only">蝴蝶曾在此处</span>
   
   
   
@@ -205,17 +205,9 @@
         
   
     <a
-      href="/"
-      class="hs-menus text-sm font-semibold leading-6 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
-      >文档</a
-    >
-  
-
-  
-    <a
       href="/posts/"
       class="hs-menus text-sm font-semibold leading-6 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
-      >博文</a
+      >Posts</a
     >
   
 
@@ -223,8 +215,66 @@
     <a
       href="/"
       class="hs-menus text-sm font-semibold leading-6 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
-      >归档</a
+      >Months</a
     >
+  
+
+  
+    <a
+      href="/archive/"
+      class="hs-menus text-sm font-semibold leading-6 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
+      >Archives</a
+    >
+  
+
+  
+    <div x-data="{ isOpen: false }" class="hs-menus relative">
+      <button
+        type="button"
+        @click="isOpen = !isOpen"
+        class="group flex items-center text-sm font-semibold leading-6 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
+        aria-expanded="false">
+        About
+        <svg
+          class="size-4 flex-none transition"
+          :class="{ 'rotate-180': isOpen }"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          aria-hidden="true">
+          <path
+            fill-rule="evenodd"
+            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+            clip-rule="evenodd" />
+        </svg>
+      </button>
+
+      <div
+        x-show="isOpen"
+        x-cloak
+        x-transition:enter="transition ease-out duration-200"
+        x-transition:enter-start="opacity-0 translate-y-1"
+        x-transition:enter-end="opacity-100 translate-y-0"
+        x-transition:leave="transition ease-in duration-150"
+        x-transition:leave-start="opacity-100 translate-y-0"
+        x-transition:leave-end="opacity-0 translate-y-1"
+        @click.away="isOpen = false"
+        @scroll.window.away="isOpen = (window.scrollY > 300 ? false : true)"
+        class="absolute -left-6 top-full z-10 mt-3 w-screen max-w-40 overflow-hidden rounded-xl bg-white/95 shadow-lg ring-1 ring-gray-900/5 backdrop-blur-xl dark:bg-gray-800/95">
+        <div class="p-2">
+          
+            <div
+              class="relative rounded-lg px-4 py-2.5 text-sm leading-6 hover:bg-gray-300/30 hover:backdrop-blur-md">
+              <a
+                href="/goods/"
+                class="block font-semibold text-gray-900 hover:text-[--hs-text-color-hover] dark:text-gray-400 dark:hover:text-white">
+                friends
+                <span class="absolute inset-0"></span>
+              </a>
+            </div>
+          
+        </div>
+      </div>
+    </div>
   
 
   
@@ -261,16 +311,6 @@
         @scroll.window.away="isOpen = (window.scrollY > 300 ? false : true)"
         class="absolute -left-6 top-full z-10 mt-3 w-screen max-w-40 overflow-hidden rounded-xl bg-white/95 shadow-lg ring-1 ring-gray-900/5 backdrop-blur-xl dark:bg-gray-800/95">
         <div class="p-2">
-          
-            <div
-              class="relative rounded-lg px-4 py-2.5 text-sm leading-6 hover:bg-gray-300/30 hover:backdrop-blur-md">
-              <a
-                href="/"
-                class="block font-semibold text-gray-900 hover:text-[--hs-text-color-hover] dark:text-gray-400 dark:hover:text-white">
-                好物
-                <span class="absolute inset-0"></span>
-              </a>
-            </div>
           
             <div
               class="relative rounded-lg px-4 py-2.5 text-sm leading-6 hover:bg-gray-300/30 hover:backdrop-blur-md">
@@ -322,6 +362,16 @@
       @scroll.window.away="isOpen = false"
       class="absolute -left-6 top-full z-10 mt-3 w-screen max-w-40 overflow-hidden rounded-xl bg-white/95 shadow-lg ring-1 ring-gray-900/5 backdrop-blur-xl dark:bg-gray-800/95">
       <div class="p-2">
+        
+          <div
+            class="relative rounded-lg px-4 py-2.5 text-sm leading-6 hover:bg-gray-300/30 hover:backdrop-blur-md">
+            <a
+              href="http://localhost:1313/categories/months/"
+              class="block font-semibold text-gray-900 hover:text-[--hs-text-color-hover] dark:text-gray-400 dark:hover:text-white">
+              Months
+              <span class="absolute inset-0"></span>
+            </a>
+          </div>
         
       </div>
     </div>
@@ -459,7 +509,7 @@
     <div
       class="fixed inset-0 z-10 w-full overflow-y-auto bg-white/85 p-4 backdrop-blur-md dark:bg-gray-900/85 sm:ring-1 sm:ring-gray-900/10">
       <div class="mx-auto mt-10 flex w-full items-center justify-center"><a x-data href="/" class="p-1.5">
-  <span class="sr-only">Seven 主题</span>
+  <span class="sr-only">蝴蝶曾在此处</span>
   
   
   
@@ -489,17 +539,9 @@
             
   
     <a
-      href="/"
-      class="hs-menus w-full rounded-lg px-3 py-2 text-center text-base font-semibold leading-7 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
-      >文档</a
-    >
-  
-
-  
-    <a
       href="/posts/"
       class="hs-menus w-full rounded-lg px-3 py-2 text-center text-base font-semibold leading-7 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
-      >博文</a
+      >Posts</a
     >
   
 
@@ -507,8 +549,56 @@
     <a
       href="/"
       class="hs-menus w-full rounded-lg px-3 py-2 text-center text-base font-semibold leading-7 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
-      >归档</a
+      >Months</a
     >
+  
+
+  
+    <a
+      href="/archive/"
+      class="hs-menus w-full rounded-lg px-3 py-2 text-center text-base font-semibold leading-7 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
+      >Archives</a
+    >
+  
+
+  
+    <div x-data="{ subMenuOpen: false }" class="hs-menus">
+      <button
+        @click="subMenuOpen = !subMenuOpen"
+        type="button"
+        :class="{ 'text-[--hs-text-color-hover]': subMenuOpen, 'text-gray-900': !subMenuOpen, 'dark:text-[--hs-text-color-hover]': subMenuOpen, 'dark:text-white': !subMenuOpen }"
+        class="group flex w-full flex-col items-center justify-center rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:text-[--hs-text-color-hover]"
+        aria-controls="disclosure-1"
+        aria-expanded="false">
+        <span>About</span>
+        <svg
+          :class="{ 'rotate-180': subMenuOpen }"
+          class="size-4 flex-none transition"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          aria-hidden="true">
+          <path
+            fill-rule="evenodd"
+            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+            clip-rule="evenodd" />
+        </svg>
+      </button>
+      <div
+        x-show="subMenuOpen"
+        x-cloak
+        x-collapse
+        class="flex flex-col space-y-1"
+        id="disclosure-1">
+        
+          <a
+            href="/goods/"
+            class="w-full rounded-lg px-3 py-2 text-center text-sm font-semibold leading-7 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
+            >friends</a
+          >
+        
+
+      </div>
+    </div>
   
 
   
@@ -539,12 +629,6 @@
         x-collapse
         class="flex flex-col space-y-1"
         id="disclosure-1">
-        
-          <a
-            href="/"
-            class="w-full rounded-lg px-3 py-2 text-center text-sm font-semibold leading-7 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
-            >好物</a
-          >
         
           <a
             href="https://seven-demo-with-twikoo.netlify.app/"
@@ -587,6 +671,12 @@
       x-collapse
       class="flex flex-col space-y-1"
       id="disclosure-1">
+      
+        <a
+          href="http://localhost:1313/categories/months/"
+          class="block rounded-lg px-3 py-2 text-center text-sm font-semibold leading-7 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
+          >Months</a
+        >
       
 
     </div>
@@ -724,84 +814,6 @@
               class="group flex w-full flex-col space-y-5 md:w-2/3 md:space-y-7">
               <div
                 class="hs-content-meta flex items-center justify-start space-x-2 text-sm text-gray-600 dark:text-gray-500">
-                <p>2024/04/03</p>
-                <div class="size-1 rounded-full bg-red-800"></div>
-                <p></p>
-              </div>
-              <a
-                href="http://localhost:1313/posts/20240403/"
-                class="hs-content-title text-4xl font-bold group-hover:text-[--hs-text-color-hover] dark:text-gray-300"
-                >月记 | 3月:春来复苏快乐多</a
-              >
-
-              <div
-                class="h-60 w-full"
-                x-intersect.threshold.70="isLoaded = true;">
-                
-              </div>
-            </div>
-            
-            <div
-              class="hidden flex-col justify-center space-y-3 border-l-[1px] border-l-gray-200 p-6 text-start dark:border-l-gray-800 md:flex md:w-1/3">
-              <p
-                class="hs-summary-title text-xl font-bold text-gray-800 underline decoration-[--hs-decoration-color] decoration-4 underline-offset-4 dark:text-gray-400">
-                摘要
-              </p>
-              <div
-                class="hs-summary line-clamp-[10] text-pretty tracking-wide text-gray-700 dark:text-gray-500">
-                来健身！终于去办健身卡了，看到学姐发朋友圈我立即私戳，获得了和美女一起健身的机会！还拉了好几个朋友一起来健身，我教练，我队友，连和我一起上选
-              </div>
-            </div>
-          </div>
-        
-          <div
-            x-intersect.margin.-50%.0="loadNum = 2"
-            class="flex space-x-7 p-1 md:p-4">
-            
-            <div
-              x-data="{ isLoaded: false }"
-              class="group flex w-full flex-col space-y-5 md:w-2/3 md:space-y-7">
-              <div
-                class="hs-content-meta flex items-center justify-start space-x-2 text-sm text-gray-600 dark:text-gray-500">
-                <p>2024/03/08</p>
-                <div class="size-1 rounded-full bg-red-800"></div>
-                <p></p>
-              </div>
-              <a
-                href="http://localhost:1313/posts/20240308/"
-                class="hs-content-title text-4xl font-bold group-hover:text-[--hs-text-color-hover] dark:text-gray-300"
-                >月记 | 2月:跌跌撞撞的寒假生活</a
-              >
-
-              <div
-                class="h-60 w-full"
-                x-intersect.threshold.70="isLoaded = true;">
-                
-              </div>
-            </div>
-            
-            <div
-              class="hidden flex-col justify-center space-y-3 border-l-[1px] border-l-gray-200 p-6 text-start dark:border-l-gray-800 md:flex md:w-1/3">
-              <p
-                class="hs-summary-title text-xl font-bold text-gray-800 underline decoration-[--hs-decoration-color] decoration-4 underline-offset-4 dark:text-gray-400">
-                摘要
-              </p>
-              <div
-                class="hs-summary line-clamp-[10] text-pretty tracking-wide text-gray-700 dark:text-gray-500">
-                二月可以有清晰的划分，前半部分是晒着太阳懒懒洋洋的过年，后半部分是躲在阴暗的房间里为我的阳光付费，谁懂啊！谁在乎啊！寒假有8篇论文的感受！ 懒
-              </div>
-            </div>
-          </div>
-        
-          <div
-            x-intersect.margin.-50%.0="loadNum = 3"
-            class="flex space-x-7 p-1 md:p-4">
-            
-            <div
-              x-data="{ isLoaded: false }"
-              class="group flex w-full flex-col space-y-5 md:w-2/3 md:space-y-7">
-              <div
-                class="hs-content-meta flex items-center justify-start space-x-2 text-sm text-gray-600 dark:text-gray-500">
                 <p>2024/02/05</p>
                 <div class="size-1 rounded-full bg-red-800"></div>
                 <p></p>
@@ -833,7 +845,7 @@
           </div>
         
           <div
-            x-intersect.margin.-50%.0="loadNum = 4"
+            x-intersect.margin.-50%.0="loadNum = 2"
             class="flex space-x-7 p-1 md:p-4">
             
             <div
@@ -872,7 +884,7 @@
           </div>
         
           <div
-            x-intersect.margin.-50%.0="loadNum = 5"
+            x-intersect.margin.-50%.0="loadNum = 3"
             class="flex space-x-7 p-1 md:p-4">
             
             <div
@@ -906,6 +918,84 @@
               <div
                 class="hs-summary line-clamp-[10] text-pretty tracking-wide text-gray-700 dark:text-gray-500">
                 写完一月月记突然发现很多Aha Moment没有写进去，于是又新开一篇www 这篇灵感之一来自播客放学以后afterschool的39期啊哈！对
+              </div>
+            </div>
+          </div>
+        
+          <div
+            x-intersect.margin.-50%.0="loadNum = 4"
+            class="flex space-x-7 p-1 md:p-4">
+            
+            <div
+              x-data="{ isLoaded: false }"
+              class="group flex w-full flex-col space-y-5 md:w-2/3 md:space-y-7">
+              <div
+                class="hs-content-meta flex items-center justify-start space-x-2 text-sm text-gray-600 dark:text-gray-500">
+                <p>2024/01/01</p>
+                <div class="size-1 rounded-full bg-red-800"></div>
+                <p></p>
+              </div>
+              <a
+                href="http://localhost:1313/posts/20240101/"
+                class="hs-content-title text-4xl font-bold group-hover:text-[--hs-text-color-hover] dark:text-gray-300"
+                >2023 | 生きていて幸せだねー</a
+              >
+
+              <div
+                class="h-60 w-full"
+                x-intersect.threshold.70="isLoaded = true;">
+                
+              </div>
+            </div>
+            
+            <div
+              class="hidden flex-col justify-center space-y-3 border-l-[1px] border-l-gray-200 p-6 text-start dark:border-l-gray-800 md:flex md:w-1/3">
+              <p
+                class="hs-summary-title text-xl font-bold text-gray-800 underline decoration-[--hs-decoration-color] decoration-4 underline-offset-4 dark:text-gray-400">
+                摘要
+              </p>
+              <div
+                class="hs-summary line-clamp-[10] text-pretty tracking-wide text-gray-700 dark:text-gray-500">
+                同样是听着年度歌单写着年终总结的我，请问大家听着年度歌单不会只想唱歌不想写吗（哈哈哈哈哈，打下今年2023，又忽然意识到已经是2024年1月
+              </div>
+            </div>
+          </div>
+        
+          <div
+            x-intersect.margin.-50%.0="loadNum = 5"
+            class="flex space-x-7 p-1 md:p-4">
+            
+            <div
+              x-data="{ isLoaded: false }"
+              class="group flex w-full flex-col space-y-5 md:w-2/3 md:space-y-7">
+              <div
+                class="hs-content-meta flex items-center justify-start space-x-2 text-sm text-gray-600 dark:text-gray-500">
+                <p>2023/12/26</p>
+                <div class="size-1 rounded-full bg-red-800"></div>
+                <p></p>
+              </div>
+              <a
+                href="http://localhost:1313/posts/20231226/"
+                class="hs-content-title text-4xl font-bold group-hover:text-[--hs-text-color-hover] dark:text-gray-300"
+                >2023 | 出轨、3p、黑车、纯爱我都要</a
+              >
+
+              <div
+                class="h-60 w-full"
+                x-intersect.threshold.70="isLoaded = true;">
+                
+              </div>
+            </div>
+            
+            <div
+              class="hidden flex-col justify-center space-y-3 border-l-[1px] border-l-gray-200 p-6 text-start dark:border-l-gray-800 md:flex md:w-1/3">
+              <p
+                class="hs-summary-title text-xl font-bold text-gray-800 underline decoration-[--hs-decoration-color] decoration-4 underline-offset-4 dark:text-gray-400">
+                摘要
+              </p>
+              <div
+                class="hs-summary line-clamp-[10] text-pretty tracking-wide text-gray-700 dark:text-gray-500">
+                又是一个在搞ddl的日子，又除了ddl什么都想搞。 今年6月我开始买dlsite！可能几百年前朋友推荐给我过，也听过一些免费的，比如那个深川绿
               </div>
             </div>
           </div>

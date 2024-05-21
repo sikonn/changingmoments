@@ -17,7 +17,7 @@ enableHighlight = true
 
 [background]
   enable = true
-  lightImg = "/images/bg.svg"
+  lightImg = "/images/bg.jpg"
   darkImg = "/images/bg-dark.svg"
 
   # There's a transition animation in the background when you turn on dark mode.

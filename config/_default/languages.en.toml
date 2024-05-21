@@ -1,9 +1,9 @@
 languageCode = "en"
 languageName = "English"
-title = "Seven Theme"
+title = "蝴蝶曾在此处"
 weight = 2
 
 [params]
-  description = "A Simple And Beautiful Blog Theme For Hugo"
+  description = "Strength can be built。"
   omitCategoryOnMenu = false
   categoryName = "Category"

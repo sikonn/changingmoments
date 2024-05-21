@@ -1,26 +1,26 @@
 [[main]]
-  name = "文档"
-  pageRef = "docs"
+  name = "Posts"
+  pageRef = "posts"
   weight = 10
 
 [[main]]
-  name = "博文"
-  pageRef = "posts"
+  name = "Months"
+  pageRef = "docs"
   weight = 20
 
 [[main]]
-  name = "归档"
+  name = "Archives"
   pageRef = "archive"
   weight = 30
 
 [[main]]
-  name = "其他"
+  name = "About"
   weight = 40
 [[main]]
   identifier = "goods"
-  name = "好物"
+  name = "friends"
   pageRef = "goods"
-  parent = '其他'
+  parent = 'About'
   weight = 10
 [[main]]
   identifier = "comments-with-twikoo"

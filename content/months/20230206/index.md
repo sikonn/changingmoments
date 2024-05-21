@@ -1,16 +1,21 @@
 ---
-layout: post
+layout: months
+categories: ["Months"]
 tags:
   - 天天的快乐日记
 title: 月记 | 1月：疯狂追剧/探索新可能/偶尔现充
 series:
   - monthly
 series_order: 1
+description: "一月月记"
+url: "months/20230206"
+image: "/images/docs/installation.webp"
 date: 2023-02-18T08:38:40.658Z
 math: false
 draft: false
 lastmod: 2023-02-18T11:54:17.186Z
 ---
+
 二月了但是还拖着一月的月记没有写，嗯，写了就行，现在开始写已经很棒了。
 
 结束了疯狂的卷卷卷考研，没想到比我疯的还早的是小城市放开之后的大感染。考完研那天下午下了大雪，也是今年的初雪。出了考场往窗外一看，白茫茫一片。教学楼下的松树就像圣诞树一样，圣诞快乐，初雪快乐。
