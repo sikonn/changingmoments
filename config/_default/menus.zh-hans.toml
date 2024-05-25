@@ -3,28 +3,29 @@
   pageRef = "posts"
   weight = 10
 
-[[main]]
-  name = "Months"
-  pageRef = "docs"
-  weight = 20
+#[[main]]
+#  name = "Months"
+#  pageRef = "docs"
+#  weight = 20
 
 [[main]]
   name = "Archives"
   pageRef = "archive"
-  weight = 30
+  weight = 20
 
 [[main]]
   name = "About"
-  weight = 40
+  weight = 30
 [[main]]
   identifier = "goods"
   name = "friends"
   pageRef = "goods"
   parent = 'About'
   weight = 10
-[[main]]
-  identifier = "comments-with-twikoo"
-  name = "Twikoo评论版"
-  url = "https://seven-demo-with-twikoo.netlify.app/"
-  parent = '其他'
-  weight = 20
+
+#[[main]]
+#  identifier = "comments-with-twikoo"
+#  name = "Twikoo评论版"
+#  url = "https://seven-demo-with-twikoo.netlify.app/"
+#  parent = '其他'
+#  weight = 20

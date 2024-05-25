@@ -5,31 +5,8 @@
     <loc>http://localhost:1313/months/20230206/</loc>
     <lastmod>2024-05-21T22:17:28+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2024-05-21T22:17:28+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-hans"
-                href="http://localhost:1313/"
-                />
-  </url><url>
-    <loc>http://localhost:1313/months/</loc>
-    <lastmod>2024-05-21T22:17:28+08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://localhost:1313/en/months/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-hans"
-                href="http://localhost:1313/months/"
-                />
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
     <lastmod>2024-05-21T22:17:28+08:00</lastmod>
@@ -44,19 +21,29 @@
                 href="http://localhost:1313/tags/"
                 />
   </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2024-05-21T22:17:28+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://localhost:1313/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-hans"
+                href="http://localhost:1313/"
+                />
+  </url><url>
     <loc>http://localhost:1313/tags/%E5%A4%A9%E5%A4%A9%E7%9A%84%E5%BF%AB%E4%B9%90%E6%97%A5%E8%AE%B0/</loc>
     <lastmod>2024-05-21T22:17:28+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/months/20240403/</loc>
+    <loc>http://localhost:1313/posts/20240403/</loc>
     <lastmod>2024-05-21T22:17:28+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/months/20240308/</loc>
+    <loc>http://localhost:1313/posts/20240308/</loc>
     <lastmod>2024-05-21T22:17:28+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/20240122/</loc>
-    <lastmod>2024-05-19T23:39:58+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2024-05-19T23:39:58+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E6%8E%A8%E3%81%97%E3%81%97%E3%81%8B%E5%8B%9D%E3%81%9F%E3%82%93/</loc>
@@ -74,7 +61,7 @@
     <loc>http://localhost:1313/tags/%E5%A4%A9%E5%A4%A9%E4%B9%A6%E5%BD%B1%E9%81%A8%E6%B8%B8/</loc>
     <lastmod>2024-02-04T22:21:28+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/months/20240203/</loc>
+    <loc>http://localhost:1313/posts/20240203/</loc>
     <lastmod>2024-05-21T22:17:28+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/goods/</loc>
@@ -86,7 +73,7 @@
     <loc>http://localhost:1313/posts/20231226/</loc>
     <lastmod>2024-01-01T23:19:21+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/months/20231201/</loc>
+    <loc>http://localhost:1313/posts/20231201/</loc>
     <lastmod>2024-05-21T22:17:28+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/20231212/</loc>
@@ -98,7 +85,7 @@
     <loc>http://localhost:1313/posts/20231007/</loc>
     <lastmod>2023-12-12T14:55:44+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/months/20231006/</loc>
+    <loc>http://localhost:1313/posts/20231006/</loc>
     <lastmod>2024-05-21T22:17:28+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/20231005/</loc>
@@ -113,13 +100,13 @@
     <loc>http://localhost:1313/posts/20230528/</loc>
     <lastmod>2023-06-24T23:14:03+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/months/20230527/</loc>
+    <loc>http://localhost:1313/posts/20230527/</loc>
     <lastmod>2024-05-21T22:17:28+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/months/20230421/</loc>
+    <loc>http://localhost:1313/posts/20230421/</loc>
     <lastmod>2024-05-21T22:17:28+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/months/20230228/</loc>
+    <loc>http://localhost:1313/posts/20230228/</loc>
     <lastmod>2024-05-21T22:17:28+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/20230220/</loc>

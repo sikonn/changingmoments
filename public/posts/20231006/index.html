@@ -125,7 +125,7 @@
       shrink: false,
       enableBgAni: true,
       scrollY: 0,
-      bgOpen: true,
+      bgOpen: false,
       darkImg: '/images/bg-dark.svg',
       lightImg: '/images/bg.jpg',
       newbgImg: '',
@@ -213,14 +213,6 @@
       href="/posts/"
       class="hs-menus text-sm font-semibold leading-6 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
       >Posts</a
-    >
-  
-
-  
-    <a
-      href="/"
-      class="hs-menus text-sm font-semibold leading-6 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
-      >Months</a
     >
   
 
@@ -367,6 +359,16 @@
       @scroll.window.away="isOpen = false"
       class="absolute -left-6 top-full z-10 mt-3 w-screen max-w-40 overflow-hidden rounded-xl bg-white/95 shadow-lg ring-1 ring-gray-900/5 backdrop-blur-xl dark:bg-gray-800/95">
       <div class="p-2">
+        
+          <div
+            class="relative rounded-lg px-4 py-2.5 text-sm leading-6 hover:bg-gray-300/30 hover:backdrop-blur-md">
+            <a
+              href="http://localhost:1313/categories/months/"
+              class="block font-semibold text-gray-900 hover:text-[--hs-text-color-hover] dark:text-gray-400 dark:hover:text-white">
+              Months
+              <span class="absolute inset-0"></span>
+            </a>
+          </div>
         
       </div>
     </div>
@@ -542,14 +544,6 @@
 
   
     <a
-      href="/"
-      class="hs-menus w-full rounded-lg px-3 py-2 text-center text-base font-semibold leading-7 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
-      >Months</a
-    >
-  
-
-  
-    <a
       href="/archive/"
       class="hs-menus w-full rounded-lg px-3 py-2 text-center text-base font-semibold leading-7 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
       >Archives</a
@@ -666,6 +660,12 @@
       x-collapse
       class="flex flex-col space-y-1"
       id="disclosure-1">
+      
+        <a
+          href="http://localhost:1313/categories/months/"
+          class="block rounded-lg px-3 py-2 text-center text-sm font-semibold leading-7 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
+          >Months</a
+        >
       
 
     </div>

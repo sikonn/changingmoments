@@ -122,7 +122,7 @@
       shrink: false,
       enableBgAni: true,
       scrollY: 0,
-      bgOpen: true,
+      bgOpen: false,
       darkImg: '/images/bg-dark.svg',
       lightImg: '/images/bg.jpg',
       newbgImg: '',
@@ -210,14 +210,6 @@
       href="/posts/"
       class="hs-menus text-sm font-semibold leading-6 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
       >Posts</a
-    >
-  
-
-  
-    <a
-      href="/"
-      class="hs-menus text-sm font-semibold leading-6 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
-      >Months</a
     >
   
 
@@ -549,14 +541,6 @@
 
   
     <a
-      href="/"
-      class="hs-menus w-full rounded-lg px-3 py-2 text-center text-base font-semibold leading-7 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
-      >Months</a
-    >
-  
-
-  
-    <a
       href="/archive/"
       class="hs-menus w-full rounded-lg px-3 py-2 text-center text-base font-semibold leading-7 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
       >Archives</a
@@ -718,6 +702,267 @@
     <ul
       class="mx-auto grid w-full grid-cols-1 gap-x-4 gap-y-6 md:grid-cols-2 lg:grid-cols-3">
       
+      
+        <li
+  x-data="{ isLoaded: false }"
+  class="items-stretch"
+  x-intersect.threshold.30="isLoaded = true">
+  <div x-show="!isLoaded" x-cloak class="h-56 w-full bg-transparent"></div>
+  <div
+    x-show="isLoaded"
+    x-cloak
+    class="group h-full animate-slideTop overflow-hidden rounded-md bg-white/50 shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] backdrop-blur-md transition hover:shadow-md dark:bg-gray-800/70 dark:shadow-[0_5px_15px_rgba(0,0,0,0.35)]">
+    <div class="h-64 w-full md:h-48">
+      
+    </div>
+
+    <div class="px-4 py-6 sm:p-6">
+      <p class="hs-content-meta block text-xs text-gray-600 dark:text-gray-400">
+        2022/06/28
+      </p>
+
+      <a href="http://localhost:1313/posts/20220628/">
+        <p
+          class="hs-content-title mt-2 text-lg text-gray-900 group-hover:text-[--hs-text-color-hover] dark:text-gray-300">
+          HUGO &amp; VNO | 换主题踩坑实录
+        </p>
+      </a>
+    </div>
+  </div>
+</li>
+
+      
+        <li
+  x-data="{ isLoaded: false }"
+  class="items-stretch"
+  x-intersect.threshold.30="isLoaded = true">
+  <div x-show="!isLoaded" x-cloak class="h-56 w-full bg-transparent"></div>
+  <div
+    x-show="isLoaded"
+    x-cloak
+    class="group h-full animate-slideTop overflow-hidden rounded-md bg-white/50 shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] backdrop-blur-md transition hover:shadow-md dark:bg-gray-800/70 dark:shadow-[0_5px_15px_rgba(0,0,0,0.35)]">
+    <div class="h-64 w-full md:h-48">
+      
+    </div>
+
+    <div class="px-4 py-6 sm:p-6">
+      <p class="hs-content-meta block text-xs text-gray-600 dark:text-gray-400">
+        2022/06/22
+      </p>
+
+      <a href="http://localhost:1313/posts/20220622/">
+        <p
+          class="hs-content-title mt-2 text-lg text-gray-900 group-hover:text-[--hs-text-color-hover] dark:text-gray-300">
+          日记 | 白色隧道的雨
+        </p>
+      </a>
+    </div>
+  </div>
+</li>
+
+      
+        <li
+  x-data="{ isLoaded: false }"
+  class="items-stretch"
+  x-intersect.threshold.30="isLoaded = true">
+  <div x-show="!isLoaded" x-cloak class="h-56 w-full bg-transparent"></div>
+  <div
+    x-show="isLoaded"
+    x-cloak
+    class="group h-full animate-slideTop overflow-hidden rounded-md bg-white/50 shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] backdrop-blur-md transition hover:shadow-md dark:bg-gray-800/70 dark:shadow-[0_5px_15px_rgba(0,0,0,0.35)]">
+    <div class="h-64 w-full md:h-48">
+      
+    </div>
+
+    <div class="px-4 py-6 sm:p-6">
+      <p class="hs-content-meta block text-xs text-gray-600 dark:text-gray-400">
+        2022/06/20
+      </p>
+
+      <a href="http://localhost:1313/posts/20220620/">
+        <p
+          class="hs-content-title mt-2 text-lg text-gray-900 group-hover:text-[--hs-text-color-hover] dark:text-gray-300">
+          感受 | 交往要有一线之隔
+        </p>
+      </a>
+    </div>
+  </div>
+</li>
+
+      
+        <li
+  x-data="{ isLoaded: false }"
+  class="items-stretch"
+  x-intersect.threshold.30="isLoaded = true">
+  <div x-show="!isLoaded" x-cloak class="h-56 w-full bg-transparent"></div>
+  <div
+    x-show="isLoaded"
+    x-cloak
+    class="group h-full animate-slideTop overflow-hidden rounded-md bg-white/50 shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] backdrop-blur-md transition hover:shadow-md dark:bg-gray-800/70 dark:shadow-[0_5px_15px_rgba(0,0,0,0.35)]">
+    <div class="h-64 w-full md:h-48">
+      
+    </div>
+
+    <div class="px-4 py-6 sm:p-6">
+      <p class="hs-content-meta block text-xs text-gray-600 dark:text-gray-400">
+        2022/06/04
+      </p>
+
+      <a href="http://localhost:1313/posts/20220601/">
+        <p
+          class="hs-content-title mt-2 text-lg text-gray-900 group-hover:text-[--hs-text-color-hover] dark:text-gray-300">
+          感受 | 远离大谈尊重
+        </p>
+      </a>
+    </div>
+  </div>
+</li>
+
+      
+        <li
+  x-data="{ isLoaded: false }"
+  class="items-stretch"
+  x-intersect.threshold.30="isLoaded = true">
+  <div x-show="!isLoaded" x-cloak class="h-56 w-full bg-transparent"></div>
+  <div
+    x-show="isLoaded"
+    x-cloak
+    class="group h-full animate-slideTop overflow-hidden rounded-md bg-white/50 shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] backdrop-blur-md transition hover:shadow-md dark:bg-gray-800/70 dark:shadow-[0_5px_15px_rgba(0,0,0,0.35)]">
+    <div class="h-64 w-full md:h-48">
+      
+    </div>
+
+    <div class="px-4 py-6 sm:p-6">
+      <p class="hs-content-meta block text-xs text-gray-600 dark:text-gray-400">
+        2022/05/31
+      </p>
+
+      <a href="http://localhost:1313/posts/20220531/">
+        <p
+          class="hs-content-title mt-2 text-lg text-gray-900 group-hover:text-[--hs-text-color-hover] dark:text-gray-300">
+          感受 | 我在对我有害的环境中长大
+        </p>
+      </a>
+    </div>
+  </div>
+</li>
+
+      
+        <li
+  x-data="{ isLoaded: false }"
+  class="items-stretch"
+  x-intersect.threshold.30="isLoaded = true">
+  <div x-show="!isLoaded" x-cloak class="h-56 w-full bg-transparent"></div>
+  <div
+    x-show="isLoaded"
+    x-cloak
+    class="group h-full animate-slideTop overflow-hidden rounded-md bg-white/50 shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] backdrop-blur-md transition hover:shadow-md dark:bg-gray-800/70 dark:shadow-[0_5px_15px_rgba(0,0,0,0.35)]">
+    <div class="h-64 w-full md:h-48">
+      
+    </div>
+
+    <div class="px-4 py-6 sm:p-6">
+      <p class="hs-content-meta block text-xs text-gray-600 dark:text-gray-400">
+        2022/05/21
+      </p>
+
+      <a href="http://localhost:1313/posts/20220521/">
+        <p
+          class="hs-content-title mt-2 text-lg text-gray-900 group-hover:text-[--hs-text-color-hover] dark:text-gray-300">
+          思考 | 听话的中国小孩，驯化的中国人
+        </p>
+      </a>
+    </div>
+  </div>
+</li>
+
+      
+        <li
+  x-data="{ isLoaded: false }"
+  class="items-stretch"
+  x-intersect.threshold.30="isLoaded = true">
+  <div x-show="!isLoaded" x-cloak class="h-56 w-full bg-transparent"></div>
+  <div
+    x-show="isLoaded"
+    x-cloak
+    class="group h-full animate-slideTop overflow-hidden rounded-md bg-white/50 shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] backdrop-blur-md transition hover:shadow-md dark:bg-gray-800/70 dark:shadow-[0_5px_15px_rgba(0,0,0,0.35)]">
+    <div class="h-64 w-full md:h-48">
+      
+    </div>
+
+    <div class="px-4 py-6 sm:p-6">
+      <p class="hs-content-meta block text-xs text-gray-600 dark:text-gray-400">
+        2022/05/21
+      </p>
+
+      <a href="http://localhost:1313/posts/20220517/">
+        <p
+          class="hs-content-title mt-2 text-lg text-gray-900 group-hover:text-[--hs-text-color-hover] dark:text-gray-300">
+          感受 | 中国式家庭的民主和科学
+        </p>
+      </a>
+    </div>
+  </div>
+</li>
+
+      
+        <li
+  x-data="{ isLoaded: false }"
+  class="items-stretch"
+  x-intersect.threshold.30="isLoaded = true">
+  <div x-show="!isLoaded" x-cloak class="h-56 w-full bg-transparent"></div>
+  <div
+    x-show="isLoaded"
+    x-cloak
+    class="group h-full animate-slideTop overflow-hidden rounded-md bg-white/50 shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] backdrop-blur-md transition hover:shadow-md dark:bg-gray-800/70 dark:shadow-[0_5px_15px_rgba(0,0,0,0.35)]">
+    <div class="h-64 w-full md:h-48">
+      
+    </div>
+
+    <div class="px-4 py-6 sm:p-6">
+      <p class="hs-content-meta block text-xs text-gray-600 dark:text-gray-400">
+        2022/05/20
+      </p>
+
+      <a href="http://localhost:1313/posts/%E6%95%99%E3%81%88%E3%82%8B%E6%95%99%E3%82%8F%E3%82%8B/">
+        <p
+          class="hs-content-title mt-2 text-lg text-gray-900 group-hover:text-[--hs-text-color-hover] dark:text-gray-300">
+          日语 | 教える＆教わる
+        </p>
+      </a>
+    </div>
+  </div>
+</li>
+
+      
+        <li
+  x-data="{ isLoaded: false }"
+  class="items-stretch"
+  x-intersect.threshold.30="isLoaded = true">
+  <div x-show="!isLoaded" x-cloak class="h-56 w-full bg-transparent"></div>
+  <div
+    x-show="isLoaded"
+    x-cloak
+    class="group h-full animate-slideTop overflow-hidden rounded-md bg-white/50 shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] backdrop-blur-md transition hover:shadow-md dark:bg-gray-800/70 dark:shadow-[0_5px_15px_rgba(0,0,0,0.35)]">
+    <div class="h-64 w-full md:h-48">
+      
+    </div>
+
+    <div class="px-4 py-6 sm:p-6">
+      <p class="hs-content-meta block text-xs text-gray-600 dark:text-gray-400">
+        2022/05/19
+      </p>
+
+      <a href="http://localhost:1313/posts/%E8%A2%AB%E6%8B%92%E4%B9%8B%E5%90%8E/">
+        <p
+          class="hs-content-title mt-2 text-lg text-gray-900 group-hover:text-[--hs-text-color-hover] dark:text-gray-300">
+          思考 | 被拒之后
+        </p>
+      </a>
+    </div>
+  </div>
+</li>
+
       
         <li
   x-data="{ isLoaded: false }"
@@ -980,267 +1225,6 @@
 </li>
 
       
-        <li
-  x-data="{ isLoaded: false }"
-  class="items-stretch"
-  x-intersect.threshold.30="isLoaded = true">
-  <div x-show="!isLoaded" x-cloak class="h-56 w-full bg-transparent"></div>
-  <div
-    x-show="isLoaded"
-    x-cloak
-    class="group h-full animate-slideTop overflow-hidden rounded-md bg-white/50 shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] backdrop-blur-md transition hover:shadow-md dark:bg-gray-800/70 dark:shadow-[0_5px_15px_rgba(0,0,0,0.35)]">
-    <div class="h-64 w-full md:h-48">
-      
-    </div>
-
-    <div class="px-4 py-6 sm:p-6">
-      <p class="hs-content-meta block text-xs text-gray-600 dark:text-gray-400">
-        2022/05/02
-      </p>
-
-      <a href="http://localhost:1313/posts/20220502/">
-        <p
-          class="hs-content-title mt-2 text-lg text-gray-900 group-hover:text-[--hs-text-color-hover] dark:text-gray-300">
-          快乐 | 撕掉封条的畅快
-        </p>
-      </a>
-    </div>
-  </div>
-</li>
-
-      
-        <li
-  x-data="{ isLoaded: false }"
-  class="items-stretch"
-  x-intersect.threshold.30="isLoaded = true">
-  <div x-show="!isLoaded" x-cloak class="h-56 w-full bg-transparent"></div>
-  <div
-    x-show="isLoaded"
-    x-cloak
-    class="group h-full animate-slideTop overflow-hidden rounded-md bg-white/50 shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] backdrop-blur-md transition hover:shadow-md dark:bg-gray-800/70 dark:shadow-[0_5px_15px_rgba(0,0,0,0.35)]">
-    <div class="h-64 w-full md:h-48">
-      
-    </div>
-
-    <div class="px-4 py-6 sm:p-6">
-      <p class="hs-content-meta block text-xs text-gray-600 dark:text-gray-400">
-        2022/05/02
-      </p>
-
-      <a href="http://localhost:1313/posts/%E7%8E%B0%E5%AE%9E%E4%B8%96%E7%95%8C%E7%9A%84%E6%97%A0%E5%8A%9B%E6%84%9F/">
-        <p
-          class="hs-content-title mt-2 text-lg text-gray-900 group-hover:text-[--hs-text-color-hover] dark:text-gray-300">
-          感受 | 现实世界的无力感
-        </p>
-      </a>
-    </div>
-  </div>
-</li>
-
-      
-        <li
-  x-data="{ isLoaded: false }"
-  class="items-stretch"
-  x-intersect.threshold.30="isLoaded = true">
-  <div x-show="!isLoaded" x-cloak class="h-56 w-full bg-transparent"></div>
-  <div
-    x-show="isLoaded"
-    x-cloak
-    class="group h-full animate-slideTop overflow-hidden rounded-md bg-white/50 shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] backdrop-blur-md transition hover:shadow-md dark:bg-gray-800/70 dark:shadow-[0_5px_15px_rgba(0,0,0,0.35)]">
-    <div class="h-64 w-full md:h-48">
-      
-    </div>
-
-    <div class="px-4 py-6 sm:p-6">
-      <p class="hs-content-meta block text-xs text-gray-600 dark:text-gray-400">
-        2022/05/02
-      </p>
-
-      <a href="http://localhost:1313/posts/hugo-meme/">
-        <p
-          class="hs-content-title mt-2 text-lg text-gray-900 group-hover:text-[--hs-text-color-hover] dark:text-gray-300">
-          HUGO &amp; MemE | 踩坑实录
-        </p>
-      </a>
-    </div>
-  </div>
-</li>
-
-      
-        <li
-  x-data="{ isLoaded: false }"
-  class="items-stretch"
-  x-intersect.threshold.30="isLoaded = true">
-  <div x-show="!isLoaded" x-cloak class="h-56 w-full bg-transparent"></div>
-  <div
-    x-show="isLoaded"
-    x-cloak
-    class="group h-full animate-slideTop overflow-hidden rounded-md bg-white/50 shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] backdrop-blur-md transition hover:shadow-md dark:bg-gray-800/70 dark:shadow-[0_5px_15px_rgba(0,0,0,0.35)]">
-    <div class="h-64 w-full md:h-48">
-      
-    </div>
-
-    <div class="px-4 py-6 sm:p-6">
-      <p class="hs-content-meta block text-xs text-gray-600 dark:text-gray-400">
-        2022/05/01
-      </p>
-
-      <a href="http://localhost:1313/posts/20220501/">
-        <p
-          class="hs-content-title mt-2 text-lg text-gray-900 group-hover:text-[--hs-text-color-hover] dark:text-gray-300">
-          日记 | 好久不见的充实
-        </p>
-      </a>
-    </div>
-  </div>
-</li>
-
-      
-        <li
-  x-data="{ isLoaded: false }"
-  class="items-stretch"
-  x-intersect.threshold.30="isLoaded = true">
-  <div x-show="!isLoaded" x-cloak class="h-56 w-full bg-transparent"></div>
-  <div
-    x-show="isLoaded"
-    x-cloak
-    class="group h-full animate-slideTop overflow-hidden rounded-md bg-white/50 shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] backdrop-blur-md transition hover:shadow-md dark:bg-gray-800/70 dark:shadow-[0_5px_15px_rgba(0,0,0,0.35)]">
-    <div class="h-64 w-full md:h-48">
-      
-    </div>
-
-    <div class="px-4 py-6 sm:p-6">
-      <p class="hs-content-meta block text-xs text-gray-600 dark:text-gray-400">
-        2022/05/01
-      </p>
-
-      <a href="http://localhost:1313/posts/%E8%AF%BB%E4%B9%A6%E4%BC%9A/">
-        <p
-          class="hs-content-title mt-2 text-lg text-gray-900 group-hover:text-[--hs-text-color-hover] dark:text-gray-300">
-          读书会 | 《HUNGER：一部身体的回忆录》
-        </p>
-      </a>
-    </div>
-  </div>
-</li>
-
-      
-        <li
-  x-data="{ isLoaded: false }"
-  class="items-stretch"
-  x-intersect.threshold.30="isLoaded = true">
-  <div x-show="!isLoaded" x-cloak class="h-56 w-full bg-transparent"></div>
-  <div
-    x-show="isLoaded"
-    x-cloak
-    class="group h-full animate-slideTop overflow-hidden rounded-md bg-white/50 shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] backdrop-blur-md transition hover:shadow-md dark:bg-gray-800/70 dark:shadow-[0_5px_15px_rgba(0,0,0,0.35)]">
-    <div class="h-64 w-full md:h-48">
-      
-    </div>
-
-    <div class="px-4 py-6 sm:p-6">
-      <p class="hs-content-meta block text-xs text-gray-600 dark:text-gray-400">
-        2022/04/30
-      </p>
-
-      <a href="http://localhost:1313/posts/20220430/">
-        <p
-          class="hs-content-title mt-2 text-lg text-gray-900 group-hover:text-[--hs-text-color-hover] dark:text-gray-300">
-          差不多该干点正事了吧你
-        </p>
-      </a>
-    </div>
-  </div>
-</li>
-
-      
-        <li
-  x-data="{ isLoaded: false }"
-  class="items-stretch"
-  x-intersect.threshold.30="isLoaded = true">
-  <div x-show="!isLoaded" x-cloak class="h-56 w-full bg-transparent"></div>
-  <div
-    x-show="isLoaded"
-    x-cloak
-    class="group h-full animate-slideTop overflow-hidden rounded-md bg-white/50 shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] backdrop-blur-md transition hover:shadow-md dark:bg-gray-800/70 dark:shadow-[0_5px_15px_rgba(0,0,0,0.35)]">
-    <div class="h-64 w-full md:h-48">
-      
-    </div>
-
-    <div class="px-4 py-6 sm:p-6">
-      <p class="hs-content-meta block text-xs text-gray-600 dark:text-gray-400">
-        2022/04/29
-      </p>
-
-      <a href="http://localhost:1313/posts/20220429/">
-        <p
-          class="hs-content-title mt-2 text-lg text-gray-900 group-hover:text-[--hs-text-color-hover] dark:text-gray-300">
-          思考 | 关于博客和亲情
-        </p>
-      </a>
-    </div>
-  </div>
-</li>
-
-      
-        <li
-  x-data="{ isLoaded: false }"
-  class="items-stretch"
-  x-intersect.threshold.30="isLoaded = true">
-  <div x-show="!isLoaded" x-cloak class="h-56 w-full bg-transparent"></div>
-  <div
-    x-show="isLoaded"
-    x-cloak
-    class="group h-full animate-slideTop overflow-hidden rounded-md bg-white/50 shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] backdrop-blur-md transition hover:shadow-md dark:bg-gray-800/70 dark:shadow-[0_5px_15px_rgba(0,0,0,0.35)]">
-    <div class="h-64 w-full md:h-48">
-      
-    </div>
-
-    <div class="px-4 py-6 sm:p-6">
-      <p class="hs-content-meta block text-xs text-gray-600 dark:text-gray-400">
-        2022/04/29
-      </p>
-
-      <a href="http://localhost:1313/posts/%E8%B5%9B%E5%8D%9A%E6%97%B6%E4%BB%A3%E7%9A%84%E6%97%A0%E5%8A%9B%E6%84%9F/">
-        <p
-          class="hs-content-title mt-2 text-lg text-gray-900 group-hover:text-[--hs-text-color-hover] dark:text-gray-300">
-          感受 | 赛博时代的无力感
-        </p>
-      </a>
-    </div>
-  </div>
-</li>
-
-      
-        <li
-  x-data="{ isLoaded: false }"
-  class="items-stretch"
-  x-intersect.threshold.30="isLoaded = true">
-  <div x-show="!isLoaded" x-cloak class="h-56 w-full bg-transparent"></div>
-  <div
-    x-show="isLoaded"
-    x-cloak
-    class="group h-full animate-slideTop overflow-hidden rounded-md bg-white/50 shadow-[0_7px_29px_0_rgba(100,100,111,0.2)] backdrop-blur-md transition hover:shadow-md dark:bg-gray-800/70 dark:shadow-[0_5px_15px_rgba(0,0,0,0.35)]">
-    <div class="h-64 w-full md:h-48">
-      
-    </div>
-
-    <div class="px-4 py-6 sm:p-6">
-      <p class="hs-content-meta block text-xs text-gray-600 dark:text-gray-400">
-        2022/04/28
-      </p>
-
-      <a href="http://localhost:1313/posts/friends/">
-        <p
-          class="hs-content-title mt-2 text-lg text-gray-900 group-hover:text-[--hs-text-color-hover] dark:text-gray-300">
-          Friends
-        </p>
-      </a>
-    </div>
-  </div>
-</li>
-
-      
     </ul>
     
 
@@ -1262,7 +1246,7 @@
       >
       of
       <span class="font-semibold text-gray-900 dark:text-white"
-        >57</span
+        >66</span
       >
       Entries
     </span>
