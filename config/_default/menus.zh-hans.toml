@@ -22,10 +22,3 @@
   pageRef = "goods"
   parent = 'About'
   weight = 10
-
-#[[main]]
-#  identifier = "comments-with-twikoo"
-#  name = "Twikoo评论版"
-#  url = "https://seven-demo-with-twikoo.netlify.app/"
-#  parent = '其他'
-#  weight = 20
