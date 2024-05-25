@@ -16,7 +16,7 @@ enableHighlight = true
   themeColor = "#ffffff"
 
 [background]
-  enable = true
+  enable = false
   lightImg = "/images/bg.jpg"
   darkImg = "/images/bg-dark.svg"
 
