@@ -1,22 +1,13 @@
 ---
-layout: "months"
 categories: ["Months"]
 tags:
   - 天天的快乐日记
 title: 月记 | 1月：疯狂追剧/探索新可能/偶尔现充
-series:
-  - monthly
-series_order: 1
 description: "一月月记"
-url: "months/20230206"
-image: "/images/docs/installation.webp"
 date: 2023-02-18T08:38:40.658Z
 math: false
 draft: false
 lastmod: 2023-02-18T11:54:17.186Z
-weight: 3
-emoji: ":star_struck:"
-description: "对配置主题的一些重要配置参数进行说明"
 ---
 
 二月了但是还拖着一月的月记没有写，嗯，写了就行，现在开始写已经很棒了。
