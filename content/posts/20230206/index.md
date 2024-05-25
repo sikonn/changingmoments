@@ -1,4 +1,5 @@
 ---
+layout: post
 categories: ["Months"]
 tags:
   - 天天的快乐日记
