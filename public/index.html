@@ -269,56 +269,6 @@
     </div>
   
 
-  
-    <div x-data="{ isOpen: false }" class="hs-menus relative">
-      <button
-        type="button"
-        @click="isOpen = !isOpen"
-        class="group flex items-center text-sm font-semibold leading-6 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
-        aria-expanded="false">
-        其他
-        <svg
-          class="size-4 flex-none transition"
-          :class="{ 'rotate-180': isOpen }"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          aria-hidden="true">
-          <path
-            fill-rule="evenodd"
-            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-            clip-rule="evenodd" />
-        </svg>
-      </button>
-
-      <div
-        x-show="isOpen"
-        x-cloak
-        x-transition:enter="transition ease-out duration-200"
-        x-transition:enter-start="opacity-0 translate-y-1"
-        x-transition:enter-end="opacity-100 translate-y-0"
-        x-transition:leave="transition ease-in duration-150"
-        x-transition:leave-start="opacity-100 translate-y-0"
-        x-transition:leave-end="opacity-0 translate-y-1"
-        @click.away="isOpen = false"
-        @scroll.window.away="isOpen = (window.scrollY > 300 ? false : true)"
-        class="absolute -left-6 top-full z-10 mt-3 w-screen max-w-40 overflow-hidden rounded-xl bg-white/95 shadow-lg ring-1 ring-gray-900/5 backdrop-blur-xl dark:bg-gray-800/95">
-        <div class="p-2">
-          
-            <div
-              class="relative rounded-lg px-4 py-2.5 text-sm leading-6 hover:bg-gray-300/30 hover:backdrop-blur-md">
-              <a
-                href="https://seven-demo-with-twikoo.netlify.app/"
-                class="block font-semibold text-gray-900 hover:text-[--hs-text-color-hover] dark:text-gray-400 dark:hover:text-white">
-                Twikoo评论版
-                <span class="absolute inset-0"></span>
-              </a>
-            </div>
-          
-        </div>
-      </div>
-    </div>
-  
-
 
 
   <div x-data="{ isOpen: false }" class="hs-menus relative">
@@ -585,46 +535,6 @@
     </div>
   
 
-  
-    <div x-data="{ subMenuOpen: false }" class="hs-menus">
-      <button
-        @click="subMenuOpen = !subMenuOpen"
-        type="button"
-        :class="{ 'text-[--hs-text-color-hover]': subMenuOpen, 'text-gray-900': !subMenuOpen, 'dark:text-[--hs-text-color-hover]': subMenuOpen, 'dark:text-white': !subMenuOpen }"
-        class="group flex w-full flex-col items-center justify-center rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:text-[--hs-text-color-hover]"
-        aria-controls="disclosure-1"
-        aria-expanded="false">
-        <span>其他</span>
-        <svg
-          :class="{ 'rotate-180': subMenuOpen }"
-          class="size-4 flex-none transition"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          aria-hidden="true">
-          <path
-            fill-rule="evenodd"
-            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-            clip-rule="evenodd" />
-        </svg>
-      </button>
-      <div
-        x-show="subMenuOpen"
-        x-cloak
-        x-collapse
-        class="flex flex-col space-y-1"
-        id="disclosure-1">
-        
-          <a
-            href="https://seven-demo-with-twikoo.netlify.app/"
-            class="w-full rounded-lg px-3 py-2 text-center text-sm font-semibold leading-7 text-gray-900 hover:text-[--hs-text-color-hover] dark:text-white"
-            >Twikoo评论版</a
-          >
-        
-
-      </div>
-    </div>
-  
-
 
 
   <div x-data="{ subMenuOpen: false }" class="hs-menus">
@@ -798,47 +708,6 @@
               class="group flex w-full flex-col space-y-5 md:w-2/3 md:space-y-7">
               <div
                 class="hs-content-meta flex items-center justify-start space-x-2 text-sm text-gray-600 dark:text-gray-500">
-                <p>2023/02/18</p>
-                <div class="size-1 rounded-full bg-red-800"></div>
-                <p>Months</p>
-              </div>
-              <a
-                href="http://localhost:1313/months/20230206/"
-                class="hs-content-title text-4xl font-bold group-hover:text-[--hs-text-color-hover] dark:text-gray-300"
-                >月记 | 1月：疯狂追剧/探索新可能/偶尔现充</a
-              >
-
-              <div
-                class="h-60 w-full"
-                x-intersect.threshold.70="isLoaded = true;">
-                
-              </div>
-            </div>
-            
-            <div
-              class="hidden flex-col justify-center space-y-3 border-l-[1px] border-l-gray-200 p-6 text-start dark:border-l-gray-800 md:flex md:w-1/3">
-              <p
-                class="hs-summary-title text-xl font-bold text-gray-800 underline decoration-[--hs-decoration-color] decoration-4 underline-offset-4 dark:text-gray-400">
-                摘要
-              </p>
-              <div
-                class="hs-summary line-clamp-[10] text-pretty tracking-wide text-gray-700 dark:text-gray-500">
-                
-                  <p>对配置主题的一些重要配置参数进行说明</p>
-                
-              </div>
-            </div>
-          </div>
-        
-          <div
-            x-intersect.margin.-50%.0="loadNum = 2"
-            class="flex space-x-7 p-1 md:p-4">
-            
-            <div
-              x-data="{ isLoaded: false }"
-              class="group flex w-full flex-col space-y-5 md:w-2/3 md:space-y-7">
-              <div
-                class="hs-content-meta flex items-center justify-start space-x-2 text-sm text-gray-600 dark:text-gray-500">
                 <p>2024/04/03</p>
                 <div class="size-1 rounded-full bg-red-800"></div>
                 <p></p>
@@ -870,7 +739,7 @@
           </div>
         
           <div
-            x-intersect.margin.-50%.0="loadNum = 3"
+            x-intersect.margin.-50%.0="loadNum = 2"
             class="flex space-x-7 p-1 md:p-4">
             
             <div
@@ -909,7 +778,7 @@
           </div>
         
           <div
-            x-intersect.margin.-50%.0="loadNum = 4"
+            x-intersect.margin.-50%.0="loadNum = 3"
             class="flex space-x-7 p-1 md:p-4">
             
             <div
@@ -948,7 +817,7 @@
           </div>
         
           <div
-            x-intersect.margin.-50%.0="loadNum = 5"
+            x-intersect.margin.-50%.0="loadNum = 4"
             class="flex space-x-7 p-1 md:p-4">
             
             <div
@@ -982,6 +851,45 @@
               <div
                 class="hs-summary line-clamp-[10] text-pretty tracking-wide text-gray-700 dark:text-gray-500">
                 这个世界越来越电子化，今天看到医院报告单没办法在小程序上查询到的时候我还觉得很烦躁，但是越来越多的电子化也让我很烦躁，怎么才能不烦躁？ 感觉不
+              </div>
+            </div>
+          </div>
+        
+          <div
+            x-intersect.margin.-50%.0="loadNum = 5"
+            class="flex space-x-7 p-1 md:p-4">
+            
+            <div
+              x-data="{ isLoaded: false }"
+              class="group flex w-full flex-col space-y-5 md:w-2/3 md:space-y-7">
+              <div
+                class="hs-content-meta flex items-center justify-start space-x-2 text-sm text-gray-600 dark:text-gray-500">
+                <p>2024/02/03</p>
+                <div class="size-1 rounded-full bg-red-800"></div>
+                <p></p>
+              </div>
+              <a
+                href="http://localhost:1313/posts/20240204/"
+                class="hs-content-title text-4xl font-bold group-hover:text-[--hs-text-color-hover] dark:text-gray-300"
+                >啊哈 | 那些我的Aha Moment</a
+              >
+
+              <div
+                class="h-60 w-full"
+                x-intersect.threshold.70="isLoaded = true;">
+                
+              </div>
+            </div>
+            
+            <div
+              class="hidden flex-col justify-center space-y-3 border-l-[1px] border-l-gray-200 p-6 text-start dark:border-l-gray-800 md:flex md:w-1/3">
+              <p
+                class="hs-summary-title text-xl font-bold text-gray-800 underline decoration-[--hs-decoration-color] decoration-4 underline-offset-4 dark:text-gray-400">
+                摘要
+              </p>
+              <div
+                class="hs-summary line-clamp-[10] text-pretty tracking-wide text-gray-700 dark:text-gray-500">
+                写完一月月记突然发现很多Aha Moment没有写进去，于是又新开一篇www 这篇灵感之一来自播客放学以后afterschool的39期啊哈！对
               </div>
             </div>
           </div>
